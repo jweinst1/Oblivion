@@ -3,8 +3,8 @@
  * File for color classes
  */
 "use strict";
-var Color;
-(function (Color) {
+var Colors;
+(function (Colors) {
     var RGB = (function () {
         function RGB(r, g, b) {
             if (r === void 0) { r = 0; }
@@ -14,8 +14,11 @@ var Color;
             this.green = g;
             this.blue = b;
         }
+        RGB.prototype.strValue = function () {
+            return "rgb(" + this.red + "," + this.green + "," + this.blue + ")";
+        };
         return RGB;
     }());
-    Color.RGB = RGB;
-})(Color = exports.Color || (exports.Color = {}));
+    Colors.RGB = RGB;
+})(Colors = exports.Colors || (exports.Colors = {}));
 //# sourceMappingURL=Color.js.map

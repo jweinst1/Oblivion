@@ -3,8 +3,14 @@
  * File for color classes
  */
 
-export namespace Color {
-    export class RGB {
+export namespace Colors {
+
+    interface Color {
+        //returns a string representing the color's value.
+        strValue():string;
+    }
+
+    export class RGB implements Color {
         public red:number;
         public green:number;
         public blue:number;
@@ -13,6 +19,10 @@ export namespace Color {
             this.red = r;
             this.green = g;
             this.blue = b;
+        }
+
+        strValue():string {
+            return `rgb(${this.red},${this.green},${this.blue})`;
         }
 
     }
