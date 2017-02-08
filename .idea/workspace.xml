@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Color.js" afterPath="$PROJECT_DIR$/src/Color.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Color.js.map" afterPath="$PROJECT_DIR$/src/Color.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Color.ts" afterPath="$PROJECT_DIR$/src/Color.ts" />
@@ -45,8 +46,8 @@
       <file leaf-file-name="Color.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Color.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="337">
+              <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -241,12 +242,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486453124893</updated>
       <workItem from="1486453126617" duration="1151000" />
-      <workItem from="1486537651977" duration="1676000" />
+      <workItem from="1486537651977" duration="2674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2827000" />
+    <option name="totallyTimeSpent" value="3825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -330,8 +331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Color.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="337">
+          <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
           <folding />
         </state>
       </provider>

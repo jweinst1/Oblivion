@@ -26,4 +26,20 @@ export namespace Colors {
         }
 
     }
+
+    export class HEX implements Color {
+
+        public digits:string[];
+
+        constructor(digits:string[] = []){
+            if(digits.length !== 6) {
+                throw "Error Hex Color invalid";
+            }
+            this.digits = digits;
+        }
+
+        strValue():string {
+            return `#${this.digits.join("")}`;
+        }
+    }
 }

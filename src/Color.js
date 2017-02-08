@@ -20,5 +20,19 @@ var Colors;
         return RGB;
     }());
     Colors.RGB = RGB;
+    var HEX = (function () {
+        function HEX(digits) {
+            if (digits === void 0) { digits = []; }
+            if (digits.length !== 6) {
+                throw "Error Hex Color invalid";
+            }
+            this.digits = digits;
+        }
+        HEX.prototype.strValue = function () {
+            return "#" + this.digits.join("");
+        };
+        return HEX;
+    }());
+    Colors.HEX = HEX;
 })(Colors = exports.Colors || (exports.Colors = {}));
 //# sourceMappingURL=Color.js.map
