@@ -31,17 +31,17 @@ export namespace Colors {
 
         public static hexRegex = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
 
-        public digits:string[];
+        public digits:string;
 
-        constructor(digits:string[] = []){
-            if(!(HEX.isHex(digits.join("")))) {
+        constructor(digits:string = '#FFFFFF'){
+            if(!(HEX.isHex(digits))) {
                 throw "Error Hex Color invalid";
             }
             this.digits = digits;
         }
 
         public strValue():string {
-            return `#${this.digits.join("")}`;
+            return `#${this.digits}`;
         }
         //checks if a color is a valid 3 or 6 digit HEX color.
         public static isHex(input:string):boolean {

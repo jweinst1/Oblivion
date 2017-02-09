@@ -22,14 +22,14 @@ var Colors;
     Colors.RGB = RGB;
     var HEX = (function () {
         function HEX(digits) {
-            if (digits === void 0) { digits = []; }
-            if (!(HEX.isHex(digits.join("")))) {
+            if (digits === void 0) { digits = '#FFFFFF'; }
+            if (!(HEX.isHex(digits))) {
                 throw "Error Hex Color invalid";
             }
             this.digits = digits;
         }
         HEX.prototype.strValue = function () {
-            return "#" + this.digits.join("");
+            return "#" + this.digits;
         };
         //checks if a color is a valid 3 or 6 digit HEX color.
         HEX.isHex = function (input) {
