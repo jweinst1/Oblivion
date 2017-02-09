@@ -23,7 +23,7 @@ var Colors;
     var HEX = (function () {
         function HEX(digits) {
             if (digits === void 0) { digits = []; }
-            if (digits.length !== 6) {
+            if (!(HEX.isHex(digits.join("")))) {
                 throw "Error Hex Color invalid";
             }
             this.digits = digits;
@@ -31,8 +31,35 @@ var Colors;
         HEX.prototype.strValue = function () {
             return "#" + this.digits.join("");
         };
+        //checks if a color is a valid 3 or 6 digit HEX color.
+        HEX.isHex = function (input) {
+            return HEX.hexRegex.test(input);
+        };
+        HEX.hexRegex = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
         return HEX;
     }());
     Colors.HEX = HEX;
+    var Swatch = (function () {
+        function Swatch(name) {
+            if (name === void 0) { name = "black"; }
+            this.name = name;
+        }
+        Swatch.prototype.strValue = function () {
+            return this.name;
+        };
+        //checks if a color is a named SVG color.
+        Swatch.isSwatch = function (input) {
+            return input in Swatch.swatchSet;
+        };
+        Swatch.swatchSet = {
+            black: true, white: true, gray: true,
+            cyan: true, blue: true, red: true,
+            yellow: true, turquoise: true, indigo: true,
+            green: true, brown: true, lightpink: true,
+            violet: true, tan: true, orange: true
+        };
+        return Swatch;
+    }());
+    Colors.Swatch = Swatch;
 })(Colors = exports.Colors || (exports.Colors = {}));
 //# sourceMappingURL=Color.js.map

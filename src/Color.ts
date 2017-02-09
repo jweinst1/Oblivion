@@ -21,7 +21,7 @@ export namespace Colors {
             this.blue = b;
         }
 
-        strValue():string {
+        public strValue():string {
             return `rgb(${this.red},${this.green},${this.blue})`;
         }
 
@@ -29,17 +29,48 @@ export namespace Colors {
 
     export class HEX implements Color {
 
+        public static hexRegex = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
+
         public digits:string[];
 
         constructor(digits:string[] = []){
-            if(digits.length !== 6) {
+            if(!(HEX.isHex(digits.join("")))) {
                 throw "Error Hex Color invalid";
             }
             this.digits = digits;
         }
 
-        strValue():string {
+        public strValue():string {
             return `#${this.digits.join("")}`;
+        }
+        //checks if a color is a valid 3 or 6 digit HEX color.
+        public static isHex(input:string):boolean {
+            return HEX.hexRegex.test(input);
+        }
+    }
+
+    export class Swatch implements Color {
+
+        public name:string;
+
+        public static swatchSet = {
+            black:true, white:true, gray:true,
+            cyan:true, blue:true, red:true,
+            yellow:true, turquoise:true, indigo:true,
+            green:true, brown:true, lightpink:true,
+            violet:true, tan:true, orange:true
+        };
+
+        constructor(name:string = "black") {
+            this.name = name;
+        }
+
+        public strValue():string {
+            return this.name;
+        }
+        //checks if a color is a named SVG color.
+        public static isSwatch(input:string):boolean {
+            return input in Swatch.swatchSet;
         }
     }
 }
