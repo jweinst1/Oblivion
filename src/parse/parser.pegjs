@@ -7,7 +7,7 @@ Statement
   
 Def
   = _? "@" _ n:Name _? "=" _? w:Value _? {
-      return {node:"def", children:[n, w]};
+      return {node:"def", name:n.join(""), value:w};
   }
   
 Value
