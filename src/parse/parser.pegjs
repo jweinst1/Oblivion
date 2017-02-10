@@ -11,13 +11,16 @@ Def
   }
   
 Value
-  = Word
+  = Add / Word
+  
+Add
+  = a:Word _? "+" _? b:Word {return {op:"+", first:a, second:b};}
 
 _ "whitespace"
   = [ \t\n\r]*
   
 Word "word"
-  = [0-9a-zA-Z]+
+  = w:[0-9a-zA-Z]+ {return w.join("");}
   
 Name "name"
   = [a-zA-Z-]+
