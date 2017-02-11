@@ -1,26 +1,27 @@
 Program
-  = Statement*
+  = c:Statement+ {return {node:"program", children:c};}
   
-/*All possble program expressions*/  
-Statement 
-  = Def
+Statement
+  /*Statements are the core top rule*/
+  = _? c:Call {return c;}
   
-Def
-  = _? "@" _ n:Name _? "=" _? w:Value _? {
-      return {node:"def", name:n.join(""), value:w};
+Call
+  /*Can Parse Function Calls*/
+  = node:Name "(" _ args:Operands _ ")" {
+     return {node:node, args:args};
   }
   
-Value
-  = Add / Word
+Operands
+  = Argument*
   
-Add
-  = a:Word _? "+" _? b:Word {return {op:"+", first:a, second:b};}
+Argument
+  = _? c:Call {return c;} / _? a:Word {return a;}
 
 _ "whitespace"
-  = [ \t\n\r]*
+  = [ \t\n\r,]*
   
-Word "word"
-  = w:[0-9a-zA-Z]+ {return w.join("");}
-  
-Name "name"
-  = [a-zA-Z-]+
+Name
+  = n:[a-zA-Z_-]+ {return n.join("");}
+
+Word
+  = w:[0-9a-zA-Z-_$]+ {return w.join("");}
