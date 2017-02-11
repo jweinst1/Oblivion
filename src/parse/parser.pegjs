@@ -36,8 +36,8 @@ Name
   = n:[a-zA-Z_-]+ {return n.join("");}
 
 Word
-  = n:[0-9]+ {return {node:"number", args:[n.join("")]};}
-  / w:[a-zA-Z-_$]+ {return {node:"word", args:[w.join("")]};}
+  =  w:[a-z0-9A-Z-_$]+ {return {node:"word", args:[w.join("")]};}
+  / n:[0-9]+ {return {node:"number", args:[n.join("")]};}
   
 String
   = '"' s:[^"]* '"' {return {node:"string", args:[s.join("")]};}
