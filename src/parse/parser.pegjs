@@ -26,6 +26,7 @@ Operands
 Argument
   = _? c:Call {return c;}
   / _? l:List {return l;}
+  / _? s:String {return s;}
   / _? a:Word {return a;}
 
 _ "whitespace"
@@ -36,6 +37,9 @@ Name
 
 Word
   = w:[0-9a-zA-Z-_$]+ {return w.join("");}
+  
+String
+  = '"' s:[^"]* '"' {return s.join("");}
   
 Operator
   = "=" / "<<"
