@@ -1,5 +1,5 @@
 Program
-  = c:Statement+ {return {node:"program", children:c};}
+  = c:Statement+ {return {node:"program", args:c};}
   
 Statement
   /*Statements are the core top rule*/
