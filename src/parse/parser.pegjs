@@ -40,7 +40,7 @@ Word
   / w:[a-zA-Z-_$]+ {return {node:"word", args:[w.join("")]};}
   
 String
-  = '"' s:[^"]* '"' {return s.join("");}
+  = '"' s:[^"]* '"' {return {node:"string", args:[s.join("")]};}
   
 Operator
   = "=" / "<<"
