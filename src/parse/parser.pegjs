@@ -11,11 +11,18 @@ Call
      return {node:node, args:args};
   }
   
+List
+  = "[" _ args:Operands _ "]" {
+    return {node:"list", args:args};
+  }
+  
 Operands
   = Argument*
   
 Argument
-  = _? c:Call {return c;} / _? a:Word {return a;}
+  = _? c:Call {return c;}
+  / _? l:List {return l;}
+  / _? a:Word {return a;}
 
 _ "whitespace"
   = [ \t\n\r,]*
