@@ -3,13 +3,17 @@ Program
   
 Statement
   /*Statements are the core top rule*/
-  = _? c:Call {return c;}
+  =   _? a:Assign {return a;} 
+  / _? c:Call {return c;}
   
 Call
   /*Can Parse Function Calls*/
   = node:Name "(" _ args:Operands _ ")" {
      return {node:node, args:args};
   }
+  
+Assign
+  =  _? v:Name _? "=" _? val:Argument {return {node:"=", args:[v, val]};}
   
 List
   = "[" _ args:Operands _ "]" {
