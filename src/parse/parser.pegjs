@@ -1,5 +1,5 @@
 Program
-  = c:Statement* {return {node:"program", args:c};}
+  = c:Statement* _? {return {node:"program", args:c};}
   
 Statement
   /*Statements are the core top rule*/
@@ -36,3 +36,6 @@ Name
 
 Word
   = w:[0-9a-zA-Z-_$]+ {return w.join("");}
+  
+Operator
+  = "=" / "<<"
