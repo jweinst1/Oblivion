@@ -3,4 +3,4 @@
  */
 var ps = require('./src/parse/parser');
 
-console.log(JSON.stringify(ps.parse("f = {(a) return(a, 3, 4)}"), null, 3));
+console.log(JSON.stringify(ps.parse("f = {(a) return(a, 3, 4)}, g = 4"), null, 3));

@@ -3,6 +3,7 @@
  * File for color classes
  */
 
+
 export namespace Colors {
 
     interface Color {
