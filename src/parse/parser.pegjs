@@ -3,7 +3,8 @@ Program
   
 Statement
   /*Statements are the core top rule*/
-  =   _? a:Assign {return a;} 
+  =   _? a:Assign {return a;}
+  / _? a:Append {return a;} 
   / _? c:Call {return c;}
   
 Call
@@ -14,7 +15,10 @@ Call
   
 Assign
   =  _? v:Name _? "=" _? val:Argument {return {node:"=", args:[v, val]};}
-  
+
+Append
+  =  _? v:Name _? "<<" _? val:Argument {return {node:"<<", args:[v, val]};}
+
 List
   = "[" _ args:Operands _ "]" {
     return {node:"list", args:args};
@@ -57,5 +61,3 @@ Word
 String
   = '"' s:[^"]* '"' {return {node:"string", args:[s.join("")]};}
   
-Operator
-  = "=" / "<<"
