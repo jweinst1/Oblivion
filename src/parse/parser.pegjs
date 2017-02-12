@@ -36,8 +36,11 @@ Name
   = n:[a-zA-Z_-]+ {return n.join("");}
 
 Word
-  =  w:[a-z0-9A-Z-_$]+ {return {node:"word", args:[w.join("")]};}
-  / n:[0-9]+ {return {node:"number", args:[n.join("")]};}
+  =  w:[a-z0-9A-Z-_$]+ {
+      var result = w.join("");
+      if(isNaN(result)) return {node:"word", args:[result]};
+      else return {node:"number", args:[result]};
+  }
   
 String
   = '"' s:[^"]* '"' {return {node:"string", args:[s.join("")]};}
