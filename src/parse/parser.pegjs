@@ -20,11 +20,23 @@ List
     return {node:"list", args:args};
   }
   
+Function
+  = "{" _? "(" _ params:Params _ ")" _ body:Body _ "}" {
+     return {node:"func", args:[params, body]};
+  }
+  
 Operands
   = Argument*
   
+Params
+  = p:Name* {return {node:"params", args:p};}
+  
+Body
+  = s:Statement* {return {node:"body", args:s};}
+  
 Argument
   = _? c:Call {return c;}
+  / _? f:Function {return f;}
   / _? l:List {return l;}
   / _? s:String {return s;}
   / _? a:Word {return a;}
@@ -33,7 +45,7 @@ _ "whitespace"
   = [ \t\n\r,]*
   
 Name
-  = n:[a-zA-Z_-]+ {return n.join("");}
+  = _? n:[a-zA-Z_-]+ {return n.join("");}
 
 Word
   =  w:[a-z0-9A-Z-_$]+ {
