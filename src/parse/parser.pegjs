@@ -53,7 +53,7 @@ _ "whitespace"
   = [ \t\n\r,]*
   
 Name
-  = _? n:[a-zA-Z_-]+ {return {node:"name", args:[n.join("")]};}
+  = _? n:[a-zA-Z_-]+ {return n.join("");}
 
 Word
   =  w:[a-z0-9A-Z-_$]+ {
