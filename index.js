@@ -1,6 +1,6 @@
 /**
  * Created by Josh on 2/7/17.
  */
-var ps = require('./src/parse/parser');
+var cmp = require('./src/Main');
 
-console.log(JSON.stringify(ps.parse("f = {(a) return(a, 3, 4)}, g = 4"), null, 3));
+console.log(JSON.stringify(cmp.Compile("f = {(a) return(a.w, 3, 4)}, g = 4"), null, 3));
