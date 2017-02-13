@@ -24,6 +24,9 @@ List
     return {node:"list", args:args};
   }
   
+Atrribute
+  = obj:Name "." attr:Word {return {node:".", args:[obj, attr]};}
+  
 Function
   = "{" _? "(" _ params:Params _ ")" _ body:Body _ "}" {
      return {node:"func", args:[params, body]};
@@ -43,13 +46,14 @@ Argument
   / _? f:Function {return f;}
   / _? l:List {return l;}
   / _? s:String {return s;}
+  / _? a:Atrribute {return a;}
   / _? a:Word {return a;}
 
 _ "whitespace"
   = [ \t\n\r,]*
   
 Name
-  = _? n:[a-zA-Z_-]+ {return n.join("");}
+  = _? n:[a-zA-Z_-]+ {return {node:"name", args:[n.join("")]};}
 
 Word
   =  w:[a-z0-9A-Z-_$]+ {
@@ -60,4 +64,3 @@ Word
   
 String
   = '"' s:[^"]* '"' {return {node:"string", args:[s.join("")]};}
-  
