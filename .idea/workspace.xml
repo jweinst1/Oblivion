@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Callable.ts" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CompObjects/interfaces.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CompObjects/interfaces.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CompObjects/interfaces.ts" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CompObjects/Arithmetic.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CompObjects/Math.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/CompObjects/Math.js.map" afterPath="$PROJECT_DIR$/src/CompObjects/Arithmetic.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/CompObjects/Math.ts" afterPath="$PROJECT_DIR$/src/CompObjects/Arithmetic.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -64,19 +64,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Math.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CompObjects/Math.ts">
+      <file leaf-file-name="Arithmetic.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CompObjects/Arithmetic.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
               <folding>
-                <element signature="n#!!doc;n#MathFuncs#0" expanded="false" />
+                <element signature="n#!!doc;n#Arithmetic#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Callable.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Callable.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Callable.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -156,8 +156,9 @@
         <option value="$PROJECT_DIR$/src/Main.js" />
         <option value="$PROJECT_DIR$/src/Env.ts" />
         <option value="$PROJECT_DIR$/src/CompObjects/interfaces.ts" />
-        <option value="$PROJECT_DIR$/src/CompObjects/Math.ts" />
         <option value="$PROJECT_DIR$/src/Callable.ts" />
+        <option value="$PROJECT_DIR$/src/CompObjects/Math.ts" />
+        <option value="$PROJECT_DIR$/src/CompObjects/Arithmetic.ts" />
       </list>
     </option>
   </component>
@@ -355,12 +356,12 @@
       <workItem from="1486453126617" duration="1151000" />
       <workItem from="1486537651977" duration="6305000" />
       <workItem from="1486773499119" duration="220000" />
-      <workItem from="1486934332672" duration="4583000" />
+      <workItem from="1486934332672" duration="5154000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12259000" />
+    <option name="totallyTimeSpent" value="12830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -394,8 +395,6 @@
         <option value="$PROJECT_DIR$/src/parse/parser.js" />
         <option value="$PROJECT_DIR$/src/Env.js" />
         <option value="$PROJECT_DIR$/src/Env.js.map" />
-        <option value="$PROJECT_DIR$/src/CompObjects/Math.js.map" />
-        <option value="$PROJECT_DIR$/src/CompObjects/Math.js" />
         <option value="$PROJECT_DIR$/src/Callable.js.map" />
         <option value="$PROJECT_DIR$/src/Callable.js" />
       </list>
@@ -563,22 +562,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompObjects/Math.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#MathFuncs#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Callable.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc;n#Caller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompObjects/Arithmetic.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc;n#Arithmetic#0" expanded="false" />
           </folding>
         </state>
       </provider>
