@@ -12,7 +12,7 @@ var Arithmetic;
             return undefined;
         };
         Add.prototype.getBody = function () {
-            return undefined;
+            return [];
         };
         return Add;
     }());
