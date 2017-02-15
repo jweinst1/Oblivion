@@ -1,3 +1,4 @@
+import{Arithmetic} from "./CompObjects/Arithmetic";
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -14,7 +15,10 @@ export namespace Lib {
         return AST["node"] in defs;
     };
 
+    //optimized function for calling AST against the active library
+
     export let defs = {
-        "add":null
+        "add":Arithmetic.add,
+        "/number":Arithmetic.number
     };
 }

@@ -34,11 +34,10 @@ export namespace Environment {
             }
             else throw `Key Error, variable ${key} not found.`;
         }
-        //retreives lib function
-        getlib(key: string): Function {
-            if(key in this.lib) return this.lib[key];
-            else throw `Call Error, Function ${key} is not defined.`;
-        }
+        //unnests from lib
+        callLib(env:Environment.Env, ASTkey:string, args:any[], flag:number):any{
+            return this.lib[ASTkey](env, args, flag);
+        };
 
         set(key: string, val: any): void {
             this.variables[key] = val;

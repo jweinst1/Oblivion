@@ -23,13 +23,11 @@ var Environment;
             else
                 throw "Key Error, variable " + key + " not found.";
         };
-        //retreives lib function
-        Env.prototype.getlib = function (key) {
-            if (key in this.lib)
-                return this.lib[key];
-            else
-                throw "Call Error, Function " + key + " is not defined.";
+        //unnests from lib
+        Env.prototype.callLib = function (env, ASTkey, args, flag) {
+            return this.lib[ASTkey](env, args, flag);
         };
+        ;
         Env.prototype.set = function (key, val) {
             this.variables[key] = val;
         };
