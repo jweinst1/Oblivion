@@ -141,7 +141,7 @@ module.exports = /*
                 peg$startRuleFunctions = { Program: peg$parseProgram },
                 peg$startRuleFunction  = peg$parseProgram,
 
-                peg$c0 = function(c) {return {node:"program", args:c};},
+                peg$c0 = function(c) {return {node:"/program", args:c};},
                 peg$c1 = function(a) {return a;},
                 peg$c2 = function(c) {return c;},
                 peg$c3 = "(",
@@ -162,7 +162,7 @@ module.exports = /*
                 peg$c16 = "]",
                 peg$c17 = peg$literalExpectation("]", false),
                 peg$c18 = function(args) {
-                    return {node:"list", args:args};
+                    return {node:"/list", args:args};
                 },
                 peg$c19 = ".",
                 peg$c20 = peg$literalExpectation(".", false),
@@ -172,31 +172,31 @@ module.exports = /*
                 peg$c24 = "}",
                 peg$c25 = peg$literalExpectation("}", false),
                 peg$c26 = function(params, body) {
-                    return {node:"func", args:[params, body]};
+                    return {node:"/func", args:[params, body]};
                 },
-                peg$c27 = function(p) {return {node:"params", args:p};},
-                peg$c28 = function(s) {return {node:"body", args:s};},
+                peg$c27 = function(p) {return {node:"/params", args:p};},
+                peg$c28 = function(s) {return {node:"/body", args:s};},
                 peg$c29 = function(f) {return f;},
                 peg$c30 = function(l) {return l;},
                 peg$c31 = function(s) {return s;},
                 peg$c32 = peg$otherExpectation("whitespace"),
                 peg$c33 = /^[ \t\n\r,]/,
                 peg$c34 = peg$classExpectation([" ", "\t", "\n", "\r", ","], false, false),
-                peg$c35 = /^[a-zA-Z_\-]/,
-                peg$c36 = peg$classExpectation([["a", "z"], ["A", "Z"], "_", "-"], false, false),
-                peg$c37 = function(n) {return n.join("");},
-                peg$c38 = /^[a-z0-9A-Z\-_$]/,
-                peg$c39 = peg$classExpectation([["a", "z"], ["0", "9"], ["A", "Z"], "-", "_", "$"], false, false),
+                peg$c35 = /^[a-zA-Z_@$\-]/,
+                peg$c36 = peg$classExpectation([["a", "z"], ["A", "Z"], "_", "@", "$", "-"], false, false),
+                peg$c37 = function(n) {return {node:"/name", args:[n.join("")]};},
+                peg$c38 = /^[a-z0-9A-Z\-_$@]/,
+                peg$c39 = peg$classExpectation([["a", "z"], ["0", "9"], ["A", "Z"], "-", "_", "$", "@"], false, false),
                 peg$c40 = function(w) {
                     var result = w.join("");
-                    if(isNaN(result)) return {node:"word", args:[result]};
-                    else return {node:"number", args:[result]};
+                    if(isNaN(result)) return {node:"/word", args:[result]};
+                    else return {node:"/number", args:[result]};
                 },
                 peg$c41 = "\"",
                 peg$c42 = peg$literalExpectation("\"", false),
                 peg$c43 = /^[^"]/,
                 peg$c44 = peg$classExpectation(["\""], true, false),
-                peg$c45 = function(s) {return {node:"string", args:[s.join("")]};},
+                peg$c45 = function(s) {return {node:"/string", args:[s.join("")]};},
 
                 peg$currPos          = 0,
                 peg$savedPos         = 0,
