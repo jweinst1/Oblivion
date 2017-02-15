@@ -14,6 +14,8 @@ var Lib;
     Lib.contains = function (AST) {
         return AST["node"] in Lib.defs;
     };
-    Lib.defs = {};
+    Lib.defs = {
+        "add": null
+    };
 })(Lib = exports.Lib || (exports.Lib = {}));
 //# sourceMappingURL=Lib.js.map

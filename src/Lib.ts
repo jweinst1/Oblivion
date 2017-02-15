@@ -15,6 +15,6 @@ export namespace Lib {
     };
 
     export let defs = {
-
+        "add":null
     };
 }
