@@ -35,8 +35,8 @@ export namespace Environment {
             else throw `Key Error, variable ${key} not found.`;
         }
         //unnests from lib
-        callLib(env:Environment.Env, ASTkey:string, args:any[], flag:number):any{
-            return this.lib[ASTkey](env, args, flag);
+        callLib(env:Environment.Env, ASTkey:string, args:any[]):any{
+            return this.lib[ASTkey](env, args);
         };
 
         set(key: string, val: any): void {

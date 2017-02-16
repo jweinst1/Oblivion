@@ -24,8 +24,8 @@ var Environment;
                 throw "Key Error, variable " + key + " not found.";
         };
         //unnests from lib
-        Env.prototype.callLib = function (env, ASTkey, args, flag) {
-            return this.lib[ASTkey](env, args, flag);
+        Env.prototype.callLib = function (env, ASTkey, args) {
+            return this.lib[ASTkey](env, args);
         };
         ;
         Env.prototype.set = function (key, val) {

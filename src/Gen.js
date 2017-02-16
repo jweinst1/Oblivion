@@ -11,7 +11,7 @@ var Gen;
         var env = new Env_1.Environment.Env();
         if (AST["node"] === '/program') {
             for (var i = 0; i < AST['args'].length; i++) {
-                var result = env.callLib(env, AST['args'][i].node, AST['args'][i].args, 0);
+                var result = env.callLib(env, AST['args'][i].node, AST['args'][i].args);
                 console.log(result);
             }
         }

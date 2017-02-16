@@ -10,7 +10,7 @@ export namespace Gen {
         let env = new Environment.Env();
         if(AST["node"] === '/program') {
             for(let i=0;i<AST['args'].length;i++){
-                let result = env.callLib(env, AST['args'][i].node, AST['args'][i].args, 0);
+                let result = env.callLib(env, AST['args'][i].node, AST['args'][i].args);
                 console.log(result);
             }
         }

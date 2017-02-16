@@ -5,54 +5,45 @@
 //AST functions that implement standard library
 var STD;
 (function (STD) {
-    STD.print = function (env, args, flag) {
-        switch (flag) {
-            case 0:
-                for (var i = 0; i < args.length; i++) {
-                    console.log(env.callLib(env, args[i].node, args[i].args, flag));
-                }
-                break;
-            case 1:
-                break;
+    //produces a callable Oblivion function
+    STD.func = function (env, args) {
+        //functionally scoped environment
+        var funcEnv = env.createChild();
+    };
+    //handles parameters for a function
+    STD.params = function (env, args) {
+        for (var i = 0; i < args.length; i++) {
         }
     };
-    STD.add = function (env, args, flag) {
-        switch (flag) {
-            case 0:
-                if (args.length === 0)
-                    return 0;
-                var reduc = env.callLib(env, args[0].node, args[0].args, flag);
-                for (var i = 0; i < args.length; i++) {
-                    reduc += env.callLib(env, args[i].node, args[i].args, flag);
-                }
-                return reduc;
-            case 1:
-                //functional object formation for flag 1.
-                break;
+    //processes name nodes
+    STD.name = function (env, args) {
+        return args[0];
+    };
+    STD.print = function (env, args) {
+        for (var i = 0; i < args.length; i++) {
+            console.log(env.callLib(env, args[i].node, args[i].args));
         }
     };
-    STD.sub = function (env, args, flag) {
-        switch (flag) {
-            case 0:
-                if (args.length === 0)
-                    return 0;
-                var reduc = env.callLib(env, args[0].node, args[0].args, flag);
-                for (var i = 0; i < args.length; i++) {
-                    reduc -= env.callLib(env, args[i].node, args[i].args, flag);
-                }
-                return reduc;
-            case 1:
-                //functional object formation for flag 1.
-                break;
+    STD.add = function (env, args) {
+        if (args.length === 0)
+            return 0;
+        var reduc = env.callLib(env, args[0].node, args[0].args);
+        for (var i = 0; i < args.length; i++) {
+            reduc += env.callLib(env, args[i].node, args[i].args);
         }
+        return reduc;
     };
-    STD.c_number = function (env, args, flag) {
-        switch (flag) {
-            case 0:
-                return Number(args[0]);
-            case 1:
-                break;
+    STD.sub = function (env, args) {
+        if (args.length === 0)
+            return 0;
+        var reduc = env.callLib(env, args[0].node, args[0].args);
+        for (var i = 0; i < args.length; i++) {
+            reduc -= env.callLib(env, args[i].node, args[i].args);
         }
+        return reduc;
+    };
+    STD.c_number = function (env, args) {
+        return Number(args[0]);
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
