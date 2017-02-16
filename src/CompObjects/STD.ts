@@ -7,15 +7,19 @@ import {Environment} from "../Env";
 export namespace STD {
     //produces a callable Oblivion function
     export let func = (env:Environment.Env, args:any[]) => {
-        //functionally scoped environment
-        let funcEnv = env.createChild();
+        let paramList = env.callLib(env, args[0].node, args[0].args);
+        return (env:Environment.Env, args:any[]) => {
+            //functionally scoped environment
+            let funcEnv = env.createChild();
+        };
 
     };
     //handles parameters for a function
     export let params = (env:Environment.Env, args:any[]) => {
         for(let i=0;i<args.length;i++){
-
+            args[i] = env.callLib(env, args[i].node, args[i].args);
         }
+        return args;
     };
     //processes name nodes
     export let name = (env:Environment.Env, args:any[]) => {
