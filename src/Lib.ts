@@ -19,6 +19,7 @@ export namespace Lib {
 
     export let defs = {
         "add":Arithmetic.add,
-        "/number":Arithmetic.number
+        "sub":Arithmetic.sub,
+        "/number":Arithmetic.c_number
     };
 }

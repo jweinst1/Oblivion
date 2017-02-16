@@ -18,7 +18,8 @@ var Lib;
     //optimized function for calling AST against the active library
     Lib.defs = {
         "add": Arithmetic_1.Arithmetic.add,
-        "/number": Arithmetic_1.Arithmetic.number
+        "sub": Arithmetic_1.Arithmetic.sub,
+        "/number": Arithmetic_1.Arithmetic.c_number
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
 //# sourceMappingURL=Lib.js.map
