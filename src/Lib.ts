@@ -1,4 +1,4 @@
-import{Arithmetic} from "./CompObjects/Arithmetic";
+import{STD} from "./CompObjects/STD";
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -18,8 +18,9 @@ export namespace Lib {
     //optimized function for calling AST against the active library
 
     export let defs = {
-        "add":Arithmetic.add,
-        "sub":Arithmetic.sub,
-        "/number":Arithmetic.c_number
+        "add":STD.add,
+        "sub":STD.sub,
+        "print":STD.print,
+        "/number":STD.c_number
     };
 }

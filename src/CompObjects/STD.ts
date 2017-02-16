@@ -3,8 +3,20 @@ import {Environment} from "../Env";
  * Created by Josh on 2/13/17.
  */
 
-//AST functions that deal with numbers and their operations
-export namespace Arithmetic {
+//AST functions that implement standard library
+export namespace STD {
+
+    export let print = (env:Environment.Env, args:any[], flag:number) => {
+        switch(flag){
+            case 0:
+                for(let i=0;i<args.length;i++){
+                    console.log(env.callLib(env, args[i].node, args[i].args, flag));
+                }
+                break;
+            case 1:
+                break;
+        }
+    };
 
     export let add = (env:Environment.Env, args:any[], flag:number) => {
         switch (flag) {

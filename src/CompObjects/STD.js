@@ -2,10 +2,21 @@
 /**
  * Created by Josh on 2/13/17.
  */
-//AST functions that deal with numbers and their operations
-var Arithmetic;
-(function (Arithmetic) {
-    Arithmetic.add = function (env, args, flag) {
+//AST functions that implement standard library
+var STD;
+(function (STD) {
+    STD.print = function (env, args, flag) {
+        switch (flag) {
+            case 0:
+                for (var i = 0; i < args.length; i++) {
+                    console.log(env.callLib(env, args[i].node, args[i].args, flag));
+                }
+                break;
+            case 1:
+                break;
+        }
+    };
+    STD.add = function (env, args, flag) {
         switch (flag) {
             case 0:
                 if (args.length === 0)
@@ -20,7 +31,7 @@ var Arithmetic;
                 break;
         }
     };
-    Arithmetic.sub = function (env, args, flag) {
+    STD.sub = function (env, args, flag) {
         switch (flag) {
             case 0:
                 if (args.length === 0)
@@ -35,7 +46,7 @@ var Arithmetic;
                 break;
         }
     };
-    Arithmetic.c_number = function (env, args, flag) {
+    STD.c_number = function (env, args, flag) {
         switch (flag) {
             case 0:
                 return Number(args[0]);
@@ -43,5 +54,5 @@ var Arithmetic;
                 break;
         }
     };
-})(Arithmetic = exports.Arithmetic || (exports.Arithmetic = {}));
-//# sourceMappingURL=Arithmetic.js.map
+})(STD = exports.STD || (exports.STD = {}));
+//# sourceMappingURL=STD.js.map

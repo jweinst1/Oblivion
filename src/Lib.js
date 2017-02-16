@@ -1,5 +1,5 @@
 "use strict";
-var Arithmetic_1 = require("./CompObjects/Arithmetic");
+var STD_1 = require("./CompObjects/STD");
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -17,9 +17,10 @@ var Lib;
     };
     //optimized function for calling AST against the active library
     Lib.defs = {
-        "add": Arithmetic_1.Arithmetic.add,
-        "sub": Arithmetic_1.Arithmetic.sub,
-        "/number": Arithmetic_1.Arithmetic.c_number
+        "add": STD_1.STD.add,
+        "sub": STD_1.STD.sub,
+        "print": STD_1.STD.print,
+        "/number": STD_1.STD.c_number
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
 //# sourceMappingURL=Lib.js.map
