@@ -17,6 +17,7 @@ var Lib;
     };
     //optimized function for calling AST against the active library
     Lib.defs = {
+        "/func": STD_1.STD.func,
         "/params": STD_1.STD.params,
         "/name": STD_1.STD.name,
         "add": STD_1.STD.add,

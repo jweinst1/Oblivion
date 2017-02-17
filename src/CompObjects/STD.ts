@@ -8,9 +8,19 @@ export namespace STD {
     //produces a callable Oblivion function
     export let func = (env:Environment.Env, args:any[]) => {
         let paramList = env.callLib(env, args[0].node, args[0].args);
+        let funcBody = args[1];
         return (env:Environment.Env, args:any[]) => {
             //functionally scoped environment
             let funcEnv = env.createChild();
+            if(args.length !== paramList.length) throw `Argument Error, expected ${paramList.length} args but got ${args.length}`;
+            for(let i=0;i<paramList.length;i++){
+                //binds called arguments to new Env
+                funcEnv.set(paramList[i], funcEnv.callLib(funcEnv, args[i].node, args[i].args));
+            }
+            for(let i=0;i<funcBody.length;i++){
+                funcEnv.callLib(funcEnv, funcBody[i].node, funcBody[i].args)
+            }
+            //needs to return return value.
         };
 
     };
