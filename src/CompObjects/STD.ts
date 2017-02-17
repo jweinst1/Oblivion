@@ -25,9 +25,13 @@ export namespace STD {
         };
 
     };
-
+    //handles variable assignment
     export let assign = (env:Environment.Env, args:any[]) => {
         env.set(env.callLib(env,args[0].node, args[0].args), env.callLib(env,args[1].node, args[1].args))
+    };
+    //handles Word rule, which retrieves variables
+    export let wordVar = (env:Environment.Env, args:any[]) => {
+        return env.get(args[0]);
     };
 
     //facilitates return function

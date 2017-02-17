@@ -58,7 +58,9 @@ Name
 Word
   =  w:[a-z0-9A-Z-_$@]+ {
       var result = w.join("");
-      if(isNaN(result)) return {node:"/word", args:[result]};
+      var imdict = {'true':['/bool', true], 'false':['/bool', false], 'null':['/null', null]};
+      if(result in imdict) {return {node:imdict[result][0], args:[imdict[result][1]]}}
+      else if(isNaN(result)) {return {node:"/word", args:[result]};}
       else return {node:"/number", args:[result]};
   }
 

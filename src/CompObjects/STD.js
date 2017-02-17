@@ -25,8 +25,13 @@ var STD;
             return funcEnv.getReturnValue();
         };
     };
+    //handles variable assignment
     STD.assign = function (env, args) {
         env.set(env.callLib(env, args[0].node, args[0].args), env.callLib(env, args[1].node, args[1].args));
+    };
+    //handles Word rule, which retrieves variables
+    STD.wordVar = function (env, args) {
+        return env.get(args[0]);
     };
     //facilitates return function
     STD._return = function (env, args) {

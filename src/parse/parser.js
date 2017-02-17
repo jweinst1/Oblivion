@@ -189,7 +189,9 @@ module.exports = /*
                 peg$c39 = peg$classExpectation([["a", "z"], ["0", "9"], ["A", "Z"], "-", "_", "$", "@"], false, false),
                 peg$c40 = function(w) {
                     var result = w.join("");
-                    if(isNaN(result)) return {node:"/word", args:[result]};
+                    var imdict = {'true':['/bool', true], 'false':['/bool', false], 'null':['/null', null]};
+                    if(result in imdict) {return {node:imdict[result][0], args:[imdict[result][1]]}}
+                    else if(isNaN(result)) {return {node:"/word", args:[result]};}
                     else return {node:"/number", args:[result]};
                 },
                 peg$c41 = "\"",
