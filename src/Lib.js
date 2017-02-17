@@ -23,7 +23,7 @@ var Lib;
         "add": STD_1.STD.add,
         "sub": STD_1.STD.sub,
         "print": STD_1.STD.print,
-        "/number": STD_1.STD.c_number
+        "/number": STD_1.STD.c_number,
+        "return": STD_1.STD._return
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
-//# sourceMappingURL=Lib.js.map

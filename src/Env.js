@@ -12,6 +12,7 @@ var Environment;
             this.variables = {};
             this.parent = parent;
             this.lib = Lib_1.Lib.defs;
+            this.returnValue = void 0;
         }
         Env.prototype.get = function (key) {
             if (this.contains(key))
@@ -46,8 +47,13 @@ var Environment;
         Env.prototype.createChild = function () {
             return new Env(this);
         };
+        Env.prototype.setReturnValue = function (value) {
+            this.returnValue = value;
+        };
+        Env.prototype.getReturnValue = function () {
+            return this.returnValue;
+        };
         return Env;
     }());
     Environment.Env = Env;
 })(Environment = exports.Environment || (exports.Environment = {}));
-//# sourceMappingURL=Env.js.map

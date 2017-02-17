@@ -20,10 +20,16 @@ export namespace STD {
             for(let i=0;i<funcBody.length;i++){
                 funcEnv.callLib(funcEnv, funcBody[i].node, funcBody[i].args)
             }
-            //needs to return return value.
+            return funcEnv.getReturnValue();
         };
 
     };
+
+    export let _return = (env:Environment.Env, args:any[]) => {
+        if(args.length === 1) env.setReturnValue(env.callLib(env, args[0].node, args[0].args));
+    };
+
+
     //handles parameters for a function
     export let params = (env:Environment.Env, args:any[]) => {
         for(let i=0;i<args.length;i++){

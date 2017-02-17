@@ -11,7 +11,7 @@ export namespace Gen {
         if(AST["node"] === '/program') {
             for(let i=0;i<AST['args'].length;i++){
                 let result = env.callLib(env, AST['args'][i].node, AST['args'][i].args);
-                console.log(result);
+                console.log(result(env, [{node:'/number', args:['3']}]));
             }
         }
     }
@@ -22,53 +22,30 @@ let tree = {
     node:"/program",
     args:[
         {
-            node:'/number',
-            args:['3']
-        },
-        {
-            node:'add',
+            node:"/func",
             args:[
                 {
-                    node:'/number',
-                    args:['44']
-                },
-                {
-                    node:'/number',
-                    args:['44']
-                },
-                {
-                    node:'/number',
-                    args:['44']
-                },
-                {
-                    node:'add',
+                    node:"/params",
                     args:[
                         {
-                            node:'/number',
-                            args:['44']
-                        },
+                            node:"/name",
+                            args:[
+                                "foo"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    node:"/body",
+                    args:[
                         {
-                            node:'/number',
-                            args:['44']
-                        },
-                        {
-                            node:'/number',
-                            args:['44']
-                        },
-                        {
-                            node:'add',
+                            node:'return',
                             args:[
                                 {
-                                    node:'/number',
-                                    args:['44']
-                                },
-                                {
-                                    node:'/number',
-                                    args:['44']
-                                },
-                                {
-                                    node:'/number',
-                                    args:['44']
+                                    node:"/number",
+                                    args:[
+                                        '6'
+                                    ]
                                 }
                             ]
                         }

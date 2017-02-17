@@ -20,11 +20,13 @@ export namespace Environment {
         variables:Object;
         lib:Object;
         parent:Env;
+        returnValue:any;
 
         constructor(parent:Env = null){
             this.variables = {};
             this.parent = parent;
             this.lib = Lib.defs;
+            this.returnValue = void 0;
         }
         get(key: string): any {
             if(this.contains(key))  return this.variables[key];
@@ -56,6 +58,14 @@ export namespace Environment {
         //creates child Env
         createChild():Env {
             return new Env(this);
+        }
+
+        setReturnValue(value:any):void {
+            this.returnValue = value;
+        }
+
+        getReturnValue():any {
+            return this.returnValue;
         }
     }
 }

@@ -24,6 +24,7 @@ export namespace Lib {
         "add":STD.add,
         "sub":STD.sub,
         "print":STD.print,
-        "/number":STD.c_number
+        "/number":STD.c_number,
+        "return":STD._return
     };
 }

@@ -21,8 +21,12 @@ var STD;
             for (var i = 0; i < funcBody.length; i++) {
                 funcEnv.callLib(funcEnv, funcBody[i].node, funcBody[i].args);
             }
-            //needs to return return value.
+            return funcEnv.getReturnValue();
         };
+    };
+    STD._return = function (env, args) {
+        if (args.length === 1)
+            env.setReturnValue(env.callLib(env, args[0].node, args[0].args));
     };
     //handles parameters for a function
     STD.params = function (env, args) {
@@ -62,4 +66,3 @@ var STD;
         return Number(args[0]);
     };
 })(STD = exports.STD || (exports.STD = {}));
-//# sourceMappingURL=STD.js.map
