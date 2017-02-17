@@ -25,6 +25,10 @@ var STD;
             return funcEnv.getReturnValue();
         };
     };
+    STD.assign = function (env, args) {
+        env.set(env.callLib(env, args[0].node, args[0].args), env.callLib(env, args[1].node, args[1].args));
+    };
+    //facilitates return function
     STD._return = function (env, args) {
         if (args.length === 1)
             env.setReturnValue(env.callLib(env, args[0].node, args[0].args));

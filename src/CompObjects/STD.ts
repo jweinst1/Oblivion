@@ -26,6 +26,11 @@ export namespace STD {
 
     };
 
+    export let assign = (env:Environment.Env, args:any[]) => {
+        env.set(env.callLib(env,args[0].node, args[0].args), env.callLib(env,args[1].node, args[1].args))
+    };
+
+    //facilitates return function
     export let _return = (env:Environment.Env, args:any[]) => {
         if(args.length === 1) env.setReturnValue(env.callLib(env, args[0].node, args[0].args));
     };

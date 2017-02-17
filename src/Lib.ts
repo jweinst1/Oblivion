@@ -18,6 +18,7 @@ export namespace Lib {
     //optimized function for calling AST against the active library
 
     export let defs = {
+        "=":STD.assign,
         "/func":STD.func,
         "/params":STD.params,
         "/name":STD.name,
