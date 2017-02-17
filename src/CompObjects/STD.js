@@ -8,7 +8,7 @@ var STD;
     //produces a callable Oblivion function
     STD.func = function (env, args) {
         var paramList = env.callLib(env, args[0].node, args[0].args);
-        var funcBody = args[1];
+        var funcBody = args[1].args;
         return function (env, args) {
             //functionally scoped environment
             var funcEnv = env.createChild();
@@ -18,8 +18,9 @@ var STD;
                 //binds called arguments to new Env
                 funcEnv.set(paramList[i], funcEnv.callLib(funcEnv, args[i].node, args[i].args));
             }
-            for (var i = 0; i < funcBody.length; i++) {
-                funcEnv.callLib(funcEnv, funcBody[i].node, funcBody[i].args);
+            //calls all statements in body
+            for (var j = 0; j < funcBody.length; j++) {
+                funcEnv.callLib(funcEnv, funcBody[j].node, funcBody[j].args);
             }
             return funcEnv.getReturnValue();
         };

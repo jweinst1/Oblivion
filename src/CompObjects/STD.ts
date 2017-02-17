@@ -8,7 +8,7 @@ export namespace STD {
     //produces a callable Oblivion function
     export let func = (env:Environment.Env, args:any[]) => {
         let paramList = env.callLib(env, args[0].node, args[0].args);
-        let funcBody = args[1];
+        let funcBody = args[1].args;
         return (env:Environment.Env, args:any[]) => {
             //functionally scoped environment
             let funcEnv = env.createChild();
@@ -17,8 +17,9 @@ export namespace STD {
                 //binds called arguments to new Env
                 funcEnv.set(paramList[i], funcEnv.callLib(funcEnv, args[i].node, args[i].args));
             }
-            for(let i=0;i<funcBody.length;i++){
-                funcEnv.callLib(funcEnv, funcBody[i].node, funcBody[i].args)
+            //calls all statements in body
+            for(let j=0;j<funcBody.length;j++){
+                funcEnv.callLib(funcEnv, funcBody[j].node, funcBody[j].args)
             }
             return funcEnv.getReturnValue();
         };
