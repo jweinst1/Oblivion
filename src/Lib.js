@@ -1,5 +1,5 @@
 "use strict";
-var STD_1 = require("./CompObjects/STD");
+var STD_1 = require("./Comp/STD");
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -30,3 +30,4 @@ var Lib;
         "return": STD_1.STD._return
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
+//# sourceMappingURL=Lib.js.map

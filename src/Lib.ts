@@ -1,4 +1,4 @@
-import{STD} from "./CompObjects/STD";
+import{STD} from "./Comp/STD";
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
