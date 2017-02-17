@@ -25,7 +25,12 @@ var Environment;
         };
         //unnests from lib
         Env.prototype.callLib = function (env, ASTkey, args) {
-            return this.lib[ASTkey](env, args);
+            if (ASTkey in this.lib)
+                return this.lib[ASTkey](env, args);
+            else if (ASTkey in this.variables)
+                return this.variables[ASTkey](env, args);
+            else
+                throw "Call Error, func " + ASTkey + " not found.";
         };
         ;
         Env.prototype.set = function (key, val) {
