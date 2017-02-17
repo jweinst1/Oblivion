@@ -25,6 +25,8 @@ var Lib;
         "sub": STD_1.STD.sub,
         "print": STD_1.STD.print,
         "/number": STD_1.STD.c_number,
+        "/bool": STD_1.STD.c_bool,
+        "/null": STD_1.STD.c_null,
         "return": STD_1.STD._return
     };
 })(Lib = exports.Lib || (exports.Lib = {}));

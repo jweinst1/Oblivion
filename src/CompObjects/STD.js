@@ -75,4 +75,11 @@ var STD;
     STD.c_number = function (env, args) {
         return Number(args[0]);
     };
+    //handles bool nodes
+    STD.c_bool = function (env, args) {
+        return args[0] == "true";
+    };
+    STD.c_null = function (env, args) {
+        return null;
+    };
 })(STD = exports.STD || (exports.STD = {}));

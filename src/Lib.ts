@@ -26,6 +26,8 @@ export namespace Lib {
         "sub":STD.sub,
         "print":STD.print,
         "/number":STD.c_number,
+        "/bool":STD.c_bool,
+        "/null":STD.c_null,
         "return":STD._return
     };
 }

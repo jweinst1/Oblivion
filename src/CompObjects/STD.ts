@@ -78,5 +78,14 @@ export namespace STD {
 
     export let c_number = (env:Environment.Env, args:any[]) => {
         return Number(args[0]);
-    }
+    };
+
+    //handles bool nodes
+    export let c_bool = (env:Environment.Env, args:any[]) => {
+        return args[0] == "true";
+    };
+
+    export let c_null = (env:Environment.Env, args:any[]) => {
+        return null;
+    };
 }
