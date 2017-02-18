@@ -5,6 +5,7 @@ Statement
   /*Statements are the core top rule*/
   =   _? a:Assign {return a;}
   / _? a:Append {return a;}
+  / _? d:Draw {return d;}
   / _? c:Call {return c;}
 
 Call
@@ -15,6 +16,9 @@ Call
 
 Assign
   =  _? v:Name _? "=" _? val:Argument {return {node:"=", args:[v, val]};}
+
+Draw
+  =  "draw:" _ val:Argument {return {node:"/draw", args:[val]};}
 
 Append
   =  _? v:Name _? "<<" _? val:Argument {return {node:"<<", args:[v, val]};}
