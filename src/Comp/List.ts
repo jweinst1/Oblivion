@@ -5,8 +5,8 @@
 
 export namespace Lists {
     export class List {
-        array:any[];
-        dict:Object;
+        public array:any[];
+        public dict:Object;
 
         constructor(){
             this.array = [];
