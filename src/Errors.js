@@ -19,5 +19,17 @@ var Errors;
         return NameError;
     }());
     Errors.NameError = NameError;
+    var IndexError = (function () {
+        function IndexError() {
+        }
+        IndexError.prototype.type = function () {
+            return undefined;
+        };
+        IndexError.prototype.message = function () {
+            return undefined;
+        };
+        return IndexError;
+    }());
+    Errors.IndexError = IndexError;
 })(Errors = exports.Errors || (exports.Errors = {}));
 //# sourceMappingURL=Errors.js.map

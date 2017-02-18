@@ -27,4 +27,18 @@ export namespace Errors {
             return `Name ${this.name} not defined`;
         }
     }
+
+    export class IndexError implements Error {
+
+        public index:string;
+
+
+        type(): string {
+            return undefined;
+        }
+
+        message(): string {
+            return undefined;
+        }
+    }
 }

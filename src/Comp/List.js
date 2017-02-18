@@ -10,6 +10,17 @@ var Lists;
             this.array = [];
             this.dict = {};
         }
+        List.prototype.get = function (key) {
+            if (key in this.dict)
+                return this.dict[key];
+            else if (key in this.array)
+                return this.array[key];
+            else
+                throw "needs error";
+        };
+        List.prototype.set = function (key, value) {
+            this.dict[key] = value;
+        };
         //takes one argument
         List.prototype.append = function (item) {
             this.array.push(item);

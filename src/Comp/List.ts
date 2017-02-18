@@ -12,6 +12,17 @@ export namespace Lists {
             this.array = [];
             this.dict = {};
         }
+
+        get(key:string):any {
+            if(key in this.dict) return this.dict[key];
+            else if(key in this.array) return this.array[key];
+            else throw `needs error`;
+        }
+
+        set(key:string | number, value:any):void {
+            this.dict[key] = value;
+        }
+
         //takes one argument
         append(item:any):void {
             this.array.push(item)
