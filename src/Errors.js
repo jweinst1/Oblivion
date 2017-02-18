@@ -20,13 +20,14 @@ var Errors;
     }());
     Errors.NameError = NameError;
     var IndexError = (function () {
-        function IndexError() {
+        function IndexError(index) {
+            this.index = index;
         }
         IndexError.prototype.type = function () {
-            return undefined;
+            return "IndexError";
         };
         IndexError.prototype.message = function () {
-            return undefined;
+            return "Index " + this.index + " not defined on list.";
         };
         return IndexError;
     }());

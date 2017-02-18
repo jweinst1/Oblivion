@@ -32,13 +32,16 @@ export namespace Errors {
 
         public index:string;
 
+        constructor(index:string) {
+            this.index = index;
+        }
 
         type(): string {
-            return undefined;
+            return "IndexError";
         }
 
         message(): string {
-            return undefined;
+            return `Index ${this.index} not defined on list.`;
         }
     }
 }
