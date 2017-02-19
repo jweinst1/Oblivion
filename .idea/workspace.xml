@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/TestFuncs.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Prim.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/TestMethods.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/TestFuncs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/TestFuncs.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/TestFuncs.ts" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js" afterPath="$PROJECT_DIR$/src/Comp/STD.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js.map" afterPath="$PROJECT_DIR$/src/Comp/STD.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.ts" afterPath="$PROJECT_DIR$/src/Comp/STD.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gen.js" afterPath="$PROJECT_DIR$/src/Gen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gen.js.map" afterPath="$PROJECT_DIR$/src/Gen.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gen.ts" afterPath="$PROJECT_DIR$/src/Gen.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.js" afterPath="$PROJECT_DIR$/src/Main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.js" afterPath="$PROJECT_DIR$/src/parse/parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.pegjs" afterPath="$PROJECT_DIR$/src/parse/parser.pegjs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestFuncs.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/TestFuncs.ts">
+      <file leaf-file-name="TestMethods.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/TestMethods.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+            <state relative-caret-position="278">
+              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Prim.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Prim.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -60,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="STD.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="STD.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
+            <state relative-caret-position="-825">
               <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -123,24 +128,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gen.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Gen.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -171,6 +166,8 @@
         <option value="$PROJECT_DIR$/src/parse/parser.js" />
         <option value="$PROJECT_DIR$/src/Main.js" />
         <option value="$PROJECT_DIR$/tests/TestFuncs.ts" />
+        <option value="$PROJECT_DIR$/tests/Prim.js" />
+        <option value="$PROJECT_DIR$/tests/TestMethods.js" />
       </list>
     </option>
   </component>
@@ -276,7 +273,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="6.2.0" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
-  <component name="RunManager" selected="Node.js.Main.js">
+  <component name="RunManager" selected="Node.js.Prim.js">
     <configuration default="false" name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
@@ -287,6 +284,9 @@
       <method />
     </configuration>
     <configuration default="false" name="Main.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Main.js" working-dir="$PROJECT_DIR$/src">
+      <method />
+    </configuration>
+    <configuration default="false" name="Prim.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Prim.js" working-dir="$PROJECT_DIR$/tests">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -348,18 +348,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Node.js.index.js" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.Gen.js" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.List.js" />
       <item index="3" class="java.lang.String" itemvalue="Node.js.Main.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.Prim.js" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.Main.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.List.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.Gen.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.index.js" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.Prim.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.Main.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.List.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.Gen.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
   </component>
@@ -381,12 +383,12 @@
       <workItem from="1486773499119" duration="220000" />
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
-      <workItem from="1487207577151" duration="25720000" />
+      <workItem from="1487207577151" duration="27162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46597000" />
+    <option name="totallyTimeSpent" value="48039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -428,8 +430,6 @@
         <option value="$PROJECT_DIR$/src/Comp/List.js" />
         <option value="$PROJECT_DIR$/src/Errors.js.map" />
         <option value="$PROJECT_DIR$/src/Errors.js" />
-        <option value="$PROJECT_DIR$/tests/TestFuncs.js.map" />
-        <option value="$PROJECT_DIR$/tests/TestFuncs.js" />
       </list>
     </option>
   </component>
@@ -614,13 +614,13 @@
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1487471518000" expanded="true" signature="199:1724" ph="{...}" />
-            <marker date="1487471518000" expanded="true" signature="912:1224" ph="{...}" />
-            <marker date="1487471518000" expanded="true" signature="1284:1334" ph="{...}" />
-            <marker date="1487471518000" expanded="true" signature="1384:1437" ph="{...}" />
-            <marker date="1487471518000" expanded="true" signature="1482:1533" ph="{...}" />
-            <marker date="1487471518000" expanded="true" signature="1611:1656" ph="{...}" />
-            <marker date="1487471518000" expanded="true" signature="1714:1724" ph="{...}" />
+            <marker date="1487473584000" expanded="true" signature="199:1724" ph="{...}" />
+            <marker date="1487473584000" expanded="true" signature="912:1224" ph="{...}" />
+            <marker date="1487473584000" expanded="true" signature="1284:1334" ph="{...}" />
+            <marker date="1487473584000" expanded="true" signature="1384:1437" ph="{...}" />
+            <marker date="1487473584000" expanded="true" signature="1482:1533" ph="{...}" />
+            <marker date="1487473584000" expanded="true" signature="1611:1656" ph="{...}" />
+            <marker date="1487473584000" expanded="true" signature="1714:1724" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -681,25 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="n#!!doc;n#STD#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Env.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -724,6 +705,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestFuncs.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -732,11 +721,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestFuncs.ts">
+    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestMethods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Prim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825">
+          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="n#!!doc;n#STD#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
