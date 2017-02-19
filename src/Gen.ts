@@ -10,50 +10,8 @@ export namespace Gen {
         let env = new Environment.Env();
         if(AST["node"] === '/program') {
             for(let i=0;i<AST['args'].length;i++){
-                let result = env.callLib(env, AST['args'][i].node, AST['args'][i].args);
-                console.log(result(env, [{node:'/number', args:['3']}]));
+                env.callLib(env, AST['args'][i].node, AST['args'][i].args);
             }
         }
     }
 }
-
-
-let tree = {
-    node:"/program",
-    args:[
-        {
-            node:"/func",
-            args:[
-                {
-                    node:"/params",
-                    args:[
-                        {
-                            node:"/name",
-                            args:[
-                                "foo"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    node:"/body",
-                    args:[
-                        {
-                            node:'return',
-                            args:[
-                                {
-                                    node:"/number",
-                                    args:[
-                                        '6'
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-};
-
-Gen.gen(tree);

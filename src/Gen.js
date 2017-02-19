@@ -11,48 +11,9 @@ var Gen;
         var env = new Env_1.Environment.Env();
         if (AST["node"] === '/program') {
             for (var i = 0; i < AST['args'].length; i++) {
-                var result = env.callLib(env, AST['args'][i].node, AST['args'][i].args);
-                console.log(result(env, [{ node: '/number', args: ['3'] }]));
+                env.callLib(env, AST['args'][i].node, AST['args'][i].args);
             }
         }
     };
 })(Gen = exports.Gen || (exports.Gen = {}));
-var tree = {
-    node: "/program",
-    args: [
-        {
-            node: "/func",
-            args: [
-                {
-                    node: "/params",
-                    args: [
-                        {
-                            node: "/name",
-                            args: [
-                                "foo"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    node: "/body",
-                    args: [
-                        {
-                            node: 'return',
-                            args: [
-                                {
-                                    node: "/number",
-                                    args: [
-                                        '6'
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-};
-Gen.gen(tree);
 //# sourceMappingURL=Gen.js.map
