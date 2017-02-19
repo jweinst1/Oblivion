@@ -1,5 +1,6 @@
 import {Environment} from "../Env";
 import {IO} from "../IO";
+import {Errors} from "../Errors";
 /**
  * Created by Josh on 2/13/17.
  */
@@ -115,5 +116,11 @@ export namespace STD {
 
     export let c_null = (env:Environment.Env, args:any[]) => {
         return null;
+    };
+
+    //eq logical op
+    export let eq = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
+        return env.callLib(env, args[0].node, args[0].args) === env.callLib(env, args[1].node, args[1].args);
     };
 }

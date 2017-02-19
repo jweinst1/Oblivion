@@ -26,6 +26,7 @@ var Lib;
         "mul": STD_1.STD.mul,
         "div": STD_1.STD.div,
         "rem": STD_1.STD.rem,
+        "eq": STD_1.STD.eq,
         "print": STD_1.STD.print,
         "/number": STD_1.STD.c_number,
         "/bool": STD_1.STD.c_bool,

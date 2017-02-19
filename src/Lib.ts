@@ -27,6 +27,7 @@ export namespace Lib {
         "mul":STD.mul,
         "div":STD.div,
         "rem":STD.rem,
+        "eq":STD.eq,
         "print":STD.print,
         "/number":STD.c_number,
         "/bool":STD.c_bool,

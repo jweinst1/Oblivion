@@ -1,5 +1,6 @@
 "use strict";
 var IO_1 = require("../IO");
+var Errors_1 = require("../Errors");
 /**
  * Created by Josh on 2/13/17.
  */
@@ -109,6 +110,12 @@ var STD;
     };
     STD.c_null = function (env, args) {
         return null;
+    };
+    //eq logical op
+    STD.eq = function (env, args) {
+        if (args.length !== 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        return env.callLib(env, args[0].node, args[0].args) === env.callLib(env, args[1].node, args[1].args);
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

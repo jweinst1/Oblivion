@@ -32,5 +32,19 @@ var Errors;
         return IndexError;
     }());
     Errors.IndexError = IndexError;
+    var ArgumentError = (function () {
+        function ArgumentError(got, expected) {
+            this.got = got;
+            this.expected = expected;
+        }
+        ArgumentError.prototype.type = function () {
+            return "ArgumentError";
+        };
+        ArgumentError.prototype.message = function () {
+            return "Got " + this.got + " arguments but expected: " + this.expected;
+        };
+        return ArgumentError;
+    }());
+    Errors.ArgumentError = ArgumentError;
 })(Errors = exports.Errors || (exports.Errors = {}));
 //# sourceMappingURL=Errors.js.map

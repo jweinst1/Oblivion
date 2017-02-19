@@ -44,4 +44,24 @@ export namespace Errors {
             return `Index ${this.index} not defined on list.`;
         }
     }
+
+    export class ArgumentError implements Error {
+
+        public expected:number;
+        public got:number;
+
+        constructor(got:number, expected:number){
+            this.got = got;
+            this.expected = expected;
+        }
+
+        type(): string {
+            return "ArgumentError";
+        }
+
+        message(): string {
+            return `Got ${this.got} arguments but expected: ${this.expected}`;
+        }
+
+    }
 }
