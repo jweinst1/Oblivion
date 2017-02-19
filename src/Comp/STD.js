@@ -73,6 +73,33 @@ var STD;
         }
         return reduc;
     };
+    STD.mul = function (env, args) {
+        if (args.length === 0)
+            return 0;
+        var reduc = env.callLib(env, args[0].node, args[0].args);
+        for (var i = 1; i < args.length; i++) {
+            reduc *= env.callLib(env, args[i].node, args[i].args);
+        }
+        return reduc;
+    };
+    STD.div = function (env, args) {
+        if (args.length === 0)
+            return 0;
+        var reduc = env.callLib(env, args[0].node, args[0].args);
+        for (var i = 1; i < args.length; i++) {
+            reduc /= env.callLib(env, args[i].node, args[i].args);
+        }
+        return reduc;
+    };
+    STD.rem = function (env, args) {
+        if (args.length === 0)
+            return 0;
+        var reduc = env.callLib(env, args[0].node, args[0].args);
+        for (var i = 1; i < args.length; i++) {
+            reduc %= env.callLib(env, args[i].node, args[i].args);
+        }
+        return reduc;
+    };
     STD.c_number = function (env, args) {
         return Number(args[0]);
     };

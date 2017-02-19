@@ -77,6 +77,33 @@ export namespace STD {
         return reduc;
     };
 
+    export let mul = (env:Environment.Env, args:any[]) => {
+        if(args.length === 0) return 0;
+        let reduc = env.callLib(env, args[0].node, args[0].args);
+        for(let i=1;i<args.length;i++){
+            reduc *= env.callLib(env, args[i].node, args[i].args);
+        }
+        return reduc;
+    };
+
+    export let div = (env:Environment.Env, args:any[]) => {
+        if(args.length === 0) return 0;
+        let reduc = env.callLib(env, args[0].node, args[0].args);
+        for(let i=1;i<args.length;i++){
+            reduc /= env.callLib(env, args[i].node, args[i].args);
+        }
+        return reduc;
+    };
+
+    export let rem = (env:Environment.Env, args:any[]) => {
+        if(args.length === 0) return 0;
+        let reduc = env.callLib(env, args[0].node, args[0].args);
+        for(let i=1;i<args.length;i++){
+            reduc %= env.callLib(env, args[i].node, args[i].args);
+        }
+        return reduc;
+    };
+
     export let c_number = (env:Environment.Env, args:any[]) => {
         return Number(args[0]);
     };
