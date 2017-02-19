@@ -1,4 +1,5 @@
 "use strict";
+var IO_1 = require("../IO");
 /**
  * Created by Josh on 2/13/17.
  */
@@ -51,7 +52,7 @@ var STD;
     };
     STD.print = function (env, args) {
         for (var i = 0; i < args.length; i++) {
-            console.log(env.callLib(env, args[i].node, args[i].args));
+            IO_1.IO.pushOut(env.callLib(env, args[i].node, args[i].args));
         }
     };
     STD.add = function (env, args) {

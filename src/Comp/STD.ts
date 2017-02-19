@@ -1,4 +1,5 @@
 import {Environment} from "../Env";
+import {IO} from "../IO";
 /**
  * Created by Josh on 2/13/17.
  */
@@ -54,7 +55,7 @@ export namespace STD {
 
     export let print = (env:Environment.Env, args:any[]) => {
         for(let i=0;i<args.length;i++){
-            console.log(env.callLib(env, args[i].node, args[i].args));
+            IO.pushOut(env.callLib(env, args[i].node, args[i].args));
         }
     };
 

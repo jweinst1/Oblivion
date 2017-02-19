@@ -10,8 +10,8 @@ Statement
 
 Call
   /*Can Parse Function Calls*/
-  = node:Name "(" _ args:Operands _ ")" {
-     return {node:node, args:args};
+  = node:[a-zA-Z_@$-]+ "(" _ args:Operands _ ")" {
+     return {node:node.join(""), args:args};
   }
 
 Assign

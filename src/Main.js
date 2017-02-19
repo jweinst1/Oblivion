@@ -3,12 +3,19 @@
  * Main file for Compiler
  */
 var prs = require('./parse/parser');
+var gen = require('./Gen');
+var io = require('./IO');
 
-
-var Compile = function(code){
+//option determines output
+var Compile = function(code, option){
     var ast = prs.parse(code);
-    //SVG generator not implemented yet
-    return ast;
+    gen.Gen.gen(ast);
+    switch(option){
+        case 0:
+            return io.IO.getOut();
+    }
 };
 
 exports.Compile = Compile;
+
+

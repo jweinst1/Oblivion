@@ -14,6 +14,7 @@ var Gen;
                 env.callLib(env, AST['args'][i].node, AST['args'][i].args);
             }
         }
+        //needs SVG output infrastructure
     };
 })(Gen = exports.Gen || (exports.Gen = {}));
 //# sourceMappingURL=Gen.js.map
