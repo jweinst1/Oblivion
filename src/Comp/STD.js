@@ -59,7 +59,7 @@ var STD;
         if (args.length === 0)
             return 0;
         var reduc = env.callLib(env, args[0].node, args[0].args);
-        for (var i = 0; i < args.length; i++) {
+        for (var i = 1; i < args.length; i++) {
             reduc += env.callLib(env, args[i].node, args[i].args);
         }
         return reduc;
@@ -68,7 +68,7 @@ var STD;
         if (args.length === 0)
             return 0;
         var reduc = env.callLib(env, args[0].node, args[0].args);
-        for (var i = 0; i < args.length; i++) {
+        for (var i = 1; i < args.length; i++) {
             reduc -= env.callLib(env, args[i].node, args[i].args);
         }
         return reduc;
