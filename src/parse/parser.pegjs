@@ -31,6 +31,11 @@ List
 Atrribute
   = obj:Name "." attr:Word {return {node:".", args:[obj, attr]};}
 
+Generator
+  = "|" _ defs:Body _ ";" _ proc:Body _ "|" {
+      return {node:"/gen", args:[defs, proc]};
+  }
+
 Function
   = "{" _? "(" _ params:Params _ ")" _ body:Body _ "}" {
      return {node:"/func", args:[params, body]};
@@ -48,6 +53,7 @@ Body
 Argument
   = _? c:Call {return c;}
   / _? f:Function {return f;}
+  / _? g:Generator {return g;}
   / _? l:List {return l;}
   / _? s:String {return s;}
   / _? a:Atrribute {return a;}
