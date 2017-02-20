@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js" afterPath="$PROJECT_DIR$/src/svg/Board.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js.map" afterPath="$PROJECT_DIR$/src/svg/Board.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.ts" afterPath="$PROJECT_DIR$/src/svg/Board.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/svg/CSS.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,16 +74,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Errors.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Errors.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="62" column="77" lean-forward="false" selection-start-line="62" selection-start-column="77" selection-end-line="62" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,11 +94,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Board.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSS.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/svg/CSS.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -166,6 +165,7 @@
         <option value="$PROJECT_DIR$/src/Lib.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
         <option value="$PROJECT_DIR$/src/svg/Board.ts" />
+        <option value="$PROJECT_DIR$/src/svg/CSS.ts" />
       </list>
     </option>
   </component>
@@ -408,12 +408,12 @@
       <workItem from="1486773499119" duration="220000" />
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
-      <workItem from="1487207577151" duration="32538000" />
+      <workItem from="1487207577151" duration="33546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53415000" />
+    <option name="totallyTimeSpent" value="54423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -455,6 +455,8 @@
         <option value="$PROJECT_DIR$/src/Errors.js" />
         <option value="$PROJECT_DIR$/src/svg/Board.js.map" />
         <option value="$PROJECT_DIR$/src/svg/Board.js" />
+        <option value="$PROJECT_DIR$/src/svg/CSS.js.map" />
+        <option value="$PROJECT_DIR$/src/svg/CSS.js" />
       </list>
     </option>
   </component>
@@ -639,13 +641,13 @@
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1487576702000" expanded="true" signature="199:1724" ph="{...}" />
-            <marker date="1487576702000" expanded="true" signature="912:1224" ph="{...}" />
-            <marker date="1487576702000" expanded="true" signature="1284:1334" ph="{...}" />
-            <marker date="1487576702000" expanded="true" signature="1384:1437" ph="{...}" />
-            <marker date="1487576702000" expanded="true" signature="1482:1533" ph="{...}" />
-            <marker date="1487576702000" expanded="true" signature="1611:1656" ph="{...}" />
-            <marker date="1487576702000" expanded="true" signature="1714:1724" ph="{...}" />
+            <marker date="1487620578000" expanded="true" signature="199:1724" ph="{...}" />
+            <marker date="1487620578000" expanded="true" signature="912:1224" ph="{...}" />
+            <marker date="1487620578000" expanded="true" signature="1284:1334" ph="{...}" />
+            <marker date="1487620578000" expanded="true" signature="1384:1437" ph="{...}" />
+            <marker date="1487620578000" expanded="true" signature="1482:1533" ph="{...}" />
+            <marker date="1487620578000" expanded="true" signature="1611:1656" ph="{...}" />
+            <marker date="1487620578000" expanded="true" signature="1714:1724" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -784,7 +786,15 @@
     <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/CSS.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding />
         </state>
       </provider>
