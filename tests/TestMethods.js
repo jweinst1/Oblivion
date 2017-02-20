@@ -17,7 +17,7 @@ var StdOutTest = function (n, code, expected) {
             console.log("Test "+n+" FAILED, Expected: "+expected+" but got: "+result);
         }
     } catch(err) {
-        console.log("Test "+n+" FAILED, Error: " + err.message);
+        console.log("Test "+n+" FAILED, Error: " + err);
     } finally {io.IO.flushOut()}
 };
 

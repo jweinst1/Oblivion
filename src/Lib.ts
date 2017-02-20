@@ -22,6 +22,7 @@ export namespace Lib {
         "/func":STD.func,
         "/params":STD.params,
         "/name":STD.name,
+        "/gen":STD.generator,
         "add":STD.add,
         "sub":STD.sub,
         "mul":STD.mul,
@@ -32,6 +33,7 @@ export namespace Lib {
         "/number":STD.c_number,
         "/bool":STD.c_bool,
         "/null":STD.c_null,
+        "/word":STD.wordVar,
         "return":STD._return
     };
 }

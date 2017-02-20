@@ -27,6 +27,26 @@ var STD;
             return funcEnv.getReturnValue();
         };
     };
+    //creates a generator object
+    STD.generator = function (env, args) {
+        var defBody = args[0].args;
+        var genBody = args[1].args;
+        var genEnv = env.createChild();
+        //runs the def body only once, to set up generator
+        for (var i = 0; i < defBody.length; i++) {
+            genEnv.callLib(genEnv, defBody[i].node, defBody[i].args);
+        }
+        return function (env, args) {
+            if (args.length !== 0)
+                throw new Errors_1.Errors.ArgumentError(args.length, 0);
+            //calls all statements in the generator body
+            for (var j = 0; j < genBody.length; j++) {
+                genEnv.callLib(genEnv, genBody[j].node, genBody[j].args);
+            }
+            //This is preserved between generator calls, but functions the same as a return
+            return genEnv.getReturnValue();
+        };
+    };
     //handles variable assignment
     STD.assign = function (env, args) {
         env.set(env.callLib(env, args[0].node, args[0].args), env.callLib(env, args[1].node, args[1].args));

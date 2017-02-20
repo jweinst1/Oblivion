@@ -21,6 +21,7 @@ var Lib;
         "/func": STD_1.STD.func,
         "/params": STD_1.STD.params,
         "/name": STD_1.STD.name,
+        "/gen": STD_1.STD.generator,
         "add": STD_1.STD.add,
         "sub": STD_1.STD.sub,
         "mul": STD_1.STD.mul,
@@ -31,6 +32,7 @@ var Lib;
         "/number": STD_1.STD.c_number,
         "/bool": STD_1.STD.c_bool,
         "/null": STD_1.STD.c_null,
+        "/word": STD_1.STD.wordVar,
         "return": STD_1.STD._return
     };
 })(Lib = exports.Lib || (exports.Lib = {}));

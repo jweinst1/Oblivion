@@ -27,6 +27,26 @@ export namespace STD {
         };
 
     };
+    //creates a generator object
+    export let generator = (env:Environment.Env, args:any[]) => {
+        let defBody = args[0].args;
+        let genBody = args[1].args;
+        let genEnv = env.createChild();
+        //runs the def body only once, to set up generator
+        for(let i=0;i<defBody.length;i++){
+            genEnv.callLib(genEnv, defBody[i].node, defBody[i].args);
+        }
+        return (env:Environment.Env, args:any[]) => {
+            if(args.length !== 0) throw new Errors.ArgumentError(args.length, 0);
+            //calls all statements in the generator body
+            for(let j=0;j<genBody.length;j++){
+                genEnv.callLib(genEnv, genBody[j].node, genBody[j].args);
+            }
+            //This is preserved between generator calls, but functions the same as a return
+            return genEnv.getReturnValue();
+        };
+
+    };
     //handles variable assignment
     export let assign = (env:Environment.Env, args:any[]) => {
         env.set(env.callLib(env,args[0].node, args[0].args), env.callLib(env,args[1].node, args[1].args))
