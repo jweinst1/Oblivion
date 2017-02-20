@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/svg/Board.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Color.js" afterPath="$PROJECT_DIR$/src/svg/Color.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Color.js.map" afterPath="$PROJECT_DIR$/src/svg/Color.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Color.ts" afterPath="$PROJECT_DIR$/src/svg/Color.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Prim.js" afterPath="$PROJECT_DIR$/tests/Prim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js" afterPath="$PROJECT_DIR$/src/svg/Board.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js.map" afterPath="$PROJECT_DIR$/src/svg/Board.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.ts" afterPath="$PROJECT_DIR$/src/svg/Board.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -111,8 +108,8 @@
       <file leaf-file-name="Board.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+            <state relative-caret-position="308">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -261,6 +258,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oblivion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oblivion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Board.ts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -279,10 +298,7 @@
       <recent name="$PROJECT_DIR$/src/svg" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.Prim.js">
-    <configuration default="false" name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Node.js.Board.js">
     <configuration default="false" name="Gen.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Gen.js" working-dir="$PROJECT_DIR$/src">
       <method />
     </configuration>
@@ -293,6 +309,9 @@
       <method />
     </configuration>
     <configuration default="false" name="Prim.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Prim.js" working-dir="$PROJECT_DIR$/tests">
+      <method />
+    </configuration>
+    <configuration default="false" name="Board.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Board.js" working-dir="$PROJECT_DIR$/src/svg">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -355,19 +374,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.index.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.Gen.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.List.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.Main.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.Prim.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.Gen.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.List.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.Main.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.Prim.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.Board.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.Prim.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.Main.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.List.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.Gen.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.index.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.Board.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.Prim.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.Main.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.List.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.Gen.js" />
       </list>
     </recent_temporary>
   </component>
@@ -389,12 +408,12 @@
       <workItem from="1486773499119" duration="220000" />
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
-      <workItem from="1487207577151" duration="31338000" />
+      <workItem from="1487207577151" duration="32538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52215000" />
+    <option name="totallyTimeSpent" value="53415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -764,8 +783,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        <state relative-caret-position="308">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
