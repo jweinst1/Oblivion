@@ -46,5 +46,19 @@ var Errors;
         return ArgumentError;
     }());
     Errors.ArgumentError = ArgumentError;
+    var CssAttributeError = (function () {
+        function CssAttributeError(classname, key) {
+            this.name = classname;
+            this.key = key;
+        }
+        CssAttributeError.prototype.type = function () {
+            return "CssAttributeError";
+        };
+        CssAttributeError.prototype.message = function () {
+            return "Attribute " + this.key + " not defined on style " + this.name;
+        };
+        return CssAttributeError;
+    }());
+    Errors.CssAttributeError = CssAttributeError;
 })(Errors = exports.Errors || (exports.Errors = {}));
 //# sourceMappingURL=Errors.js.map

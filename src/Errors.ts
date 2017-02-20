@@ -64,4 +64,24 @@ export namespace Errors {
         }
 
     }
+
+    export class CssAttributeError implements Error {
+
+        public name:string;
+        public key:string;
+
+        constructor(classname:string, key:string) {
+            this.name = classname;
+            this.key = key;
+        }
+
+        type(): string {
+            return "CssAttributeError";
+        }
+
+        message(): string {
+            return `Attribute ${this.key} not defined on style ${this.name}`;
+        }
+
+    }
 }
