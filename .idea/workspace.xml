@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.js" afterPath="$PROJECT_DIR$/src/Errors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.js.map" afterPath="$PROJECT_DIR$/src/Errors.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.ts" afterPath="$PROJECT_DIR$/src/Errors.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js" afterPath="$PROJECT_DIR$/src/svg/Board.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js.map" afterPath="$PROJECT_DIR$/src/svg/Board.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.ts" afterPath="$PROJECT_DIR$/src/svg/Board.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/CSS.js" afterPath="$PROJECT_DIR$/src/svg/CSS.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/CSS.js.map" afterPath="$PROJECT_DIR$/src/svg/CSS.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/CSS.ts" afterPath="$PROJECT_DIR$/src/svg/CSS.ts" />
@@ -89,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Board.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="173">
@@ -99,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSS.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CSS.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/svg/CSS.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="71" column="46" lean-forward="false" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+            <state relative-caret-position="15">
+              <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -125,8 +119,7 @@
             <state relative-caret-position="-45">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
-                <marker date="1487638809000" expanded="true" signature="1326:1645" ph="{...}" />
-                <marker date="1487638809000" expanded="true" signature="1326:2635" ph="{...}" />
+                <marker date="1487653189000" expanded="true" signature="2716:2719" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -416,12 +409,12 @@
       <workItem from="1486773499119" duration="220000" />
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
-      <workItem from="1487207577151" duration="37271000" />
+      <workItem from="1487207577151" duration="38861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58148000" />
+    <option name="totallyTimeSpent" value="59738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -788,8 +781,7 @@
         <state relative-caret-position="-45">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1487638809000" expanded="true" signature="1326:1645" ph="{...}" />
-            <marker date="1487638809000" expanded="true" signature="1326:2635" ph="{...}" />
+            <marker date="1487653189000" expanded="true" signature="2716:2719" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -802,18 +794,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/CSS.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="71" column="46" lean-forward="false" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/CSS.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           <folding />
         </state>
       </provider>

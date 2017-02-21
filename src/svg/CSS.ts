@@ -16,6 +16,21 @@ export namespace CSS {
         "fill-opacity":true
     };
 
+    export let isAttribute = (input:string):boolean => {
+        return input in ATTRIBUTES;
+    };
+
+    /*CSS Values*/
+
+    export interface CssValue {
+        unit:string;
+        amount:number;
+        getAmount():number;
+        setAmount(val:number):void;
+        strFormat():string;
+    }
+
+
     //basic form of a cssClass
     export interface CssClass {
         setName(name:string):void;

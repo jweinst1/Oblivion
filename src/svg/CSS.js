@@ -15,6 +15,9 @@ var CSS;
         "stroke-width": true, "class": true, "r": true,
         "fill-opacity": true
     };
+    CSS.isAttribute = function (input) {
+        return input in ATTRIBUTES;
+    };
     //basic css class
     var Base = (function () {
         function Base(name, attributes) {
