@@ -28,6 +28,11 @@ List
     return {node:"/list", args:args};
   }
 
+Pair
+  = "(" _ arg1:Argument _ arg2:Argument _ ")" {
+    return {node:"/pair", args:[arg1, arg2]};
+  }
+
 Atrribute
   = obj:Name "." attr:Word {return {node:".", args:[obj, attr]};}
 
@@ -55,6 +60,7 @@ Argument
   / _? f:Function {return f;}
   / _? g:Generator {return g;}
   / _? l:List {return l;}
+  / _? p:Pair {return p;}
   / _? s:String {return s;}
   / _? a:Atrribute {return a;}
   / _? a:Word {return a;}
