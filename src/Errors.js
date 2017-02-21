@@ -60,5 +60,19 @@ var Errors;
         return CssAttributeError;
     }());
     Errors.CssAttributeError = CssAttributeError;
+    var CssClassError = (function () {
+        function CssClassError(name) {
+            this.name = name;
+        }
+        ;
+        CssClassError.prototype.type = function () {
+            return "CssClassError";
+        };
+        CssClassError.prototype.message = function () {
+            return undefined;
+        };
+        return CssClassError;
+    }());
+    Errors.CssClassError = CssClassError;
 })(Errors = exports.Errors || (exports.Errors = {}));
 //# sourceMappingURL=Errors.js.map

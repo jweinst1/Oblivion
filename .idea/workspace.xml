@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.js" afterPath="$PROJECT_DIR$/src/Errors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.js.map" afterPath="$PROJECT_DIR$/src/Errors.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.ts" afterPath="$PROJECT_DIR$/src/Errors.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js" afterPath="$PROJECT_DIR$/src/svg/Board.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js.map" afterPath="$PROJECT_DIR$/src/svg/Board.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.ts" afterPath="$PROJECT_DIR$/src/svg/Board.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/CSS.js" afterPath="$PROJECT_DIR$/src/svg/CSS.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/CSS.js.map" afterPath="$PROJECT_DIR$/src/svg/CSS.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/CSS.ts" afterPath="$PROJECT_DIR$/src/svg/CSS.ts" />
@@ -82,21 +89,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Board.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="173">
+              <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSS.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CSS.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/CSS.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-292">
-              <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="113">
+              <caret line="71" column="46" lean-forward="false" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -105,8 +112,8 @@
       <file leaf-file-name="Errors.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Errors.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="82" column="77" lean-forward="false" selection-start-line="82" selection-start-column="77" selection-end-line="82" selection-end-column="77" />
+            <state relative-caret-position="188">
+              <caret line="93" column="33" lean-forward="false" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -118,8 +125,8 @@
             <state relative-caret-position="-45">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
-                <marker date="1487635374000" expanded="true" signature="1326:1645" ph="{...}" />
-                <marker date="1487635374000" expanded="true" signature="1326:1672" ph="{...}" />
+                <marker date="1487638809000" expanded="true" signature="1326:1645" ph="{...}" />
+                <marker date="1487638809000" expanded="true" signature="1326:2635" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -164,8 +171,8 @@
         <option value="$PROJECT_DIR$/tests/TestMethods.js" />
         <option value="$PROJECT_DIR$/src/Lib.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
-        <option value="$PROJECT_DIR$/src/svg/Board.ts" />
         <option value="$PROJECT_DIR$/src/Errors.ts" />
+        <option value="$PROJECT_DIR$/src/svg/Board.ts" />
         <option value="$PROJECT_DIR$/src/svg/CSS.ts" />
       </list>
     </option>
@@ -239,28 +246,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oblivion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oblivion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSS.ts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -431,12 +416,12 @@
       <workItem from="1486773499119" duration="220000" />
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
-      <workItem from="1487207577151" duration="35969000" />
+      <workItem from="1487207577151" duration="37271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56846000" />
+    <option name="totallyTimeSpent" value="58148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -798,37 +783,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/CSS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1487635374000" expanded="true" signature="1326:1645" ph="{...}" />
-            <marker date="1487635374000" expanded="true" signature="1326:1672" ph="{...}" />
+            <marker date="1487638809000" expanded="true" signature="1326:1645" ph="{...}" />
+            <marker date="1487638809000" expanded="true" signature="1326:2635" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Errors.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="82" column="77" lean-forward="false" selection-start-line="82" selection-start-column="77" selection-end-line="82" selection-end-column="77" />
+        <state relative-caret-position="188">
+          <caret line="93" column="33" lean-forward="false" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/CSS.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-292">
-          <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        <state relative-caret-position="113">
+          <caret line="71" column="46" lean-forward="false" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
           <folding />
         </state>
       </provider>

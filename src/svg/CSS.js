@@ -49,5 +49,32 @@ var CSS;
         return Base;
     }());
     CSS.Base = Base;
+    var Container = (function () {
+        function Container(classes) {
+            if (classes === void 0) { classes = {}; }
+            this.classes = classes;
+        }
+        ;
+        Container.prototype.declareClass = function (name) {
+            this.classes[name] = new Base(name);
+        };
+        Container.prototype.getClass = function (name) {
+            if (name in this.classes)
+                return this.classes[name];
+            else
+                throw new Errors_1.Errors.CssClassError(name);
+        };
+        Container.prototype.updateClass = function (name, dict) {
+            var targetClass = this.getClass(name);
+            for (var key in dict) {
+                targetClass.setAttr(key, dict[key]);
+            }
+        };
+        Container.prototype.createClass = function (name, dict) {
+            this.classes[name] = new Base(name, dict);
+        };
+        return Container;
+    }());
+    CSS.Container = Container;
 })(CSS = exports.CSS || (exports.CSS = {}));
 //# sourceMappingURL=CSS.js.map

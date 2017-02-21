@@ -84,4 +84,19 @@ export namespace Errors {
         }
 
     }
+
+    export class CssClassError implements Error {
+
+
+        constructor(public name:string){};
+
+        type(): string {
+            return "CssClassError";
+        }
+
+        message(): string {
+            return undefined;
+        }
+
+    }
 }

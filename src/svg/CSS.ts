@@ -28,6 +28,9 @@ export namespace CSS {
     //container of cssClasses's
     export interface classContainer {
         declareClass(name:string):void;
+        getClass(name:string):CssClass;
+        updateClass(name:string, dict:Object):void;
+        createClass(name:string, dict:Object):void;
     }
 
     //basic css class
@@ -62,6 +65,31 @@ export namespace CSS {
             return format + "}";
         }
 
+    }
+
+    export class Container implements classContainer {
+
+        constructor(public classes:Object = {}){};
+
+        declareClass(name: string): void {
+            this.classes[name] = new Base(name);
+        }
+
+        getClass(name: string): CSS.CssClass {
+            if(name in this.classes) return this.classes[name];
+            else throw new Errors.CssClassError(name);
+        }
+
+        updateClass(name: string, dict: Object): void {
+            let targetClass = this.getClass(name);
+            for(let key in dict){
+                targetClass.setAttr(key, dict[key]);
+            }
+        }
+
+        createClass(name: string, dict: Object): void {
+            this.classes[name] = new Base(name, dict);
+        }
 
     }
 }
