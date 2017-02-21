@@ -25,6 +25,12 @@ export namespace CSS {
         strFormat():string;
     }
 
+    //container of cssClasses's
+    export interface classContainer {
+        declareClass(name:string):void;
+    }
+
+    //basic css class
     export class Base implements CssClass {
 
         constructor(public name:string,
@@ -49,7 +55,11 @@ export namespace CSS {
         }
 
         strFormat(): string {
-            return undefined;
+            let format = `.${this.name} {\n`;
+            for(let key in this.attributes){
+                format += `  ${key}:${this.attributes[key]};\n`
+            }
+            return format + "}";
         }
 
 

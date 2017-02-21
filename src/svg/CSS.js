@@ -15,6 +15,7 @@ var CSS;
         "stroke-width": true, "class": true, "r": true,
         "fill-opacity": true
     };
+    //basic css class
     var Base = (function () {
         function Base(name, attributes) {
             if (attributes === void 0) { attributes = {}; }
@@ -39,7 +40,11 @@ var CSS;
                 throw new Errors_1.Errors.CssAttributeError(this.name, key);
         };
         Base.prototype.strFormat = function () {
-            return undefined;
+            var format = "." + this.name + " {\n";
+            for (var key in this.attributes) {
+                format += "  " + key + ":" + this.attributes[key] + ";\n";
+            }
+            return format + "}";
         };
         return Base;
     }());
