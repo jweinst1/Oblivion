@@ -10,6 +10,9 @@ var Pair;
             this.first = first;
             this.second = second;
         }
+        Pair.prototype.strFormat = function () {
+            return this.first + "," + this.second;
+        };
         return Pair;
     }());
     Pair_1.init = function (first, second) {

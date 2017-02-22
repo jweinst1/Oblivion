@@ -13,6 +13,10 @@ export namespace Pair {
             this.first = first;
             this.second = second;
         }
+
+        strFormat():string {
+            return `${this.first},${this.second}`;
+        }
     }
 
     export let init = (first:any, second:any):Pair => {
