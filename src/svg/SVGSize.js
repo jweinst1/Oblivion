@@ -13,13 +13,20 @@ var SVGSize;
             this.height = height;
         }
         ;
+        SVGSize.prototype.setWidth = function (newWidth) {
+            this.width = newWidth;
+        };
+        SVGSize.prototype.setHeight = function (newHeight) {
+            this.height = newHeight;
+        };
         SVGSize.prototype.strFormat = function () {
             return "width =\"" + this.width + " height=\"" + this.height + "\"";
         };
         return SVGSize;
     }());
-    SVGSize_1.init = function (width, height) {
-        return new SVGSize(width, height);
+    SVGSize_1.SVGSize = SVGSize;
+    SVGSize_1.init = function () {
+        return new SVGSize();
     };
 })(SVGSize = exports.SVGSize || (exports.SVGSize = {}));
 //# sourceMappingURL=SVGSize.js.map

@@ -4,16 +4,24 @@
  */
 
 export namespace SVGSize {
-    class SVGSize {
+    export class SVGSize {
 
         constructor(public width:string = "100%", public height:string = "100%"){};
+
+        setWidth(newWidth:string):void {
+            this.width = newWidth;
+        }
+
+        setHeight(newHeight:string):void {
+            this.height = newHeight;
+        }
 
         strFormat():string {
             return `width ="${this.width} height="${this.height}"`;
         }
     }
 
-    export let init = (width:string, height:string):SVGSize => {
-        return new SVGSize(width, height);
+    export let init = ():SVGSize => {
+        return new SVGSize();
     }
 }

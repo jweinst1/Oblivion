@@ -4,12 +4,14 @@ var CSS_1 = require("./CSS");
  * Created by Josh on 2/19/17.
  * File that implements the SVG Board, which transform into the finished string project
  */
+var SVGSize_1 = require("./SVGSize");
 var Board;
 (function (Board_1) {
     var Board = (function () {
         function Board() {
             this.css = new CSS_1.CSS.Container();
             this.svg = [];
+            this.size = SVGSize_1.SVGSize.init();
         }
         return Board;
     }());
