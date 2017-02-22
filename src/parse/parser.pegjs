@@ -10,7 +10,7 @@ Statement
 
 Call
   /*Can Parse Function Calls*/
-  = node:[a-zA-Z_@$-]+ "(" _ args:Operands _ ")" {
+  = node:[a-zA-Z!><=/+%*_@$-]+ "(" _ args:Operands _ ")" {
      return {node:node.join(""), args:args};
   }
 
@@ -55,6 +55,7 @@ Params
 Body
   = s:Statement* {return {node:"/body", args:s};}
 
+
 Argument
   = _? c:Call {return c;}
   / _? f:Function {return f;}
@@ -70,6 +71,7 @@ _ "whitespace"
 
 Name
   = _? n:[a-zA-Z_@$-]+ {return {node:"/name", args:[n.join("")]};}
+
 
 Word
   =  w:[a-z0-9A-Z-_$@]+ {
