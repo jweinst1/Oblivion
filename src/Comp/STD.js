@@ -47,6 +47,20 @@ var STD;
             return genEnv.getReturnValue();
         };
     };
+    //handles a process, no parameter bodies of statemnts evaluated in the same scope
+    STD.process = function (env, args) {
+        var procBody = args[0].args;
+        return function (env, args) {
+            if (args.length !== 0)
+                throw new Errors_1.Errors.ArgumentError(args.length, 0);
+            //calls all statements in the procBody
+            for (var j = 0; j < procBody.length; j++) {
+                env.callLib(env, procBody[j].node, procBody[j].args);
+            }
+            //This is preserved between generator calls, but functions the same as a return
+            return env.getReturnValue();
+        };
+    };
     //handles variable assignment
     STD.assign = function (env, args) {
         env.set(env.callLib(env, args[0].node, args[0].args), env.callLib(env, args[1].node, args[1].args));

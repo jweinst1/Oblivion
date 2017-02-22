@@ -23,6 +23,7 @@ export namespace Lib {
         "/params":STD.params,
         "/name":STD.name,
         "/gen":STD.generator,
+        "/process":STD.process,
         "add":STD.add,
         "sub":STD.sub,
         "mul":STD.mul,

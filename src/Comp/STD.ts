@@ -47,6 +47,22 @@ export namespace STD {
         };
 
     };
+
+    //handles a process, no parameter bodies of statemnts evaluated in the same scope
+    export let process = (env:Environment.Env, args:any[]) => {
+        let procBody = args[0].args;
+        return (env:Environment.Env, args:any[]) => {
+            if(args.length !== 0) throw new Errors.ArgumentError(args.length, 0);
+            //calls all statements in the procBody
+            for(let j=0;j<procBody.length;j++){
+                env.callLib(env, procBody[j].node, procBody[j].args);
+            }
+            //This is preserved between generator calls, but functions the same as a return
+            return env.getReturnValue();
+        };
+
+    };
+
     //handles variable assignment
     export let assign = (env:Environment.Env, args:any[]) => {
         env.set(env.callLib(env,args[0].node, args[0].args), env.callLib(env,args[1].node, args[1].args))

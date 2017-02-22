@@ -22,6 +22,7 @@ var Lib;
         "/params": STD_1.STD.params,
         "/name": STD_1.STD.name,
         "/gen": STD_1.STD.generator,
+        "/process": STD_1.STD.process,
         "add": STD_1.STD.add,
         "sub": STD_1.STD.sub,
         "mul": STD_1.STD.mul,

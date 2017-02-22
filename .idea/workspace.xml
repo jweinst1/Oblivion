@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.js" afterPath="$PROJECT_DIR$/src/parse/parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.pegjs" afterPath="$PROJECT_DIR$/src/parse/parser.pegjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js" afterPath="$PROJECT_DIR$/src/svg/Board.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.js.map" afterPath="$PROJECT_DIR$/src/svg/Board.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Board.ts" afterPath="$PROJECT_DIR$/src/svg/Board.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js" afterPath="$PROJECT_DIR$/src/Comp/STD.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js.map" afterPath="$PROJECT_DIR$/src/Comp/STD.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.ts" afterPath="$PROJECT_DIR$/src/Comp/STD.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js" afterPath="$PROJECT_DIR$/src/Lib.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js.map" afterPath="$PROJECT_DIR$/src/Lib.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.ts" afterPath="$PROJECT_DIR$/src/Lib.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,21 +26,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IO.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IO.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Board.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Board.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
               <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Env.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Env.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="42" column="68" lean-forward="false" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -57,8 +59,8 @@
       <file leaf-file-name="STD.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state relative-caret-position="173">
+              <caret line="50" column="85" lean-forward="false" selection-start-line="50" selection-start-column="85" selection-end-line="50" selection-end-column="85" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="n#!!doc;n#STD#0" expanded="false" />
@@ -67,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Errors.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Errors.ts">
+      <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="93" column="33" lean-forward="false" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+            <state relative-caret-position="158">
+              <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -107,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parser.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="10418">
               <caret line="1551" column="0" lean-forward="true" selection-start-line="1551" selection-start-column="0" selection-end-line="1551" selection-end-column="0" />
               <folding />
             </state>
@@ -160,9 +162,7 @@
         <option value="$PROJECT_DIR$/src/Gen.ts" />
         <option value="$PROJECT_DIR$/src/Main.js" />
         <option value="$PROJECT_DIR$/tests/TestFuncs.ts" />
-        <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/tests/TestMethods.js" />
-        <option value="$PROJECT_DIR$/src/Lib.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
         <option value="$PROJECT_DIR$/src/Errors.ts" />
         <option value="$PROJECT_DIR$/src/svg/CSS.ts" />
@@ -171,6 +171,8 @@
         <option value="$PROJECT_DIR$/src/svg/Board.ts" />
         <option value="$PROJECT_DIR$/src/parse/parser.pegjs" />
         <option value="$PROJECT_DIR$/src/parse/parser.js" />
+        <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
+        <option value="$PROJECT_DIR$/src/Lib.ts" />
       </list>
     </option>
   </component>
@@ -449,12 +451,12 @@
       <workItem from="1486773499119" duration="220000" />
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
-      <workItem from="1487207577151" duration="41451000" />
+      <workItem from="1487207577151" duration="42859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62328000" />
+    <option name="totallyTimeSpent" value="63736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -729,14 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Env.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="68" lean-forward="false" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/TestFuncs.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -773,14 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -841,17 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="n#!!doc;n#STD#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -862,8 +837,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="10418">
           <caret line="1551" column="0" lean-forward="true" selection-start-line="1551" selection-start-column="0" selection-end-line="1551" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Env.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="42" column="68" lean-forward="false" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="50" column="85" lean-forward="false" selection-start-line="50" selection-start-column="85" selection-end-line="50" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="n#!!doc;n#STD#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding />
         </state>
       </provider>
