@@ -7,16 +7,21 @@ import {CSS} from "./CSS";
 import{SVGSize} from "./SVGSize";
 
 export namespace Board {
-    class Board {
+
+    export class Board {
 
         public css:CSS.Container;
-        public svg:any[];
+        public svg:string;
         public size:SVGSize.SVGSize;
 
         constructor(){
             this.css = new CSS.Container();
-            this.svg = [];
+            this.svg = "";
             this.size = SVGSize.init();
+        }
+
+        drawSVG(SVGString:string):void {
+            this.svg += SVGString;
         }
     }
 

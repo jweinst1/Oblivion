@@ -10,11 +10,15 @@ var Board;
     var Board = (function () {
         function Board() {
             this.css = new CSS_1.CSS.Container();
-            this.svg = [];
+            this.svg = "";
             this.size = SVGSize_1.SVGSize.init();
         }
+        Board.prototype.drawSVG = function (SVGString) {
+            this.svg += SVGString;
+        };
         return Board;
     }());
+    Board_1.Board = Board;
     Board_1.init = function () {
         return new Board();
     };

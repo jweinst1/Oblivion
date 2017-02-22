@@ -55,11 +55,15 @@ Params
 Body
   = s:Statement* {return {node:"/body", args:s};}
 
+Process
+  = "~{" _ proc:Body _ "}" {return {node:"/process", args:[proc]}}
+
 
 Argument
   = _? c:Call {return c;}
   / _? f:Function {return f;}
   / _? g:Generator {return g;}
+  / _? p:Process {return p;}
   / _? l:List {return l;}
   / _? p:Pair {return p;}
   / _? s:String {return s;}
