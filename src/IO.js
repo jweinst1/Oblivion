@@ -8,6 +8,8 @@ var IO;
 (function (IO) {
     var Out = "";
     var In = "";
+    var svg = "";
+    var css = "";
     IO.pushOut = function (input) {
         Out += input + '\n';
     };

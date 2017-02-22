@@ -13,9 +13,13 @@ var Board;
             this.svg = "";
             this.size = SVGSize_1.SVGSize.init();
         }
+        Board.prototype.createCSSClass = function (name, attributes) {
+            this.css.createClass(name, attributes);
+        };
         Board.prototype.drawSVG = function (SVGString) {
             this.svg += SVGString;
         };
+        Board.xmldat = 'version="1.1" xmlns="http://www.w3.org/2000/svg"';
         return Board;
     }());
     Board_1.Board = Board;

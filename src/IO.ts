@@ -7,6 +7,8 @@
 export namespace IO {
     let Out = "";
     let In = "";
+    let svg = "";
+    let css = "";
 
     export let pushOut = (input:string):void => {
         Out += input + '\n';
