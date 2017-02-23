@@ -12,12 +12,30 @@ var Line;
             this.y1 = y1;
             this.x2 = x2;
             this.y2 = y2;
-            this.style = {};
+            this.style = { stroke: "black", 'stroke-width': 1 };
         }
-        Line.prototype.strForamt = function () {
-            return undefined;
+        Line.prototype.styleStrFormat = function () {
+            var str = '';
+            for (var key in this.style) {
+                str += key + "=\"" + this.style[key] + "\"";
+            }
+            return str;
+        };
+        Line.prototype.strFormat = function () {
+            return "<line x1=\"" + this.x1 + "\" x2=\"" + this.x2 + "\" y1=\"" + this.y1 + "\" y2=\"" + this.y2 + "\" " + this.styleStrFormat() + "/>";
         };
         Line.prototype.type = function () {
+            return "Line";
+        };
+        Line.prototype.setStrokeWidth = function (width) {
+            this.style['stroke-width'] = width;
+        };
+        Line.prototype.getStrokeWidth = function () {
+            return this.style['stroke-width'];
+        };
+        Line.prototype.setStrokeColor = function (color) {
+        };
+        Line.prototype.getStrokeColor = function () {
             return undefined;
         };
         return Line;
