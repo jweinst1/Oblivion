@@ -24,6 +24,12 @@ var IO;
     IO.getSVGDoc = function (input) {
         return "<svg " + size.strFormat() + " " + xmldat + ">\n<style>" + css + "</style>\n" + svg + "</svg>";
     };
+    IO.getflushSVGDoc = function (input) {
+        var str = "<svg " + size.strFormat() + " " + xmldat + ">\n<style>" + css + "</style>\n" + svg + "</svg>";
+        IO.flushSVG();
+        IO.flushCSS();
+        return str;
+    };
     IO.flushSVG = function () {
         svg = "";
     };

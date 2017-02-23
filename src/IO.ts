@@ -28,6 +28,13 @@ export namespace IO {
         return `<svg ${size.strFormat()} ${xmldat}>\n<style>${css}</style>\n${svg}</svg>`;
     };
 
+    export let getflushSVGDoc = (input:string):string => {
+        const str = `<svg ${size.strFormat()} ${xmldat}>\n<style>${css}</style>\n${svg}</svg>`;
+        flushSVG();
+        flushCSS();
+        return str;
+    };
+
     export let flushSVG = ():void => {
         svg = "";
     };

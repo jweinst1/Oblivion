@@ -13,6 +13,8 @@ var Compile = function(code, option){
     switch(option){
         case 0:
             return io.IO.getOut();
+        case 1:
+            return io.IO.getflushSVGDoc();
     }
 };
 

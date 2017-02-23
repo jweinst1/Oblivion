@@ -22,3 +22,19 @@ var StdOutTest = function (n, code, expected) {
 };
 
 exports.StdOutTest = StdOutTest;
+
+var SVGTest = function (n, code, expected) {
+    try {
+        var result = cmp.Compile(code, 1);
+        if (result === expected){
+            console.log("Test "+n+" PASSED");
+        }
+        else {
+            console.log("Test "+n+" FAILED, Expected: "+expected+" but got: "+result);
+        }
+    } catch(err) {
+        console.log("Test "+n+" FAILED, Error: " + err);
+    }
+};
+
+exports.SVGTest = SVGTest;
