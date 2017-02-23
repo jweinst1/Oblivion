@@ -8,7 +8,7 @@ export namespace Gen {
     //main processing function that generates SVG and processes statements
     export let gen = (AST:Object):void => {
         let env = new Environment.Env();
-        if(AST["node"] === '/program') {
+        if(AST["node"] === '?program') {
             for(let i=0;i<AST['args'].length;i++){
                 env.callLib(env, AST['args'][i].node, AST['args'][i].args);
             }

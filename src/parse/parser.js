@@ -141,7 +141,7 @@ module.exports = /*
                 peg$startRuleFunctions = { Program: peg$parseProgram },
                 peg$startRuleFunction  = peg$parseProgram,
 
-                peg$c0 = function(c) {return {node:"/program", args:c};},
+                peg$c0 = function(c) {return {node:"?program", args:c};},
                 peg$c1 = function(a) {return a;},
                 peg$c2 = function(d) {return d;},
                 peg$c3 = function(c) {return c;},
@@ -156,45 +156,45 @@ module.exports = /*
                 },
                 peg$c11 = "=",
                 peg$c12 = peg$literalExpectation("=", false),
-                peg$c13 = function(v, val) {return {node:"=", args:[v, val]};},
+                peg$c13 = function(v, val) {return {node:"?=", args:[v, val]};},
                 peg$c14 = "draw:",
                 peg$c15 = peg$literalExpectation("draw:", false),
-                peg$c16 = function(val) {return {node:"/draw", args:[val]};},
-                peg$c17 = "<<",
-                peg$c18 = peg$literalExpectation("<<", false),
-                peg$c19 = function(v, val) {return {node:"<<", args:[v, val]};},
+                peg$c16 = function(val) {return {node:"?draw", args:[val]};},
+                peg$c17 = "=>",
+                peg$c18 = peg$literalExpectation("=>", false),
+                peg$c19 = function(v, val) {return {node:"?=>", args:[v, val]};},
                 peg$c20 = "[",
                 peg$c21 = peg$literalExpectation("[", false),
                 peg$c22 = "]",
                 peg$c23 = peg$literalExpectation("]", false),
                 peg$c24 = function(args) {
-                    return {node:"/list", args:args};
+                    return {node:"?list", args:args};
                 },
                 peg$c25 = function(arg1, arg2) {
-                    return {node:"/pair", args:[arg1, arg2]};
+                    return {node:"?pair", args:[arg1, arg2]};
                 },
                 peg$c26 = ".",
                 peg$c27 = peg$literalExpectation(".", false),
-                peg$c28 = function(obj, attr) {return {node:".", args:[obj, attr]};},
+                peg$c28 = function(obj, attr) {return {node:"?.", args:[obj, attr]};},
                 peg$c29 = "|",
                 peg$c30 = peg$literalExpectation("|", false),
                 peg$c31 = ";",
                 peg$c32 = peg$literalExpectation(";", false),
                 peg$c33 = function(defs, proc) {
-                    return {node:"/gen", args:[defs, proc]};
+                    return {node:"?gen", args:[defs, proc]};
                 },
                 peg$c34 = "{",
                 peg$c35 = peg$literalExpectation("{", false),
                 peg$c36 = "}",
                 peg$c37 = peg$literalExpectation("}", false),
                 peg$c38 = function(params, body) {
-                    return {node:"/func", args:[params, body]};
+                    return {node:"?func", args:[params, body]};
                 },
-                peg$c39 = function(p) {return {node:"/params", args:p};},
-                peg$c40 = function(s) {return {node:"/body", args:s};},
+                peg$c39 = function(p) {return {node:"?params", args:p};},
+                peg$c40 = function(s) {return {node:"?body", args:s};},
                 peg$c41 = "~{",
                 peg$c42 = peg$literalExpectation("~{", false),
-                peg$c43 = function(proc) {return {node:"/process", args:[proc]}},
+                peg$c43 = function(proc) {return {node:"?process", args:[proc]}},
                 peg$c44 = function(f) {return f;},
                 peg$c45 = function(g) {return g;},
                 peg$c46 = function(p) {return p;},
@@ -205,21 +205,21 @@ module.exports = /*
                 peg$c51 = peg$classExpectation([" ", "\t", "\n", "\r", ","], false, false),
                 peg$c52 = /^[a-zA-Z_@$\-]/,
                 peg$c53 = peg$classExpectation([["a", "z"], ["A", "Z"], "_", "@", "$", "-"], false, false),
-                peg$c54 = function(n) {return {node:"/name", args:[n.join("")]};},
+                peg$c54 = function(n) {return {node:"?name", args:[n.join("")]};},
                 peg$c55 = /^[a-z0-9A-Z\-_$@]/,
                 peg$c56 = peg$classExpectation([["a", "z"], ["0", "9"], ["A", "Z"], "-", "_", "$", "@"], false, false),
                 peg$c57 = function(w) {
                     var result = w.join("");
-                    var imdict = {'true':['/bool', true], 'false':['/bool', false], 'null':['/null', null]};
+                    var imdict = {'true':['?bool', true], 'false':['?bool', false], 'null':['?null', null]};
                     if(result in imdict) {return {node:imdict[result][0], args:[imdict[result][1]]}}
-                    else if(isNaN(result)) {return {node:"/word", args:[result]};}
-                    else return {node:"/number", args:[result]};
+                    else if(isNaN(result)) {return {node:"?word", args:[result]};}
+                    else return {node:"?number", args:[result]};
                 },
                 peg$c58 = "\"",
                 peg$c59 = peg$literalExpectation("\"", false),
                 peg$c60 = /^[^"]/,
                 peg$c61 = peg$classExpectation(["\""], true, false),
-                peg$c62 = function(s) {return {node:"/string", args:[s.join("")]};},
+                peg$c62 = function(s) {return {node:"?string", args:[s.join("")]};},
 
                 peg$currPos          = 0,
                 peg$savedPos         = 0,
@@ -417,7 +417,7 @@ module.exports = /*
                         s1 = null;
                     }
                     if (s1 !== peg$FAILED) {
-                        s2 = peg$parseAppend();
+                        s2 = peg$parseAttrAssign();
                         if (s2 !== peg$FAILED) {
                             peg$savedPos = s0;
                             s1 = peg$c1(s2);
@@ -654,7 +654,7 @@ module.exports = /*
                 return s0;
             }
 
-            function peg$parseAppend() {
+            function peg$parseAttrAssign() {
                 var s0, s1, s2, s3, s4, s5, s6;
 
                 s0 = peg$currPos;
@@ -663,7 +663,7 @@ module.exports = /*
                     s1 = null;
                 }
                 if (s1 !== peg$FAILED) {
-                    s2 = peg$parseName();
+                    s2 = peg$parseAtrribute();
                     if (s2 !== peg$FAILED) {
                         s3 = peg$parse_();
                         if (s3 === peg$FAILED) {

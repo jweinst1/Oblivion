@@ -63,6 +63,12 @@ export namespace Colors {
             violet:true, tan:true, orange:true
         };
 
+        public static swatchList = [
+            'black', 'white', 'gray', 'cyan', 'blue', 'red', 'yellow',
+            'turquoise', 'indigo', 'green', 'brown', 'lightpink', 'violet',
+            'tan', 'orange'
+        ];
+
         constructor(name:string = "black") {
             this.name = name;
         }
@@ -76,7 +82,8 @@ export namespace Colors {
         }
     }
 
-    export let randColor = ():Swatch => {
-        return new Swatch("orange");
+    //gets random swatch color
+    export let randSwatch = ():Swatch => {
+        return new Swatch(Swatch.swatchList[Math.floor((Math.random() * Swatch.swatchList.length))]);
     };
 }

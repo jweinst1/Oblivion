@@ -20,12 +20,12 @@ export namespace Lib {
     //optimized function for calling AST against the active library
 
     export let defs = {
-        "=":STD.assign,
-        "/func":STD.func,
-        "/params":STD.params,
-        "/name":STD.name,
-        "/gen":STD.generator,
-        "/process":STD.process,
+        "?=":STD.assign,
+        "?func":STD.func,
+        "?params":STD.params,
+        "?name":STD.name,
+        "?gen":STD.generator,
+        "?process":STD.process,
         "add":STD.add,
         "sub":STD.sub,
         "mul":STD.mul,
@@ -33,14 +33,14 @@ export namespace Lib {
         "rem":STD.rem,
         "eq":STD.eq,
         "print":STD.print,
-        "/number":STD.c_number,
-        "/bool":STD.c_bool,
-        "/null":STD.c_null,
-        "/word":STD.wordVar,
+        "?number":STD.c_number,
+        "?bool":STD.c_bool,
+        "?null":STD.c_null,
+        "?word":STD.wordVar,
         "return":STD._return,
 
         /*SVG*/
-        "/draw":drawSVG.draw,
+        "?draw":drawSVG.draw,
         "line":Line.initLine
     };
 }

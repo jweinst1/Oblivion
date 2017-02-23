@@ -1,10 +1,10 @@
 Program
-  = c:Statement* _? {return {node:"/program", args:c};}
+  = c:Statement* _? {return {node:"?program", args:c};}
 
 Statement
   /*Statements are the core top rule*/
   =   _? a:Assign {return a;}
-  / _? a:Append {return a;}
+  / _? a:AttrAssign {return a;}
   / _? d:Draw {return d;}
   / _? c:Call {return c;}
 
@@ -15,48 +15,48 @@ Call
   }
 
 Assign
-  =  _? v:Name _? "=" _? val:Argument {return {node:"=", args:[v, val]};}
+  =  _? v:Name _? "=" _? val:Argument {return {node:"?=", args:[v, val]};}
 
 Draw
-  =  "draw:" _ val:Argument {return {node:"/draw", args:[val]};}
+  =  "draw:" _ val:Argument {return {node:"?draw", args:[val]};}
 
-Append
-  =  _? v:Name _? "<<" _? val:Argument {return {node:"<<", args:[v, val]};}
+AttrAssign
+  =  _? v:Atrribute _? "=>" _? val:Argument {return {node:"?=>", args:[v, val]};}
 
 List
   = "[" _ args:Operands _ "]" {
-    return {node:"/list", args:args};
+    return {node:"?list", args:args};
   }
 
 Pair
   = "(" _ arg1:Argument _ arg2:Argument _ ")" {
-    return {node:"/pair", args:[arg1, arg2]};
+    return {node:"?pair", args:[arg1, arg2]};
   }
 
 Atrribute
-  = obj:Name "." attr:Word {return {node:".", args:[obj, attr]};}
+  = obj:Name "." attr:Word {return {node:"?.", args:[obj, attr]};}
 
 Generator
   = "|" _ defs:Body _ ";" _ proc:Body _ "|" {
-      return {node:"/gen", args:[defs, proc]};
+      return {node:"?gen", args:[defs, proc]};
   }
 
 Function
   = "{" _? "(" _ params:Params _ ")" _ body:Body _ "}" {
-     return {node:"/func", args:[params, body]};
+     return {node:"?func", args:[params, body]};
   }
 
 Operands
   = Argument*
 
 Params
-  = p:Name* {return {node:"/params", args:p};}
+  = p:Name* {return {node:"?params", args:p};}
 
 Body
-  = s:Statement* {return {node:"/body", args:s};}
+  = s:Statement* {return {node:"?body", args:s};}
 
 Process
-  = "~{" _ proc:Body _ "}" {return {node:"/process", args:[proc]}}
+  = "~{" _ proc:Body _ "}" {return {node:"?process", args:[proc]}}
 
 
 Argument
@@ -74,17 +74,17 @@ _ "whitespace"
   = [ \t\n\r,]*
 
 Name
-  = _? n:[a-zA-Z_@$-]+ {return {node:"/name", args:[n.join("")]};}
+  = _? n:[a-zA-Z_@$-]+ {return {node:"?name", args:[n.join("")]};}
 
 
 Word
   =  w:[a-z0-9A-Z-_$@]+ {
       var result = w.join("");
-      var imdict = {'true':['/bool', true], 'false':['/bool', false], 'null':['/null', null]};
+      var imdict = {'true':['?bool', true], 'false':['?bool', false], 'null':['?null', null]};
       if(result in imdict) {return {node:imdict[result][0], args:[imdict[result][1]]}}
-      else if(isNaN(result)) {return {node:"/word", args:[result]};}
-      else return {node:"/number", args:[result]};
+      else if(isNaN(result)) {return {node:"?word", args:[result]};}
+      else return {node:"?number", args:[result]};
   }
 
 String
-  = '"' s:[^"]* '"' {return {node:"/string", args:[s.join("")]};}
+  = '"' s:[^"]* '"' {return {node:"?string", args:[s.join("")]};}

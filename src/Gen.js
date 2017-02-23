@@ -9,7 +9,7 @@ var Gen;
     //main processing function that generates SVG and processes statements
     Gen.gen = function (AST) {
         var env = new Env_1.Environment.Env();
-        if (AST["node"] === '/program') {
+        if (AST["node"] === '?program') {
             for (var i = 0; i < AST['args'].length; i++) {
                 env.callLib(env, AST['args'][i].node, AST['args'][i].args);
             }

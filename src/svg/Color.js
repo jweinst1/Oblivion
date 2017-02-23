@@ -58,11 +58,17 @@ var Colors;
             green: true, brown: true, lightpink: true,
             violet: true, tan: true, orange: true
         };
+        Swatch.swatchList = [
+            'black', 'white', 'gray', 'cyan', 'blue', 'red', 'yellow',
+            'turquoise', 'indigo', 'green', 'brown', 'lightpink', 'violet',
+            'tan', 'orange'
+        ];
         return Swatch;
     }());
     Colors.Swatch = Swatch;
-    Colors.randColor = function () {
-        return new Swatch("orange");
+    //gets random swatch color
+    Colors.randSwatch = function () {
+        return new Swatch(Swatch.swatchList[Math.floor((Math.random() * Swatch.swatchList.length))]);
     };
 })(Colors = exports.Colors || (exports.Colors = {}));
 //# sourceMappingURL=Color.js.map

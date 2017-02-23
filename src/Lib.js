@@ -19,12 +19,12 @@ var Lib;
     };
     //optimized function for calling AST against the active library
     Lib.defs = {
-        "=": STD_1.STD.assign,
-        "/func": STD_1.STD.func,
-        "/params": STD_1.STD.params,
-        "/name": STD_1.STD.name,
-        "/gen": STD_1.STD.generator,
-        "/process": STD_1.STD.process,
+        "?=": STD_1.STD.assign,
+        "?func": STD_1.STD.func,
+        "?params": STD_1.STD.params,
+        "?name": STD_1.STD.name,
+        "?gen": STD_1.STD.generator,
+        "?process": STD_1.STD.process,
         "add": STD_1.STD.add,
         "sub": STD_1.STD.sub,
         "mul": STD_1.STD.mul,
@@ -32,13 +32,13 @@ var Lib;
         "rem": STD_1.STD.rem,
         "eq": STD_1.STD.eq,
         "print": STD_1.STD.print,
-        "/number": STD_1.STD.c_number,
-        "/bool": STD_1.STD.c_bool,
-        "/null": STD_1.STD.c_null,
-        "/word": STD_1.STD.wordVar,
+        "?number": STD_1.STD.c_number,
+        "?bool": STD_1.STD.c_bool,
+        "?null": STD_1.STD.c_null,
+        "?word": STD_1.STD.wordVar,
         "return": STD_1.STD._return,
         /*SVG*/
-        "/draw": draw_1.drawSVG.draw,
+        "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
