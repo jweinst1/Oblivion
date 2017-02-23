@@ -1,11 +1,21 @@
 import {SVGObject, SVGStrokable} from "./Interfaces";
 import {SVGColor} from "./Color";
+import {Environment} from "../Env";
 /**
  * Created by Josh on 2/22/17.
  * File for the Line svg object
  */
 
 export namespace Line {
+
+    //function for Lib
+    export let initLine = (env:Environment.Env, args:any[]) => {
+        return new Line(env.callLib(env, args[0].node, args[0].args),
+            env.callLib(env, args[1].node, args[1].args),
+            env.callLib(env, args[2].node, args[2].args),
+            env.callLib(env, args[3].node, args[3].args)
+        );
+    };
 
     //two point, basic line
     export class Line implements SVGObject, SVGStrokable {

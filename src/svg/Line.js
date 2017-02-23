@@ -5,6 +5,10 @@
  */
 var Line;
 (function (Line_1) {
+    //function for Lib
+    Line_1.initLine = function (env, args) {
+        return new Line(env.callLib(env, args[0].node, args[0].args), env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args), env.callLib(env, args[3].node, args[3].args));
+    };
     //two point, basic line
     var Line = (function () {
         function Line(x1, y1, x2, y2) {

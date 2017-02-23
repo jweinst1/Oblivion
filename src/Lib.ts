@@ -1,4 +1,5 @@
 import{STD} from "./Comp/STD";
+import{Line} from "./svg/Line";
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -35,6 +36,9 @@ export namespace Lib {
         "/bool":STD.c_bool,
         "/null":STD.c_null,
         "/word":STD.wordVar,
-        "return":STD._return
+        "return":STD._return,
+
+        /*SVG*/
+        "line":Line.initLine
     };
 }
