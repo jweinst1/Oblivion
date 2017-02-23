@@ -75,4 +75,8 @@ export namespace Colors {
             return input in Swatch.swatchSet;
         }
     }
+
+    export let randColor = ():Swatch => {
+        return new Swatch("orange");
+    };
 }

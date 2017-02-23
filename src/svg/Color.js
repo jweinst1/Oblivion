@@ -61,5 +61,8 @@ var Colors;
         return Swatch;
     }());
     Colors.Swatch = Swatch;
+    Colors.randColor = function () {
+        return new Swatch("orange");
+    };
 })(Colors = exports.Colors || (exports.Colors = {}));
 //# sourceMappingURL=Color.js.map
