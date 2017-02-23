@@ -4,14 +4,15 @@
  */
 
 
+export interface SVGColor {
+    //returns a string representing the color's value.
+    strValue():string;
+}
+
 export namespace Colors {
 
-    interface Color {
-        //returns a string representing the color's value.
-        strValue():string;
-    }
 
-    export class RGB implements Color {
+    export class RGB implements SVGColor {
         public red:number;
         public green:number;
         public blue:number;
@@ -28,7 +29,7 @@ export namespace Colors {
 
     }
 
-    export class HEX implements Color {
+    export class HEX implements SVGColor {
 
         public static hexRegex = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
 
@@ -50,7 +51,7 @@ export namespace Colors {
         }
     }
 
-    export class Swatch implements Color {
+    export class Swatch implements SVGColor {
 
         public name:string;
 
