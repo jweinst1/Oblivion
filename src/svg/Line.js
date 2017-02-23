@@ -17,7 +17,7 @@ var Line;
         Line.prototype.styleStrFormat = function () {
             var str = '';
             for (var key in this.style) {
-                str += key + "=\"" + this.style[key] + "\"";
+                str += key + "=\"" + this.style[key] + "\" ";
             }
             return str;
         };
@@ -34,9 +34,10 @@ var Line;
             return this.style['stroke-width'];
         };
         Line.prototype.setStrokeColor = function (color) {
+            this.style['stroke'] = color.strValue();
         };
         Line.prototype.getStrokeColor = function () {
-            return undefined;
+            return this.style['stroke'];
         };
         return Line;
     }());

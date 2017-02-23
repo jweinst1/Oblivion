@@ -28,7 +28,7 @@ export namespace Line {
         private styleStrFormat():string {
             let str = '';
             for(let key in this.style){
-                str += `${key}="${this.style[key]}"`;
+                str += `${key}="${this.style[key]}" `;
             }
             return str;
         }
@@ -50,10 +50,13 @@ export namespace Line {
         }
 
         setStrokeColor(color: SVGColor): void {
+            this.style['stroke'] = color.strValue();
         }
 
         getStrokeColor(): SVGColor {
-            return undefined;
+            return this.style['stroke'];
         }
     }
 }
+
+
