@@ -20,7 +20,7 @@ var SVGSize;
             this.height = newHeight;
         };
         SVGSize.prototype.strFormat = function () {
-            return "width =\"" + this.width + " height=\"" + this.height + "\"";
+            return "width =\"" + this.width + "\" height=\"" + this.height + "\"";
         };
         return SVGSize;
     }());

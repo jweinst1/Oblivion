@@ -12,4 +12,4 @@ test.StdOutTest(3, "print(eq(3, 3))", "true\n");
 test.StdOutTest(4, "print(eq(true, false))", "true\n");
 //generator test
 test.StdOutTest(5, "a = |b=3;b=add(b,3), return(b)|, print(a()), print(a())", "6\n9\n");
-test.SVGTest(6, "line(0, 2, add(3, 3, 3), 9)", '<svg width ="100% height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n</svg>');
+test.SVGTest(6, " draw: line(0, 2, add(3, 3, 3), 9)", '<svg width ="100% height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<line x1="0" x2="9" y1="2" y2="9" stroke="black" stroke-width="1" />\n</svg>');

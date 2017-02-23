@@ -1,6 +1,7 @@
 "use strict";
 var STD_1 = require("./Comp/STD");
 var Line_1 = require("./svg/Line");
+var draw_1 = require("./svg/draw");
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -37,6 +38,7 @@ var Lib;
         "/word": STD_1.STD.wordVar,
         "return": STD_1.STD._return,
         /*SVG*/
+        "/draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine
     };
 })(Lib = exports.Lib || (exports.Lib = {}));

@@ -17,7 +17,7 @@ export namespace SVGSize {
         }
 
         strFormat():string {
-            return `width ="${this.width} height="${this.height}"`;
+            return `width ="${this.width}" height="${this.height}"`;
         }
     }
 

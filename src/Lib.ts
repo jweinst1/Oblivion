@@ -1,5 +1,6 @@
 import{STD} from "./Comp/STD";
 import{Line} from "./svg/Line";
+import{drawSVG} from "./svg/draw";
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -39,6 +40,7 @@ export namespace Lib {
         "return":STD._return,
 
         /*SVG*/
+        "/draw":drawSVG.draw,
         "line":Line.initLine
     };
 }
