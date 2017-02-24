@@ -34,6 +34,7 @@ export namespace Lib {
         "==":STD.eq,
         "!=":STD.ne,
         "<":STD.lt,
+        ">":STD.gt,
         "print":STD.print,
         "?number":STD.c_number,
         "?bool":STD.c_bool,
