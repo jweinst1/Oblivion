@@ -193,6 +193,12 @@ var STD;
             throw new Errors_1.Errors.TypeError('number', typeof left + " and " + typeof right);
         return left >= right;
     };
+    //comparison that works on lists and maps
+    STD.same = function (env, args) {
+        if (args.length !== 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        return JSON.stringify(env.callLib(env, args[0].node, args[0].args)) === JSON.stringify(env.callLib(env, args[1].node, args[1].args));
+    };
     /*Conditional StdLib funcs*/
     STD._if = function (env, args) {
         if (args.length < 2)

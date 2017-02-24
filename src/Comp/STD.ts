@@ -199,6 +199,12 @@ export namespace STD {
         return left >= right;
     };
 
+    //comparison that works on lists and maps
+    export let same = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
+        return JSON.stringify(env.callLib(env, args[0].node, args[0].args)) === JSON.stringify(env.callLib(env, args[1].node, args[1].args));
+    };
+
     /*Conditional StdLib funcs*/
 
     export let _if = (env:Environment.Env, args:any[]) => {
