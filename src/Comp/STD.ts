@@ -222,4 +222,8 @@ export namespace STD {
             }
         }
     };
+
+    export let loop = (env:Environment.Env, args:any[]) => {
+
+    };
 }

@@ -217,5 +217,7 @@ var STD;
             }
         }
     };
+    STD.loop = function (env, args) {
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
