@@ -55,5 +55,11 @@ var IO;
     IO.flushIn = function () {
         In = "";
     };
+    //gets and flushes stdout
+    IO.getFlushOut = function () {
+        var result = Out;
+        Out = "";
+        return result;
+    };
 })(IO = exports.IO || (exports.IO = {}));
 //# sourceMappingURL=IO.js.map

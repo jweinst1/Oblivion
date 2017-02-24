@@ -67,4 +67,10 @@ export namespace IO {
     export let flushIn = ():void => {
         In = "";
     };
+    //gets and flushes stdout
+    export let getFlushOut = ():string => {
+        let result = Out;
+        Out = "";
+        return result;
+    };
 }
