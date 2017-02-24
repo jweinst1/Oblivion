@@ -34,6 +34,8 @@ var Lib;
         "!=": STD_1.STD.ne,
         "<": STD_1.STD.lt,
         ">": STD_1.STD.gt,
+        "<=": STD_1.STD.le,
+        ">=": STD_1.STD.ge,
         "print": STD_1.STD.print,
         "?number": STD_1.STD.c_number,
         "?bool": STD_1.STD.c_bool,

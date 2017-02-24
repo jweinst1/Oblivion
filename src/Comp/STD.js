@@ -156,7 +156,7 @@ var STD;
             throw new Errors_1.Errors.ArgumentError(args.length, 2);
         return env.callLib(env, args[0].node, args[0].args) !== env.callLib(env, args[1].node, args[1].args);
     };
-    //only numbers can be compared with < and >
+    //only numbers can be compared with <, <=, >=, and >
     STD.lt = function (env, args) {
         if (args.length !== 2)
             throw new Errors_1.Errors.ArgumentError(args.length, 2);
@@ -174,6 +174,24 @@ var STD;
         if (typeof left !== 'number' || typeof right !== 'number')
             throw new Errors_1.Errors.TypeError('number', typeof left + " and " + typeof right);
         return left > right;
+    };
+    STD.le = function (env, args) {
+        if (args.length !== 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        var left = env.callLib(env, args[0].node, args[0].args);
+        var right = env.callLib(env, args[1].node, args[1].args);
+        if (typeof left !== 'number' || typeof right !== 'number')
+            throw new Errors_1.Errors.TypeError('number', typeof left + " and " + typeof right);
+        return left <= right;
+    };
+    STD.ge = function (env, args) {
+        if (args.length !== 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        var left = env.callLib(env, args[0].node, args[0].args);
+        var right = env.callLib(env, args[1].node, args[1].args);
+        if (typeof left !== 'number' || typeof right !== 'number')
+            throw new Errors_1.Errors.TypeError('number', typeof left + " and " + typeof right);
+        return left >= right;
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
