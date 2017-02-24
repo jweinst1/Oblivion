@@ -207,13 +207,13 @@ var STD;
             //calls if function is present in if statemnt
             var statement = env.callLib(env, args[1].node, args[1].args);
             if (typeof statement === 'function')
-                statement();
+                statement(env, []);
         }
         else if (args.length > 2) {
             for (var i = 2; i < args.length; i++) {
                 var state = env.callLib(env, args[i].node, args[i].args);
                 if (typeof state === 'function')
-                    state();
+                    state(env, []);
             }
         }
     };
@@ -223,9 +223,10 @@ var STD;
             throw new Errors_1.Errors.ArgumentError(args.length, 2);
         while (env.callLib(env, args[0].node, args[0].args)) {
             for (var i = 1; i < args.length; i++) {
+                //treats function types genrated from AST as callable blocks
                 var state = env.callLib(env, args[i].node, args[i].args);
                 if (typeof state === 'function')
-                    state();
+                    state(env, []);
             }
         }
     };

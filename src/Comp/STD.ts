@@ -212,13 +212,13 @@ export namespace STD {
         if(cond){
             //calls if function is present in if statemnt
             let statement = env.callLib(env, args[1].node, args[1].args);
-            if(typeof statement === 'function') statement();
+            if(typeof statement === 'function') statement(env, []);
         }
         //If condition is false, executes the remaining statements after the first.
         else if(args.length > 2) {
             for(let i=2;i<args.length;i++){
                 let state = env.callLib(env, args[i].node, args[i].args);
-                if(typeof state === 'function') state();
+                if(typeof state === 'function') state(env, []);
             }
         }
     };
@@ -228,8 +228,9 @@ export namespace STD {
         if(args.length < 2) throw new Errors.ArgumentError(args.length, 2);
         while(env.callLib(env, args[0].node, args[0].args)){
             for(let i=1;i<args.length;i++){
+                //treats function types genrated from AST as callable blocks
                 let state = env.callLib(env, args[i].node, args[i].args);
-                if(typeof state === 'function') state();
+                if(typeof state === 'function') state(env, []);
             }
         }
     };
