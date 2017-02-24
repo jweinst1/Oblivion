@@ -85,6 +85,7 @@ export namespace Errors {
 
     }
 
+    //possibly not needed due to writing SVG/CSS components
     export class CssClassError implements Error {
 
 
@@ -95,8 +96,21 @@ export namespace Errors {
         }
 
         message(): string {
-            return undefined;
+            return `CSS Class ${this.name} is not defined.`;
         }
 
+    }
+
+    export class TypeError implements Error {
+
+        constructor(public required:string, public got:string){};
+
+        type(): string {
+            return "TypeError";
+        }
+
+        message(): string {
+            return `Call requires type ${this.required} but got ${this.got}`;
+        }
     }
 }

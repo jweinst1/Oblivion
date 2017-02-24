@@ -60,6 +60,7 @@ var Errors;
         return CssAttributeError;
     }());
     Errors.CssAttributeError = CssAttributeError;
+    //possibly not needed due to writing SVG/CSS components
     var CssClassError = (function () {
         function CssClassError(name) {
             this.name = name;
@@ -69,10 +70,25 @@ var Errors;
             return "CssClassError";
         };
         CssClassError.prototype.message = function () {
-            return undefined;
+            return "CSS Class " + this.name + " is not defined.";
         };
         return CssClassError;
     }());
     Errors.CssClassError = CssClassError;
+    var TypeError = (function () {
+        function TypeError(required, got) {
+            this.required = required;
+            this.got = got;
+        }
+        ;
+        TypeError.prototype.type = function () {
+            return "TypeError";
+        };
+        TypeError.prototype.message = function () {
+            return "Call requires type " + this.required + " but got " + this.got;
+        };
+        return TypeError;
+    }());
+    Errors.TypeError = TypeError;
 })(Errors = exports.Errors || (exports.Errors = {}));
 //# sourceMappingURL=Errors.js.map
