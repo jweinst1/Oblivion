@@ -224,6 +224,13 @@ export namespace STD {
     };
 
     export let loop = (env:Environment.Env, args:any[]) => {
-
+        //must have at least a condition and statement/argument
+        if(args.length < 2) throw new Errors.ArgumentError(args.length, 2);
+        while(env.callLib(env, args[0].node, args[0].args)){
+            for(let i=1;i<args.length;i++){
+                let state = env.callLib(env, args[i].node, args[i].args);
+                if(typeof state === 'function') state();
+            }
+        }
     };
 }
