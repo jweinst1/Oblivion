@@ -57,8 +57,6 @@ var STD;
             for (var j = 0; j < procBody.length; j++) {
                 env.callLib(env, procBody[j].node, procBody[j].args);
             }
-            //This is preserved between generator calls, but functions the same as a return
-            return env.getReturnValue();
         };
     };
     //handles variable assignment
@@ -206,11 +204,16 @@ var STD;
         var cond = env.callLib(env, args[0].node, args[0].args);
         //if condition is true, only executes first statement
         if (cond) {
-            env.callLib(env, args[1].node, args[1].args);
+            //calls if function is present in if statemnt
+            var statement = env.callLib(env, args[1].node, args[1].args);
+            if (typeof statement === 'function')
+                statement();
         }
         else if (args.length > 2) {
             for (var i = 2; i < args.length; i++) {
-                env.callLib(env, args[i].node, args[i].args);
+                var state = env.callLib(env, args[i].node, args[i].args);
+                if (typeof state === 'function')
+                    state();
             }
         }
     };

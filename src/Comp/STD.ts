@@ -57,8 +57,6 @@ export namespace STD {
             for(let j=0;j<procBody.length;j++){
                 env.callLib(env, procBody[j].node, procBody[j].args);
             }
-            //This is preserved between generator calls, but functions the same as a return
-            return env.getReturnValue();
         };
 
     };
@@ -212,12 +210,15 @@ export namespace STD {
         let cond = env.callLib(env, args[0].node, args[0].args);
         //if condition is true, only executes first statement
         if(cond){
-            env.callLib(env, args[1].node, args[1].args);
+            //calls if function is present in if statemnt
+            let statement = env.callLib(env, args[1].node, args[1].args);
+            if(typeof statement === 'function') statement();
         }
         //If condition is false, executes the remaining statements after the first.
         else if(args.length > 2) {
             for(let i=2;i<args.length;i++){
-                env.callLib(env, args[i].node, args[i].args);
+                let state = env.callLib(env, args[i].node, args[i].args);
+                if(typeof state === 'function') state();
             }
         }
     };
