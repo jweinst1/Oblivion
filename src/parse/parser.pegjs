@@ -27,9 +27,13 @@ List
   = "[" _ args:Operands _ "]" {
     return {node:"?list", args:args};
   }
+  / "[" _ args:Pair* _ "]" {
+    return {node:"?map", args:args};
+  }
+  / "[:]" {return {node:"?map", args:[]};}
 
 Pair
-  = "(" _ arg1:Argument _ arg2:Argument _ ")" {
+  = _ arg1:Word ":" arg2:Argument _ {
     return {node:"?pair", args:[arg1, arg2]};
   }
 
@@ -65,7 +69,6 @@ Argument
   / _? g:Generator {return g;}
   / _? p:Process {return p;}
   / _? l:List {return l;}
-  / _? p:Pair {return p;}
   / _? s:String {return s;}
   / _? a:Atrribute {return a;}
   / _? a:Word {return a;}
