@@ -147,7 +147,7 @@ export namespace STD {
 
     //handles bool nodes
     export let c_bool = (env:Environment.Env, args:any[]) => {
-        return args[0] == "true";
+        return args[0];
     };
 
     export let c_null = (env:Environment.Env, args:any[]) => {

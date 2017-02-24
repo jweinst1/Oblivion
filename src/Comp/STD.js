@@ -140,7 +140,7 @@ var STD;
     };
     //handles bool nodes
     STD.c_bool = function (env, args) {
-        return args[0] == "true";
+        return args[0];
     };
     STD.c_null = function (env, args) {
         return null;
