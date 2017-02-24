@@ -33,6 +33,7 @@ export namespace Lib {
         "%":STD.rem,
         "==":STD.eq,
         "!=":STD.ne,
+        "<":STD.lt,
         "print":STD.print,
         "?number":STD.c_number,
         "?bool":STD.c_bool,

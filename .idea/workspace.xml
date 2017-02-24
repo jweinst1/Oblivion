@@ -5,9 +5,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js" afterPath="$PROJECT_DIR$/src/Comp/STD.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js.map" afterPath="$PROJECT_DIR$/src/Comp/STD.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.ts" afterPath="$PROJECT_DIR$/src/Comp/STD.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.js" afterPath="$PROJECT_DIR$/src/Errors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.js.map" afterPath="$PROJECT_DIR$/src/Errors.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Errors.ts" afterPath="$PROJECT_DIR$/src/Errors.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js" afterPath="$PROJECT_DIR$/src/Lib.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js.map" afterPath="$PROJECT_DIR$/src/Lib.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.ts" afterPath="$PROJECT_DIR$/src/Lib.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+            <state relative-caret-position="233">
+              <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -60,8 +60,8 @@
       <file leaf-file-name="STD.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="169" column="77" lean-forward="true" selection-start-line="169" selection-start-column="77" selection-end-line="169" selection-end-column="77" />
+            <state relative-caret-position="263">
+              <caret line="168" column="47" lean-forward="false" selection-start-line="168" selection-start-column="47" selection-end-line="168" selection-end-column="47" />
               <folding>
                 <element signature="n#!!doc;n#STD#0" expanded="false" />
               </folding>
@@ -69,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Errors.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Errors.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Errors.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -174,9 +174,9 @@
         <option value="$PROJECT_DIR$/src/parse/parser.js" />
         <option value="$PROJECT_DIR$/src/Gen.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
-        <option value="$PROJECT_DIR$/src/Lib.ts" />
-        <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/src/Errors.ts" />
+        <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
+        <option value="$PROJECT_DIR$/src/Lib.ts" />
       </list>
     </option>
   </component>
@@ -435,12 +435,12 @@
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
       <workItem from="1487207577151" duration="50741000" />
-      <workItem from="1487838037508" duration="4714000" />
+      <workItem from="1487838037508" duration="5016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76332000" />
+    <option name="totallyTimeSpent" value="76634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -875,31 +875,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
+    <entry file="file://$PROJECT_DIR$/src/Errors.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="112" column="77" lean-forward="false" selection-start-line="112" selection-start-column="77" selection-end-line="112" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="169" column="77" lean-forward="true" selection-start-line="169" selection-start-column="77" selection-end-line="169" selection-end-column="77" />
+        <state relative-caret-position="263">
+          <caret line="168" column="47" lean-forward="false" selection-start-line="168" selection-start-column="47" selection-end-line="168" selection-end-column="47" />
           <folding>
             <element signature="n#!!doc;n#STD#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Errors.ts">
+    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="112" column="77" lean-forward="false" selection-start-line="112" selection-start-column="77" selection-end-line="112" selection-end-column="77" />
-          <folding />
+        <state relative-caret-position="233">
+          <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
