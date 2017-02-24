@@ -193,5 +193,20 @@ var STD;
             throw new Errors_1.Errors.TypeError('number', typeof left + " and " + typeof right);
         return left >= right;
     };
+    /*Conditional StdLib funcs*/
+    STD._if = function (env, args) {
+        if (args.length < 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        var cond = env.callLib(env, args[0].node, args[0].args);
+        //if condition is true, only executes first statement
+        if (cond) {
+            env.callLib(env, args[1].node, args[1].args);
+        }
+        else if (args.length > 2) {
+            for (var i = 2; i < args.length; i++) {
+                env.callLib(env, args[i].node, args[i].args);
+            }
+        }
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

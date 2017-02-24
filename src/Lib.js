@@ -36,6 +36,7 @@ var Lib;
         ">": STD_1.STD.gt,
         "<=": STD_1.STD.le,
         ">=": STD_1.STD.ge,
+        "if": STD_1.STD._if,
         "print": STD_1.STD.print,
         "?number": STD_1.STD.c_number,
         "?bool": STD_1.STD.c_bool,

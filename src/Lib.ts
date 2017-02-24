@@ -37,6 +37,7 @@ export namespace Lib {
         ">":STD.gt,
         "<=":STD.le,
         ">=":STD.ge,
+        "if":STD._if,
         "print":STD.print,
         "?number":STD.c_number,
         "?bool":STD.c_bool,

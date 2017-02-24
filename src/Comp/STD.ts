@@ -198,4 +198,21 @@ export namespace STD {
         if(typeof left !== 'number' || typeof right !== 'number') throw new Errors.TypeError('number', `${typeof left} and ${typeof right}`);
         return left >= right;
     };
+
+    /*Conditional StdLib funcs*/
+
+    export let _if = (env:Environment.Env, args:any[]) => {
+        if(args.length < 2) throw new Errors.ArgumentError(args.length, 2);
+        let cond = env.callLib(env, args[0].node, args[0].args);
+        //if condition is true, only executes first statement
+        if(cond){
+            env.callLib(env, args[1].node, args[1].args);
+        }
+        //If condition is false, executes the remaining statements after the first.
+        else if(args.length > 2) {
+            for(let i=2;i<args.length;i++){
+                env.callLib(env, args[i].node, args[i].args);
+            }
+        }
+    };
 }
