@@ -4,7 +4,6 @@ Program
 Statement
   /*Statements are the core top rule*/
   =   _? a:Assign {return a;}
-  / _? a:AttrAssign {return a;}
   / _? d:Draw {return d;}
   / _? c:Call {return c;}
 
@@ -13,15 +12,16 @@ Call
   = node:[a-zA-Z!><=/+%*_@$-]+ "(" _ args:Operands _ ")" {
      return {node:node.join(""), args:args};
   }
+  / method:Attribute "(" _ args:Operands _ ")" {
+     return {node:"?method", args:[method].concat(args)};
+  }
 
 Assign
   =  _? v:Name _? "=" _? val:Argument {return {node:"?=", args:[v, val]};}
+  / _? v:Attribute _? "=" _? val:Argument {return {node:"?=>", args:[v, val]};}
 
 Draw
   =  "draw:" _ val:Argument {return {node:"?draw", args:[val]};}
-
-AttrAssign
-  =  _? v:Atrribute _? "=>" _? val:Argument {return {node:"?=>", args:[v, val]};}
 
 List
   = "[" _ args:Operands _ "]" {
@@ -37,7 +37,7 @@ Pair
     return {node:"?pair", args:[arg1, arg2]};
   }
 
-Atrribute
+Attribute
   = obj:Name "." attr:Word {return {node:"?.", args:[obj, attr]};}
 
 Generator
@@ -70,7 +70,7 @@ Argument
   / _? p:Process {return p;}
   / _? l:List {return l;}
   / _? s:String {return s;}
-  / _? a:Atrribute {return a;}
+  / _? a:Attribute {return a;}
   / _? a:Word {return a;}
 
 _ "whitespace"

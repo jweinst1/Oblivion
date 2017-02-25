@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Comp/interfaces.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.js" afterPath="$PROJECT_DIR$/src/parse/parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.pegjs" afterPath="$PROJECT_DIR$/src/parse/parser.pegjs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,14 +85,14 @@
       <file leaf-file-name="parser.pegjs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="86" column="85" lean-forward="false" selection-start-line="86" selection-start-column="85" selection-end-line="86" selection-end-column="85" />
+            <state relative-caret-position="1298">
+              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interfaces.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="interfaces.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/interfaces.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -102,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parser.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parse/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21713">
-              <caret line="1588" column="0" lean-forward="false" selection-start-line="1588" selection-start-column="0" selection-end-line="1588" selection-end-column="0" />
+            <state relative-caret-position="233">
+              <caret line="1610" column="9" lean-forward="true" selection-start-line="1610" selection-start-column="9" selection-end-line="1610" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -174,13 +174,13 @@
         <option value="$PROJECT_DIR$/src/svg/Color.ts" />
         <option value="$PROJECT_DIR$/src/Gen.ts" />
         <option value="$PROJECT_DIR$/src/Errors.ts" />
-        <option value="$PROJECT_DIR$/src/parse/parser.pegjs" />
-        <option value="$PROJECT_DIR$/src/parse/parser.js" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
         <option value="$PROJECT_DIR$/src/IO.ts" />
         <option value="$PROJECT_DIR$/src/Lib.ts" />
         <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/src/Comp/interfaces.ts" />
+        <option value="$PROJECT_DIR$/src/parse/parser.pegjs" />
+        <option value="$PROJECT_DIR$/src/parse/parser.js" />
       </list>
     </option>
   </component>
@@ -421,12 +421,12 @@
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
       <workItem from="1487207577151" duration="50741000" />
-      <workItem from="1487838037508" duration="12705000" />
+      <workItem from="1487838037508" duration="13676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84323000" />
+    <option name="totallyTimeSpent" value="85294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -859,26 +859,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parse/parser.js">
+    <entry file="file://$PROJECT_DIR$/src/Comp/interfaces.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21713">
-          <caret line="1588" column="0" lean-forward="false" selection-start-line="1588" selection-start-column="0" selection-end-line="1588" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="86" column="85" lean-forward="false" selection-start-line="86" selection-start-column="85" selection-end-line="86" selection-end-column="85" />
+        <state relative-caret-position="1298">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comp/interfaces.ts">
+    <entry file="file://$PROJECT_DIR$/src/parse/parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <state relative-caret-position="233">
+          <caret line="1610" column="9" lean-forward="true" selection-start-line="1610" selection-start-column="9" selection-end-line="1610" selection-end-column="9" />
           <folding />
         </state>
       </provider>
