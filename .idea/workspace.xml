@@ -48,8 +48,8 @@
       <file leaf-file-name="STD.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="246" column="95" lean-forward="true" selection-start-line="246" selection-start-column="95" selection-end-line="246" selection-end-column="95" />
+            <state relative-caret-position="83">
+              <caret line="239" column="72" lean-forward="true" selection-start-line="239" selection-start-column="72" selection-end-line="239" selection-end-column="72" />
               <folding>
                 <element signature="n#!!doc;n#STD#0" expanded="false" />
               </folding>
@@ -63,12 +63,12 @@
             <state relative-caret-position="-2707">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1488009912000" expanded="true" signature="192:10388" ph="{...}" />
-                <marker date="1488009912000" expanded="true" signature="8231:8981" ph="{...}" />
-                <marker date="1488009912000" expanded="true" signature="8476:8704" ph="{...}" />
-                <marker date="1488009912000" expanded="true" signature="8739:8975" ph="{...}" />
-                <marker date="1488009912000" expanded="true" signature="8791:8965" ph="{...}" />
-                <marker date="1488009912000" expanded="true" signature="9019:9563" ph="{...}" />
+                <marker date="1488049799000" expanded="true" signature="192:10483" ph="{...}" />
+                <marker date="1488049799000" expanded="true" signature="8231:8981" ph="{...}" />
+                <marker date="1488049799000" expanded="true" signature="8476:8704" ph="{...}" />
+                <marker date="1488049799000" expanded="true" signature="8739:8975" ph="{...}" />
+                <marker date="1488049799000" expanded="true" signature="8791:8965" ph="{...}" />
+                <marker date="1488049799000" expanded="true" signature="9019:9563" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -87,7 +87,7 @@
       <file leaf-file-name="parser.pegjs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
+            <state relative-caret-position="338">
               <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
@@ -423,12 +423,12 @@
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
       <workItem from="1487207577151" duration="50741000" />
-      <workItem from="1487838037508" duration="15492000" />
+      <workItem from="1487838037508" duration="16254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87110000" />
+    <option name="totallyTimeSpent" value="87872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -439,7 +439,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -815,12 +815,12 @@
         <state relative-caret-position="-2707">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488009912000" expanded="true" signature="192:10388" ph="{...}" />
-            <marker date="1488009912000" expanded="true" signature="8231:8981" ph="{...}" />
-            <marker date="1488009912000" expanded="true" signature="8476:8704" ph="{...}" />
-            <marker date="1488009912000" expanded="true" signature="8739:8975" ph="{...}" />
-            <marker date="1488009912000" expanded="true" signature="8791:8965" ph="{...}" />
-            <marker date="1488009912000" expanded="true" signature="9019:9563" ph="{...}" />
+            <marker date="1488049799000" expanded="true" signature="192:10483" ph="{...}" />
+            <marker date="1488049799000" expanded="true" signature="8231:8981" ph="{...}" />
+            <marker date="1488049799000" expanded="true" signature="8476:8704" ph="{...}" />
+            <marker date="1488049799000" expanded="true" signature="8739:8975" ph="{...}" />
+            <marker date="1488049799000" expanded="true" signature="8791:8965" ph="{...}" />
+            <marker date="1488049799000" expanded="true" signature="9019:9563" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -849,14 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lib.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -864,6 +856,14 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -877,8 +877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="246" column="95" lean-forward="true" selection-start-line="246" selection-start-column="95" selection-end-line="246" selection-end-column="95" />
+        <state relative-caret-position="83">
+          <caret line="239" column="72" lean-forward="true" selection-start-line="239" selection-start-column="72" selection-end-line="239" selection-end-column="72" />
           <folding>
             <element signature="n#!!doc;n#STD#0" expanded="false" />
           </folding>

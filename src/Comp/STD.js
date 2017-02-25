@@ -233,8 +233,8 @@ var STD;
     STD.attribute = function (env, args) {
         if (args.length !== 2)
             throw new Errors_1.Errors.ArgumentError(args.length, 2);
-        var obj = env.callLib(env, args[0].node, args[0].args);
-        var index = env.callLib(env, args[0].node, args[0].args);
+        var obj = env.get(env.callLib(env, args[0].node, args[0].args));
+        var index = env.callLib(env, args[1].node, args[1].args);
         if (typeof obj === 'object' && obj !== null) {
             return obj.getItem(index); //collection interface
         }
@@ -247,6 +247,9 @@ var STD;
         }
         else
             throw new Errors_1.Errors.TypeError('Collection', typeof obj);
+    };
+    //handles attribute assignment
+    STD.attrAssign = function (env, args) {
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

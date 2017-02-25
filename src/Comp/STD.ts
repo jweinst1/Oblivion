@@ -237,8 +237,8 @@ export namespace STD {
 
     export let attribute = (env:Environment.Env, args:any[]) => {
         if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
-        let obj = env.callLib(env, args[0].node, args[0].args);
-        let index = env.callLib(env, args[0].node, args[0].args);
+        let obj = env.get(env.callLib(env, args[0].node, args[0].args));
+        let index = env.callLib(env, args[1].node, args[1].args);
         if(typeof obj === 'object' && obj !== null) {
             return obj.getItem(index); //collection interface
         }
@@ -248,5 +248,10 @@ export namespace STD {
             return obj[index];
         }
         else throw new Errors.TypeError('Collection', typeof obj);
+    };
+
+    //handles attribute assignment
+    export let attrAssign = (env:Environment.Env, args:any[]) => {
+
     };
 }
