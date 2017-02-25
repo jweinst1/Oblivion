@@ -234,4 +234,19 @@ export namespace STD {
             }
         }
     };
+
+    export let attribute = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
+        let obj = env.callLib(env, args[0].node, args[0].args);
+        let index = env.callLib(env, args[0].node, args[0].args);
+        if(typeof obj === 'object' && obj !== null) {
+            return obj.getItem(index); //collection interface
+        }
+        else if(typeof obj === 'string'){
+            if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
+            if(index < 0 || index >= obj.length) throw new Errors.IndexError(index.toString());
+            return obj[index];
+        }
+        else throw new Errors.TypeError('Collection', typeof obj);
+    };
 }

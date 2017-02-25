@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.js" afterPath="$PROJECT_DIR$/src/parse/parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.pegjs" afterPath="$PROJECT_DIR$/src/parse/parser.pegjs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js" afterPath="$PROJECT_DIR$/src/Comp/STD.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js.map" afterPath="$PROJECT_DIR$/src/Comp/STD.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.ts" afterPath="$PROJECT_DIR$/src/Comp/STD.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +26,7 @@
       <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
+            <state relative-caret-position="308">
               <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -43,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="STD.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="STD.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="230" column="76" lean-forward="false" selection-start-line="230" selection-start-column="76" selection-end-line="230" selection-end-column="76" />
+            <state relative-caret-position="248">
+              <caret line="246" column="95" lean-forward="true" selection-start-line="246" selection-start-column="95" selection-end-line="246" selection-end-column="95" />
               <folding>
                 <element signature="n#!!doc;n#STD#0" expanded="false" />
               </folding>
@@ -61,12 +63,12 @@
             <state relative-caret-position="-2707">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1487979003000" expanded="true" signature="192:9566" ph="{...}" />
-                <marker date="1487979003000" expanded="true" signature="8231:8981" ph="{...}" />
-                <marker date="1487979003000" expanded="true" signature="8476:8704" ph="{...}" />
-                <marker date="1487979003000" expanded="true" signature="8739:8975" ph="{...}" />
-                <marker date="1487979003000" expanded="true" signature="8791:8965" ph="{...}" />
-                <marker date="1487979003000" expanded="true" signature="9019:9563" ph="{...}" />
+                <marker date="1488009912000" expanded="true" signature="192:10388" ph="{...}" />
+                <marker date="1488009912000" expanded="true" signature="8231:8981" ph="{...}" />
+                <marker date="1488009912000" expanded="true" signature="8476:8704" ph="{...}" />
+                <marker date="1488009912000" expanded="true" signature="8739:8975" ph="{...}" />
+                <marker date="1488009912000" expanded="true" signature="8791:8965" ph="{...}" />
+                <marker date="1488009912000" expanded="true" signature="9019:9563" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -85,7 +87,7 @@
       <file leaf-file-name="parser.pegjs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1298">
+            <state relative-caret-position="563">
               <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
@@ -102,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parser.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
+            <state relative-caret-position="7148">
               <caret line="1610" column="9" lean-forward="true" selection-start-line="1610" selection-start-column="9" selection-end-line="1610" selection-end-column="9" />
               <folding />
             </state>
@@ -177,10 +179,10 @@
         <option value="$PROJECT_DIR$/tests/Prim.js" />
         <option value="$PROJECT_DIR$/src/IO.ts" />
         <option value="$PROJECT_DIR$/src/Lib.ts" />
-        <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/src/Comp/interfaces.ts" />
         <option value="$PROJECT_DIR$/src/parse/parser.pegjs" />
         <option value="$PROJECT_DIR$/src/parse/parser.js" />
+        <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
       </list>
     </option>
   </component>
@@ -421,12 +423,12 @@
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
       <workItem from="1487207577151" duration="50741000" />
-      <workItem from="1487838037508" duration="13676000" />
+      <workItem from="1487838037508" duration="15492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85294000" />
+    <option name="totallyTimeSpent" value="87110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -745,7 +747,7 @@
         <state relative-caret-position="165">
           <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -813,22 +815,12 @@
         <state relative-caret-position="-2707">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487979003000" expanded="true" signature="192:9566" ph="{...}" />
-            <marker date="1487979003000" expanded="true" signature="8231:8981" ph="{...}" />
-            <marker date="1487979003000" expanded="true" signature="8476:8704" ph="{...}" />
-            <marker date="1487979003000" expanded="true" signature="8739:8975" ph="{...}" />
-            <marker date="1487979003000" expanded="true" signature="8791:8965" ph="{...}" />
-            <marker date="1487979003000" expanded="true" signature="9019:9563" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1488009912000" expanded="true" signature="192:10388" ph="{...}" />
+            <marker date="1488009912000" expanded="true" signature="8231:8981" ph="{...}" />
+            <marker date="1488009912000" expanded="true" signature="8476:8704" ph="{...}" />
+            <marker date="1488009912000" expanded="true" signature="8739:8975" ph="{...}" />
+            <marker date="1488009912000" expanded="true" signature="8791:8965" ph="{...}" />
+            <marker date="1488009912000" expanded="true" signature="9019:9563" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -849,16 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="230" column="76" lean-forward="false" selection-start-line="230" selection-start-column="76" selection-end-line="230" selection-end-column="76" />
-          <folding>
-            <element signature="n#!!doc;n#STD#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/interfaces.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -869,17 +851,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1298">
+        <state relative-caret-position="563">
           <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
+        <state relative-caret-position="7148">
           <caret line="1610" column="9" lean-forward="true" selection-start-line="1610" selection-start-column="9" selection-end-line="1610" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="246" column="95" lean-forward="true" selection-start-line="246" selection-start-column="95" selection-end-line="246" selection-end-column="95" />
+          <folding>
+            <element signature="n#!!doc;n#STD#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

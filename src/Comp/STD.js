@@ -230,5 +230,23 @@ var STD;
             }
         }
     };
+    STD.attribute = function (env, args) {
+        if (args.length !== 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        var obj = env.callLib(env, args[0].node, args[0].args);
+        var index = env.callLib(env, args[0].node, args[0].args);
+        if (typeof obj === 'object' && obj !== null) {
+            return obj.getItem(index); //collection interface
+        }
+        else if (typeof obj === 'string') {
+            if (typeof index !== 'number')
+                throw new Errors_1.Errors.TypeError('number', typeof index);
+            if (index < 0 || index >= obj.length)
+                throw new Errors_1.Errors.IndexError(index.toString());
+            return obj[index];
+        }
+        else
+            throw new Errors_1.Errors.TypeError('Collection', typeof obj);
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
