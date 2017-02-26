@@ -1,4 +1,5 @@
 "use strict";
+var Errors_1 = require("../Errors");
 /**
  * Created by Josh on 2/25/17.
  */
@@ -15,6 +16,24 @@ var Strings;
         };
         OblString.prototype.innerValue = function () {
             return this.str;
+        };
+        OblString.prototype.getItem = function (index) {
+            //might need type check
+            if (index < 0 || index >= this.str.length)
+                throw new Errors_1.Errors.IndexError(index);
+            else
+                return this.str[index];
+        };
+        OblString.prototype.setItem = function (index, value) {
+            if (index < 0 || index >= this.str.length)
+                throw new Errors_1.Errors.IndexError(index);
+            this.str = this.str.replace(this.str.charAt(index), value);
+        };
+        OblString.prototype.hasItem = function (item) {
+            return undefined;
+        };
+        OblString.prototype.size = function () {
+            return undefined;
         };
         return OblString;
     }());
