@@ -2,6 +2,7 @@
  * Created by Josh on 2/25/17.
  */
 "use strict";
+//contains OblString class and string util methods
 var Strings;
 (function (Strings) {
     var OblString = (function () {

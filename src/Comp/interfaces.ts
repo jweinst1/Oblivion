@@ -8,3 +8,8 @@ export interface Collection {
     getItem(index:any):any;
     setItem(index:any, value:any):void;
 }
+
+//interface for formatting for printing
+export interface Printable {
+    strFormat():string;
+}
