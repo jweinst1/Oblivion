@@ -7,6 +7,7 @@
 export interface Collection {
     getItem(index:any):any;
     setItem(index:any, value:any):void;
+    size():number;
 }
 
 //interface for formatting for printing
@@ -22,6 +23,11 @@ export interface Comparable {
     notEqualTo(other:Comparable):boolean;
 }
 
-export interface Array {
-    
+//interface for array-like objects
+export interface OrderedCollection {
+    append(item:any):void;
+    appendLeft(item:any):void;
+    pop():any;
+    remove(item:any):void;
+
 }
