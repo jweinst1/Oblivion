@@ -29,8 +29,9 @@ var Strings;
                 throw new Errors_1.Errors.IndexError(index);
             this.str = this.str.replace(this.str.charAt(index), value);
         };
+        //checks if string contains substring
         OblString.prototype.hasItem = function (item) {
-            return undefined;
+            return this.str.search(item.innerValue()) !== -1;
         };
         OblString.prototype.size = function () {
             return undefined;

@@ -33,8 +33,9 @@ export namespace Strings {
             this.str = this.str.replace(this.str.charAt(index), value);
         }
 
-        hasItem(item: any): boolean {
-            return undefined;
+        //checks if string contains substring
+        hasItem(item: OblString): boolean {
+            return this.str.search(item.innerValue()) !== -1;
         }
 
         size(): number {
