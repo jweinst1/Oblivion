@@ -13,3 +13,9 @@ export interface Collection {
 export interface Printable {
     strFormat():string;
 }
+
+
+export interface Comparable {
+    isEqualTo(other:Comparable):boolean;
+    notEqualTo(other:Comparable):boolean;
+}
