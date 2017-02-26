@@ -1,7 +1,7 @@
+"use strict";
 /**
  * Created by Josh on 2/25/17.
  */
-"use strict";
 //contains OblString class and string util methods
 var Strings;
 (function (Strings) {
@@ -10,6 +10,12 @@ var Strings;
             if (str === void 0) { str = ""; }
             this.str = str;
         }
+        OblString.prototype.strFormat = function () {
+            return "\"" + this.str + "\"";
+        };
+        OblString.prototype.innerValue = function () {
+            return this.str;
+        };
         return OblString;
     }());
     Strings.OblString = OblString;
