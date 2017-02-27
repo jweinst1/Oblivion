@@ -1,6 +1,7 @@
 import {Environment} from "../Env";
 import {IO} from "../IO";
 import {Errors} from "../Errors";
+import {Strings} from "./Strings";
 /**
  * Created by Josh on 2/13/17.
  */
@@ -245,9 +246,21 @@ export namespace STD {
         else throw new Errors.TypeError('Collection', typeof obj);
     };
 
+    //handles any forms of a.b()
     export let methodCall = (env:Environment.Env, args:any[]) => {
-
+        let objnode = args[0].args[0];
+        let key = env.callLib(env,args[0].args[1].node, args[0].args[1].args);
+        let obj = env.callLib(env, objnode.node, objnode.args);
+        if(typeof obj !== 'object' || obj === null) throw new Errors.TypeError('Collction', typeof obj);
+        if(key in obj.constructor.prototype) {
+            for(let i=1;i<args.length;i++){
+                args[i] = env.callLib(env, args[i].node, args[i].args);
+            }
+            return obj[key](args.slice(1));
+        }
     };
 
-
+    export let c_string = (env:Environment.Env, args:any[]) => {
+        return new Strings.OblString(args[0]);
+    };
 }

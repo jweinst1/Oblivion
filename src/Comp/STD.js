@@ -1,6 +1,7 @@
 "use strict";
 var IO_1 = require("../IO");
 var Errors_1 = require("../Errors");
+var Strings_1 = require("./Strings");
 /**
  * Created by Josh on 2/13/17.
  */
@@ -241,7 +242,22 @@ var STD;
         else
             throw new Errors_1.Errors.TypeError('Collection', typeof obj);
     };
+    //handles any forms of a.b()
     STD.methodCall = function (env, args) {
+        var objnode = args[0].args[0];
+        var key = env.callLib(env, args[0].args[1].node, args[0].args[1].args);
+        var obj = env.callLib(env, objnode.node, objnode.args);
+        if (typeof obj !== 'object' || obj === null)
+            throw new Errors_1.Errors.TypeError('Collction', typeof obj);
+        if (key in obj.constructor.prototype) {
+            for (var i = 1; i < args.length; i++) {
+                args[i] = env.callLib(env, args[i].node, args[i].args);
+            }
+            return obj[key](args.slice(1));
+        }
+    };
+    STD.c_string = function (env, args) {
+        return new Strings_1.Strings.OblString(args[0]);
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
