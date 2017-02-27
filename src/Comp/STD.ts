@@ -249,7 +249,7 @@ export namespace STD {
     //handles any forms of a.b()
     export let methodCall = (env:Environment.Env, args:any[]) => {
         let objnode = args[0].args[0];
-        let key = env.callLib(env,args[0].args[1].node, args[0].args[1].args);
+        let key = args[0].args[1].args[0];
         let obj = env.callLib(env, objnode.node, objnode.args);
         if(typeof obj !== 'object' || obj === null) throw new Errors.TypeError('Collction', typeof obj);
         if(key in obj.constructor.prototype) {

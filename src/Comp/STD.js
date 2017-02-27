@@ -245,7 +245,7 @@ var STD;
     //handles any forms of a.b()
     STD.methodCall = function (env, args) {
         var objnode = args[0].args[0];
-        var key = env.callLib(env, args[0].args[1].node, args[0].args[1].args);
+        var key = args[0].args[1].args[0];
         var obj = env.callLib(env, objnode.node, objnode.args);
         if (typeof obj !== 'object' || obj === null)
             throw new Errors_1.Errors.TypeError('Collction', typeof obj);
