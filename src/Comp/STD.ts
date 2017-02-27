@@ -242,16 +242,12 @@ export namespace STD {
         if(typeof obj === 'object' && obj !== null) {
             return obj.getItem(index); //collection interface
         }
-        else if(typeof obj === 'string'){
-            if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
-            if(index < 0 || index >= obj.length) throw new Errors.IndexError(index.toString());
-            return obj[index];
-        }
         else throw new Errors.TypeError('Collection', typeof obj);
     };
 
-    //handles attribute assignment
-    export let attrAssign = (env:Environment.Env, args:any[]) => {
+    export let methodCall = (env:Environment.Env, args:any[]) => {
 
     };
+
+
 }

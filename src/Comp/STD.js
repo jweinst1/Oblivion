@@ -238,18 +238,10 @@ var STD;
         if (typeof obj === 'object' && obj !== null) {
             return obj.getItem(index); //collection interface
         }
-        else if (typeof obj === 'string') {
-            if (typeof index !== 'number')
-                throw new Errors_1.Errors.TypeError('number', typeof index);
-            if (index < 0 || index >= obj.length)
-                throw new Errors_1.Errors.IndexError(index.toString());
-            return obj[index];
-        }
         else
             throw new Errors_1.Errors.TypeError('Collection', typeof obj);
     };
-    //handles attribute assignment
-    STD.attrAssign = function (env, args) {
+    STD.methodCall = function (env, args) {
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
