@@ -248,16 +248,8 @@ export namespace STD {
 
     //handles any forms of a.b()
     export let methodCall = (env:Environment.Env, args:any[]) => {
-        let objnode = args[0].args[0];
-        let key = args[0].args[1].args[0];
-        let obj = env.callLib(env, objnode.node, objnode.args);
-        if(typeof obj !== 'object' || obj === null) throw new Errors.TypeError('Collction', typeof obj);
-        if(key in obj.constructor.prototype) {
-            for(let i=1;i<args.length;i++){
-                args[i] = env.callLib(env, args[i].node, args[i].args);
-            }
-            return obj[key](args.slice(1));
-        }
+        let method = env.callLib(env, args[0].node, args[0].args);
+        if(typeof args[0] !== 'function') throw new Errors.TypeError('callable', typeof args[0]);
     };
 
     export let c_string = (env:Environment.Env, args:any[]) => {
