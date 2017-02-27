@@ -1,56 +1,31 @@
+import {Collection} from "./interfaces";
 /**
  * Created by Josh on 2/17/17.
  * Implements the primitive List Type in Oblivion
  */
 
 export namespace Lists {
-    export class List {
-        public array:any[];
-        public dict:Object;
+
+    export class OblList implements Collection {
+        public items:any[];
 
         constructor(){
-            this.array = [];
-            this.dict = {};
+            this.items = [];
         }
 
-        get(key:string):any {
-            if(key in this.dict) return this.dict[key];
-            else if(key in this.array) return this.array[key];
-            else throw `needs error`;
+        getItem(index: any): any {
+            return undefined;
         }
 
-        set(key:string | number, value:any):void {
-            this.dict[key] = value;
+        setItem(index: any, value: any): void {
         }
 
-        //takes one argument
-        append(item:any):void {
-            this.array.push(item)
+        hasItem(item: any): boolean {
+            return undefined;
         }
 
-        //takes arbitrary amount of arguments
-        appendAll(...items:any[]):void {
-            Array.prototype.push.apply(this.array, items);
-        }
-
-        appendLeft(item:any):void {
-            this.array.unshift(item);
-        }
-
-        pop():any {
-            if(this.array.length > 0) return this.array.pop();
-            //needs custom error
-            else throw "Length Error: No items in list.";
-        }
-
-        popLeft():any {
-            if(this.array.length > 0) return this.array.shift();
-            //needs custom error
-            else throw "Length Error: No items in list.";
-        }
-
-        extend(other:List):void {
-            this.array = this.array.concat(other.array);
+        size(): number {
+            return this.items.length;
         }
     }
 }

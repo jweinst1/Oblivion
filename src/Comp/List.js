@@ -1,58 +1,27 @@
+"use strict";
 /**
  * Created by Josh on 2/17/17.
  * Implements the primitive List Type in Oblivion
  */
-"use strict";
 var Lists;
 (function (Lists) {
-    var List = (function () {
-        function List() {
-            this.array = [];
-            this.dict = {};
+    var OblList = (function () {
+        function OblList() {
+            this.items = [];
         }
-        List.prototype.get = function (key) {
-            if (key in this.dict)
-                return this.dict[key];
-            else if (key in this.array)
-                return this.array[key];
-            else
-                throw "needs error";
+        OblList.prototype.getItem = function (index) {
+            return undefined;
         };
-        List.prototype.set = function (key, value) {
-            this.dict[key] = value;
+        OblList.prototype.setItem = function (index, value) {
         };
-        //takes one argument
-        List.prototype.append = function (item) {
-            this.array.push(item);
+        OblList.prototype.hasItem = function (item) {
+            return undefined;
         };
-        //takes arbitrary amount of arguments
-        List.prototype.appendAll = function () {
-            var items = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                items[_i - 0] = arguments[_i];
-            }
-            Array.prototype.push.apply(this.array, items);
+        OblList.prototype.size = function () {
+            return this.items.length;
         };
-        List.prototype.appendLeft = function (item) {
-            this.array.unshift(item);
-        };
-        List.prototype.pop = function () {
-            if (this.array.length > 0)
-                return this.array.pop();
-            else
-                throw "Length Error: No items in list.";
-        };
-        List.prototype.popLeft = function () {
-            if (this.array.length > 0)
-                return this.array.shift();
-            else
-                throw "Length Error: No items in list.";
-        };
-        List.prototype.extend = function (other) {
-            this.array = this.array.concat(other.array);
-        };
-        return List;
+        return OblList;
     }());
-    Lists.List = List;
+    Lists.OblList = OblList;
 })(Lists = exports.Lists || (exports.Lists = {}));
 //# sourceMappingURL=List.js.map
