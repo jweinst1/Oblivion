@@ -1,4 +1,5 @@
 import {Collection} from "./interfaces";
+import {Errors} from "../Errors";
 /**
  * Created by Josh on 2/17/17.
  * Implements the primitive List Type in Oblivion
@@ -14,10 +15,13 @@ export namespace Lists {
         }
 
         getItem(index: any): any {
-            return undefined;
+            if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
+            if(index < 0 || index >= this.items.length) throw new Errors.IndexError(index+"");
+            return this.items[index];
         }
 
         setItem(index: any, value: any): void {
+
         }
 
         hasItem(item: any): boolean {
