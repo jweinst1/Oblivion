@@ -249,7 +249,14 @@ export namespace STD {
     //handles any forms of a.b()
     export let methodCall = (env:Environment.Env, args:any[]) => {
         let method = env.callLib(env, args[0].node, args[0].args);
-        if(typeof args[0] !== 'function') throw new Errors.TypeError('callable', typeof args[0]);
+        if(typeof method !== 'function') throw new Errors.TypeError('callable', typeof args[0]);
+        return method(env, args.slice(1));
+    };
+
+    export let attrAssign = (env:Environment.Env, args:any[]) => {
+        let obj = env.get(args[0].args[0].args[0]);
+        let key = env.callLib(env, args[0].args[1].node, args[0].args[1].args);
+        obj.setItem(key, env.callLib(env, args[1].node, args[1].args));
     };
 
     export let c_string = (env:Environment.Env, args:any[]) => {

@@ -27,6 +27,8 @@ export namespace Lib {
         "?gen":STD.generator,
         "?process":STD.process,
         "?method":STD.methodCall,
+        "?.":STD.attribute,
+        "?=>":STD.attrAssign,
         "+":STD.add,
         "-":STD.sub,
         "*":STD.mul,

@@ -26,6 +26,8 @@ var Lib;
         "?gen": STD_1.STD.generator,
         "?process": STD_1.STD.process,
         "?method": STD_1.STD.methodCall,
+        "?.": STD_1.STD.attribute,
+        "?=>": STD_1.STD.attrAssign,
         "+": STD_1.STD.add,
         "-": STD_1.STD.sub,
         "*": STD_1.STD.mul,

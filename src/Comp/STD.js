@@ -245,8 +245,14 @@ var STD;
     //handles any forms of a.b()
     STD.methodCall = function (env, args) {
         var method = env.callLib(env, args[0].node, args[0].args);
-        if (typeof args[0] !== 'function')
+        if (typeof method !== 'function')
             throw new Errors_1.Errors.TypeError('callable', typeof args[0]);
+        return method(env, args.slice(1));
+    };
+    STD.attrAssign = function (env, args) {
+        var obj = env.get(args[0].args[0].args[0]);
+        var key = env.callLib(env, args[0].args[1].node, args[0].args[1].args);
+        obj.setItem(key, env.callLib(env, args[1].node, args[1].args));
     };
     STD.c_string = function (env, args) {
         return new Strings_1.Strings.OblString(args[0]);
