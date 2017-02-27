@@ -21,11 +21,16 @@ export namespace Lists {
         }
 
         setItem(index: any, value: any): void {
-
+            if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
+            if(index < 0 || index >= this.items.length) throw new Errors.IndexError(index+"");
+            this.items[index] = value;
         }
 
         hasItem(item: any): boolean {
-            return undefined;
+            for(let val of this.items){
+                if(val === item) return true;
+            }
+            return false;
         }
 
         size(): number {
