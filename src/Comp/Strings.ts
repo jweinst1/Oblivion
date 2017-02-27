@@ -39,7 +39,7 @@ export namespace Strings {
         }
 
         size(): number {
-            return undefined;
+            return this.str.length;
         }
     }
 }

@@ -34,7 +34,7 @@ var Strings;
             return this.str.search(item.innerValue()) !== -1;
         };
         OblString.prototype.size = function () {
-            return undefined;
+            return this.str.length;
         };
         return OblString;
     }());
