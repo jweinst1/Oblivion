@@ -36,8 +36,10 @@ var Lists;
             return this.items.length;
         };
         OblList.prototype.append = function (item) {
+            this.items.push(item);
         };
         OblList.prototype.appendLeft = function (item) {
+            this.items.unshift(item);
         };
         OblList.prototype.pop = function () {
             return undefined;
