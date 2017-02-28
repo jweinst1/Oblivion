@@ -47,11 +47,13 @@ export namespace Lists {
         }
 
         pop(): any {
-            return undefined;
+            if(this.items.length === 0) throw new Error("Pop Error: Pop method requires list not have length 0");
+            return this.items.pop();
         }
 
         popLeft(): any {
-            return undefined;
+            if(this.items.length === 0) throw new Error("Pop Error: Pop method requires list not have length 0");
+            return this.items.shift();
         }
 
         remove(item: any): void {

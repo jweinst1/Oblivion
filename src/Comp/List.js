@@ -42,10 +42,14 @@ var Lists;
             this.items.unshift(item);
         };
         OblList.prototype.pop = function () {
-            return undefined;
+            if (this.items.length === 0)
+                throw new Error("Pop Error: Pop method requires list not have length 0");
+            return this.items.pop();
         };
         OblList.prototype.popLeft = function () {
-            return undefined;
+            if (this.items.length === 0)
+                throw new Error("Pop Error: Pop method requires list not have length 0");
+            return this.items.shift();
         };
         OblList.prototype.remove = function (item) {
         };
