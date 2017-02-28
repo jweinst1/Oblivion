@@ -56,10 +56,17 @@ export namespace Lists {
             return this.items.shift();
         }
 
+        //wont do anything if item not in list
         remove(item: any): void {
+            for(let i=0;i<this.items.length;i++){
+                if(item === this.items[i]){
+                    this.items.splice(i, 1);
+                }
+            }
         }
 
         insert(index: number, item: any): void {
+
         }
 
         extend(other: Collection): void {

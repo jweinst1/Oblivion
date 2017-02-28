@@ -51,7 +51,13 @@ var Lists;
                 throw new Error("Pop Error: Pop method requires list not have length 0");
             return this.items.shift();
         };
+        //wont do anything if item not in list
         OblList.prototype.remove = function (item) {
+            for (var i = 0; i < this.items.length; i++) {
+                if (item === this.items[i]) {
+                    this.items.splice(i, 1);
+                }
+            }
         };
         OblList.prototype.insert = function (index, item) {
         };
