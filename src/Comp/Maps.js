@@ -19,19 +19,37 @@ var Maps;
                     throw new Errors_1.Errors.IndexError(index);
             }
             else {
-                if (index.innerValue() in this.pairs)
-                    return this.pairs[index.innerValue()];
+                //uses string format for object wrapped valus.
+                var str = index.strFormat();
+                if (str in this.pairs)
+                    return this.pairs[str];
                 else
-                    throw new Errors_1.Errors.IndexError(index.innerValue());
+                    throw new Errors_1.Errors.IndexError(str);
             }
         };
         OblMap.prototype.setItem = function (index, value) {
+            if (typeof index !== 'object')
+                this.pairs[index] = value;
+            else
+                this.pairs[index.strFormat()] = value;
         };
         OblMap.prototype.hasItem = function (item) {
-            return undefined;
+            if (typeof item !== 'object')
+                return item in this.pairs;
+            else
+                return item.strFormat() in this.pairs;
         };
         OblMap.prototype.size = function () {
-            return undefined;
+            var total = 0;
+            for (var key in this.pairs)
+                total++;
+            return total;
+        };
+        OblMap.prototype.strFormat = function () {
+            return JSON.stringify(this.pairs);
+        };
+        OblMap.prototype.innerValue = function () {
+            return this.pairs;
         };
         return OblMap;
     }());

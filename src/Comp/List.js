@@ -62,6 +62,7 @@ var Lists;
         OblList.prototype.insert = function (index, item) {
         };
         OblList.prototype.extend = function (other) {
+            //not implmented
         };
         OblList.prototype.find = function (item) {
             return undefined;

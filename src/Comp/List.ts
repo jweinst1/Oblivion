@@ -70,6 +70,7 @@ export namespace Lists {
         }
 
         extend(other: Collection): void {
+            //not implmented
         }
 
         find(item: any): any {
