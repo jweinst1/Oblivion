@@ -35,6 +35,25 @@ var Lists;
         OblList.prototype.size = function () {
             return this.items.length;
         };
+        OblList.prototype.append = function (item) {
+        };
+        OblList.prototype.appendLeft = function (item) {
+        };
+        OblList.prototype.pop = function () {
+            return undefined;
+        };
+        OblList.prototype.popLeft = function () {
+            return undefined;
+        };
+        OblList.prototype.remove = function (item) {
+        };
+        OblList.prototype.insert = function (index, item) {
+        };
+        OblList.prototype.extend = function (other) {
+        };
+        OblList.prototype.find = function (item) {
+            return undefined;
+        };
         return OblList;
     }());
     Lists.OblList = OblList;

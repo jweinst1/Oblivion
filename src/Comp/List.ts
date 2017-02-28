@@ -1,4 +1,4 @@
-import {Collection} from "./interfaces";
+import {Collection, OrderedCollection} from "./interfaces";
 import {Errors} from "../Errors";
 /**
  * Created by Josh on 2/17/17.
@@ -7,7 +7,8 @@ import {Errors} from "../Errors";
 
 export namespace Lists {
 
-    export class OblList implements Collection {
+    export class OblList implements Collection, OrderedCollection {
+
         public items:any[];
 
         constructor(){
@@ -35,6 +36,33 @@ export namespace Lists {
 
         size(): number {
             return this.items.length;
+        }
+
+        append(item: any): void {
+        }
+
+        appendLeft(item: any): void {
+        }
+
+        pop(): any {
+            return undefined;
+        }
+
+        popLeft(): any {
+            return undefined;
+        }
+
+        remove(item: any): void {
+        }
+
+        insert(index: number, item: any): void {
+        }
+
+        extend(other: Collection): void {
+        }
+
+        find(item: any): any {
+            return undefined;
         }
     }
 }
