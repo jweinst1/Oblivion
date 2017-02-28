@@ -1,4 +1,4 @@
-import {Collection, OrderedCollection} from "./interfaces";
+import {Collection, OrderedCollection, Printable} from "./interfaces";
 import {Errors} from "../Errors";
 /**
  * Created by Josh on 2/17/17.
@@ -7,12 +7,20 @@ import {Errors} from "../Errors";
 
 export namespace Lists {
 
-    export class OblList implements Collection, OrderedCollection {
+    export class OblList implements Collection, OrderedCollection, Printable {
 
         public items:any[];
 
         constructor(){
             this.items = [];
+        }
+
+        strFormat(): string {
+            return JSON.stringify(this.items);
+        }
+
+        innerValue(): any {
+            return this.items;
         }
 
         getItem(index: any): any {

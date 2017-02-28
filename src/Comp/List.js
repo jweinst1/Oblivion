@@ -10,6 +10,12 @@ var Lists;
         function OblList() {
             this.items = [];
         }
+        OblList.prototype.strFormat = function () {
+            return JSON.stringify(this.items);
+        };
+        OblList.prototype.innerValue = function () {
+            return this.items;
+        };
         OblList.prototype.getItem = function (index) {
             if (typeof index !== 'number')
                 throw new Errors_1.Errors.TypeError('number', typeof index);
