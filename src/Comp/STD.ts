@@ -70,7 +70,7 @@ export namespace STD {
     };
     //handles Word rule, which retrieves variables
     export let wordVar = (env:Environment.Env, args:any[]) => {
-        if(env.contains(args[0])) env.get(args[0]);
+        if(env.contains(args[0])) return env.get(args[0]);
         else return args[0];
     };
 
