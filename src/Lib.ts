@@ -52,7 +52,8 @@ export namespace Lib {
         "?null":STD.c_null,
         "?word":STD.wordVar,
         "return":STD._return,
-
+        /*Lib functons with !*/
+        "!range":STD.range,
         /*SVG*/
         "?draw":drawSVG.draw,
         "line":Line.initLine

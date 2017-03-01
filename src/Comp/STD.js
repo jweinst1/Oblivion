@@ -284,6 +284,27 @@ var STD;
     };
     //produces lists in a range
     STD.range = function (env, args) {
+        switch (args.length) {
+            case 0:
+                return new List_1.Lists.OblList();
+            case 1:
+                var lst = [];
+                var limit = env.callLib(env, args[0].node, args[0].args);
+                if (typeof limit !== 'number')
+                    throw new Error("TypeError: Got type " + typeof limit + " but needs number.");
+                for (var i = 0; i < limit; i++)
+                    lst.push(i);
+                return new List_1.Lists.OblList(lst);
+            case 2:
+                var lst = [];
+                var start = env.callLib(env, args[0].node, args[0].args);
+                var end = env.callLib(env, args[1].node, args[1].args);
+                if (typeof start !== 'number' || typeof end !== 'number')
+                    throw new Error("TypeError: Needs type number.");
+                for (var i = start; i < end; i++)
+                    lst.push(i);
+                return new List_1.Lists.OblList(lst);
+        }
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

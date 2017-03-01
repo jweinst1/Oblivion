@@ -287,6 +287,22 @@ export namespace STD {
 
     //produces lists in a range
     export let range = (env:Environment.Env, args:any[]) => {
-
+        switch(args.length){
+            case 0:
+                return new Lists.OblList();
+            case 1:
+                var lst = [];
+                let limit = env.callLib(env, args[0].node, args[0].args);
+                if(typeof limit !== 'number') throw new Error(`TypeError: Got type ${typeof limit} but needs number.`);
+                for(let i=0;i<limit;i++) lst.push(i);
+                return new Lists.OblList(lst);
+            case 2:
+                var lst = [];
+                let start = env.callLib(env, args[0].node, args[0].args);
+                let end = env.callLib(env, args[1].node, args[1].args);
+                if(typeof start !== 'number' || typeof end !== 'number') throw new Error(`TypeError: Needs type number.`);
+                for(let i=start;i<end;i++) lst.push(i);
+                return new Lists.OblList(lst);
+        }
     };
 }

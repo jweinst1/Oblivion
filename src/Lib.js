@@ -51,6 +51,8 @@ var Lib;
         "?null": STD_1.STD.c_null,
         "?word": STD_1.STD.wordVar,
         "return": STD_1.STD._return,
+        /*Lib functons with !*/
+        "!range": STD_1.STD.range,
         /*SVG*/
         "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine
