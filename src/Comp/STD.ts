@@ -2,6 +2,7 @@ import {Environment} from "../Env";
 import {IO} from "../IO";
 import {Errors} from "../Errors";
 import {Strings} from "./Strings";
+import {Lists} from "./List";
 /**
  * Created by Josh on 2/13/17.
  */
@@ -261,5 +262,13 @@ export namespace STD {
 
     export let c_string = (env:Environment.Env, args:any[]) => {
         return new Strings.OblString(args[0]);
+    };
+
+    //creates new lst object
+    export let c_list = (env:Environment.Env, args:any[]) => {
+        for(let i=0;i<args.length;i++){
+            args[i] = env.callLib(env, args[i].node, args[i].args);
+        }
+        return new Lists.OblList(args);
     };
 }

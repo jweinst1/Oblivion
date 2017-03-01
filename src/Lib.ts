@@ -46,6 +46,7 @@ export namespace Lib {
         "print":STD.print,
         "?number":STD.c_number,
         "?string":STD.c_string,
+        "?list":STD.c_list,
         "?bool":STD.c_bool,
         "?null":STD.c_null,
         "?word":STD.wordVar,

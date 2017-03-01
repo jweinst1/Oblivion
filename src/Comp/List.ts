@@ -11,8 +11,8 @@ export namespace Lists {
 
         public items:any[];
 
-        constructor(){
-            this.items = [];
+        constructor(lst:any[] = []){
+            this.items = lst;
         }
 
         strFormat(): string {

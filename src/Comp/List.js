@@ -7,8 +7,9 @@ var Errors_1 = require("../Errors");
 var Lists;
 (function (Lists) {
     var OblList = (function () {
-        function OblList() {
-            this.items = [];
+        function OblList(lst) {
+            if (lst === void 0) { lst = []; }
+            this.items = lst;
         }
         OblList.prototype.strFormat = function () {
             return JSON.stringify(this.items);
