@@ -70,7 +70,8 @@ export namespace STD {
     };
     //handles Word rule, which retrieves variables
     export let wordVar = (env:Environment.Env, args:any[]) => {
-        return env.get(args[0]);
+        if(env.contains(args[0])) env.get(args[0]);
+        else return args[0];
     };
 
     //facilitates return function
@@ -279,7 +280,7 @@ export namespace STD {
     export let c_map = (env:Environment.Env, args:any[]) => {
         let map = new Maps.OblMap();
         for(let pair of args){
-            map.setItem(env.callLib(env, pair.args[0].node, pair.args[0].args),env.callLib(env, pair.args[1].node, pair.args[1].args))
+            map.setItem(env.callLib(env, pair.args[0].node, pair.args[0].args), env.callLib(env, pair.args[1].node, pair.args[1].args))
         }
         return map;
     };

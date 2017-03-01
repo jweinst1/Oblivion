@@ -68,7 +68,10 @@ var STD;
     };
     //handles Word rule, which retrieves variables
     STD.wordVar = function (env, args) {
-        return env.get(args[0]);
+        if (env.contains(args[0]))
+            env.get(args[0]);
+        else
+            return args[0];
     };
     //facilitates return function
     STD._return = function (env, args) {
