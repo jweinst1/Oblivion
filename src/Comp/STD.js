@@ -282,5 +282,8 @@ var STD;
         }
         return map;
     };
+    //produces lists in a range
+    STD.range = function (env, args) {
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

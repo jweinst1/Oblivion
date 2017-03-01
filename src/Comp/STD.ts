@@ -284,4 +284,9 @@ export namespace STD {
         }
         return map;
     };
+
+    //produces lists in a range
+    export let range = (env:Environment.Env, args:any[]) => {
+
+    };
 }
