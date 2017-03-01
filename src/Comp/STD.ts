@@ -92,7 +92,9 @@ export namespace STD {
 
     export let print = (env:Environment.Env, args:any[]) => {
         for(let i=0;i<args.length;i++){
-            IO.pushOut(env.callLib(env, args[i].node, args[i].args));
+            let printed = env.callLib(env, args[i].node, args[i].args);
+            if(typeof printed === 'object') IO.pushOut(printed.strFormat());
+            else IO.pushOut(printed);
         }
     };
 

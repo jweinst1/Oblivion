@@ -87,7 +87,11 @@ var STD;
     };
     STD.print = function (env, args) {
         for (var i = 0; i < args.length; i++) {
-            IO_1.IO.pushOut(env.callLib(env, args[i].node, args[i].args));
+            var printed = env.callLib(env, args[i].node, args[i].args);
+            if (typeof printed === 'object')
+                IO_1.IO.pushOut(printed.strFormat());
+            else
+                IO_1.IO.pushOut(printed);
         }
     };
     STD.add = function (env, args) {
