@@ -3,6 +3,7 @@ var IO_1 = require("../IO");
 var Errors_1 = require("../Errors");
 var Strings_1 = require("./Strings");
 var List_1 = require("./List");
+var Maps_1 = require("./Maps");
 /**
  * Created by Josh on 2/13/17.
  */
@@ -262,12 +263,16 @@ var STD;
     STD.c_string = function (env, args) {
         return new Strings_1.Strings.OblString(args[0]);
     };
-    //creates new lst object
+    //creates new list object
     STD.c_list = function (env, args) {
         for (var i = 0; i < args.length; i++) {
             args[i] = env.callLib(env, args[i].node, args[i].args);
         }
         return new List_1.Lists.OblList(args);
+    };
+    //creates new map object
+    STD.c_map = function (env, args) {
+        var map = new Maps_1.Maps.OblMap();
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

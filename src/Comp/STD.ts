@@ -3,6 +3,7 @@ import {IO} from "../IO";
 import {Errors} from "../Errors";
 import {Strings} from "./Strings";
 import {Lists} from "./List";
+import {Maps} from "./Maps";
 /**
  * Created by Josh on 2/13/17.
  */
@@ -266,11 +267,16 @@ export namespace STD {
         return new Strings.OblString(args[0]);
     };
 
-    //creates new lst object
+    //creates new list object
     export let c_list = (env:Environment.Env, args:any[]) => {
         for(let i=0;i<args.length;i++){
             args[i] = env.callLib(env, args[i].node, args[i].args);
         }
         return new Lists.OblList(args);
+    };
+
+    //creates new map object
+    export let c_map = (env:Environment.Env, args:any[]) => {
+        let map = new Maps.OblMap();
     };
 }
