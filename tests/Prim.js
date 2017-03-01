@@ -21,3 +21,4 @@ test.StdOutTest(11, 'b = ~{print(3)} b()', '3\n');
 test.StdOutTest(12, 'b = [~{print(3)}] b.0()', '3\n');
 test.StdOutTest(13, 'b = [f:~{print(3)}] b.f()', '3\n');
 test.StdOutTest(14, 'a = 0, b = 3, print(b)', '3\n');
+test.StdOutTest(15, 'a = [b:{(a) a = +(a, a) return(a)}], print(a.b(8))', '16\n');
