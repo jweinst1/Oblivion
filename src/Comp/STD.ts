@@ -278,5 +278,9 @@ export namespace STD {
     //creates new map object
     export let c_map = (env:Environment.Env, args:any[]) => {
         let map = new Maps.OblMap();
+        for(let pair of args){
+            map.setItem(env.callLib(env, pair.args[0].node, pair.args[0].args),env.callLib(env, pair.args[1].node, pair.args[1].args))
+        }
+        return map;
     };
 }

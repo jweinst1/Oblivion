@@ -273,6 +273,11 @@ var STD;
     //creates new map object
     STD.c_map = function (env, args) {
         var map = new Maps_1.Maps.OblMap();
+        for (var _i = 0, args_1 = args; _i < args_1.length; _i++) {
+            var pair = args_1[_i];
+            map.setItem(env.callLib(env, pair.args[0].node, pair.args[0].args), env.callLib(env, pair.args[1].node, pair.args[1].args));
+        }
+        return map;
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

@@ -46,6 +46,7 @@ var Lib;
         "?number": STD_1.STD.c_number,
         "?string": STD_1.STD.c_string,
         "?list": STD_1.STD.c_list,
+        "?map": STD_1.STD.c_map,
         "?bool": STD_1.STD.c_bool,
         "?null": STD_1.STD.c_null,
         "?word": STD_1.STD.wordVar,
