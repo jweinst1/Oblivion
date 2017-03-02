@@ -1,4 +1,4 @@
-import {Printable, Collection} from "./interfaces";
+import {Printable, Collection, OrderedCollection} from "./interfaces";
 import {Errors} from "../Errors";
 /**
  * Created by Josh on 2/25/17.
@@ -7,7 +7,7 @@ import {Errors} from "../Errors";
 //contains OblString class and string util methods
 export namespace Strings {
 
-    export class OblString implements Printable, Collection {
+    export class OblString implements Printable, Collection, OrderedCollection {
         public str:string;
 
         constructor(str:string = ""){
@@ -40,6 +40,35 @@ export namespace Strings {
 
         size(): number {
             return this.str.length;
+        }
+
+        append(item: any): void {
+            this.str += item;
+        }
+
+        appendLeft(item: any): void {
+            this.str = item + this.str;
+        }
+
+        pop(): any {
+            return undefined;
+        }
+
+        popLeft(): any {
+            return undefined;
+        }
+
+        remove(item: any): void {
+        }
+
+        insert(index: number, item: any): void {
+        }
+
+        extend(other: Collection): void {
+        }
+
+        find(item: any): any {
+            return undefined;
         }
     }
 }

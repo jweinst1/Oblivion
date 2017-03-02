@@ -36,6 +36,27 @@ var Strings;
         OblString.prototype.size = function () {
             return this.str.length;
         };
+        OblString.prototype.append = function (item) {
+            this.str += item;
+        };
+        OblString.prototype.appendLeft = function (item) {
+            this.str = item + this.str;
+        };
+        OblString.prototype.pop = function () {
+            return undefined;
+        };
+        OblString.prototype.popLeft = function () {
+            return undefined;
+        };
+        OblString.prototype.remove = function (item) {
+        };
+        OblString.prototype.insert = function (index, item) {
+        };
+        OblString.prototype.extend = function (other) {
+        };
+        OblString.prototype.find = function (item) {
+            return undefined;
+        };
         return OblString;
     }());
     Strings.OblString = OblString;
