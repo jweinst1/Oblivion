@@ -324,7 +324,11 @@ var STD;
         if (typeof obj !== 'object')
             return typeof obj;
         else
-            return obj.constructor.name;
+            switch (obj.constructor.name) {
+                case 'OblList': return 'List';
+                case 'OblString': return 'String';
+                case 'OblMap': return 'Map';
+            }
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

@@ -25,3 +25,4 @@ test.StdOutTest(15, 'a = [b:{(a) a = +(a, a) return(a)}], print(a.b(8))', '16\n'
 test.StdOutTest(16, 'print(!range(9))', '[0,1,2,3,4,5,6,7,8]\n');
 test.StdOutTest(17, 'b = ~{print(3)}, !repeat(2, b)', '3\n3\n');
 test.StdOutTest(18, 'i = 0, !loop(!=(i, 1), print(2), print(6), ~{i = 1})', '2\n6\n');
+test.StdOutTest(19, 'print(!type([]))', 'List\n');
