@@ -55,6 +55,8 @@ var Lib;
         "!range": STD_1.STD.range,
         "!repeat": STD_1.STD.repeat,
         "!type": STD_1.STD.type,
+        "!get": STD_1.STD.get,
+        "!set": STD_1.STD.set,
         /*SVG*/
         "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine

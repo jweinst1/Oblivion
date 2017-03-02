@@ -56,6 +56,8 @@ export namespace Lib {
         "!range":STD.range,
         "!repeat":STD.repeat,
         "!type":STD.type,
+        "!get":STD.get,
+        "!set":STD.set,
         /*SVG*/
         "?draw":drawSVG.draw,
         "line":Line.initLine

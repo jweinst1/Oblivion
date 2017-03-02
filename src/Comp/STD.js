@@ -330,5 +330,16 @@ var STD;
                 case 'OblMap': return 'Map';
             }
     };
+    /*Generic get and set functions*/
+    STD.get = function (env, args) {
+        if (args.length !== 2)
+            throw new Error("ArgumentError: !get() takes 2 arguments but got " + args.length);
+        return env.callLib(env, args[0].node, args[0].args).getItem(env.callLib(env, args[1].node, args[1].args));
+    };
+    STD.set = function (env, args) {
+        if (args.length !== 3)
+            throw new Error("ArgumentError: !get() takes 3 arguments but got " + args.length);
+        env.callLib(env, args[0].node, args[0].args).setItem(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
