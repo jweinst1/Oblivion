@@ -315,4 +315,11 @@ export namespace STD {
                 return new Lists.OblList(lst);
         }
     };
+
+    export let type = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 1) throw new Error(`ArgumentError: !type() takes one argument but got ${args.length}`);
+        let obj = env.callLib(env, args[0].node, args[0].args);
+        if(typeof obj !== 'object') return typeof obj;
+        else return obj.constructor.name;
+    };
 }

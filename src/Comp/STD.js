@@ -317,5 +317,14 @@ var STD;
                 return new List_1.Lists.OblList(lst);
         }
     };
+    STD.type = function (env, args) {
+        if (args.length !== 1)
+            throw new Error("ArgumentError: !type() takes one argument but got " + args.length);
+        var obj = env.callLib(env, args[0].node, args[0].args);
+        if (typeof obj !== 'object')
+            return typeof obj;
+        else
+            return obj.constructor.name;
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

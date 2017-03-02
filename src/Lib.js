@@ -54,6 +54,7 @@ var Lib;
         /*Lib functons with !*/
         "!range": STD_1.STD.range,
         "!repeat": STD_1.STD.repeat,
+        "!type": STD_1.STD.type,
         /*SVG*/
         "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine
