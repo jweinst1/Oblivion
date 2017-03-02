@@ -51,7 +51,14 @@ export namespace Strings {
         }
 
         pop(): any {
-            return undefined;
+            if(this.str) {
+                let popped = this.str[this.str.length];
+                this.str = this.str.slice(0, -1);
+                return popped;
+            }
+            else {
+                throw new Error(`LengthError: String cannot be popped when empty.`);
+            }
         }
 
         popLeft(): any {

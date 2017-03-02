@@ -43,7 +43,14 @@ var Strings;
             this.str = item + this.str;
         };
         OblString.prototype.pop = function () {
-            return undefined;
+            if (this.str) {
+                var popped = this.str[this.str.length];
+                this.str = this.str.slice(0, -1);
+                return popped;
+            }
+            else {
+                throw new Error("LengthError: String cannot be popped when empty.");
+            }
         };
         OblString.prototype.popLeft = function () {
             return undefined;

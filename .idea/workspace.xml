@@ -5,10 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/Strings.js" afterPath="$PROJECT_DIR$/src/Comp/Strings.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/Strings.js.map" afterPath="$PROJECT_DIR$/src/Comp/Strings.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/Strings.ts" afterPath="$PROJECT_DIR$/src/Comp/Strings.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js" afterPath="$PROJECT_DIR$/src/Lib.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js.map" afterPath="$PROJECT_DIR$/src/Lib.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.ts" afterPath="$PROJECT_DIR$/src/Lib.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Prim.js" afterPath="$PROJECT_DIR$/tests/Prim.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -126,8 +122,8 @@
       <file leaf-file-name="Strings.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Comp/Strings.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+            <state relative-caret-position="488">
+              <caret line="59" column="81" lean-forward="false" selection-start-line="59" selection-start-column="81" selection-end-line="59" selection-end-column="81" />
               <folding>
                 <element signature="e#0#70#0" expanded="true" />
                 <element signature="n#!!doc;n#Strings#0" expanded="false" />
@@ -449,12 +445,12 @@
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
       <workItem from="1487207577151" duration="50741000" />
-      <workItem from="1487838037508" duration="44101000" />
+      <workItem from="1487838037508" duration="44356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115719000" />
+    <option name="totallyTimeSpent" value="115974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -924,8 +920,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/Strings.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        <state relative-caret-position="488">
+          <caret line="59" column="81" lean-forward="false" selection-start-line="59" selection-start-column="81" selection-end-line="59" selection-end-column="81" />
           <folding>
             <element signature="e#0#70#0" expanded="true" />
             <element signature="n#!!doc;n#Strings#0" expanded="false" />
