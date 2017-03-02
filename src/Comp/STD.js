@@ -240,6 +240,17 @@ var STD;
             }
         }
     };
+    //repeat function useful for drawing and looping
+    //only accepts 2 arguments
+    STD.repeat = function (env, args) {
+        if (args.length !== 2)
+            throw new Error("ArgumentError: Expected 2 arguments but got " + args.length);
+        var times = env.callLib(env, args[0].node, args[0].args);
+        var proc = env.callLib(env, args[1].node, args[1].args);
+        while (times--) {
+            proc(env, []);
+        }
+    };
     STD.attribute = function (env, args) {
         if (args.length !== 2)
             throw new Errors_1.Errors.ArgumentError(args.length, 2);

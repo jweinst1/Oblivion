@@ -240,6 +240,16 @@ export namespace STD {
             }
         }
     };
+    //repeat function useful for drawing and looping
+    //only accepts 2 arguments
+    export let repeat = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 2) throw new Error(`ArgumentError: Expected 2 arguments but got ${args.length}`);
+        let times = env.callLib(env, args[0].node, args[0].args);
+        let proc = env.callLib(env, args[1].node, args[1].args);
+        while(times--){
+            proc(env, []);
+        }
+    };
 
     export let attribute = (env:Environment.Env, args:any[]) => {
         if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);

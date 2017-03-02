@@ -53,6 +53,7 @@ var Lib;
         "return": STD_1.STD._return,
         /*Lib functons with !*/
         "!range": STD_1.STD.range,
+        "!repeat": STD_1.STD.repeat,
         /*SVG*/
         "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine
