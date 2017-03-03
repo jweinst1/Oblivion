@@ -7,6 +7,7 @@ Statement
   / _? d:Def {return d;}
   / _? i:If {return i;}
   / _? f:For {return f;}
+  / _? g:Gen {return g;}
   / _? l:Loop {return l;}
   / _? d:Draw {return d;}
   / _? c:Call {return c;}
@@ -26,7 +27,7 @@ Def
   }
 
 Gen
-  = "gen" _ n:Name _ b:Body _ "call" _ c:Body "_" {
+  = "gen" _ n:Name _ b:Body _ "call" _ c:Body _ "_" {
      return {node:"?gen", args:[n, b, c]};
   }
 
