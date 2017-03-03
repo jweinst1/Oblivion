@@ -4,6 +4,7 @@ Program
 Statement
   /*Statements are the core top rule*/
   =   _? a:Assign {return a;}
+  / _? d:Def {return d;}
   / _? d:Draw {return d;}
   / _? c:Call {return c;}
 
@@ -14,6 +15,11 @@ Call
   }
   / method:Attribute "(" _ args:Operands _ ")" {
      return {node:"?method", args:[method].concat(args)};
+  }
+
+Def
+  = "def" _ n:Name _ "(" _ params:Params _ ")" _ b:Body _ "end" {
+     return {node:"?def", args:[n, params, b]};
   }
 
 Assign
