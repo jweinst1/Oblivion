@@ -25,6 +25,11 @@ Def
      return {node:"?def", args:[n, params, b]};
   }
 
+Gen
+  = "gen" _ n:Name _ b:Body _ "call" _ c:Body "_" {
+     return {node:"?gen", args:[n, b, c]};
+  }
+
 If
   = "if" _ c:Argument _ b:Body _ "_" {
     return {node:"?if", args:[c, b]};
