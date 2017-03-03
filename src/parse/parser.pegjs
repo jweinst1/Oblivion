@@ -5,7 +5,9 @@ Statement
   /*Statements are the core top rule*/
   =   _? a:Assign {return a;}
   / _? d:Def {return d;}
+  / _? i:If {return i;}
   / _? f:For {return f;}
+  / _? l:Loop {return l;}
   / _? d:Draw {return d;}
   / _? c:Call {return c;}
 
@@ -19,13 +21,23 @@ Call
   }
 
 Def
-  = "def" _ n:Name _ "(" _ params:Params _ ")" _ b:Body _ "end" {
+  = "def" _ n:Name _ "(" _ params:Params _ ")" _ b:Body _ "_" {
      return {node:"?def", args:[n, params, b]};
   }
 
+If
+  = "if" _ c:Argument _ b:Body _ "_" {
+    return {node:"?if", args:[c, b]};
+  }
+
 For
-  = "for" _ v:Name _ "in" _ a:Argument _ b:Body _ "end" {
+  = "for" _ v:Name _ "in" _ a:Argument _ b:Body _ "_" {
      return {node:"?for", args:[v, a, b]};
+  }
+
+Loop
+  = "loop" _ c:Argument _ b:Body _ "_" {
+     return {node:"?loop", args:[c, b]};
   }
 
 Assign
