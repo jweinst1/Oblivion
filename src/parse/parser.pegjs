@@ -5,6 +5,7 @@ Statement
   /*Statements are the core top rule*/
   =   _? a:Assign {return a;}
   / _? d:Def {return d;}
+  / _? f:For {return f;}
   / _? d:Draw {return d;}
   / _? c:Call {return c;}
 
@@ -23,7 +24,9 @@ Def
   }
 
 For
-  = "for" _ v:Name _ "in"
+  = "for" _ v:Name _ "in" _ a:Argument _ b:Body _ "end" {
+     return {node:"?for", args:[v, a, b]};
+  }
 
 Assign
   =  _? v:Name _? "=" _? val:Argument {return {node:"?=", args:[v, val]};}
