@@ -31,6 +31,9 @@ List
     return {node:"?map", args:args};
   }
   / "[:]" {return {node:"?map", args:[]};}
+  / "[" _ a:Name _ ";" _? b:Argument* _? "]" {
+    return {node:"?lcomp", args:[a].concat(b)};
+  }
 
 Pair
   = _ arg1:Word ":" arg2:Argument _ {
