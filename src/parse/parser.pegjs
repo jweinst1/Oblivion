@@ -11,6 +11,7 @@ Statement
   / _? l:Loop {return l;}
   / _? d:Draw {return d;}
   / _? c:Call {return c;}
+  / _? r:Return {return r;}
 
 Call
   /*Can Parse Function Calls*/
@@ -29,6 +30,11 @@ Def
 Gen
   = "gen" _ n:Name _ b:Body _ "call" _ c:Body _ "_" {
      return {node:"?gen", args:[n, b, c]};
+  }
+
+Return
+  = "return" _ a:Argument [ \t\r,]* "\n" {
+    return {node:"?return", args:[a]};
   }
 
 If
