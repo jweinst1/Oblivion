@@ -27,6 +27,7 @@ Def
      return {node:"?def", args:[n, params, b]};
   }
 
+
 Gen
   = "gen" _ n:Name _ b:Body _ "call" _ c:Body _ "_" {
      return {node:"?gen", args:[n, b, c]};
@@ -79,14 +80,9 @@ Pair
 Attribute
   = obj:Name "." attr:Word {return {node:"?.", args:[obj, attr]};}
 
-Generator
-  = "|" _ defs:Body _ ";" _ proc:Body _ "|" {
-      return {node:"?gen", args:[defs, proc]};
-  }
-
-Function
-  = "{" _? "(" _ params:Params _ ")" _ body:Body _ "}" {
-     return {node:"?func", args:[params, body]};
+Lambda
+  = "lambda " "(" p:Params ")" " -> " b:Argument " "* "\n"* {
+     return {node:"?func", args:[p, b]};
   }
 
 Operands
@@ -104,8 +100,7 @@ Process
 
 Argument
   = _? c:Call {return c;}
-  / _? f:Function {return f;}
-  / _? g:Generator {return g;}
+  / _? f:Lambda {return f;}
   / _? p:Process {return p;}
   / _? l:List {return l;}
   / _? s:String {return s;}
@@ -130,3 +125,6 @@ Word
 
 String
   = '"' s:[^"]* '"' {return {node:"?string", args:[s.join("")]};}
+
+
+
