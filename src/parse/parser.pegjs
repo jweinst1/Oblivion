@@ -22,6 +22,9 @@ Def
      return {node:"?def", args:[n, params, b]};
   }
 
+For
+  = "for" _ v:Name _ "in"
+
 Assign
   =  _? v:Name _? "=" _? val:Argument {return {node:"?=", args:[v, val]};}
   / _? v:Attribute _? "=" _? val:Argument {return {node:"?=>", args:[v, val]};}
