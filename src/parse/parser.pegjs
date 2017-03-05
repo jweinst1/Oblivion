@@ -58,7 +58,7 @@ Assign
   / _? v:Attribute _? "=" _? val:Argument {return {node:"?=>", args:[v, val]};}
 
 Draw
-  =  "draw:" _ val:Argument {return {node:"?draw", args:[val]};}
+  =  "draw" _ val:Argument {return {node:"?draw", args:[val]};}
 
 List
   = "[" _ args:Operands _ "]" {
@@ -68,9 +68,6 @@ List
     return {node:"?map", args:args};
   }
   / "[:]" {return {node:"?map", args:[]};}
-  / "[" _ a:Name _ ";" _? b:Argument* _? "]" {
-    return {node:"?lcomp", args:[a].concat(b)};
-  }
 
 Pair
   = _ arg1:Word ":" arg2:Argument _ {
@@ -96,7 +93,6 @@ Body
 
 Process
   = "~{" _ proc:Body _ "}" {return {node:"?process", args:[proc]}}
-
 
 Argument
   = _? c:Call {return c;}

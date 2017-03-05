@@ -50,7 +50,7 @@ var Lib;
         "?bool": STD_1.STD.c_bool,
         "?null": STD_1.STD.c_null,
         "?word": STD_1.STD.wordVar,
-        "return": STD_1.STD._return,
+        "?return": STD_1.STD._return,
         /*Lib functons with !*/
         "!range": STD_1.STD.range,
         "!repeat": STD_1.STD.repeat,

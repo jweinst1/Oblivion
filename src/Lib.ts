@@ -51,7 +51,7 @@ export namespace Lib {
         "?bool":STD.c_bool,
         "?null":STD.c_null,
         "?word":STD.wordVar,
-        "return":STD._return,
+        "?return":STD._return,
         /*Lib functons with !*/
         "!range":STD.range,
         "!repeat":STD.repeat,

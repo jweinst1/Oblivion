@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js" afterPath="$PROJECT_DIR$/src/Lib.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js.map" afterPath="$PROJECT_DIR$/src/Lib.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.ts" afterPath="$PROJECT_DIR$/src/Lib.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parse/parser.pegjs" afterPath="$PROJECT_DIR$/src/parse/parser.pegjs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+            <state relative-caret-position="203">
+              <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -77,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parser.pegjs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parser.pegjs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
-              <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -178,10 +181,10 @@
         <option value="$PROJECT_DIR$/src/Comp/Strings.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
         <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
-        <option value="$PROJECT_DIR$/src/Lib.ts" />
         <option value="$PROJECT_DIR$/src/Comp/Iter.ts" />
         <option value="$PROJECT_DIR$/src/parse/parser.js" />
         <option value="$PROJECT_DIR$/src/parse/parser.pegjs" />
+        <option value="$PROJECT_DIR$/src/Lib.ts" />
       </list>
     </option>
   </component>
@@ -444,12 +447,12 @@
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
       <workItem from="1487207577151" duration="50741000" />
-      <workItem from="1487838037508" duration="51436000" />
+      <workItem from="1487838037508" duration="51872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123054000" />
+    <option name="totallyTimeSpent" value="123490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -912,21 +915,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/parse/parser.pegjs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
