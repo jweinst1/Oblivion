@@ -9,7 +9,6 @@ Statement
   / _? f:For {return f;}
   / _? g:Gen {return g;}
   / _? l:Loop {return l;}
-  / _? d:Draw {return d;}
   / _? c:Call {return c;}
   / _? r:Return {return r;}
 
@@ -24,13 +23,13 @@ Call
 
 Def
   = "def" _ n:Name _ "(" _ params:Params _ ")" _ b:Body _ "_" {
-     return {node:"?def", args:[n, {node:"?func", args:[params, b]}]};
+     return {node:"?=", args:[n, {node:"?func", args:[params, b]}]};
   }
 
 
 Gen
   = "gen" _ n:Name _ b:Body _ "call" _ c:Body _ "_" {
-     return {node:"?gen", args:[n, b, c]};
+     return {node:"?=", args:[n, {node:"?gen", args:[b, c]}]};
   }
 
 Return
@@ -56,9 +55,6 @@ Loop
 Assign
   =  _? v:Name _? "=" _? val:Argument {return {node:"?=", args:[v, val]};}
   / _? v:Attribute _? "=" _? val:Argument {return {node:"?=>", args:[v, val]};}
-
-Draw
-  =  "draw" _ val:Argument _ "\n" {return {node:"?draw", args:[val]};}
 
 List
   = "[" _ args:Operands _ "]" {
