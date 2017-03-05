@@ -51,14 +51,15 @@ export namespace STD {
 
     };
 
-    //handles a process, no parameter bodies of statemnts evaluated in the same scope
+    //handles a process, no parameter bodies of statemnts evaluated in child scope
     export let process = (env:Environment.Env, args:any[]) => {
         let procBody = args[0].args;
         return (env:Environment.Env, args:any[]) => {
+            let procEnv = env.createChild();
             if(args.length !== 0) throw new Errors.ArgumentError(args.length, 0);
             //calls all statements in the procBody
             for(let j=0;j<procBody.length;j++){
-                env.callLib(env, procBody[j].node, procBody[j].args);
+                procEnv.callLib(procEnv, procBody[j].node, procBody[j].args);
             }
         };
 
