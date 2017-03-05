@@ -73,11 +73,6 @@ Pair
 Attribute
   = obj:Name "." attr:Word {return {node:"?.", args:[obj, attr]};}
 
-Lambda
-  = "lambda " "(" p:Params ")" " -> " b:Argument " "* "\n"* {
-     return {node:"?func", args:[p, {node:"?params", args:[{node:"?return", args:[b]}]}]};
-  }
-
 Operands
   = Argument*
 
@@ -92,7 +87,6 @@ Process
 
 Argument
   = _? c:Call {return c;}
-  / _? f:Lambda {return f;}
   / _? p:Process {return p;}
   / _? l:List {return l;}
   / _? s:String {return s;}
