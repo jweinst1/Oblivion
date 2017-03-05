@@ -213,16 +213,19 @@ var STD;
         if (args.length < 2)
             throw new Errors_1.Errors.ArgumentError(args.length, 2);
         var cond = env.callLib(env, args[0].node, args[0].args);
-        //if condition is true, only executes first statement
+        var trueBody = args[1].args;
+        var falseBody = args[2].args;
+        //if condition is true, executes statements in the true body
         if (cond) {
-            //calls if function is present in if statemnt
-            var statement = env.callLib(env, args[1].node, args[1].args);
-            if (typeof statement === 'function')
-                statement(env, []);
+            for (var i = 0; i < trueBody.length; i++) {
+                var statement = env.callLib(env, trueBody[i].node, trueBody[i].args);
+                if (typeof statement === 'function')
+                    statement(env, []);
+            }
         }
-        else if (args.length > 2) {
-            for (var i = 2; i < args.length; i++) {
-                var state = env.callLib(env, args[i].node, args[i].args);
+        else {
+            for (var j = 0; j < falseBody.length; j++) {
+                var state = env.callLib(env, falseBody[j].node, falseBody[j].args);
                 if (typeof state === 'function')
                     state(env, []);
             }

@@ -215,16 +215,19 @@ export namespace STD {
     export let _if = (env:Environment.Env, args:any[]) => {
         if(args.length < 2) throw new Errors.ArgumentError(args.length, 2);
         let cond = env.callLib(env, args[0].node, args[0].args);
-        //if condition is true, only executes first statement
+        let trueBody = args[1].args;
+        let falseBody = args[2].args;
+        //if condition is true, executes statements in the true body
         if(cond){
-            //calls if function is present in if statemnt
-            let statement = env.callLib(env, args[1].node, args[1].args);
-            if(typeof statement === 'function') statement(env, []);
+            for(let i=0;i<trueBody.length;i++){
+                let statement = env.callLib(env, trueBody[i].node, trueBody[i].args);
+                if(typeof statement === 'function') statement(env, []);
+            }
         }
-        //If condition is false, executes the remaining statements after the first.
-        else if(args.length > 2) {
-            for(let i=2;i<args.length;i++){
-                let state = env.callLib(env, args[i].node, args[i].args);
+        //If condition is false, executes the statements in the false body
+        else {
+            for(let j=0;j<falseBody.length;j++){
+                let state = env.callLib(env, falseBody[j].node, falseBody[j].args);
                 if(typeof state === 'function') state(env, []);
             }
         }

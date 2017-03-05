@@ -12,7 +12,7 @@ test.StdOutTest(3, "print(==(3, 3))", "true\n");
 test.StdOutTest(4, "print(==(true, false))", "false\n");
 //generator test
 test.StdOutTest(5, "gen e \n b=3 call b= +(b,3), return b  _ print(e()), print(e())", "6\n9\n");
-test.StdOutTest(7, "if false print(3), print(4), print(7) _", "4\n7\n");
+test.StdOutTest(7, "if false print(3) else print(4), print(7) _", "4\n7\n");
 test.StdOutTest(8, 'b = "hello" print(b.4)', "o\n");
 test.StdOutTest(9, 'b = [1, 2, 3] print(b.0)', "1\n");
 test.StdOutTest(10, 'b = [1, 2, 3], b.0 = "hello", print(b.0)', '"hello"\n');
