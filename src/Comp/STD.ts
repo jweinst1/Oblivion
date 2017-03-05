@@ -239,7 +239,7 @@ export namespace STD {
         //must have at least a condition and statement/argument
         let loopBody = args[1].args;
         while(env.callLib(env, args[0].node, args[0].args)){
-            for(let i=1;i<args.length;i++){
+            for(let i=0;i<loopBody.length;i++){
                 //treats function types genrated from AST as callable blocks
                 let state = env.callLib(env, loopBody[i].node, loopBody[i].args);
                 if(typeof state === 'function') state(env, []);

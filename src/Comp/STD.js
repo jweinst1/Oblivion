@@ -237,7 +237,7 @@ var STD;
         //must have at least a condition and statement/argument
         var loopBody = args[1].args;
         while (env.callLib(env, args[0].node, args[0].args)) {
-            for (var i = 1; i < args.length; i++) {
+            for (var i = 0; i < loopBody.length; i++) {
                 //treats function types genrated from AST as callable blocks
                 var state = env.callLib(env, loopBody[i].node, loopBody[i].args);
                 if (typeof state === 'function')
