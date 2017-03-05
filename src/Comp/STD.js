@@ -61,6 +61,8 @@ var STD;
             for (var j = 0; j < procBody.length; j++) {
                 procEnv.callLib(procEnv, procBody[j].node, procBody[j].args);
             }
+            //returns localized return value
+            return procEnv.getReturnValue();
         };
     };
     //handles variable assignment

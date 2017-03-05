@@ -61,6 +61,8 @@ export namespace STD {
             for(let j=0;j<procBody.length;j++){
                 procEnv.callLib(procEnv, procBody[j].node, procBody[j].args);
             }
+            //returns localized return value
+            return procEnv.getReturnValue()
         };
 
     };
