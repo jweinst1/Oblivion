@@ -24,7 +24,7 @@ Call
 
 Def
   = "def" _ n:Name _ "(" _ params:Params _ ")" _ b:Body _ "_" {
-     return {node:"?def", args:[n, params, b]};
+     return {node:"?def", args:[n, {node:"?func", args:[params, b]}]};
   }
 
 
@@ -34,7 +34,7 @@ Gen
   }
 
 Return
-  = "return" _ a:Argument [ \t\r,]* "\n" {
+  = "return" _ a:Argument _ {
     return {node:"?return", args:[a]};
   }
 
@@ -58,7 +58,7 @@ Assign
   / _? v:Attribute _? "=" _? val:Argument {return {node:"?=>", args:[v, val]};}
 
 Draw
-  =  "draw" _ val:Argument {return {node:"?draw", args:[val]};}
+  =  "draw" _ val:Argument _ "\n" {return {node:"?draw", args:[val]};}
 
 List
   = "[" _ args:Operands _ "]" {
@@ -79,7 +79,7 @@ Attribute
 
 Lambda
   = "lambda " "(" p:Params ")" " -> " b:Argument " "* "\n"* {
-     return {node:"?func", args:[p, b]};
+     return {node:"?func", args:[p, {node:"?params", args:[{node:"?return", args:[b]}]}]};
   }
 
 Operands
