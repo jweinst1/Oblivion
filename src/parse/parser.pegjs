@@ -88,7 +88,7 @@ Body
   = s:Statement* {return {node:"?body", args:s};}
 
 Process
-  = "~{" _ proc:Body _ "}" {return {node:"?process", args:[proc]}}
+  = "{" _ proc:Body _ "}" {return {node:"?process", args:[proc]}}
 
 Argument
   = _? c:Call {return c;}
