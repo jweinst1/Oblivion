@@ -38,8 +38,8 @@ Return
   }
 
 If
-  = "if" _ c:Argument _ b:Body _ "_" {
-    return {node:"?if", args:[c, b]};
+  = "if" _ c:Argument _ b:Body _ "else"? _ d:Body? _? "_" {
+    return {node:"?if", args:[c, b, d]};
   }
 
 For
