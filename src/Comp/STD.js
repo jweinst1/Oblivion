@@ -233,12 +233,11 @@ var STD;
     };
     STD.loop = function (env, args) {
         //must have at least a condition and statement/argument
-        if (args.length < 2)
-            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        var loopBody = args[1].args;
         while (env.callLib(env, args[0].node, args[0].args)) {
             for (var i = 1; i < args.length; i++) {
                 //treats function types genrated from AST as callable blocks
-                var state = env.callLib(env, args[i].node, args[i].args);
+                var state = env.callLib(env, loopBody[i].node, loopBody[i].args);
                 if (typeof state === 'function')
                     state(env, []);
             }
