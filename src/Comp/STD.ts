@@ -396,4 +396,9 @@ export namespace STD {
         if(typeof obj !== 'object') throw new Error('TypeError: Argument not of collection type');
         return obj.hasItem(env.callLib(env, args[1].node, args[1].args));
     };
+
+    export let pop = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 0) throw new Errors.ArgumentError(args.length, 0);
+        return env.callLib(env, args[0].node, args[0].args).pop();
+    };
 }
