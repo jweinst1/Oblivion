@@ -35,7 +35,7 @@ export namespace Lib {
         "/":STD.div,
         "%":STD.rem,
         "==":STD.eq,
-        "===":STD.same,
+        "~=":STD.same,
         "!=":STD.ne,
         "<":STD.lt,
         ">":STD.gt,

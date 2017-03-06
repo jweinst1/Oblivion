@@ -34,7 +34,7 @@ var Lib;
         "/": STD_1.STD.div,
         "%": STD_1.STD.rem,
         "==": STD_1.STD.eq,
-        "===": STD_1.STD.same,
+        "~=": STD_1.STD.same,
         "!=": STD_1.STD.ne,
         "<": STD_1.STD.lt,
         ">": STD_1.STD.gt,
