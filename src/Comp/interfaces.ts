@@ -8,6 +8,7 @@ export interface Collection {
     getItem(index:any):any;
     setItem(index:any, value:any):void;
     hasItem(item:any):boolean;
+    arrayValue():any[];
     size():number;
 }
 

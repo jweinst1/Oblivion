@@ -11,6 +11,10 @@ var Strings;
             if (str === void 0) { str = ""; }
             this.str = str;
         }
+        //used for iterators
+        OblString.prototype.arrayValue = function () {
+            return this.str.split("");
+        };
         OblString.prototype.strFormat = function () {
             return "\"" + this.str + "\"";
         };

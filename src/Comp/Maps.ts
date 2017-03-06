@@ -8,6 +8,14 @@ import {Errors} from "../Errors";
 
 export namespace Maps {
     export class OblMap implements Collection, Printable {
+        //used for iterators
+        arrayValue(): any[] {
+            let arr = [];
+            for(let key in this.pairs){
+                arr.push(key);
+            }
+            return arr;
+        }
 
 
         public pairs:Object;

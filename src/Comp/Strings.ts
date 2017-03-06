@@ -8,6 +8,11 @@ import {Errors} from "../Errors";
 export namespace Strings {
 
     export class OblString implements Printable, Collection, OrderedCollection {
+        //used for iterators
+        arrayValue(): any[] {
+            return this.str.split("");
+        }
+
         public str:string;
 
         constructor(str:string = ""){

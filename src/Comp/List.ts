@@ -8,6 +8,10 @@ import {Errors} from "../Errors";
 export namespace Lists {
 
     export class OblList implements Collection, OrderedCollection, Printable {
+        //used for iterators
+        arrayValue(): any[] {
+            return this.items;
+        }
 
         public items:any[];
 

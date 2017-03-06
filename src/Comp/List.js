@@ -11,6 +11,10 @@ var Lists;
             if (lst === void 0) { lst = []; }
             this.items = lst;
         }
+        //used for iterators
+        OblList.prototype.arrayValue = function () {
+            return this.items;
+        };
         OblList.prototype.strFormat = function () {
             return JSON.stringify(this.items);
         };

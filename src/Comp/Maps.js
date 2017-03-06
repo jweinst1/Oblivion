@@ -11,6 +11,14 @@ var Maps;
             if (dict === void 0) { dict = {}; }
             this.pairs = dict;
         }
+        //used for iterators
+        OblMap.prototype.arrayValue = function () {
+            var arr = [];
+            for (var key in this.pairs) {
+                arr.push(key);
+            }
+            return arr;
+        };
         OblMap.prototype.getItem = function (index) {
             if (typeof index !== 'object') {
                 if (index in this.pairs)
