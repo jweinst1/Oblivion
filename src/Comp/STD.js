@@ -327,12 +327,12 @@ var STD;
             throw new Error("ArgumentError: !type() takes one argument but got " + args.length);
         var obj = env.callLib(env, args[0].node, args[0].args);
         if (typeof obj !== 'object')
-            return typeof obj;
+            return new Strings_1.Strings.OblString(typeof obj);
         else
             switch (obj.constructor.name) {
-                case 'OblList': return 'List';
-                case 'OblString': return 'String';
-                case 'OblMap': return 'Map';
+                case 'OblList': return new Strings_1.Strings.OblString('List');
+                case 'OblString': return new Strings_1.Strings.OblString('String');
+                case 'OblMap': return new Strings_1.Strings.OblString('Map');
             }
     };
     STD._for = function (env, args) {

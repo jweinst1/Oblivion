@@ -322,14 +322,14 @@ export namespace STD {
         }
     };
 
-    export let type = (env:Environment.Env, args:any[]):string => {
+    export let type = (env:Environment.Env, args:any[]):Strings.OblString => {
         if(args.length !== 1) throw new Error(`ArgumentError: !type() takes one argument but got ${args.length}`);
         let obj = env.callLib(env, args[0].node, args[0].args);
-        if(typeof obj !== 'object') return typeof obj;
+        if(typeof obj !== 'object') return new Strings.OblString(typeof obj);
         else switch(obj.constructor.name){
-            case 'OblList': return 'List';
-            case 'OblString': return 'String';
-            case 'OblMap': return 'Map';
+            case 'OblList': return new Strings.OblString('List');
+            case 'OblString': return new Strings.OblString('String');
+            case 'OblMap': return new Strings.OblString('Map');
         }
     };
 
