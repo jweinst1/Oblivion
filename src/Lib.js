@@ -42,6 +42,7 @@ var Lib;
         ">=": STD_1.STD.ge,
         "?if": STD_1.STD._if,
         "?loop": STD_1.STD.loop,
+        "?for": STD_1.STD._for,
         "print": STD_1.STD.print,
         "?number": STD_1.STD.c_number,
         "?string": STD_1.STD.c_string,

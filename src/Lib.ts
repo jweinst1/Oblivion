@@ -43,6 +43,7 @@ export namespace Lib {
         ">=":STD.ge,
         "?if":STD._if,
         "?loop":STD.loop,
+        "?for":STD._for,
         "print":STD.print,
         "?number":STD.c_number,
         "?string":STD.c_string,

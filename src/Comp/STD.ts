@@ -4,6 +4,7 @@ import {Errors} from "../Errors";
 import {Strings} from "./Strings";
 import {Lists} from "./List";
 import {Maps} from "./Maps";
+import {Iter} from "./Iter";
 /**
  * Created by Josh on 2/13/17.
  */
@@ -335,6 +336,13 @@ export namespace STD {
 
     export let _for = (env:Environment.Env, args:any[]) => {
         let varName = env.callLib(env, args[0].node, args[0].args);
+        let iterable = Iter.makeIter(env.callLib(env, args[1].node, args[1].args));
+        let forBody = args[2].args;
+        //calls for body continously for each in the iterator
+        while(!iterable.done){
+            env.set(varName, iterable.next());
+            for(let i=0;i<forBody.length;i++) env.callLib(env, forBody[i].node, forBody[i].args);
+        }
 
     };
 

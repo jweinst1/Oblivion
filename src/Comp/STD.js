@@ -4,6 +4,7 @@ var Errors_1 = require("../Errors");
 var Strings_1 = require("./Strings");
 var List_1 = require("./List");
 var Maps_1 = require("./Maps");
+var Iter_1 = require("./Iter");
 /**
  * Created by Josh on 2/13/17.
  */
@@ -337,6 +338,14 @@ var STD;
     };
     STD._for = function (env, args) {
         var varName = env.callLib(env, args[0].node, args[0].args);
+        var iterable = Iter_1.Iter.makeIter(env.callLib(env, args[1].node, args[1].args));
+        var forBody = args[2].args;
+        //calls for body continously for each in the iterator
+        while (!iterable.done) {
+            env.set(varName, iterable.next());
+            for (var i = 0; i < forBody.length; i++)
+                env.callLib(env, forBody[i].node, forBody[i].args);
+        }
     };
     /*Generic get and set functions*/
     STD.get = function (env, args) {
