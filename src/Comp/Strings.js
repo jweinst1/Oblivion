@@ -22,13 +22,16 @@ var Strings;
             return this.str;
         };
         OblString.prototype.getItem = function (index) {
-            //might need type check
+            if (typeof index !== 'number')
+                throw new Errors_1.Errors.TypeError('number', typeof index);
             if (index < 0 || index >= this.str.length)
                 throw new Errors_1.Errors.IndexError(index);
             else
                 return this.str[index];
         };
         OblString.prototype.setItem = function (index, value) {
+            if (typeof index !== 'number')
+                throw new Errors_1.Errors.TypeError('number', typeof index);
             if (index < 0 || index >= this.str.length)
                 throw new Errors_1.Errors.IndexError(index);
             this.str = this.str.replace(this.str.charAt(index), value);
@@ -67,8 +70,14 @@ var Strings;
             }
         };
         OblString.prototype.remove = function (item) {
+            this.str = this.str.replace(item, "");
         };
         OblString.prototype.insert = function (index, item) {
+            if (typeof index !== 'number')
+                throw new Errors_1.Errors.TypeError('number', typeof index);
+            if (typeof item === 'object')
+                item = item.strValue();
+            this.str = this.str.slice(0, index) + item + this.str.slice(index);
         };
         OblString.prototype.extend = function (other) {
         };
