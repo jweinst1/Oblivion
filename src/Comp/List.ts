@@ -90,7 +90,7 @@ export namespace Lists {
 
         find(item: any): any {
            let result = this.items.indexOf(item);
-           return result === -1 ? result : false;
+           return result !== -1 ? result : false;
         }
     }
 }

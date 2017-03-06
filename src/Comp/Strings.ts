@@ -29,13 +29,13 @@ export namespace Strings {
 
         getItem(index: any): string {
             if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
-            if(index < 0 || index >= this.str.length) throw new Errors.IndexError(index);
+            if(index < 0 || index >= this.str.length) throw new Errors.IndexError(String(index));
             else return this.str[index];
         }
 
         setItem(index: any, value: any): void {
             if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
-            if(index < 0 || index >= this.str.length) throw new Errors.IndexError(index);
+            if(index < 0 || index >= this.str.length) throw new Errors.IndexError(String(index));
             this.str = this.str.replace(this.str.charAt(index), value);
         }
 
@@ -88,11 +88,14 @@ export namespace Strings {
             this.str = this.str.slice(0, index) + item + this.str.slice(index);
         }
 
-        extend(other: Collection): void {
+        extend(other: any): void {
+            if(typeof other === 'object') other = other.strValue();
+            this.str += other;
         }
 
         find(item: any): any {
-            return undefined;
+            let result = this.str.search(item);
+            return result !== -1 ? result : false;
         }
     }
 }

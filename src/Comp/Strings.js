@@ -25,7 +25,7 @@ var Strings;
             if (typeof index !== 'number')
                 throw new Errors_1.Errors.TypeError('number', typeof index);
             if (index < 0 || index >= this.str.length)
-                throw new Errors_1.Errors.IndexError(index);
+                throw new Errors_1.Errors.IndexError(String(index));
             else
                 return this.str[index];
         };
@@ -33,7 +33,7 @@ var Strings;
             if (typeof index !== 'number')
                 throw new Errors_1.Errors.TypeError('number', typeof index);
             if (index < 0 || index >= this.str.length)
-                throw new Errors_1.Errors.IndexError(index);
+                throw new Errors_1.Errors.IndexError(String(index));
             this.str = this.str.replace(this.str.charAt(index), value);
         };
         //checks if string contains substring
@@ -80,9 +80,13 @@ var Strings;
             this.str = this.str.slice(0, index) + item + this.str.slice(index);
         };
         OblString.prototype.extend = function (other) {
+            if (typeof other === 'object')
+                other = other.strValue();
+            this.str += other;
         };
         OblString.prototype.find = function (item) {
-            return undefined;
+            var result = this.str.search(item);
+            return result !== -1 ? result : false;
         };
         return OblString;
     }());

@@ -85,7 +85,7 @@ var Lists;
         };
         OblList.prototype.find = function (item) {
             var result = this.items.indexOf(item);
-            return result === -1 ? result : false;
+            return result !== -1 ? result : false;
         };
         return OblList;
     }());
