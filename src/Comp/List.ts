@@ -78,15 +78,19 @@ export namespace Lists {
         }
 
         insert(index: number, item: any): void {
-
+            if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
+            if(index < 0 || index >= this.items.length) throw new Errors.IndexError(index+"");
+            this.items.splice(index, 0, item);
         }
 
         extend(other: Collection): void {
-            //not implmented
+            if(typeof other === 'object') this.items = this.items.concat(other.arrayValue());
+            else this.items = this.items.concat(other);
         }
 
         find(item: any): any {
-            return undefined;
+           let result = this.items.indexOf(item);
+           return result === -1 ? result : false;
         }
     }
 }

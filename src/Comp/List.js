@@ -71,12 +71,21 @@ var Lists;
             }
         };
         OblList.prototype.insert = function (index, item) {
+            if (typeof index !== 'number')
+                throw new Errors_1.Errors.TypeError('number', typeof index);
+            if (index < 0 || index >= this.items.length)
+                throw new Errors_1.Errors.IndexError(index + "");
+            this.items.splice(index, 0, item);
         };
         OblList.prototype.extend = function (other) {
-            //not implmented
+            if (typeof other === 'object')
+                this.items = this.items.concat(other.arrayValue());
+            else
+                this.items = this.items.concat(other);
         };
         OblList.prototype.find = function (item) {
-            return undefined;
+            var result = this.items.indexOf(item);
+            return result === -1 ? result : false;
         };
         return OblList;
     }());
