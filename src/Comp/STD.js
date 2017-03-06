@@ -335,6 +335,9 @@ var STD;
                 case 'OblMap': return 'Map';
             }
     };
+    STD._for = function (env, args) {
+        var varName = env.callLib(env, args[0].node, args[0].args);
+    };
     /*Generic get and set functions*/
     STD.get = function (env, args) {
         if (args.length !== 2)

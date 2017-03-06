@@ -333,6 +333,11 @@ export namespace STD {
         }
     };
 
+    export let _for = (env:Environment.Env, args:any[]) => {
+        let varName = env.callLib(env, args[0].node, args[0].args);
+
+    };
+
     /*Generic get and set functions*/
 
     export let get = (env:Environment.Env, args:any[]) => {
