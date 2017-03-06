@@ -58,6 +58,8 @@ var Lib;
         "!type": STD_1.STD.type,
         "!get": STD_1.STD.get,
         "!set": STD_1.STD.set,
+        "!append": STD_1.STD.append,
+        "!push": STD_1.STD.appendLeft,
         /*SVG*/
         "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine

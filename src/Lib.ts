@@ -59,6 +59,8 @@ export namespace Lib {
         "!type":STD.type,
         "!get":STD.get,
         "!set":STD.set,
+        "!append":STD.append,
+        "!push":STD.appendLeft,
         /*SVG*/
         "?draw":drawSVG.draw,
         "line":Line.initLine
