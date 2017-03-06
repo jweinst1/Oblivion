@@ -377,5 +377,13 @@ var STD;
         for (var i = 1; i < args.length; i++)
             obj.appendLeft(env.callLib(env, args[i].node, args[i].args));
     };
+    STD.remove = function (env, args) {
+        if (args.length < 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        var obj = env.callLib(env, args[0].node, args[0].args);
+        if (typeof obj !== 'object' || !('append' in obj.constructor.prototype))
+            throw new Error('TypeError: Argument not of collection type');
+        obj.remove(env.callLib(env, args[1].node, args[1].args));
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

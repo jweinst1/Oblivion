@@ -61,6 +61,7 @@ export namespace Lib {
         "!set":STD.set,
         "!append":STD.append,
         "!push":STD.appendLeft,
+        "!remove":STD.remove,
         /*SVG*/
         "?draw":drawSVG.draw,
         "line":Line.initLine

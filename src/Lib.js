@@ -60,6 +60,7 @@ var Lib;
         "!set": STD_1.STD.set,
         "!append": STD_1.STD.append,
         "!push": STD_1.STD.appendLeft,
+        "!remove": STD_1.STD.remove,
         /*SVG*/
         "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine

@@ -373,4 +373,11 @@ export namespace STD {
         if(typeof obj !== 'object' || !('append' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of collection type');
         for(let i=1;i<args.length;i++) obj.appendLeft(env.callLib(env, args[i].node, args[i].args));
     };
+
+    export let remove = (env:Environment.Env, args:any[]) => {
+        if(args.length < 2) throw new Errors.ArgumentError(args.length, 2);
+        let obj = env.callLib(env, args[0].node, args[0].args);
+        if(typeof obj !== 'object' || !('append' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of collection type');
+        obj.remove(env.callLib(env, args[1].node, args[1].args))
+    };
 }
