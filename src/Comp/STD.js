@@ -385,5 +385,13 @@ var STD;
             throw new Error('TypeError: Argument not of collection type');
         obj.remove(env.callLib(env, args[1].node, args[1].args));
     };
+    STD.len = function (env, args) {
+        var obj = env.callLib(env, args[0].node, args[0].args);
+        switch (typeof obj) {
+            case 'number': return obj;
+            case 'object': return obj.size();
+            default: return 1;
+        }
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

@@ -380,4 +380,13 @@ export namespace STD {
         if(typeof obj !== 'object' || !('append' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of collection type');
         obj.remove(env.callLib(env, args[1].node, args[1].args))
     };
+
+    export let len = (env:Environment.Env, args:any[]) => {
+        let obj = env.callLib(env, args[0].node, args[0].args);
+        switch(typeof obj){
+            case 'number': return obj;
+            case 'object': return obj.size();
+            default: return 1;
+        }
+    }
 }
