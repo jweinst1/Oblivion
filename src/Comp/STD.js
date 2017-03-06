@@ -358,5 +358,11 @@ var STD;
             throw new Error("ArgumentError: !get() takes 3 arguments but got " + args.length);
         env.callLib(env, args[0].node, args[0].args).setItem(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
     };
+    /*Generic Collection functions*/
+    STD.append = function (env, args) {
+        var obj = env.callLib(env, args[0].node, args[0].args);
+        if (typeof obj !== 'object' || !('append' in obj.constructor.prototype))
+            throw new Error('TypeError: Argument not of collection type');
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
