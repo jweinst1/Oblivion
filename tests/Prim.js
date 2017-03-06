@@ -23,5 +23,5 @@ test.StdOutTest(14, 'a = 0, b = 3, print(b)', '3\n');
 test.StdOutTest(16, 'print(!range(9))', '[0,1,2,3,4,5,6,7,8]\n');
 test.StdOutTest(17, 'b = {print(3)}, !repeat(2, b)', '3\n3\n');
 test.StdOutTest(18, 'fn = {return 1} i = 0, loop !=(i, 1) print(2) print(6) i = fn() _', '2\n6\n');
-test.StdOutTest(19, 'print(!type([]))', 'List\n');
-test.StdOutTest(20, 'a =[d:1], b = {(elem) return(+(elem, 2))}, print(b(a.d))', '3\n');
+test.StdOutTest(19, 'print(!type([]))', '"List"\n');
+test.StdOutTest(20, 'for elem in !range(8)\nprint(elem) _', '0\n1\n2\n3\n4\n5\n6\n7\n');

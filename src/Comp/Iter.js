@@ -24,6 +24,8 @@ var Iter;
     }());
     Iter.Iterator = Iterator;
     Iter.makeIter = function (obj) {
+        if (typeof obj !== 'object')
+            throw new Error('IterError: Argument does not conform to Iter Format');
         return new Iterator(obj.arrayValue());
     };
 })(Iter = exports.Iter || (exports.Iter = {}));

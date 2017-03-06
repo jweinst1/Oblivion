@@ -28,6 +28,7 @@ export namespace Iter {
     }
 
     export let makeIter = (obj:Collection):Iter.Iterator => {
+        if(typeof obj !== 'object') throw new Error('IterError: Argument does not conform to Iter Format');
         return new Iterator(obj.arrayValue());
     };
 }
