@@ -57,7 +57,14 @@ var Strings;
             }
         };
         OblString.prototype.popLeft = function () {
-            return undefined;
+            if (this.str) {
+                var popped = this.str[0];
+                this.str = this.str.slice(1);
+                return popped;
+            }
+            else {
+                throw new Error("LengthError: String cannot be popped when empty.");
+            }
         };
         OblString.prototype.remove = function (item) {
         };
