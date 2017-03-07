@@ -1,5 +1,5 @@
-import {SVGObject, SVGStrokable} from "./Interfaces";
-import {SVGColor} from "./Color";
+import {SVGObject, SVGStrokable} from "../svg/Interfaces";
+import {SVGColor} from "../svg/Color";
 import {Environment} from "../Env";
 /**
  * Created by Josh on 2/22/17.

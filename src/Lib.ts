@@ -1,5 +1,5 @@
 import{STD} from "./Comp/STD";
-import{Line} from "./svg/Line";
+import{Line} from "./exper/LineObj";
 import{drawSVG} from "./svg/draw";
 /**
  * Created by Josh on 2/13/17.
@@ -68,9 +68,8 @@ export namespace Lib {
         "!in":STD._in,
         "!insert":STD.insert,
         "!extend":STD.extend,
-        "!find":STD.find,
+        "!find":STD.find
         /*SVG*/
-        "?draw":drawSVG.draw,
-        "line":Line.initLine
+
     };
 }
