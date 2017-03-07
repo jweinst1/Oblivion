@@ -25,3 +25,4 @@ test.StdOutTest(17, 'b = {print(3)}, !repeat(2, b)', '3\n3\n');
 test.StdOutTest(18, 'fn = {return 1} i = 0, loop !=(i, 1) print(2) print(6) i = fn() _', '2\n6\n');
 test.StdOutTest(19, 'print(!type([]))', '"List"\n');
 test.StdOutTest(20, 'for elem in !range(8)\nprint(elem) _', '0\n1\n2\n3\n4\n5\n6\n7\n');
+test.StdOutTest(21, 'print(!in([1, 2, 3], 3))', 'true\n');
