@@ -398,12 +398,12 @@ export namespace STD {
     };
 
     export let pop = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 0) throw new Errors.ArgumentError(args.length, 0);
+        if(args.length !== 1) throw new Errors.ArgumentError(args.length, 1);
         return env.callLib(env, args[0].node, args[0].args).pop();
     };
 
     export let popLeft = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 0) throw new Errors.ArgumentError(args.length, 0);
+        if(args.length !== 1) throw new Errors.ArgumentError(args.length, 1);
         return env.callLib(env, args[0].node, args[0].args).popLeft();
     };
 
@@ -412,5 +412,19 @@ export namespace STD {
         let obj = env.callLib(env, args[0].node, args[0].args);
         if(typeof obj !== 'object' || !('insert' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of collection type');
         obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
+    };
+
+    export let extend = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
+        let obj = env.callLib(env, args[0].node, args[0].args);
+        if(typeof obj !== 'object') throw new Error('TypeError: Argument not of collection type');
+        obj.extend(env.callLib(env, args[1].node, args[1].args));
+    };
+
+    export let find = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
+        let obj = env.callLib(env, args[0].node, args[0].args);
+        if(typeof obj !== 'object' || !('insert' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of ordered collection type');
+        return obj.find(env.callLib(env, args[1].node, args[1].args));
     };
 }

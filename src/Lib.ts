@@ -67,6 +67,8 @@ export namespace Lib {
         "!len":STD.len,
         "!in":STD._in,
         "!insert":STD.insert,
+        "!extend":STD.extend,
+        "!find":STD.find,
         /*SVG*/
         "?draw":drawSVG.draw,
         "line":Line.initLine

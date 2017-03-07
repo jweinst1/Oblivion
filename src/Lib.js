@@ -66,6 +66,8 @@ var Lib;
         "!len": STD_1.STD.len,
         "!in": STD_1.STD._in,
         "!insert": STD_1.STD.insert,
+        "!extend": STD_1.STD.extend,
+        "!find": STD_1.STD.find,
         /*SVG*/
         "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine

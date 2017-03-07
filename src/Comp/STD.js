@@ -402,13 +402,13 @@ var STD;
         return obj.hasItem(env.callLib(env, args[1].node, args[1].args));
     };
     STD.pop = function (env, args) {
-        if (args.length !== 0)
-            throw new Errors_1.Errors.ArgumentError(args.length, 0);
+        if (args.length !== 1)
+            throw new Errors_1.Errors.ArgumentError(args.length, 1);
         return env.callLib(env, args[0].node, args[0].args).pop();
     };
     STD.popLeft = function (env, args) {
-        if (args.length !== 0)
-            throw new Errors_1.Errors.ArgumentError(args.length, 0);
+        if (args.length !== 1)
+            throw new Errors_1.Errors.ArgumentError(args.length, 1);
         return env.callLib(env, args[0].node, args[0].args).popLeft();
     };
     STD.insert = function (env, args) {
@@ -418,6 +418,22 @@ var STD;
         if (typeof obj !== 'object' || !('insert' in obj.constructor.prototype))
             throw new Error('TypeError: Argument not of collection type');
         obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
+    };
+    STD.extend = function (env, args) {
+        if (args.length !== 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        var obj = env.callLib(env, args[0].node, args[0].args);
+        if (typeof obj !== 'object')
+            throw new Error('TypeError: Argument not of collection type');
+        obj.extend(env.callLib(env, args[1].node, args[1].args));
+    };
+    STD.find = function (env, args) {
+        if (args.length !== 2)
+            throw new Errors_1.Errors.ArgumentError(args.length, 2);
+        var obj = env.callLib(env, args[0].node, args[0].args);
+        if (typeof obj !== 'object' || !('insert' in obj.constructor.prototype))
+            throw new Error('TypeError: Argument not of ordered collection type');
+        return obj.find(env.callLib(env, args[1].node, args[1].args));
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

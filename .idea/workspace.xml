@@ -25,11 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="68" column="29" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+            <state relative-caret-position="608">
+              <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="STD.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="STD.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="395" column="98" lean-forward="true" selection-start-line="395" selection-start-column="98" selection-end-line="395" selection-end-column="98" />
+            <state relative-caret-position="188">
+              <caret line="423" column="21" lean-forward="false" selection-start-line="423" selection-start-column="21" selection-end-line="423" selection-end-column="21" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="n#!!doc;n#STD#0" expanded="false" />
@@ -447,12 +447,12 @@
       <workItem from="1486934332672" duration="9108000" />
       <workItem from="1487140948971" duration="4093000" />
       <workItem from="1487207577151" duration="50741000" />
-      <workItem from="1487838037508" duration="67325000" />
+      <workItem from="1487838037508" duration="67585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138943000" />
+    <option name="totallyTimeSpent" value="139203000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -766,12 +766,12 @@
         <state relative-caret-position="-2707">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488852473000" expanded="true" signature="11420:11713" ph="{...}" />
-            <marker date="1488852473000" expanded="true" signature="8231:8981" ph="{...}" />
-            <marker date="1488852473000" expanded="true" signature="8476:8704" ph="{...}" />
-            <marker date="1488852473000" expanded="true" signature="8739:8975" ph="{...}" />
-            <marker date="1488852473000" expanded="true" signature="8791:8965" ph="{...}" />
-            <marker date="1488852473000" expanded="true" signature="9019:9563" ph="{...}" />
+            <marker date="1488852792000" expanded="true" signature="11420:11713" ph="{...}" />
+            <marker date="1488852792000" expanded="true" signature="8231:8981" ph="{...}" />
+            <marker date="1488852792000" expanded="true" signature="8476:8704" ph="{...}" />
+            <marker date="1488852792000" expanded="true" signature="8739:8975" ph="{...}" />
+            <marker date="1488852792000" expanded="true" signature="8791:8965" ph="{...}" />
+            <marker date="1488852792000" expanded="true" signature="9019:9563" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -912,23 +912,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
+    <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="68" column="29" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+        <state relative-caret-position="188">
+          <caret line="423" column="21" lean-forward="false" selection-start-line="423" selection-start-column="21" selection-end-line="423" selection-end-column="21" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="n#!!doc;n#STD#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
+    <entry file="file://$PROJECT_DIR$/src/Lib.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="395" column="98" lean-forward="true" selection-start-line="395" selection-start-column="98" selection-end-line="395" selection-end-column="98" />
+        <state relative-caret-position="608">
+          <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="n#!!doc;n#STD#0" expanded="false" />
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
