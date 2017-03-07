@@ -60,10 +60,13 @@ export namespace Lib {
         "!get":STD.get,
         "!set":STD.set,
         "!append":STD.append,
-        "!push":STD.appendLeft,
+        "!append-left":STD.appendLeft,
         "!remove":STD.remove,
+        "!pop":STD.pop,
+        "!pop-left":STD.popLeft,
         "!len":STD.len,
         "!in":STD._in,
+        "!insert":STD.insert,
         /*SVG*/
         "?draw":drawSVG.draw,
         "line":Line.initLine

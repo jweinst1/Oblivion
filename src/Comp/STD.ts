@@ -401,4 +401,16 @@ export namespace STD {
         if(args.length !== 0) throw new Errors.ArgumentError(args.length, 0);
         return env.callLib(env, args[0].node, args[0].args).pop();
     };
+
+    export let popLeft = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 0) throw new Errors.ArgumentError(args.length, 0);
+        return env.callLib(env, args[0].node, args[0].args).popLeft();
+    };
+
+    export let insert = (env:Environment.Env, args:any[]) => {
+        if(args.length < 3) throw new Errors.ArgumentError(args.length, 3);
+        let obj = env.callLib(env, args[0].node, args[0].args);
+        if(typeof obj !== 'object' || !('insert' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of collection type');
+        obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
+    };
 }

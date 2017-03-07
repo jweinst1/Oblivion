@@ -59,10 +59,13 @@ var Lib;
         "!get": STD_1.STD.get,
         "!set": STD_1.STD.set,
         "!append": STD_1.STD.append,
-        "!push": STD_1.STD.appendLeft,
+        "!append-left": STD_1.STD.appendLeft,
         "!remove": STD_1.STD.remove,
+        "!pop": STD_1.STD.pop,
+        "!pop-left": STD_1.STD.popLeft,
         "!len": STD_1.STD.len,
         "!in": STD_1.STD._in,
+        "!insert": STD_1.STD.insert,
         /*SVG*/
         "?draw": draw_1.drawSVG.draw,
         "line": Line_1.Line.initLine

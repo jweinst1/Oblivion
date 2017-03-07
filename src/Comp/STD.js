@@ -406,5 +406,18 @@ var STD;
             throw new Errors_1.Errors.ArgumentError(args.length, 0);
         return env.callLib(env, args[0].node, args[0].args).pop();
     };
+    STD.popLeft = function (env, args) {
+        if (args.length !== 0)
+            throw new Errors_1.Errors.ArgumentError(args.length, 0);
+        return env.callLib(env, args[0].node, args[0].args).popLeft();
+    };
+    STD.insert = function (env, args) {
+        if (args.length < 3)
+            throw new Errors_1.Errors.ArgumentError(args.length, 3);
+        var obj = env.callLib(env, args[0].node, args[0].args);
+        if (typeof obj !== 'object' || !('insert' in obj.constructor.prototype))
+            throw new Error('TypeError: Argument not of collection type');
+        obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
