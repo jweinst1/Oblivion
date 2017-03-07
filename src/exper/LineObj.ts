@@ -6,7 +6,7 @@ import {Environment} from "../Env";
  * File for the Line svg object
  */
 
-export namespace Line {
+export namespace LineObj {
 
     //function for Lib
     export let initLine = (env:Environment.Env, args:any[]) => {
