@@ -26,3 +26,5 @@ test.StdOutTest(18, 'fn = {return 1} i = 0, loop !=(i, 1) print(2) print(6) i = 
 test.StdOutTest(19, 'print(!type([]))', '"List"\n');
 test.StdOutTest(20, 'for elem in !range(8)\nprint(elem) _', '0\n1\n2\n3\n4\n5\n6\n7\n');
 test.StdOutTest(21, 'print(!in([1, 2, 3], 3))', 'true\n');
+test.StdOutTest(22, 'f = [1, 2, 3], !append(f, 4), print(f)', '[1,2,3,4]\n');
+test.StdOutTest(23, 'f = [1, 2, 3], !insert(f, 1, 4), print(f)', '[1,4,2,3]\n');
