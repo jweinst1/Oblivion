@@ -21,6 +21,7 @@ export namespace CSS {
     };
 
     //main CSS class
+    //will be implemented in future version
     export class CSSClass implements Collection, Printable{
         getItem(index: any): any {
             return undefined;

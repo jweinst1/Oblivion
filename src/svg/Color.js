@@ -1,10 +1,43 @@
-/**
- * Created by Josh on 2/7/17.
- * File for color classes
- */
 "use strict";
 var Colors;
 (function (Colors) {
+    //main color class for Oblivion
+    var Color = (function () {
+        function Color(r, g, b) {
+            if (r === void 0) { r = 0; }
+            if (g === void 0) { g = 0; }
+            if (b === void 0) { b = 0; }
+            this.values = {
+                r: r,
+                g: g,
+                b: b
+            };
+        }
+        Color.prototype.strFormat = function () {
+            return undefined;
+        };
+        Color.prototype.innerValue = function () {
+            return undefined;
+        };
+        Color.prototype.getItem = function (index) {
+            return undefined;
+        };
+        Color.prototype.setItem = function (index, value) {
+        };
+        Color.prototype.hasItem = function (item) {
+            return undefined;
+        };
+        Color.prototype.arrayValue = function () {
+            return undefined;
+        };
+        Color.prototype.size = function () {
+            return undefined;
+        };
+        return Color;
+    }());
+    Colors.Color = Color;
+    //old RGB class
+    /*Saved for future version*/
     var RGB = (function () {
         function RGB(r, g, b) {
             if (r === void 0) { r = 0; }

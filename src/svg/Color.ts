@@ -1,3 +1,4 @@
+import {Printable, Collection} from "../Comp/interfaces";
 /**
  * Created by Josh on 2/7/17.
  * File for color classes
@@ -11,7 +12,50 @@ export interface SVGColor {
 
 export namespace Colors {
 
+    //main color class for Oblivion
+    export class Color implements Printable, Collection {
 
+        public values:Object;
+
+        constructor(r:number=0, g:number=0, b:number=0){
+            this.values = {
+                r:r,
+                g:g,
+                b:b
+            };
+        }
+
+        strFormat(): string {
+            return undefined;
+        }
+
+        innerValue(): any {
+            return undefined;
+        }
+
+        getItem(index: any): any {
+            return undefined;
+        }
+
+        setItem(index: any, value: any): void {
+        }
+
+        hasItem(item: any): boolean {
+            return undefined;
+        }
+
+        arrayValue(): any[] {
+            return undefined;
+        }
+
+        size(): number {
+            return undefined;
+        }
+
+    }
+
+//old RGB class
+    /*Saved for future version*/
     export class RGB implements SVGColor {
         public red:number;
         public green:number;

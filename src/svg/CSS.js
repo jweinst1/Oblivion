@@ -18,6 +18,7 @@ var CSS;
         return input in ATTRIBUTES;
     };
     //main CSS class
+    //will be implemented in future version
     var CSSClass = (function () {
         function CSSClass() {
         }
