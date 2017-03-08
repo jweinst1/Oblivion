@@ -1,6 +1,6 @@
 import{STD} from "./Comp/STD";
-import{Line} from "./exper/LineObj";
-import{drawSVG} from "./svg/draw";
+import{Colors} from "./svg/Color";
+
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -68,8 +68,9 @@ export namespace Lib {
         "!in":STD._in,
         "!insert":STD.insert,
         "!extend":STD.extend,
-        "!find":STD.find
+        "!find":STD.find,
         /*SVG*/
+        "!color":Colors.colorToMap
 
     };
 }

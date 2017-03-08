@@ -1,4 +1,6 @@
 import {Printable, Collection} from "../Comp/interfaces";
+import {Environment} from "../Env";
+import {Maps} from "../Comp/Maps";
 /**
  * Created by Josh on 2/7/17.
  * File for color classes
@@ -15,6 +17,14 @@ export namespace Colors {
     //custom swatch maker for oblivion language
     export let colorDict = {
 
+    };
+
+    //converts a color function arg set to map
+    export let colorToMap = (env:Environment.Env, args:any[]) => {
+        if(args.length !== 3) throw new Error(`ArgumentError: Expected 3 argument but got ${args.length}`);
+        return new Maps.OblMap({r:env.callLib(env, args[0].node, args[0].args),
+            g:env.callLib(env, args[1].node, args[1].args),
+            b:env.callLib(env, args[2].node, args[2].args)})
     };
 
     //main color class for Oblivion

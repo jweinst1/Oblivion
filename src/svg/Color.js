@@ -1,8 +1,17 @@
 "use strict";
+var Maps_1 = require("../Comp/Maps");
 var Colors;
 (function (Colors) {
     //custom swatch maker for oblivion language
     Colors.colorDict = {};
+    //converts a color function arg set to map
+    Colors.colorToMap = function (env, args) {
+        if (args.length !== 3)
+            throw new Error("ArgumentError: Expected 3 argument but got " + args.length);
+        return new Maps_1.Maps.OblMap({ r: env.callLib(env, args[0].node, args[0].args),
+            g: env.callLib(env, args[1].node, args[1].args),
+            b: env.callLib(env, args[2].node, args[2].args) });
+    };
     //main color class for Oblivion
     var Color = (function () {
         function Color(r, g, b) {
