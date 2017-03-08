@@ -14,15 +14,20 @@ var Colors;
             };
         }
         Color.prototype.strFormat = function () {
-            return undefined;
+            return "rgb(" + this.values["r"] + "," + this.values["g"] + "," + this.values["b"] + ")";
         };
         Color.prototype.innerValue = function () {
-            return undefined;
+            return this.values;
         };
         Color.prototype.getItem = function (index) {
-            return undefined;
+            if (index in Color.altRGBNames)
+                index = Color.altRGBNames[index];
+            return this.values[index];
         };
         Color.prototype.setItem = function (index, value) {
+            if (index in Color.altRGBNames)
+                index = Color.altRGBNames[index];
+            this.values[index] = value;
         };
         Color.prototype.hasItem = function (item) {
             return undefined;
@@ -33,6 +38,7 @@ var Colors;
         Color.prototype.size = function () {
             return undefined;
         };
+        Color.altRGBNames = { "red": "r", "green": "g", "blue": "b" };
         return Color;
     }());
     Colors.Color = Color;

@@ -16,6 +16,7 @@ export namespace Colors {
     export class Color implements Printable, Collection {
 
         public values:Object;
+        public static altRGBNames = {"red":"r", "green":"g", "blue":"b"};
 
         constructor(r:number=0, g:number=0, b:number=0){
             this.values = {
@@ -26,18 +27,21 @@ export namespace Colors {
         }
 
         strFormat(): string {
-            return undefined;
+            return `rgb(${this.values["r"]},${this.values["g"]},${this.values["b"]})`;
         }
 
         innerValue(): any {
-            return undefined;
+            return this.values;
         }
 
         getItem(index: any): any {
-            return undefined;
+            if(index in Color.altRGBNames) index = Color.altRGBNames[index];
+            return this.values[index];
         }
 
         setItem(index: any, value: any): void {
+            if(index in Color.altRGBNames) index = Color.altRGBNames[index];
+            this.values[index] = value;
         }
 
         hasItem(item: any): boolean {
