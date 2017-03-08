@@ -21,6 +21,10 @@ export namespace Line {
     export let polyLineString = (points:any[]):string => {
         if(points.length % 2 !== 0) throw new Error("ArgCountError: A Line must have an even number of arguments");
         let str = "";
+        for(let i=0;i<points.length-1;i++){
+            if(typeof points[i] !== 'number') throw new Error(`TypeError: Only number accepted for line but got ${typeof points[i]}`);
+            str += ` ${points[i]},${points[i+1]}`;
+        }
         return str;
     };
 }
