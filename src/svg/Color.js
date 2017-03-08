@@ -1,6 +1,8 @@
 "use strict";
 var Colors;
 (function (Colors) {
+    //custom swatch maker for oblivion language
+    Colors.colorDict = {};
     //main color class for Oblivion
     var Color = (function () {
         function Color(r, g, b) {

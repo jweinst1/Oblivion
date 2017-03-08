@@ -12,6 +12,11 @@ export interface SVGColor {
 
 export namespace Colors {
 
+    //custom swatch maker for oblivion language
+    export let colorDict = {
+
+    };
+
     //main color class for Oblivion
     export class Color implements Printable, Collection {
 
