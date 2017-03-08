@@ -30,13 +30,15 @@ var Colors;
             this.values[index] = value;
         };
         Color.prototype.hasItem = function (item) {
-            return undefined;
+            if (item in Color.altRGBNames)
+                item = Color.altRGBNames[item];
+            return item in this.values;
         };
         Color.prototype.arrayValue = function () {
-            return undefined;
+            return [this.values["r"], this.values["g"], this.values["b"]];
         };
         Color.prototype.size = function () {
-            return undefined;
+            return 0;
         };
         Color.altRGBNames = { "red": "r", "green": "g", "blue": "b" };
         return Color;

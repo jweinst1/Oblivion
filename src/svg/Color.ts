@@ -45,15 +45,16 @@ export namespace Colors {
         }
 
         hasItem(item: any): boolean {
-            return undefined;
+            if(item in Color.altRGBNames) item = Color.altRGBNames[item];
+            return item in this.values;
         }
 
         arrayValue(): any[] {
-            return undefined;
+            return [this.values["r"], this.values["g"], this.values["b"]];
         }
 
         size(): number {
-            return undefined;
+            return 0;
         }
 
     }
