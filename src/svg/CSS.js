@@ -1,5 +1,4 @@
 "use strict";
-var Errors_1 = require("../Errors");
 /**
  * Created by Josh on 2/20/17.
  * File that is responsible for CSS styling for SVG components
@@ -18,66 +17,32 @@ var CSS;
     CSS.isAttribute = function (input) {
         return input in ATTRIBUTES;
     };
-    //basic css class
-    var Base = (function () {
-        function Base(name, attributes) {
-            if (attributes === void 0) { attributes = {}; }
-            this.name = name;
-            this.attributes = attributes;
+    //main CSS class
+    var CSSClass = (function () {
+        function CSSClass() {
         }
-        ;
-        Base.prototype.setName = function (name) {
-            this.name = name;
+        CSSClass.prototype.getItem = function (index) {
+            return undefined;
         };
-        Base.prototype.getName = function () {
-            return this.name;
+        CSSClass.prototype.setItem = function (index, value) {
         };
-        Base.prototype.setAttr = function (key, value) {
-            this.attributes[key] = value;
+        CSSClass.prototype.hasItem = function (item) {
+            return undefined;
         };
-        //throws cssattribute error
-        Base.prototype.getAttr = function (key) {
-            if (key in this.attributes)
-                return this.attributes[key];
-            else
-                throw new Errors_1.Errors.CssAttributeError(this.name, key);
+        CSSClass.prototype.arrayValue = function () {
+            return undefined;
         };
-        Base.prototype.strFormat = function () {
-            var format = "." + this.name + " {\n";
-            for (var key in this.attributes) {
-                format += "  " + key + ":" + this.attributes[key] + ";\n";
-            }
-            return format + "}";
+        CSSClass.prototype.size = function () {
+            return undefined;
         };
-        return Base;
+        CSSClass.prototype.strFormat = function () {
+            return undefined;
+        };
+        CSSClass.prototype.innerValue = function () {
+            return undefined;
+        };
+        return CSSClass;
     }());
-    CSS.Base = Base;
-    var Container = (function () {
-        function Container(classes) {
-            if (classes === void 0) { classes = {}; }
-            this.classes = classes;
-        }
-        ;
-        Container.prototype.declareClass = function (name) {
-            this.classes[name] = new Base(name);
-        };
-        Container.prototype.getClass = function (name) {
-            if (name in this.classes)
-                return this.classes[name];
-            else
-                throw new Errors_1.Errors.CssClassError(name);
-        };
-        Container.prototype.updateClass = function (name, dict) {
-            var targetClass = this.getClass(name);
-            for (var key in dict) {
-                targetClass.setAttr(key, dict[key]);
-            }
-        };
-        Container.prototype.createClass = function (name, dict) {
-            this.classes[name] = new Base(name, dict);
-        };
-        return Container;
-    }());
-    CSS.Container = Container;
+    CSS.CSSClass = CSSClass;
 })(CSS = exports.CSS || (exports.CSS = {}));
 //# sourceMappingURL=CSS.js.map

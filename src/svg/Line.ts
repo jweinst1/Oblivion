@@ -14,6 +14,7 @@ export namespace Line {
                 let arg = env.callLib(env, args[0].node, args[0].args);
                 if(typeof arg !== 'object') throw new Error(`TypeError: Expected list argument, got ${typeof arg}`);
 
+
         }
     };
 
