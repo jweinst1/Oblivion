@@ -3,4 +3,4 @@
  */
 var cmp = require('./src/Main');
 
-console.log(JSON.stringify(cmp.Compile("f = {(a) return(@a.w, 3, 4)}, @$g = 4"), null, 3));
+console.log(cmp.Compile("f=[1,2,3,4,7,7], !shape(f)"));
