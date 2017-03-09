@@ -13,7 +13,7 @@ var Compile = function(code, option){
     gen.Gen.gen(ast);
     switch(option){
         case 0:
-            return io.IO.getOut();
+            return io.IO.getFlushOut();
         case 1:
             return io.IO.getflushSVGDoc();
     }
