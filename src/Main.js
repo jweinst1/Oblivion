@@ -8,6 +8,7 @@ var io = require('./IO');
 
 //option determines output
 var Compile = function(code, option){
+    if (option === void 0) { option = 1; }
     var ast = prs.parse(code);
     gen.Gen.gen(ast);
     switch(option){
