@@ -2,6 +2,7 @@
 var STD_1 = require("./Comp/STD");
 var Color_1 = require("./svg/Color");
 var Line_1 = require("./svg/Line");
+var Polygon_1 = require("./svg/Polygon");
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -70,7 +71,8 @@ var Lib;
         "!find": STD_1.STD.find,
         /*SVG*/
         "!color": Color_1.Colors.colorToMap,
-        "!line": Line_1.Line.makeLine
+        "!line": Line_1.Line.makeLine,
+        "!shape": Polygon_1.Polygon.makePolygon
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
 //# sourceMappingURL=Lib.js.map

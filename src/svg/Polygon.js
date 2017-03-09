@@ -17,7 +17,7 @@ var Polygon;
                 var color = env.callLib(env, args[1].node, args[1].args);
                 if (typeof arg !== 'object')
                     throw new Error("TypeError: Expected list argument, got " + typeof arg);
-                IO_1.IO.pushSVG("<polyline points=\"" + Polygon.polygonString(arg.arrayValue()) + "\" fill=\"rgb(" + color.getItem('r') + "," + color.getItem('g') + "," + color.getItem('b') + ")\" stroke-width=\"1\"/>");
+                IO_1.IO.pushSVG("<polygon points=\"" + Polygon.polygonString(arg.arrayValue()) + "\" fill=\"rgb(" + color.getItem('r') + "," + color.getItem('g') + "," + color.getItem('b') + ")\" stroke-width=\"1\"/>");
                 break;
             default:
                 throw new Error("ArgumentError: Expected 1 or 2 args got " + args.length);

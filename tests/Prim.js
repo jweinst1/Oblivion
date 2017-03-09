@@ -31,3 +31,4 @@ test.StdOutTest(23, 'f = [1, 2, 3], !insert(f, 1, 4), !print(f)', '[1,4,2,3]\n')
 console.log("SVG TEsts");
 test.SVGTest(1, '!line([0, 0, 11, 17], !color(3, 4, 77))', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<polyline points=" 0,0 11,17" stroke="rgb(3,4,77)" stroke-width="1"/>\n</svg>');
 test.SVGTest(2, '!line([0, 0, 11, 17, 23, 0, 11, 11, 14, 18], !color(3, 4, 77))', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<polyline points=" 0,0 11,17 23,0 11,11 14,18" stroke="rgb(3,4,77)" stroke-width="1"/>\n</svg>');
+test.SVGTest(3, '!shape([0, 0, 11, 17, 23, 0, 11, 11, 14, 18], !color(3, 4, 77))', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<polygon points=" 0,0 11,17 23,0 11,11 14,18" fill="rgb(3,4,77)" stroke-width="1"/>\n</svg>');
