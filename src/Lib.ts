@@ -1,5 +1,6 @@
 import{STD} from "./Comp/STD";
 import{Colors} from "./svg/Color";
+import{Line} from "./svg/Line";
 
 /**
  * Created by Josh on 2/13/17.
@@ -70,7 +71,8 @@ export namespace Lib {
         "!extend":STD.extend,
         "!find":STD.find,
         /*SVG*/
-        "!color":Colors.colorToMap
+        "!color":Colors.colorToMap,
+        "!line":Line.makeLine
 
     };
 }

@@ -28,3 +28,6 @@ test.StdOutTest(20, 'for elem in !range(8)\n!print(elem) _', '0\n1\n2\n3\n4\n5\n
 test.StdOutTest(21, '!print(!in([1, 2, 3], 3))', 'true\n');
 test.StdOutTest(22, 'f = [1, 2, 3], !append(f, 4), !print(f)', '[1,2,3,4]\n');
 test.StdOutTest(23, 'f = [1, 2, 3], !insert(f, 1, 4), !print(f)', '[1,4,2,3]\n');
+console.log("SVG TEsts");
+test.SVGTest(1, '!line([0, 0, 11, 17], !color(3, 4, 77))', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<polyline points=" 0,0 11,17" stroke="rgb(3,4,77)" stroke-width="1"/>\n</svg>');
+test.SVGTest(2, '!line([0, 0, 11, 17, 23, 0, 11, 11, 14, 18], !color(3, 4, 77))', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<polyline points=" 0,0 11,17 23,0 11,11 14,18" stroke="rgb(3,4,77)" stroke-width="1"/>\n</svg>');
