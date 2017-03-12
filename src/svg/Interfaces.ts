@@ -17,7 +17,3 @@ export interface SVGStrokable {
     setStrokeColor(color:SVGColor):void;
     getStrokeColor():SVGColor;
 }
-
-export interface SVGImmutable {
-
-}

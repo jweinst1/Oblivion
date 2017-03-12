@@ -1,7 +1,7 @@
+"use strict";
 /**
  * Created by Josh on 3/12/17.
  */
-"use strict";
 var Points;
 (function (Points) {
     var Point = (function () {
@@ -11,6 +11,18 @@ var Points;
             this.x = x;
             this.y = y;
         }
+        Point.prototype.getItem = function (index) {
+            if (index in this)
+                return this[index];
+            else
+                throw new Error("Index " + index + " not supported by Point.");
+        };
+        Point.prototype.arrayValue = function () {
+            return [this.x, this.y];
+        };
+        Point.prototype.size = function () {
+            return 2;
+        };
         return Point;
     }());
     Points.Point = Point;
