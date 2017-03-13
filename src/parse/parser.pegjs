@@ -41,7 +41,6 @@ If
 
 Assign
   =  _? v:Name _? "=" _? val:Argument {return {node:"?=", args:[v, val]};}
-  / _? v:Attribute _? "=" _? val:Argument {return {node:"?=>", args:[v, val]};}
 
 
 
