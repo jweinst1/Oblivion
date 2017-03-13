@@ -107,6 +107,9 @@ export namespace STD {
     //need to be changed to operator
     export let add = (env:Environment.Env, args:any[]) => {
         let left = env.callLib(env, args[0].node, args[0].args);
+        let right = env.callLib(env, args[1].node, args[1].args);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        return left + right;
     };
 
     export let sub = (env:Environment.Env, args:any[]) => {

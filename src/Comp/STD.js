@@ -105,6 +105,10 @@ var STD;
     //need to be changed to operator
     STD.add = function (env, args) {
         var left = env.callLib(env, args[0].node, args[0].args);
+        var right = env.callLib(env, args[1].node, args[1].args);
+        if (typeof left !== 'number' || typeof right !== 'number')
+            throw new Error("+ only supports number type.");
+        return left + right;
     };
     STD.sub = function (env, args) {
         if (args.length === 0)

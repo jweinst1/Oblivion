@@ -46,7 +46,7 @@ export namespace Lib {
         "?if":STD._if,
         "?loop":STD.loop,
         "?for":STD._for,
-        "!print":STD.print,
+        "print":STD.print,
         "?number":STD.c_number,
         "?string":STD.c_string,
         "?list":STD.c_list,
