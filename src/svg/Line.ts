@@ -5,16 +5,32 @@
 import {Environment} from "../Env";
 import{IO} from "../IO";
 import {Points} from "./Point";
-import {SVGObject} from "./Interfaces";
+import {SVGObject, SVGPolyObject} from "./Interfaces";
 
 export namespace Lines {
 
-    export class Line implements SVGObject {
+    export class Line implements SVGObject, SVGPolyObject {
 
         public point:Points.Point;
-        public next:SVGObject;
+        public next:SVGPolyObject;
+
+        constructor(point:Points.Point, next:SVGPolyObject = null){
+            this.point = point;
+            this.next = next;
+        }
 
 
+        getPoint(): Points.Point {
+            return this.point;
+        }
+
+        getNext(): SVGPolyObject {
+            return this.next;
+        }
+
+        hasNext():boolean {
+            return this.next !== null;
+        }
 
         strFormat(): string {
             return undefined;

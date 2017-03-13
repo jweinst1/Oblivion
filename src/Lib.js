@@ -1,7 +1,6 @@
 "use strict";
 var STD_1 = require("./Comp/STD");
 var Color_1 = require("./svg/Color");
-var Polygon_1 = require("./svg/Polygon");
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -69,8 +68,7 @@ var Lib;
         "!extend": STD_1.STD.extend,
         "!find": STD_1.STD.find,
         /*SVG*/
-        "!color": Color_1.Colors.colorToMap,
-        "!shape": Polygon_1.Polygon.makePolygon
+        "!color": Color_1.Colors.colorToMap
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
 //# sourceMappingURL=Lib.js.map

@@ -23,4 +23,5 @@ export interface SVGStrokable {
 export interface SVGPolyObject {
     getPoint():Points.Point;
     getNext():SVGPolyObject;
+    hasNext():boolean;
 }

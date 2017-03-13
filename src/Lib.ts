@@ -1,7 +1,7 @@
 import{STD} from "./Comp/STD";
 import{Colors} from "./svg/Color";
 import{Lines} from "./svg/Line";
-import {Polygon} from "./svg/Polygon";
+import {Polygons} from "./svg/Polygon";
 
 /**
  * Created by Josh on 2/13/17.
@@ -72,8 +72,6 @@ export namespace Lib {
         "!extend":STD.extend,
         "!find":STD.find,
         /*SVG*/
-        "!color":Colors.colorToMap,
-        "!shape":Polygon.makePolygon
-
+        "!color":Colors.colorToMap
     };
 }
