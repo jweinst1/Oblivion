@@ -102,14 +102,9 @@ var STD;
                 IO_1.IO.pushOut(printed);
         }
     };
+    //need to be changed to operator
     STD.add = function (env, args) {
-        if (args.length === 0)
-            return 0;
-        var reduc = env.callLib(env, args[0].node, args[0].args);
-        for (var i = 1; i < args.length; i++) {
-            reduc += env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        var left = env.callLib(env, args[0].node, args[0].args);
     };
     STD.sub = function (env, args) {
         if (args.length === 0)

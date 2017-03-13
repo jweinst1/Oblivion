@@ -104,13 +104,9 @@ export namespace STD {
         }
     };
 
+    //need to be changed to operator
     export let add = (env:Environment.Env, args:any[]) => {
-        if(args.length === 0) return 0;
-        let reduc = env.callLib(env, args[0].node, args[0].args);
-        for(let i=1;i<args.length;i++){
-            reduc += env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        let left = env.callLib(env, args[0].node, args[0].args);
     };
 
     export let sub = (env:Environment.Env, args:any[]) => {
