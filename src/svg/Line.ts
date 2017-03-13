@@ -32,6 +32,10 @@ export namespace Lines {
             return this.next !== null;
         }
 
+        setNext(other:SVGPolyObject):void {
+            this.next = other;
+        }
+
         strFormat(): string {
             return undefined;
         }

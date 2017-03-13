@@ -23,5 +23,6 @@ export interface SVGStrokable {
 export interface SVGPolyObject {
     getPoint():Points.Point;
     getNext():SVGPolyObject;
+    setNext(other:SVGPolyObject):void;
     hasNext():boolean;
 }

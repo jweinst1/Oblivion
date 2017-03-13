@@ -16,6 +16,9 @@ var Lines;
         Line.prototype.hasNext = function () {
             return this.next !== null;
         };
+        Line.prototype.setNext = function (other) {
+            this.next = other;
+        };
         Line.prototype.strFormat = function () {
             return undefined;
         };
