@@ -1,11 +1,11 @@
-import {ImmutableCollecton, Printable} from "../Comp/interfaces";
+import {Collection, Printable} from "../Comp/interfaces";
 /**
  * Created by Josh on 3/12/17.
  */
 
 
 export namespace Points {
-    export class Point implements ImmutableCollecton, Printable {
+    export class Point implements Collection, Printable {
 
         readonly x:number;
         readonly y:number;
@@ -19,6 +19,19 @@ export namespace Points {
 
         innerValue(): any {
             return [this.x, this.y];
+        }
+
+        setItem(index: any, value: any): any {
+            if(index in this){
+                if(typeof value !== 'number') throw new Error(`Points can only hold numbers.`);
+                this[index] = value;
+                return new Point(this.x, this.y);
+            }
+            else throw new Error(`Index ${index} not supported by Point.`);
+        }
+
+        hasItem(item: any): boolean {
+            return false;
         }
 
         getItem(index: any): any {

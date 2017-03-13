@@ -17,6 +17,19 @@ var Points;
         Point.prototype.innerValue = function () {
             return [this.x, this.y];
         };
+        Point.prototype.setItem = function (index, value) {
+            if (index in this) {
+                if (typeof value !== 'number')
+                    throw new Error("Points can only hold numbers.");
+                this[index] = value;
+                return new Point(this.x, this.y);
+            }
+            else
+                throw new Error("Index " + index + " not supported by Point.");
+        };
+        Point.prototype.hasItem = function (item) {
+            return false;
+        };
         Point.prototype.getItem = function (index) {
             if (index in this)
                 return this[index];

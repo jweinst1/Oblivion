@@ -12,13 +12,6 @@ export interface Collection {
     size():number;
 }
 
-//specific interface for immutable
-export interface ImmutableCollecton {
-    getItem(index:any):any;
-    arrayValue():any[];
-    size():number;
-}
-
 //interface for formatting for printing
 export interface Printable {
     strFormat():string;
