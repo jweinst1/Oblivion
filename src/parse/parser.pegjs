@@ -48,15 +48,15 @@ List
   = "[" _ args:Operands _ "]" {
     return {node:"?list", args:args};
   }
-  / "[" _ args:Pair* _ "]" {
+  /*/ "[" _ args:Pair* _ "]" {
     return {node:"?map", args:args};
   }
-  / "[:]" {return {node:"?map", args:[]};}
+  / "[:]" {return {node:"?map", args:[]};}*/
 
-Pair
+/*Pair
   = _ arg1:Word ":" arg2:Argument _ {
     return {node:"?pair", args:[arg1, arg2]};
-  }
+  }*/
 
 Point
   = "(" _ a:Argument _ b:Argument _ ")" {
