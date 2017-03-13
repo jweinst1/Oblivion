@@ -1,4 +1,5 @@
 import {SVGColor} from "./Color";
+import {Points} from "./Point";
 /**
  * Created by Josh on 2/22/17.
  */
@@ -16,4 +17,10 @@ export interface SVGStrokable {
     getStrokeWidth():number;
     setStrokeColor(color:SVGColor):void;
     getStrokeColor():SVGColor;
+}
+
+//interface for svg objects that continuosly connect to one another
+export interface SVGPolyObject {
+    getPoint():Points.Point;
+    getNext():SVGPolyObject;
 }
