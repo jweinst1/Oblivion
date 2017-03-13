@@ -75,6 +75,7 @@ InfixArgument
   / _? p:Process {return p;}
   / _? l:List {return l;}
   / _? p:Point {return p;}
+  / _? c:Color {return c;}
   / _? a:Attribute {return a;}
   / _? a:Word {return a;}
 
@@ -96,6 +97,7 @@ Argument
   / _? i:Infix {return i;}
   / _? l:List {return l;}
   / _? p:Point {return p;}
+  / _? c:Color {return c;}
   / _? a:Attribute {return a;}
   / _? a:Word {return a;}
 
@@ -107,6 +109,9 @@ Name
 
 Operator
   = op:[~&|!><=/+%*-]+ {return op.join("")}
+
+Color
+  = "#" c:[a-zA-Z]+ {return {node:"?color", args:["#" + c.join("")]};}
 
 
 Word
