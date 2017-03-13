@@ -11,6 +11,12 @@ var Points;
             this.x = x;
             this.y = y;
         }
+        Point.prototype.strFormat = function () {
+            return this.x + "," + this.y;
+        };
+        Point.prototype.innerValue = function () {
+            return [this.x, this.y];
+        };
         Point.prototype.getItem = function (index) {
             if (index in this)
                 return this[index];
