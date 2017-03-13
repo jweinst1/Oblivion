@@ -11,6 +11,9 @@ var Points;
             this.x = x;
             this.y = y;
         }
+        Point.prototype.type = function () {
+            return "point";
+        };
         Point.prototype.strFormat = function () {
             return this.x + "," + this.y;
         };

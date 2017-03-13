@@ -5,12 +5,10 @@ import {IO} from "../IO";
  * Contains implementation for the draw: keyword and underlying function
  */
 
-export namespace drawSVG {
+//namespace to contain drawing operators and functions
+export namespace Draw {
+    //connects SVG objcts via a line
+    export let lineConnect = (env:Environment.Env, args:any[]) => {
 
-    //Functions that writes to SVG output
-    export let draw = (env:Environment.Env, args:any[]) => {
-        for(let i=0;i<args.length;i++){
-            IO.pushSVG(env.callLib(env, args[i].node, args[i].args).strFormat());
-        }
-    };
+    }
 }

@@ -1,11 +1,16 @@
 import {Collection, Printable} from "../Comp/interfaces";
+import {SVGObject} from "./Interfaces";
 /**
  * Created by Josh on 3/12/17.
  */
 
 
 export namespace Points {
-    export class Point implements Collection, Printable {
+    export class Point implements Collection, Printable, SVGObject {
+
+        type(): string {
+            return "point";
+        }
 
         readonly x:number;
         readonly y:number;

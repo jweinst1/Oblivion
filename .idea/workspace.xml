@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Interfaces.ts" afterPath="$PROJECT_DIR$/src/svg/Interfaces.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Line.js" afterPath="$PROJECT_DIR$/src/svg/Line.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Line.js.map" afterPath="$PROJECT_DIR$/src/svg/Line.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Line.ts" afterPath="$PROJECT_DIR$/src/svg/Line.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Polygon.js" afterPath="$PROJECT_DIR$/src/svg/Polygon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Polygon.js.map" afterPath="$PROJECT_DIR$/src/svg/Polygon.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Polygon.ts" afterPath="$PROJECT_DIR$/src/svg/Polygon.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Point.js" afterPath="$PROJECT_DIR$/src/svg/Point.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Point.js.map" afterPath="$PROJECT_DIR$/src/svg/Point.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Point.ts" afterPath="$PROJECT_DIR$/src/svg/Point.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/draw.js" afterPath="$PROJECT_DIR$/src/svg/draw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/draw.js.map" afterPath="$PROJECT_DIR$/src/svg/draw.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/draw.ts" afterPath="$PROJECT_DIR$/src/svg/draw.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,10 +39,11 @@
       <file leaf-file-name="Line.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Line.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="54" />
+            <state relative-caret-position="255">
+              <caret line="39" column="19" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#77#112#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Polygon.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Polygon.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Polygon.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="555">
               <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -99,18 +100,28 @@
             <state relative-caret-position="0">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <marker date="1489371308000" expanded="true" signature="277:287" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="84:1546" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="115:1514" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="277:287" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="420:473" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="524:572" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="632:991" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="665:884" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="1133:1308" ph="{...}" />
+                <marker date="1489449397000" expanded="true" signature="1359:1407" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Point.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Point.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/svg/Point.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="135">
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,8 +129,8 @@
       <file leaf-file-name="Interfaces.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Interfaces.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+            <state relative-caret-position="23">
+              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -127,12 +138,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Prim.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Prim.js">
+      <file leaf-file-name="draw.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/svg/draw.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,7 +179,6 @@
         <option value="$PROJECT_DIR$/tests/TestFuncs.ts" />
         <option value="$PROJECT_DIR$/src/Comp/Pair.ts" />
         <option value="$PROJECT_DIR$/src/svg/Board.ts" />
-        <option value="$PROJECT_DIR$/src/svg/draw.ts" />
         <option value="$PROJECT_DIR$/src/svg/SVGSize.ts" />
         <option value="$PROJECT_DIR$/src/Gen.ts" />
         <option value="$PROJECT_DIR$/src/Errors.ts" />
@@ -186,13 +198,14 @@
         <option value="$PROJECT_DIR$/src/parse/parser.pegjs" />
         <option value="$PROJECT_DIR$/src/parse/parser.js" />
         <option value="$PROJECT_DIR$/src/Comp/interfaces.ts" />
-        <option value="$PROJECT_DIR$/src/svg/Point.ts" />
         <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
         <option value="$PROJECT_DIR$/src/Lib.ts" />
-        <option value="$PROJECT_DIR$/src/svg/Interfaces.ts" />
         <option value="$PROJECT_DIR$/src/svg/Line.ts" />
         <option value="$PROJECT_DIR$/src/svg/Polygon.ts" />
+        <option value="$PROJECT_DIR$/src/svg/Interfaces.ts" />
+        <option value="$PROJECT_DIR$/src/svg/draw.ts" />
+        <option value="$PROJECT_DIR$/src/svg/Point.ts" />
       </list>
     </option>
   </component>
@@ -534,12 +547,12 @@
       <workItem from="1487207577151" duration="50741000" />
       <workItem from="1487838037508" duration="78817000" />
       <workItem from="1489266466094" duration="373000" />
-      <workItem from="1489306017047" duration="7364000" />
+      <workItem from="1489306017047" duration="8131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158172000" />
+    <option name="totallyTimeSpent" value="158939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -716,13 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/draw.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -905,20 +911,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/Point.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Point.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <marker date="1489371308000" expanded="true" signature="277:287" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="84:1546" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="115:1514" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="277:287" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="420:473" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="524:572" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="632:991" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="665:884" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="1133:1308" ph="{...}" />
+            <marker date="1489449397000" expanded="true" signature="1359:1407" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -949,26 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/Interfaces.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/Line.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Rect.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -979,11 +965,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Polygon.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="555">
           <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#80#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/Line.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="19" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#77#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/Interfaces.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/draw.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/Point.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>

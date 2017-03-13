@@ -7,7 +7,6 @@ import {Points} from "./Point";
 
 //interface describing the most basic SVG object
 export interface SVGObject {
-    strFormat():string;
     type():string;
 }
 
