@@ -1,6 +1,6 @@
 import{STD} from "./Comp/STD";
 import{Colors} from "./svg/Color";
-import{Line} from "./svg/Line";
+import{Lines} from "./svg/Line";
 import {Polygon} from "./svg/Polygon";
 
 /**
@@ -73,7 +73,6 @@ export namespace Lib {
         "!find":STD.find,
         /*SVG*/
         "!color":Colors.colorToMap,
-        "!line":Line.makeLine,
         "!shape":Polygon.makePolygon
 
     };
