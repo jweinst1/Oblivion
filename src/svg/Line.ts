@@ -35,6 +35,12 @@ export namespace Lines {
         setNext(other:SVGPolyObject):void {
             this.next = other;
         }
+        //for interconnecting lines, gets last point in the chain
+        getLast():SVGPolyObject {
+            if(this.hasNext()) {
+                return this.next.getLast();
+            } else return this;
+        }
 
         strFormat(): string {
             return undefined;

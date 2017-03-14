@@ -19,6 +19,14 @@ var Lines;
         Line.prototype.setNext = function (other) {
             this.next = other;
         };
+        //for interconnecting lines, gets last point in the chain
+        Line.prototype.getLast = function () {
+            if (this.hasNext()) {
+                return this.next.getLast();
+            }
+            else
+                return this;
+        };
         Line.prototype.strFormat = function () {
             return undefined;
         };

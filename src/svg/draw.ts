@@ -7,8 +7,9 @@ import {IO} from "../IO";
 
 //namespace to contain drawing operators and functions
 export namespace Draw {
-    //connects SVG objcts via a line
+    //connects SVG objects via a line
     export let lineConnect = (env:Environment.Env, args:any[]) => {
-
+        let left = env.callLib(env, args[0].node, args[0].args);
+        let right = env.callLib(env, args[1].node, args[1].args);
     }
 }

@@ -24,4 +24,5 @@ export interface SVGPolyObject {
     getNext():SVGPolyObject;
     setNext(other:SVGPolyObject):void;
     hasNext():boolean;
+    getLast():SVGPolyObject;
 }
