@@ -8,6 +8,7 @@ import {Points} from "./Point";
 //interface describing the most basic SVG object
 export interface SVGObject {
     type():string;
+    strFormat():string;
 }
 
 //describes SVG objects that are strokable;
@@ -20,6 +21,7 @@ export interface SVGStrokable {
 
 //interface for svg objects that continuosly connect to one another
 export interface SVGPolyObject {
+    strFormat():string;
     getPoint():Points.Point;
     getNext():SVGPolyObject;
     setNext(other:SVGPolyObject):void;

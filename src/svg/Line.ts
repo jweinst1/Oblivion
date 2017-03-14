@@ -43,7 +43,8 @@ export namespace Lines {
         }
 
         strFormat(): string {
-            return undefined;
+            if(this.hasNext()) return `${this.type()}:${this.point.strFormat()} ${this.next.strFormat()}`;
+            else return `${this.type()}:${this.point.strFormat()}`;
         }
 
         type(): string {

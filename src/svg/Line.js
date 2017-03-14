@@ -28,7 +28,10 @@ var Lines;
                 return this;
         };
         Line.prototype.strFormat = function () {
-            return undefined;
+            if (this.hasNext())
+                return this.type() + ":" + this.point.strFormat() + " " + this.next.strFormat();
+            else
+                return this.type() + ":" + this.point.strFormat();
         };
         Line.prototype.type = function () {
             return "line";
