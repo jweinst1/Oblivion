@@ -7,6 +7,12 @@ var Line_1 = require("./Line");
 //namespace to contain drawing operators and functions
 var Draw;
 (function (Draw) {
+    Draw.draw = function (env, args) {
+        var root = env.callLib(env, args[0].node, args[0].args);
+        var mode = root.type();
+        while (root.hasNext()) {
+        }
+    };
     //connects SVG objects via a line
     Draw.lineConnect = function (env, args) {
         var left = env.callLib(env, args[0].node, args[0].args);

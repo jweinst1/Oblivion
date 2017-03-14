@@ -8,6 +8,15 @@ import {Lines} from "./Line";
 
 //namespace to contain drawing operators and functions
 export namespace Draw {
+
+    export let draw = (env:Environment.Env, args:any[]) => {
+        let root = env.callLib(env, args[0].node, args[0].args);
+        let mode = root.type();
+        while(root.hasNext()){
+
+        }
+    };
+
     //connects SVG objects via a line
     export let lineConnect = (env:Environment.Env, args:any[]) => {
         let left = env.callLib(env, args[0].node, args[0].args);
