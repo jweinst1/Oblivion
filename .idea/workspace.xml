@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/svg/Wrappers.ts" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/Rect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/Rect.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/Rect.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/SVGSize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/SVGSize.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/SVGSize.ts" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Interfaces.ts" afterPath="$PROJECT_DIR$/src/svg/Interfaces.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Wrappers.js" afterPath="$PROJECT_DIR$/src/svg/Wrappers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Wrappers.js.map" afterPath="$PROJECT_DIR$/src/svg/Wrappers.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Wrappers.ts" afterPath="$PROJECT_DIR$/src/svg/Wrappers.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -91,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interfaces.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Interfaces.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Interfaces.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
+            <state relative-caret-position="278">
               <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
@@ -113,12 +108,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wrappers.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Wrappers.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/svg/Wrappers.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,8 +197,8 @@
         <option value="$PROJECT_DIR$/src/svg/Line.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
         <option value="$PROJECT_DIR$/src/svg/draw.ts" />
-        <option value="$PROJECT_DIR$/src/svg/Wrappers.ts" />
         <option value="$PROJECT_DIR$/src/svg/Interfaces.ts" />
+        <option value="$PROJECT_DIR$/src/svg/Wrappers.ts" />
       </list>
     </option>
   </component>
@@ -543,12 +540,12 @@
       <workItem from="1487207577151" duration="50741000" />
       <workItem from="1487838037508" duration="78817000" />
       <workItem from="1489266466094" duration="373000" />
-      <workItem from="1489306017047" duration="12918000" />
+      <workItem from="1489306017047" duration="13630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163726000" />
+    <option name="totallyTimeSpent" value="164438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -994,20 +991,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/Wrappers.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Interfaces.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
+        <state relative-caret-position="278">
           <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/Wrappers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
