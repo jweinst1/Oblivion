@@ -7,6 +7,13 @@ var Polygons;
             this.point = point;
             this.next = next;
         }
+        Polygon.prototype.getLast = function () {
+            if (this.hasNext()) {
+                return this.next.getLast();
+            }
+            else
+                return this;
+        };
         Polygon.prototype.getPoint = function () {
             return this.point;
         };

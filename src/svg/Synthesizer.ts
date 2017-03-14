@@ -17,7 +17,9 @@ class Synthesizer {
         this.currentStyle = {};
     }
 
-    put(item:SVGPolyObject) {
-        switch
+    put(item:SVGPolyObject):void {
+        switch(){
+
+        }
     }
 }

@@ -11,6 +11,12 @@ export namespace Polygons {
 
     export class Polygon implements SVGObject, SVGPolyObject{
 
+        getLast(): SVGPolyObject {
+            if(this.hasNext()) {
+                return this.next.getLast();
+            } else return this;
+        }
+
         public point:Points.Point;
         public next:SVGPolyObject;
 

@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/Wrappers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/Wrappers.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/svg/Wrappers.ts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Interfaces.ts" afterPath="$PROJECT_DIR$/src/svg/Interfaces.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Polygon.js" afterPath="$PROJECT_DIR$/src/svg/Polygon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Polygon.js.map" afterPath="$PROJECT_DIR$/src/svg/Polygon.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Polygon.ts" afterPath="$PROJECT_DIR$/src/svg/Polygon.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.js.map" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.ts" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="Line.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Line.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="45" column="67" lean-forward="false" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+            <state relative-caret-position="248">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="31" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#77#112#0" expanded="true" />
@@ -51,8 +50,8 @@
       <file leaf-file-name="Polygon.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Polygon.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#80#115#0" expanded="true" />
@@ -88,8 +87,8 @@
       <file leaf-file-name="Synthesizer.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="203">
+              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -185,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/parse/parser.pegjs" />
         <option value="$PROJECT_DIR$/src/parse/parser.js" />
         <option value="$PROJECT_DIR$/src/Comp/interfaces.ts" />
-        <option value="$PROJECT_DIR$/src/svg/Polygon.ts" />
         <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/src/svg/Point.ts" />
         <option value="$PROJECT_DIR$/src/Lib.ts" />
@@ -194,6 +192,7 @@
         <option value="$PROJECT_DIR$/src/svg/draw.ts" />
         <option value="$PROJECT_DIR$/src/svg/Wrappers.ts" />
         <option value="$PROJECT_DIR$/src/svg/Interfaces.ts" />
+        <option value="$PROJECT_DIR$/src/svg/Polygon.ts" />
         <option value="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
       </list>
     </option>
@@ -536,12 +535,12 @@
       <workItem from="1487207577151" duration="50741000" />
       <workItem from="1487838037508" duration="78817000" />
       <workItem from="1489266466094" duration="373000" />
-      <workItem from="1489306017047" duration="15378000" />
+      <workItem from="1489306017047" duration="15442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166186000" />
+    <option name="totallyTimeSpent" value="166250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -977,8 +976,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Line.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="45" column="67" lean-forward="false" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+        <state relative-caret-position="248">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="31" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#77#112#0" expanded="true" />
@@ -988,8 +987,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Polygon.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#80#115#0" expanded="true" />
@@ -999,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="203">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding />
         </state>
       </provider>
