@@ -7,4 +7,4 @@
 var test = require("./TestMethods");
 
 test.StdOutTest(1, 'print(3 + 3 + 6)', '12\n');
-test.StdOutTest(2, 'print((1,2) -> (5,6))', '12\n');
+test.StdOutTest(2, 'print((1,2) -> (5,6))', '1,2 -> 5,6\n');

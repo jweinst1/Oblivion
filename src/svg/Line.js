@@ -29,9 +29,9 @@ var Lines;
         };
         Line.prototype.strFormat = function () {
             if (this.hasNext())
-                return this.type() + ":" + this.point.strFormat() + " " + this.next.strFormat();
+                return this.point.strFormat() + " -> " + this.next.strFormat();
             else
-                return this.type() + ":" + this.point.strFormat();
+                return "" + this.point.strFormat();
         };
         Line.prototype.type = function () {
             return "line";
