@@ -29,7 +29,3 @@ export interface SVGPolyObject {
     getLast():SVGPolyObject;
 }
 
-export interface SVGWrapper {
-    put(item:SVGPolyObject):void;
-    getSVGString():string;
-}
