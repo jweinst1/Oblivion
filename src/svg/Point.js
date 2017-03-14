@@ -4,6 +4,13 @@
  */
 var Points;
 (function (Points) {
+    Points.makePoint = function (env, args) {
+        var x = env.callLib(env, args[0].node, args[0].args);
+        var y = env.callLib(env, args[1].node, args[1].args);
+        if (typeof x !== 'number' || typeof y !== 'number')
+            throw new Error("Points must have numbers as coordinates");
+        return new Point(x, y);
+    };
     var Point = (function () {
         function Point(x, y) {
             if (x === void 0) { x = 0; }

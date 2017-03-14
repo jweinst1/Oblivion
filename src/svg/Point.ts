@@ -1,11 +1,20 @@
 import {Collection, Printable} from "../Comp/interfaces";
 import {SVGObject} from "./Interfaces";
+import {Environment} from "../Env";
 /**
  * Created by Josh on 3/12/17.
  */
 
 
 export namespace Points {
+
+    export let makePoint = (env:Environment.Env, args:any[]) => {
+        let x = env.callLib(env, args[0].node, args[0].args);
+        let y = env.callLib(env, args[1].node, args[1].args);
+        if(typeof x !== 'number' || typeof y !== 'number') throw new Error(`Points must have numbers as coordinates`);
+        return new Point(x, y);
+    };
+
     export class Point implements Collection, Printable, SVGObject {
 
         type(): string {

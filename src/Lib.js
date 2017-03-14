@@ -1,6 +1,8 @@
 "use strict";
 var STD_1 = require("./Comp/STD");
 var Color_1 = require("./svg/Color");
+var Point_1 = require("./svg/Point");
+var draw_1 = require("./svg/draw");
 /**
  * Created by Josh on 2/13/17.
  * File that holds the standard library
@@ -68,7 +70,9 @@ var Lib;
         "!extend": STD_1.STD.extend,
         "!find": STD_1.STD.find,
         /*SVG*/
-        "!color": Color_1.Colors.colorToMap
+        "!color": Color_1.Colors.colorToMap,
+        "?point": Point_1.Points.makePoint,
+        "->": draw_1.Draw.lineConnect
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
 //# sourceMappingURL=Lib.js.map
