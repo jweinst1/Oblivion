@@ -79,6 +79,6 @@ export namespace Lib {
         "*>":Draw.shapeConnect,
         "?draw":Draw.draw,
         "?color":Colors.makeColor,
-        "@":null
+        "@":Colors.colorfFunc
     };
 }

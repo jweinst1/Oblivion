@@ -23,6 +23,13 @@ export namespace Colors {
         violet:true, tan:true, orange:true
     };
 
+    export let colorfFunc = (env:Environment.Env, args:any[]) => {
+        let left = env.callLib(env, args[1].node, args[1].args);
+        if(!left.type) throw new Error("Coloring Operator must be used on line or shape");
+        left.color = env.callLib(env, args[0].node, args[0].args);
+        return left;
+    };
+
     //embedded into lib and makes color from #<> syntax
     export let makeColor = (env:Environment.Env, args:any[]) => {
         let color = args[0];

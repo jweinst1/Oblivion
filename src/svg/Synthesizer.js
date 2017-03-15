@@ -18,6 +18,7 @@ var Synthesizer = (function () {
             this.mode = item.type();
             if (this.mode === 'polygon')
                 this.currentStyle = { fill: "black", stroke: "transparent", "stroke-width": 1 };
+            this.colorCheck(item);
             this.currentPoints.push(item.getPoint().strFormat());
         }
     };
@@ -40,11 +41,19 @@ var Synthesizer = (function () {
         IO_1.IO.pushSVG("<" + this.mode + " " + this.makePointString() + " " + this.makestyleString() + "/>");
         this.reset();
     };
-    Synthesizer.prototype.setStroke = function (input) {
-        this.currentStyle["stroke"] = input;
-    };
-    Synthesizer.prototype.setFill = function (input) {
-        this.currentStyle["fill"] = input;
+    Synthesizer.prototype.colorCheck = function (item) {
+        if (item.color) {
+            switch (this.mode) {
+                case "line":
+                    if (item.color !== this.currentStyle["stroke"])
+                        this.currentStyle["stroke"] = item.color;
+                    break;
+                case "polygon":
+                    if (item.color !== this.currentStyle["fill"])
+                        this.currentStyle["fill"] = item.color;
+                    break;
+            }
+        }
     };
     return Synthesizer;
 }());

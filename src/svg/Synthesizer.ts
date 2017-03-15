@@ -22,6 +22,7 @@ export class Synthesizer {
             this.releaseSVG();
             this.mode = item.type();
             if(this.mode === 'polygon') this.currentStyle = {fill:"black", stroke:"transparent", "stroke-width":1};
+            this.colorCheck(item);
             this.currentPoints.push(item.getPoint().strFormat());
         }
     }
@@ -49,11 +50,16 @@ export class Synthesizer {
         this.reset();
     }
 
-    public setStroke(input:string):void {
-        this.currentStyle["stroke"] = input;
-    }
-
-    public setFill(input:string):void {
-        this.currentStyle["fill"] = input;
+    private colorCheck(item:any):void {
+        if(item.color){
+            switch(this.mode){
+                case "line":
+                    if(item.color !== this.currentStyle["stroke"]) this.currentStyle["stroke"] = item.color;
+                    break;
+                case "polygon":
+                    if(item.color !== this.currentStyle["fill"]) this.currentStyle["fill"] = item.color;
+                    break;
+            }
+        }
     }
 }
