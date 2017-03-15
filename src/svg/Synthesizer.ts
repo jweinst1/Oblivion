@@ -6,20 +6,27 @@ import {SVGPolyObject} from "./Interfaces";
 
 class Synthesizer {
     public mode:string;
-    public SVGStrings:string[];
     private currentPoints:string[];
     private currentStyle:Object;
 
     constructor(){
         this.mode = "line";
-        this.SVGStrings = [];
         this.currentPoints = [];
         this.currentStyle = {};
     }
 
-    put(item:SVGPolyObject):void {
-        switch(){
+    public put(item:SVGPolyObject):void {
+        if(item.type() === this.mode) this.currentPoints.push(item.getPoint().strFormat());
+        else {
 
         }
+    }
+
+    private makestyleString():string {
+        let str = "";
+        for(let key in this.currentStyle){
+            str += `${key}="${this.currentStyle[key]}"`;
+        }
+        return str;
     }
 }

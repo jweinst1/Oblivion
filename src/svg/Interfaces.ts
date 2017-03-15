@@ -21,6 +21,7 @@ export interface SVGStrokable {
 
 //interface for svg objects that continuosly connect to one another
 export interface SVGPolyObject {
+    type():string;
     strFormat():string;
     getPoint():Points.Point;
     getNext():SVGPolyObject;
