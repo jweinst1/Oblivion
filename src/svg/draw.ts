@@ -10,6 +10,8 @@ import {Synthesizer} from "./Synthesizer";
 //namespace to contain drawing operators and functions
 export namespace Draw {
 
+    export let connects = {"line":true, "polyline":true};
+
     export let draw = (env:Environment.Env, args:any[]) => {
         let root = env.callLib(env, args[0].node, args[0].args);
         let syn = new Synthesizer();

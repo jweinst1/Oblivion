@@ -8,6 +8,7 @@ var Synthesizer_1 = require("./Synthesizer");
 //namespace to contain drawing operators and functions
 var Draw;
 (function (Draw) {
+    Draw.connects = { "line": true, "polyline": true };
     Draw.draw = function (env, args) {
         var root = env.callLib(env, args[0].node, args[0].args);
         var syn = new Synthesizer_1.Synthesizer();
