@@ -72,6 +72,7 @@ var Lib;
         /*SVG*/
         "?point": Point_1.Points.makePoint,
         "->": draw_1.Draw.lineConnect,
+        "*>": draw_1.Draw.shapeConnect,
         "?draw": draw_1.Draw.draw,
         "?color": Color_1.Colors.makeColor,
         "@": null

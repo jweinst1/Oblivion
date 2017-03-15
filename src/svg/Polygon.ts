@@ -19,6 +19,7 @@ export namespace Polygons {
 
         public point:Points.Point;
         public next:SVGPolyObject;
+        public color:string;
 
         constructor(point:Points.Point, next:SVGPolyObject = null){
             this.point = point;
@@ -43,7 +44,8 @@ export namespace Polygons {
         }
 
         strFormat(): string {
-            return undefined;
+            if(this.hasNext()) return `${this.point.strFormat()} *> ${this.next.strFormat()}`;
+            else return `${this.point.strFormat()}`;
         }
 
         type(): string {

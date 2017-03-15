@@ -16,6 +16,8 @@ var Synthesizer = (function () {
         else {
             this.releaseSVG();
             this.mode = item.type();
+            if (this.mode === 'polygon')
+                this.currentStyle = { fill: "black", stroke: "transparent", "stroke-width": 1 };
             this.currentPoints.push(item.getPoint().strFormat());
         }
     };
@@ -37,6 +39,12 @@ var Synthesizer = (function () {
     Synthesizer.prototype.releaseSVG = function () {
         IO_1.IO.pushSVG("<" + this.mode + " " + this.makePointString() + " " + this.makestyleString() + "/>");
         this.reset();
+    };
+    Synthesizer.prototype.setStroke = function (input) {
+        this.currentStyle["stroke"] = input;
+    };
+    Synthesizer.prototype.setFill = function (input) {
+        this.currentStyle["fill"] = input;
     };
     return Synthesizer;
 }());

@@ -76,6 +76,7 @@ export namespace Lib {
         /*SVG*/
         "?point":Points.makePoint,
         "->":Draw.lineConnect,
+        "*>":Draw.shapeConnect,
         "?draw":Draw.draw,
         "?color":Colors.makeColor,
         "@":null

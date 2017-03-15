@@ -13,6 +13,7 @@ export namespace Lines {
 
         public point:Points.Point;
         public next:SVGPolyObject;
+        public color:string;
 
         constructor(point:Points.Point, next:SVGPolyObject = null){
             this.point = point;

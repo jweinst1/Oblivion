@@ -27,7 +27,10 @@ var Polygons;
             this.next = other;
         };
         Polygon.prototype.strFormat = function () {
-            return undefined;
+            if (this.hasNext())
+                return this.point.strFormat() + " *> " + this.next.strFormat();
+            else
+                return "" + this.point.strFormat();
         };
         Polygon.prototype.type = function () {
             return "polygon";

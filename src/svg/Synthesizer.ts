@@ -21,6 +21,7 @@ export class Synthesizer {
         else {
             this.releaseSVG();
             this.mode = item.type();
+            if(this.mode === 'polygon') this.currentStyle = {fill:"black", stroke:"transparent", "stroke-width":1};
             this.currentPoints.push(item.getPoint().strFormat());
         }
     }
@@ -46,5 +47,13 @@ export class Synthesizer {
     public releaseSVG():void {
         IO.pushSVG(`<${this.mode} ${this.makePointString()} ${this.makestyleString()}/>`);
         this.reset();
+    }
+
+    public setStroke(input:string):void {
+        this.currentStyle["stroke"] = input;
+    }
+
+    public setFill(input:string):void {
+        this.currentStyle["fill"] = input;
     }
 }
