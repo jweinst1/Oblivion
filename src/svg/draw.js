@@ -8,6 +8,7 @@ var Synthesizer_1 = require("./Synthesizer");
 //namespace to contain drawing operators and functions
 var Draw;
 (function (Draw) {
+    //name dictionary to check if an SVG type is connectable
     Draw.connects = { "line": true, "polyline": true };
     Draw.draw = function (env, args) {
         var root = env.callLib(env, args[0].node, args[0].args);
@@ -26,18 +27,18 @@ var Draw;
             if (right.type() === 'point') {
                 return new Line_1.Lines.Line(left, new Line_1.Lines.Line(right));
             }
-            else if (right.type() === 'line') {
+            else if (right.type() in Draw.connects) {
                 return new Line_1.Lines.Line(left, right);
             }
             else
                 throw new Error("-> Operator received wrong arguments");
         }
-        else if (left.type() === 'line') {
+        else if (left.type() in Draw.connects) {
             if (right.type() === 'point') {
                 left.getLast().next = new Line_1.Lines.Line(right);
                 return left;
             }
-            else if (right.type() === 'line') {
+            else if (right.type() in Draw.connects) {
                 left.getLast().next = right;
             }
             else

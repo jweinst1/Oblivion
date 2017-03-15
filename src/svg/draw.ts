@@ -10,6 +10,7 @@ import {Synthesizer} from "./Synthesizer";
 //namespace to contain drawing operators and functions
 export namespace Draw {
 
+    //name dictionary to check if an SVG type is connectable
     export let connects = {"line":true, "polyline":true};
 
     export let draw = (env:Environment.Env, args:any[]) => {
@@ -30,17 +31,17 @@ export namespace Draw {
             if(right.type() === 'point') {
                 return new Lines.Line(left, new Lines.Line(right));
             }
-            else if(right.type() === 'line'){
+            else if(right.type() in Draw.connects){
                 return new Lines.Line(left, right);
             }
             else throw new Error(`-> Operator received wrong arguments`);
         }
-        else if(left.type() === 'line'){
+        else if(left.type() in Draw.connects){
             if(right.type() === 'point'){
                 left.getLast().next = new Lines.Line(right);
                 return left;
             }
-            else if(right.type() === 'line'){
+            else if(right.type() in Draw.connects){
                 left.getLast().next = right;
             }
             else throw new Error(`-> Operator received wrong arguments`);
