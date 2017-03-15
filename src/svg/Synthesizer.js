@@ -22,6 +22,14 @@ var Synthesizer = (function () {
         }
         return str;
     };
+    Synthesizer.prototype.makePointString = function () {
+        return this.currentPoints.join(" ");
+    };
+    //resets the synthesizer to it's base state.
+    Synthesizer.prototype.reset = function () {
+        this.currentStyle = {};
+        this.currentPoints = [];
+    };
     return Synthesizer;
 }());
 //# sourceMappingURL=Synthesizer.js.map

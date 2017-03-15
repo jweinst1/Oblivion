@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Interfaces.ts" afterPath="$PROJECT_DIR$/src/svg/Interfaces.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.js" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.js.map" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.ts" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
@@ -87,8 +86,8 @@
       <file leaf-file-name="Synthesizer.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="263">
+              <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -535,12 +534,12 @@
       <workItem from="1487207577151" duration="50741000" />
       <workItem from="1487838037508" duration="78817000" />
       <workItem from="1489266466094" duration="373000" />
-      <workItem from="1489306017047" duration="16090000" />
+      <workItem from="1489306017047" duration="16805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166898000" />
+    <option name="totallyTimeSpent" value="167613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -998,8 +997,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="263">
+          <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
           <folding />
         </state>
       </provider>

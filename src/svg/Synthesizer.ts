@@ -29,4 +29,14 @@ class Synthesizer {
         }
         return str;
     }
+
+    private makePointString():string {
+        return this.currentPoints.join(" ");
+    }
+
+    //resets the synthesizer to it's base state.
+    private reset():void {
+        this.currentStyle = {};
+        this.currentPoints = [];
+    }
 }
