@@ -11,11 +11,16 @@ var Colors;
         violet: true, tan: true, orange: true
     };
     Colors.colorfFunc = function (env, args) {
-        var left = env.callLib(env, args[1].node, args[1].args);
-        if (!left.type)
+        var item = env.callLib(env, args[1].node, args[1].args);
+        var col = env.callLib(env, args[0].node, args[0].args);
+        if (!item.type)
             throw new Error("Coloring Operator must be used on line or shape");
-        left.color = env.callLib(env, args[0].node, args[0].args);
-        return left;
+        var curr = item;
+        while (curr !== null) {
+            curr.color = col;
+            curr = curr.next;
+        }
+        return item;
     };
     //embedded into lib and makes color from #<> syntax
     Colors.makeColor = function (env, args) {

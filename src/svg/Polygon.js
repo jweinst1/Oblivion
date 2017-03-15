@@ -6,6 +6,7 @@ var Polygons;
             if (next === void 0) { next = null; }
             this.point = point;
             this.next = next;
+            this.color = "black";
         }
         Polygon.prototype.getLast = function () {
             if (this.hasNext()) {

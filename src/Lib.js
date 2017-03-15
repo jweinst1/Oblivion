@@ -75,7 +75,7 @@ var Lib;
         "*>": draw_1.Draw.shapeConnect,
         "?draw": draw_1.Draw.draw,
         "?color": Color_1.Colors.makeColor,
-        "@": Color_1.Colors.colorfFunc
+        "|=": Color_1.Colors.colorfFunc
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
 //# sourceMappingURL=Lib.js.map

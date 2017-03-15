@@ -6,6 +6,7 @@ var Lines;
             if (next === void 0) { next = null; }
             this.point = point;
             this.next = next;
+            this.color = "black";
         }
         Line.prototype.getPoint = function () {
             return this.point;

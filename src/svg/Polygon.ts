@@ -24,6 +24,7 @@ export namespace Polygons {
         constructor(point:Points.Point, next:SVGPolyObject = null){
             this.point = point;
             this.next = next;
+            this.color = "black";
         }
 
 

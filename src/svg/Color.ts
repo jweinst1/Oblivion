@@ -24,10 +24,15 @@ export namespace Colors {
     };
 
     export let colorfFunc = (env:Environment.Env, args:any[]) => {
-        let left = env.callLib(env, args[1].node, args[1].args);
-        if(!left.type) throw new Error("Coloring Operator must be used on line or shape");
-        left.color = env.callLib(env, args[0].node, args[0].args);
-        return left;
+        let item = env.callLib(env, args[1].node, args[1].args);
+        let col = env.callLib(env, args[0].node, args[0].args);
+        if(!item.type) throw new Error("Coloring Operator must be used on line or shape");
+        let curr = item;
+        while(curr !== null){
+            curr.color = col;
+            curr = curr.next
+        }
+        return item;
     };
 
     //embedded into lib and makes color from #<> syntax

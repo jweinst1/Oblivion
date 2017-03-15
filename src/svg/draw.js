@@ -14,7 +14,7 @@ var Draw;
     Draw.draw = function (env, args) {
         var root = env.callLib(env, args[0].node, args[0].args);
         var syn = new Synthesizer_1.Synthesizer();
-        while (root.hasNext()) {
+        while (root !== null) {
             syn.put(root);
             root = root.next;
         }

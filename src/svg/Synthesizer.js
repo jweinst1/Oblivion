@@ -6,14 +6,22 @@ var IO_1 = require("../IO");
  */
 var Synthesizer = (function () {
     function Synthesizer() {
-        this.mode = "line";
+        this.mode = "start";
         this.currentPoints = [];
         this.currentStyle = { fill: "transparent", stroke: "black", "stroke-width": 1 };
     }
     Synthesizer.prototype.put = function (item) {
-        if (item.type() === this.mode)
+        if (this.mode === "start") {
+            this.mode = item.type();
+            this.currentStyle = this.startStyle(item.type());
+            this.put(item);
+        }
+        else if (item.type() === this.mode) {
             this.currentPoints.push(item.getPoint().strFormat());
+            this.colorCheck(item);
+        }
         else {
+            this.currentPoints.push(item.getPoint().strFormat());
             this.releaseSVG();
             this.mode = item.type();
             if (this.mode === 'polygon')
@@ -42,18 +50,22 @@ var Synthesizer = (function () {
         this.reset();
     };
     Synthesizer.prototype.colorCheck = function (item) {
-        if (item.color) {
-            switch (this.mode) {
-                case "line":
-                    if (item.color !== this.currentStyle["stroke"])
-                        this.currentStyle["stroke"] = item.color;
-                    break;
-                case "polygon":
-                    if (item.color !== this.currentStyle["fill"])
-                        this.currentStyle["fill"] = item.color;
-                    break;
-            }
+        switch (this.mode) {
+            case "line":
+                if (item.color !== this.currentStyle["stroke"])
+                    this.currentStyle["stroke"] = item.color;
+                break;
+            case "polygon":
+                if (item.color !== this.currentStyle["fill"])
+                    this.currentStyle["fill"] = item.color;
+                break;
         }
+    };
+    Synthesizer.prototype.startStyle = function (mode) {
+        if (mode === 'line')
+            return { fill: "transparent", stroke: "black", "stroke-width": 1 };
+        else if (mode === 'polygon')
+            return { fill: "black", stroke: "transparent", "stroke-width": 1 };
     };
     return Synthesizer;
 }());

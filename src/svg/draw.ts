@@ -17,7 +17,7 @@ export namespace Draw {
     export let draw = (env:Environment.Env, args:any[]) => {
         let root = env.callLib(env, args[0].node, args[0].args);
         let syn = new Synthesizer();
-        while(root.hasNext()){
+        while(root !== null){
             syn.put(root);
             root = root.next;
         }
