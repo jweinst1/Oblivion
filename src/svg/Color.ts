@@ -15,7 +15,16 @@ export interface SVGColor {
 export namespace Colors {
 
     //custom swatch maker for oblivion language
-    export let colorDict = {
+    export let swatchSet = {
+        black:true, white:true, gray:true,
+        cyan:true, blue:true, red:true,
+        yellow:true, turquoise:true, indigo:true,
+        green:true, brown:true, lightpink:true,
+        violet:true, tan:true, orange:true
+    };
+
+    //embedded into lib and makes color from #<> syntax
+    export let makeColor = (env:Environment.Env, args:any[]) => {
 
     };
 

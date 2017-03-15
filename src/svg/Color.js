@@ -3,7 +3,16 @@ var Maps_1 = require("../Comp/Maps");
 var Colors;
 (function (Colors) {
     //custom swatch maker for oblivion language
-    Colors.colorDict = {};
+    Colors.swatchSet = {
+        black: true, white: true, gray: true,
+        cyan: true, blue: true, red: true,
+        yellow: true, turquoise: true, indigo: true,
+        green: true, brown: true, lightpink: true,
+        violet: true, tan: true, orange: true
+    };
+    //embedded into lib and makes color from #<> syntax
+    Colors.makeColor = function (env, args) {
+    };
     //converts a color function arg set to map
     Colors.colorToMap = function (env, args) {
         if (args.length !== 3)
