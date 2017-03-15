@@ -13,7 +13,7 @@ export class Synthesizer {
     constructor(){
         this.mode = "line";
         this.currentPoints = [];
-        this.currentStyle = {};
+        this.currentStyle = {fill:"transparent", stroke:"black", "stroke-width":1};
     }
 
     public put(item:SVGPolyObject):void {
@@ -28,7 +28,7 @@ export class Synthesizer {
     private makestyleString():string {
         let str = "";
         for(let key in this.currentStyle){
-            str += `${key}="${this.currentStyle[key]}"`;
+            str += `${key}="${this.currentStyle[key]}" `;
         }
         return str;
     }
@@ -39,12 +39,12 @@ export class Synthesizer {
 
     //resets the synthesizer to it's base state.
     private reset():void {
-        this.currentStyle = {};
+        this.currentStyle = {fill:"transparent", stroke:"black", "stroke-width":1};
         this.currentPoints = [];
     }
 
     public releaseSVG():void {
-        IO.pushSVG(`<${this.mode} ${this.makePointString()} ${this.makestyleString()}`);
+        IO.pushSVG(`<${this.mode} ${this.makePointString()} ${this.makestyleString()}/>`);
         this.reset();
     }
 }

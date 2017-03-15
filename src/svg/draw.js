@@ -15,6 +15,7 @@ var Draw;
             syn.put(root);
             root = root.next;
         }
+        syn.releaseSVG();
     };
     //connects SVG objects via a line
     Draw.lineConnect = function (env, args) {

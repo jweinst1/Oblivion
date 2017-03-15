@@ -8,7 +8,7 @@ var Synthesizer = (function () {
     function Synthesizer() {
         this.mode = "line";
         this.currentPoints = [];
-        this.currentStyle = {};
+        this.currentStyle = { fill: "transparent", stroke: "black", "stroke-width": 1 };
     }
     Synthesizer.prototype.put = function (item) {
         if (item.type() === this.mode)
@@ -22,7 +22,7 @@ var Synthesizer = (function () {
     Synthesizer.prototype.makestyleString = function () {
         var str = "";
         for (var key in this.currentStyle) {
-            str += key + "=\"" + this.currentStyle[key] + "\"";
+            str += key + "=\"" + this.currentStyle[key] + "\" ";
         }
         return str;
     };
@@ -31,11 +31,11 @@ var Synthesizer = (function () {
     };
     //resets the synthesizer to it's base state.
     Synthesizer.prototype.reset = function () {
-        this.currentStyle = {};
+        this.currentStyle = { fill: "transparent", stroke: "black", "stroke-width": 1 };
         this.currentPoints = [];
     };
     Synthesizer.prototype.releaseSVG = function () {
-        IO_1.IO.pushSVG("<" + this.mode + " " + this.makePointString() + " " + this.makestyleString());
+        IO_1.IO.pushSVG("<" + this.mode + " " + this.makePointString() + " " + this.makestyleString() + "/>");
         this.reset();
     };
     return Synthesizer;

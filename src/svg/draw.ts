@@ -17,6 +17,7 @@ export namespace Draw {
             syn.put(root);
             root = root.next;
         }
+        syn.releaseSVG();
     };
 
     //connects SVG objects via a line
