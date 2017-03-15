@@ -1,6 +1,5 @@
 "use strict";
 var STD_1 = require("./Comp/STD");
-var Color_1 = require("./svg/Color");
 var Point_1 = require("./svg/Point");
 var draw_1 = require("./svg/draw");
 /**
@@ -70,9 +69,9 @@ var Lib;
         "!extend": STD_1.STD.extend,
         "!find": STD_1.STD.find,
         /*SVG*/
-        "!color": Color_1.Colors.colorToMap,
         "?point": Point_1.Points.makePoint,
-        "->": draw_1.Draw.lineConnect
+        "->": draw_1.Draw.lineConnect,
+        "?draw": draw_1.Draw.draw
     };
 })(Lib = exports.Lib || (exports.Lib = {}));
 //# sourceMappingURL=Lib.js.map

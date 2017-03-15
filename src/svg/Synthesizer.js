@@ -1,4 +1,5 @@
 "use strict";
+var IO_1 = require("../IO");
 /**
  * Created by Josh on 3/14/17.
  * SVG Synthesizer
@@ -13,6 +14,9 @@ var Synthesizer = (function () {
         if (item.type() === this.mode)
             this.currentPoints.push(item.getPoint().strFormat());
         else {
+            this.releaseSVG();
+            this.mode = item.type();
+            this.currentPoints.push(item.getPoint().strFormat());
         }
     };
     Synthesizer.prototype.makestyleString = function () {
@@ -23,13 +27,18 @@ var Synthesizer = (function () {
         return str;
     };
     Synthesizer.prototype.makePointString = function () {
-        return this.currentPoints.join(" ");
+        return "points=\"" + this.currentPoints.join(" ") + "\"";
     };
     //resets the synthesizer to it's base state.
     Synthesizer.prototype.reset = function () {
         this.currentStyle = {};
         this.currentPoints = [];
     };
+    Synthesizer.prototype.releaseSVG = function () {
+        IO_1.IO.pushSVG("<" + this.mode + " " + this.makePointString() + " " + this.makestyleString());
+        this.reset();
+    };
     return Synthesizer;
 }());
+exports.Synthesizer = Synthesizer;
 //# sourceMappingURL=Synthesizer.js.map

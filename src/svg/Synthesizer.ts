@@ -1,10 +1,11 @@
 import {SVGPolyObject} from "./Interfaces";
+import {IO} from "../IO";
 /**
  * Created by Josh on 3/14/17.
  * SVG Synthesizer
  */
 
-class Synthesizer {
+export class Synthesizer {
     public mode:string;
     private currentPoints:string[];
     private currentStyle:Object;
@@ -18,7 +19,9 @@ class Synthesizer {
     public put(item:SVGPolyObject):void {
         if(item.type() === this.mode) this.currentPoints.push(item.getPoint().strFormat());
         else {
-
+            this.releaseSVG();
+            this.mode = item.type();
+            this.currentPoints.push(item.getPoint().strFormat());
         }
     }
 
@@ -31,12 +34,17 @@ class Synthesizer {
     }
 
     private makePointString():string {
-        return this.currentPoints.join(" ");
+        return `points="${this.currentPoints.join(" ")}"`;
     }
 
     //resets the synthesizer to it's base state.
     private reset():void {
         this.currentStyle = {};
         this.currentPoints = [];
+    }
+
+    public releaseSVG():void {
+        IO.pushSVG(`<${this.mode} ${this.makePointString()} ${this.makestyleString()}`);
+        this.reset();
     }
 }

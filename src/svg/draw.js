@@ -1,5 +1,6 @@
 "use strict";
 var Line_1 = require("./Line");
+var Synthesizer_1 = require("./Synthesizer");
 /**
  * Created by Josh on 2/23/17.
  * Contains implementation for the draw: keyword and underlying function
@@ -9,8 +10,10 @@ var Draw;
 (function (Draw) {
     Draw.draw = function (env, args) {
         var root = env.callLib(env, args[0].node, args[0].args);
-        var mode = root.type();
+        var syn = new Synthesizer_1.Synthesizer();
         while (root.hasNext()) {
+            syn.put(root);
+            root = root.next;
         }
     };
     //connects SVG objects via a line

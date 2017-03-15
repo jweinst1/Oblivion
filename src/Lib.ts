@@ -1,5 +1,4 @@
 import{STD} from "./Comp/STD";
-import{Colors} from "./svg/Color";
 import{Lines} from "./svg/Line";
 import {Polygons} from "./svg/Polygon";
 import {Points} from "./svg/Point";
@@ -74,8 +73,8 @@ export namespace Lib {
         "!extend":STD.extend,
         "!find":STD.find,
         /*SVG*/
-        "!color":Colors.colorToMap,
         "?point":Points.makePoint,
-        "->":Draw.lineConnect
+        "->":Draw.lineConnect,
+        "?draw":Draw.draw
     };
 }
