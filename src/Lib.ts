@@ -1,6 +1,7 @@
 import{STD} from "./Comp/STD";
 import{Lines} from "./svg/Line";
 import {Polygons} from "./svg/Polygon";
+import {Colors} from "./svg/Color";
 import {Points} from "./svg/Point";
 import {Draw} from "./svg/draw";
 
@@ -75,6 +76,8 @@ export namespace Lib {
         /*SVG*/
         "?point":Points.makePoint,
         "->":Draw.lineConnect,
-        "?draw":Draw.draw
+        "?draw":Draw.draw,
+        "?color":Colors.makeColor,
+        "@":null
     };
 }

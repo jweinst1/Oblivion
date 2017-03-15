@@ -25,7 +25,9 @@ export namespace Colors {
 
     //embedded into lib and makes color from #<> syntax
     export let makeColor = (env:Environment.Env, args:any[]) => {
-
+        let color = args[0];
+        if(/^#[0-9a-f]{6}|[0-9a-f]{3}$/i.test(color)) return color;
+        else if(color.slice(1) in swatchSet) return color.slice(1);
     };
 
     //converts a color function arg set to map

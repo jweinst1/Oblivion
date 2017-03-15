@@ -12,6 +12,11 @@ var Colors;
     };
     //embedded into lib and makes color from #<> syntax
     Colors.makeColor = function (env, args) {
+        var color = args[0];
+        if (/^#[0-9a-f]{6}|[0-9a-f]{3}$/i.test(color))
+            return color;
+        else if (color.slice(1) in Colors.swatchSet)
+            return color.slice(1);
     };
     //converts a color function arg set to map
     Colors.colorToMap = function (env, args) {
