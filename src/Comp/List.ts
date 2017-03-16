@@ -30,6 +30,7 @@ export namespace Lists {
         getItem(index: any): any {
             if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
             if(index < 0 || index >= this.items.length) throw new Errors.IndexError(index+"");
+            if (this.items[index].constructor.name === 'List') return this.items[index].copy();
             return this.items[index];
         }
 

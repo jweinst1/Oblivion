@@ -26,6 +26,8 @@ var Lists;
                 throw new Errors_1.Errors.TypeError('number', typeof index);
             if (index < 0 || index >= this.items.length)
                 throw new Errors_1.Errors.IndexError(index + "");
+            if (this.items[index].constructor.name === 'List')
+                return this.items[index].copy();
             return this.items[index];
         };
         List.prototype.setItem = function (index, value) {
