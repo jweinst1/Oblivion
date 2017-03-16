@@ -36,7 +36,10 @@ var Environment;
         };
         ;
         Env.prototype.set = function (key, val) {
-            this.variables[key] = val;
+            if (val.constructor.name === 'List')
+                this.variables[key] = val.copy();
+            else
+                this.variables[key] = val;
         };
         Env.prototype.contains = function (key) {
             return key in this.variables;

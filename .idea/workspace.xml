@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/List.js" afterPath="$PROJECT_DIR$/src/Comp/List.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/List.js.map" afterPath="$PROJECT_DIR$/src/Comp/List.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/List.ts" afterPath="$PROJECT_DIR$/src/Comp/List.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js" afterPath="$PROJECT_DIR$/src/Comp/STD.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js.map" afterPath="$PROJECT_DIR$/src/Comp/STD.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.ts" afterPath="$PROJECT_DIR$/src/Comp/STD.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js" afterPath="$PROJECT_DIR$/src/Lib.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js.map" afterPath="$PROJECT_DIR$/src/Lib.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.ts" afterPath="$PROJECT_DIR$/src/Lib.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Prim.js" afterPath="$PROJECT_DIR$/tests/Prim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Env.js" afterPath="$PROJECT_DIR$/src/Env.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Env.js.map" afterPath="$PROJECT_DIR$/src/Env.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Env.ts" afterPath="$PROJECT_DIR$/src/Env.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="List.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/List.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
-              <caret line="67" column="9" lean-forward="false" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+              <caret line="45" column="63" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -105,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Env.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Env.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Env.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-217">
-              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="203">
+              <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -121,18 +116,18 @@
             <state relative-caret-position="-1312">
               <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="45" />
               <folding>
-                <marker date="1489700380000" expanded="true" signature="199:4275" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="2082:2417" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="2514:2706" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="2572:2696" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="2618:2682" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="2763:3064" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="3168:3327" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="3345:3436" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="3494:3607" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="3617:3683" ph="//..." />
-                <marker date="1489700380000" expanded="true" signature="3736:4247" ph="{...}" />
-                <marker date="1489700380000" expanded="true" signature="4187:4200" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="199:4307" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="2114:2449" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="2546:2738" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="2604:2728" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="2650:2714" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="2795:3096" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="3200:3359" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="3377:3468" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="3526:3639" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="3649:3715" ph="//..." />
+                <marker date="1489700460000" expanded="true" signature="3768:4279" ph="{...}" />
+                <marker date="1489700460000" expanded="true" signature="4219:4232" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -179,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/svg/Board.ts" />
         <option value="$PROJECT_DIR$/src/Gen.ts" />
         <option value="$PROJECT_DIR$/src/Errors.ts" />
-        <option value="$PROJECT_DIR$/src/Env.ts" />
         <option value="$PROJECT_DIR$/tests/TestMethods.js" />
         <option value="$PROJECT_DIR$/src/Comp/Maps.ts" />
         <option value="$PROJECT_DIR$/src/Comp/Iter.ts" />
@@ -206,6 +200,7 @@
         <option value="$PROJECT_DIR$/src/Lib.ts" />
         <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/src/Comp/List.ts" />
+        <option value="$PROJECT_DIR$/src/Env.ts" />
       </list>
     </option>
   </component>
@@ -569,12 +564,12 @@
       <workItem from="1487207577151" duration="50741000" />
       <workItem from="1487838037508" duration="78817000" />
       <workItem from="1489266466094" duration="373000" />
-      <workItem from="1489306017047" duration="33222000" />
+      <workItem from="1489306017047" duration="33344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184030000" />
+    <option name="totallyTimeSpent" value="184152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -982,31 +977,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Env.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-217">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/List.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1312">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="45" />
           <folding>
-            <marker date="1489700380000" expanded="true" signature="199:4275" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="2082:2417" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="2514:2706" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="2572:2696" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="2618:2682" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="2763:3064" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="3168:3327" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="3345:3436" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="3494:3607" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="3617:3683" ph="//..." />
-            <marker date="1489700380000" expanded="true" signature="3736:4247" ph="{...}" />
-            <marker date="1489700380000" expanded="true" signature="4187:4200" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="199:4307" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="2114:2449" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="2546:2738" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="2604:2728" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="2650:2714" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="2795:3096" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="3200:3359" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="3377:3468" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="3526:3639" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="3649:3715" ph="//..." />
+            <marker date="1489700460000" expanded="true" signature="3768:4279" ph="{...}" />
+            <marker date="1489700460000" expanded="true" signature="4219:4232" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1059,7 +1046,15 @@
     <entry file="file://$PROJECT_DIR$/src/Comp/List.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="67" column="9" lean-forward="false" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+          <caret line="45" column="63" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Env.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
           <folding />
         </state>
       </provider>

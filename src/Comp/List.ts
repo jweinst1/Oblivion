@@ -43,7 +43,7 @@ export namespace Lists {
 
         hasItem(item: any): boolean {
             for(let val of this.items){
-                if(val === item) return true;
+                if(JSON.stringify(val) === JSON.stringify(item)) return true;
             }
             return false;
         }

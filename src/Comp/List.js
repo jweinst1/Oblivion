@@ -41,7 +41,7 @@ var Lists;
         List.prototype.hasItem = function (item) {
             for (var _i = 0, _a = this.items; _i < _a.length; _i++) {
                 var val = _a[_i];
-                if (val === item)
+                if (JSON.stringify(val) === JSON.stringify(item))
                     return true;
             }
             return false;

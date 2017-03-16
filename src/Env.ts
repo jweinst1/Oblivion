@@ -45,7 +45,8 @@ export namespace Environment {
         };
 
         set(key: string, val: any): void {
-            this.variables[key] = val;
+            if(val.constructor.name === 'List') this.variables[key] = val.copy();
+            else this.variables[key] = val;
         }
 
         contains(key: string): boolean {
