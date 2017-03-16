@@ -113,39 +113,31 @@ export namespace STD {
     };
 
     export let sub = (env:Environment.Env, args:any[]) => {
-        if(args.length === 0) return 0;
-        let reduc = env.callLib(env, args[0].node, args[0].args);
-        for(let i=1;i<args.length;i++){
-            reduc -= env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        let left = env.callLib(env, args[0].node, args[0].args);
+        let right = env.callLib(env, args[1].node, args[1].args);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        return left - right;
     };
 
     export let mul = (env:Environment.Env, args:any[]) => {
-        if(args.length === 0) return 0;
-        let reduc = env.callLib(env, args[0].node, args[0].args);
-        for(let i=1;i<args.length;i++){
-            reduc *= env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        let left = env.callLib(env, args[0].node, args[0].args);
+        let right = env.callLib(env, args[1].node, args[1].args);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        return left * right;
     };
 
     export let div = (env:Environment.Env, args:any[]) => {
-        if(args.length === 0) return 0;
-        let reduc = env.callLib(env, args[0].node, args[0].args);
-        for(let i=1;i<args.length;i++){
-            reduc /= env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        let left = env.callLib(env, args[0].node, args[0].args);
+        let right = env.callLib(env, args[1].node, args[1].args);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        return left / right;
     };
 
     export let rem = (env:Environment.Env, args:any[]) => {
-        if(args.length === 0) return 0;
-        let reduc = env.callLib(env, args[0].node, args[0].args);
-        for(let i=1;i<args.length;i++){
-            reduc %= env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        let left = env.callLib(env, args[0].node, args[0].args);
+        let right = env.callLib(env, args[1].node, args[1].args);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        return left % right;
     };
 
     export let c_number = (env:Environment.Env, args:any[]) => {

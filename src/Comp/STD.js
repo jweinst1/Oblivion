@@ -111,40 +111,32 @@ var STD;
         return left + right;
     };
     STD.sub = function (env, args) {
-        if (args.length === 0)
-            return 0;
-        var reduc = env.callLib(env, args[0].node, args[0].args);
-        for (var i = 1; i < args.length; i++) {
-            reduc -= env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        var left = env.callLib(env, args[0].node, args[0].args);
+        var right = env.callLib(env, args[1].node, args[1].args);
+        if (typeof left !== 'number' || typeof right !== 'number')
+            throw new Error("+ only supports number type.");
+        return left - right;
     };
     STD.mul = function (env, args) {
-        if (args.length === 0)
-            return 0;
-        var reduc = env.callLib(env, args[0].node, args[0].args);
-        for (var i = 1; i < args.length; i++) {
-            reduc *= env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        var left = env.callLib(env, args[0].node, args[0].args);
+        var right = env.callLib(env, args[1].node, args[1].args);
+        if (typeof left !== 'number' || typeof right !== 'number')
+            throw new Error("+ only supports number type.");
+        return left * right;
     };
     STD.div = function (env, args) {
-        if (args.length === 0)
-            return 0;
-        var reduc = env.callLib(env, args[0].node, args[0].args);
-        for (var i = 1; i < args.length; i++) {
-            reduc /= env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        var left = env.callLib(env, args[0].node, args[0].args);
+        var right = env.callLib(env, args[1].node, args[1].args);
+        if (typeof left !== 'number' || typeof right !== 'number')
+            throw new Error("+ only supports number type.");
+        return left / right;
     };
     STD.rem = function (env, args) {
-        if (args.length === 0)
-            return 0;
-        var reduc = env.callLib(env, args[0].node, args[0].args);
-        for (var i = 1; i < args.length; i++) {
-            reduc %= env.callLib(env, args[i].node, args[i].args);
-        }
-        return reduc;
+        var left = env.callLib(env, args[0].node, args[0].args);
+        var right = env.callLib(env, args[1].node, args[1].args);
+        if (typeof left !== 'number' || typeof right !== 'number')
+            throw new Error("+ only supports number type.");
+        return left % right;
     };
     STD.c_number = function (env, args) {
         return Number(args[0]);
