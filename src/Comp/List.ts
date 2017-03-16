@@ -34,10 +34,11 @@ export namespace Lists {
             return this.items[index];
         }
 
-        setItem(index: any, value: any): void {
+        setItem(index: any, value: any): List {
             if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
             if(index < 0 || index >= this.items.length) throw new Errors.IndexError(index+"");
             this.items[index] = value;
+            return this.copy();
         }
 
         hasItem(item: any): boolean {
@@ -54,6 +55,7 @@ export namespace Lists {
         append(item: any): void {
             this.items.push(item);
         }
+
 
         appendLeft(item: any): void {
             this.items.unshift(item);
@@ -84,9 +86,15 @@ export namespace Lists {
             this.items.splice(index, 0, item);
         }
 
-        extend(other: Collection): void {
-            if(typeof other === 'object') this.items = this.items.concat(other.arrayValue());
-            else this.items = this.items.concat(other);
+        extend(other: any): List {
+            if(other.constructor.name === 'List'){
+                for(let i=0;i<other.size();i++) this.items.push(other.items[i]);
+                return this.copy();
+            }
+            else {
+                this.items.push(other);
+                return this.copy();
+            }
         }
 
         find(item: any): any {
@@ -94,10 +102,13 @@ export namespace Lists {
            return result !== -1 ? result : false;
         }
 
+
         //function that implements copying
-        public copy():List {
+        //also supports slicing
+        public copy(start:any = 0, end:any =this.items.length):List {
+            //may need error to prevent faulty copying
             let newArr = [];
-            for(let i=0;i<this.items.length;i++){
+            for(let i=start;i<end;i++){
                 if(this.items[i].constructor.name === 'List'){
                     newArr.push(this.items[i].copy());
                 }

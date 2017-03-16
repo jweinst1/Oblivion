@@ -36,6 +36,7 @@ var Lists;
             if (index < 0 || index >= this.items.length)
                 throw new Errors_1.Errors.IndexError(index + "");
             this.items[index] = value;
+            return this.copy();
         };
         List.prototype.hasItem = function (item) {
             for (var _i = 0, _a = this.items; _i < _a.length; _i++) {
@@ -80,19 +81,28 @@ var Lists;
             this.items.splice(index, 0, item);
         };
         List.prototype.extend = function (other) {
-            if (typeof other === 'object')
-                this.items = this.items.concat(other.arrayValue());
-            else
-                this.items = this.items.concat(other);
+            if (other.constructor.name === 'List') {
+                for (var i = 0; i < other.size(); i++)
+                    this.items.push(other.items[i]);
+                return this.copy();
+            }
+            else {
+                this.items.push(other);
+                return this.copy();
+            }
         };
         List.prototype.find = function (item) {
             var result = this.items.indexOf(item);
             return result !== -1 ? result : false;
         };
         //function that implements copying
-        List.prototype.copy = function () {
+        //also supports slicing
+        List.prototype.copy = function (start, end) {
+            if (start === void 0) { start = 0; }
+            if (end === void 0) { end = this.items.length; }
+            //may need error to prevent faulty copying
             var newArr = [];
-            for (var i = 0; i < this.items.length; i++) {
+            for (var i = start; i < end; i++) {
                 if (this.items[i].constructor.name === 'List') {
                     newArr.push(this.items[i].copy());
                 }
