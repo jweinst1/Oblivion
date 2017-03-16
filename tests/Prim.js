@@ -17,3 +17,4 @@ test.SVGTest(8, 'draw #red |= (1,2) -> (10, 10), draw #yellow |= (0,0) *> (20, 2
 test.SVGTest(9, 'g = #red |= (1,2) -> (10, 10) *> (20, 20)\ndraw g', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<line points="1,2 10,10" fill="transparent" stroke="red" stroke-width="1" />\n<polygon points="10,10 20,20" fill="red" stroke="transparent" stroke-width="1" />\n</svg>');
 test.StdOutTest(10, 'print((1,2) -> (5,6+3) *> (77,77))', '1,2 -> 5,9 *> 77,77\n');
 test.StdOutTest(11, 'print((1,2) -> (5,6%3) *> (77,77))', '1,2 -> 5,0 *> 77,77\n');
+test.StdOutTest(12, 'print(3 == 4)', 'false\n');

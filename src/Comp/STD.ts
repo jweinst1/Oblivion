@@ -155,7 +155,6 @@ export namespace STD {
 
     //eq logical op functions -------------
     export let eq = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         return env.callLib(env, args[0].node, args[0].args) === env.callLib(env, args[1].node, args[1].args);
     };
 

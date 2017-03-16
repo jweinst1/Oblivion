@@ -150,8 +150,6 @@ var STD;
     };
     //eq logical op functions -------------
     STD.eq = function (env, args) {
-        if (args.length !== 2)
-            throw new Errors_1.Errors.ArgumentError(args.length, 2);
         return env.callLib(env, args[0].node, args[0].args) === env.callLib(env, args[1].node, args[1].args);
     };
     STD.ne = function (env, args) {
