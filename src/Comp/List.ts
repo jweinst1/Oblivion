@@ -7,7 +7,7 @@ import {Errors} from "../Errors";
 
 export namespace Lists {
 
-    export class OblList implements Collection, OrderedCollection, Printable {
+    export class OblList implements Collection, Printable {
         //used for iterators
         arrayValue(): any[] {
             return this.items;

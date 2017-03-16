@@ -202,6 +202,11 @@ export namespace STD {
         return Boolean(env.callLib(env, args[0].node, args[0].args) || env.callLib(env, args[1].node, args[1].args));
     };
 
+    //logical and operator
+    export let _and = (env:Environment.Env, args:any[]) => {
+        return Boolean(env.callLib(env, args[0].node, args[0].args) && env.callLib(env, args[1].node, args[1].args));
+    };
+
     /*Conditional StdLib funcs*/
 
     export let _if = (env:Environment.Env, args:any[]) => {

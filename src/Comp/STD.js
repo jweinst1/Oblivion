@@ -192,6 +192,10 @@ var STD;
     STD._or = function (env, args) {
         return Boolean(env.callLib(env, args[0].node, args[0].args) || env.callLib(env, args[1].node, args[1].args));
     };
+    //logical and operator
+    STD._and = function (env, args) {
+        return Boolean(env.callLib(env, args[0].node, args[0].args) && env.callLib(env, args[1].node, args[1].args));
+    };
     /*Conditional StdLib funcs*/
     STD._if = function (env, args) {
         if (args.length < 2)
