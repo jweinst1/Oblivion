@@ -6,36 +6,36 @@ var Errors_1 = require("../Errors");
  */
 var Lists;
 (function (Lists) {
-    var OblList = (function () {
-        function OblList(lst) {
+    var List = (function () {
+        function List(lst) {
             if (lst === void 0) { lst = []; }
             this.items = lst;
         }
         //used for iterators
-        OblList.prototype.arrayValue = function () {
+        List.prototype.arrayValue = function () {
             return this.items;
         };
-        OblList.prototype.strFormat = function () {
+        List.prototype.strFormat = function () {
             return JSON.stringify(this.items);
         };
-        OblList.prototype.innerValue = function () {
+        List.prototype.innerValue = function () {
             return this.items;
         };
-        OblList.prototype.getItem = function (index) {
+        List.prototype.getItem = function (index) {
             if (typeof index !== 'number')
                 throw new Errors_1.Errors.TypeError('number', typeof index);
             if (index < 0 || index >= this.items.length)
                 throw new Errors_1.Errors.IndexError(index + "");
             return this.items[index];
         };
-        OblList.prototype.setItem = function (index, value) {
+        List.prototype.setItem = function (index, value) {
             if (typeof index !== 'number')
                 throw new Errors_1.Errors.TypeError('number', typeof index);
             if (index < 0 || index >= this.items.length)
                 throw new Errors_1.Errors.IndexError(index + "");
             this.items[index] = value;
         };
-        OblList.prototype.hasItem = function (item) {
+        List.prototype.hasItem = function (item) {
             for (var _i = 0, _a = this.items; _i < _a.length; _i++) {
                 var val = _a[_i];
                 if (val === item)
@@ -43,52 +43,64 @@ var Lists;
             }
             return false;
         };
-        OblList.prototype.size = function () {
+        List.prototype.size = function () {
             return this.items.length;
         };
-        OblList.prototype.append = function (item) {
+        List.prototype.append = function (item) {
             this.items.push(item);
         };
-        OblList.prototype.appendLeft = function (item) {
+        List.prototype.appendLeft = function (item) {
             this.items.unshift(item);
         };
-        OblList.prototype.pop = function () {
+        List.prototype.pop = function () {
             if (this.items.length === 0)
                 throw new Error("Pop Error: Pop method requires list not have length 0");
             return this.items.pop();
         };
-        OblList.prototype.popLeft = function () {
+        List.prototype.popLeft = function () {
             if (this.items.length === 0)
                 throw new Error("Pop Error: Pop method requires list not have length 0");
             return this.items.shift();
         };
         //wont do anything if item not in list
-        OblList.prototype.remove = function (item) {
+        List.prototype.remove = function (item) {
             for (var i = 0; i < this.items.length; i++) {
                 if (item === this.items[i]) {
                     this.items.splice(i, 1);
                 }
             }
         };
-        OblList.prototype.insert = function (index, item) {
+        List.prototype.insert = function (index, item) {
             if (typeof index !== 'number')
                 throw new Errors_1.Errors.TypeError('number', typeof index);
             if (index < 0 || index >= this.items.length)
                 throw new Errors_1.Errors.IndexError(index + "");
             this.items.splice(index, 0, item);
         };
-        OblList.prototype.extend = function (other) {
+        List.prototype.extend = function (other) {
             if (typeof other === 'object')
                 this.items = this.items.concat(other.arrayValue());
             else
                 this.items = this.items.concat(other);
         };
-        OblList.prototype.find = function (item) {
+        List.prototype.find = function (item) {
             var result = this.items.indexOf(item);
             return result !== -1 ? result : false;
         };
-        return OblList;
+        //function that implements copying
+        List.prototype.copy = function () {
+            var newArr = [];
+            for (var i = 0; i < this.items.length; i++) {
+                if (this.items[i].constructor.name === 'List') {
+                    newArr.push(this.items[i].copy());
+                }
+                else
+                    newArr.push(this.items[i]);
+            }
+            return new List(newArr);
+        };
+        return List;
     }());
-    Lists.OblList = OblList;
+    Lists.List = List;
 })(Lists = exports.Lists || (exports.Lists = {}));
 //# sourceMappingURL=List.js.map

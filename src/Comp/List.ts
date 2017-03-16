@@ -7,7 +7,7 @@ import {Errors} from "../Errors";
 
 export namespace Lists {
 
-    export class OblList implements Collection, Printable {
+    export class List implements Collection, Printable {
         //used for iterators
         arrayValue(): any[] {
             return this.items;
@@ -91,6 +91,18 @@ export namespace Lists {
         find(item: any): any {
            let result = this.items.indexOf(item);
            return result !== -1 ? result : false;
+        }
+
+        //function that implements copying
+        public copy():List {
+            let newArr = [];
+            for(let i=0;i<this.items.length;i++){
+                if(this.items[i].constructor.name === 'List'){
+                    newArr.push(this.items[i].copy());
+                }
+                else newArr.push(this.items[i]);
+            }
+            return new List(newArr);
         }
     }
 }
