@@ -53,7 +53,6 @@ export namespace Lib {
         "?for":STD._for,
         "print":STD.print,
         "?number":STD.c_number,
-        "?string":STD.c_string,
         "?list":STD.c_list,
         "?map":STD.c_map,
         "?bool":STD.c_bool,

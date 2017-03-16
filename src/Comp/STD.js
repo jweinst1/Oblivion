@@ -1,7 +1,6 @@
 "use strict";
 var IO_1 = require("../IO");
 var Errors_1 = require("../Errors");
-var Strings_1 = require("./Strings");
 var List_1 = require("./List");
 var Maps_1 = require("./Maps");
 var Iter_1 = require("./Iter");
@@ -264,9 +263,6 @@ var STD;
         var obj = env.get(args[0].args[0].args[0]);
         var key = env.callLib(env, args[0].args[1].node, args[0].args[1].args);
         obj.setItem(key, env.callLib(env, args[1].node, args[1].args));
-    };
-    STD.c_string = function (env, args) {
-        return new Strings_1.Strings.OblString(args[0]);
     };
     //creates new list object
     STD.c_list = function (env, args) {

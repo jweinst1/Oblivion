@@ -275,10 +275,6 @@ export namespace STD {
         obj.setItem(key, env.callLib(env, args[1].node, args[1].args));
     };
 
-    export let c_string = (env:Environment.Env, args:any[]) => {
-        return new Strings.OblString(args[0]);
-    };
-
     //creates new list object
     export let c_list = (env:Environment.Env, args:any[]) => {
         for(let i=0;i<args.length;i++){
