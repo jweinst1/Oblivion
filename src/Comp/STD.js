@@ -188,6 +188,10 @@ var STD;
     STD.same = function (env, args) {
         return JSON.stringify(env.callLib(env, args[0].node, args[0].args)) === JSON.stringify(env.callLib(env, args[1].node, args[1].args));
     };
+    //logical or operator
+    STD._or = function (env, args) {
+        return Boolean(env.callLib(env, args[0].node, args[0].args) || env.callLib(env, args[1].node, args[1].args));
+    };
     /*Conditional StdLib funcs*/
     STD._if = function (env, args) {
         if (args.length < 2)

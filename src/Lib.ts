@@ -45,6 +45,7 @@ export namespace Lib {
         ">":STD.gt,
         "<=":STD.le,
         ">=":STD.ge,
+        "||":STD._or,
         "?if":STD._if,
         "?loop":STD.loop,
         "?for":STD._for,

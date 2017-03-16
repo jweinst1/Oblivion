@@ -41,6 +41,7 @@ var Lib;
         ">": STD_1.STD.gt,
         "<=": STD_1.STD.le,
         ">=": STD_1.STD.ge,
+        "||": STD_1.STD._or,
         "?if": STD_1.STD._if,
         "?loop": STD_1.STD.loop,
         "?for": STD_1.STD._for,
