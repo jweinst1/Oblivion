@@ -18,3 +18,5 @@ test.SVGTest(9, 'g = #red |= (1,2) -> (10, 10) *> (20, 20)\ndraw g', '<svg width
 test.StdOutTest(10, 'print((1,2) -> (5,6+3) *> (77,77))', '1,2 -> 5,9 *> 77,77\n');
 test.StdOutTest(11, 'print((1,2) -> (5,6%3) *> (77,77))', '1,2 -> 5,0 *> 77,77\n');
 test.StdOutTest(12, 'print(3 == 4)', 'false\n');
+test.StdOutTest(13, 'print(3 ~= 4 - 1)', 'true\n');
+test.StdOutTest(14, 'if 3 ~= 4\nprint(2) else print(true) _', 'true\n');

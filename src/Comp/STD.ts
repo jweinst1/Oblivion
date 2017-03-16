@@ -160,13 +160,11 @@ export namespace STD {
 
 
     export let ne = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         return env.callLib(env, args[0].node, args[0].args) !== env.callLib(env, args[1].node, args[1].args);
     };
 
     //only numbers can be compared with <, <=, >=, and >
     export let lt = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
         if(typeof left !== 'number' || typeof right !== 'number') throw new Errors.TypeError('number', `${typeof left} and ${typeof right}`);
@@ -174,7 +172,6 @@ export namespace STD {
     };
 
     export let gt = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
         if(typeof left !== 'number' || typeof right !== 'number') throw new Errors.TypeError('number', `${typeof left} and ${typeof right}`);
@@ -182,7 +179,6 @@ export namespace STD {
     };
 
     export let le = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
         if(typeof left !== 'number' || typeof right !== 'number') throw new Errors.TypeError('number', `${typeof left} and ${typeof right}`);
@@ -190,7 +186,6 @@ export namespace STD {
     };
 
     export let ge = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
         if(typeof left !== 'number' || typeof right !== 'number') throw new Errors.TypeError('number', `${typeof left} and ${typeof right}`);
@@ -199,7 +194,6 @@ export namespace STD {
 
     //comparison that works on lists and maps
     export let same = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         return JSON.stringify(env.callLib(env, args[0].node, args[0].args)) === JSON.stringify(env.callLib(env, args[1].node, args[1].args));
     };
 
