@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/List.js" afterPath="$PROJECT_DIR$/src/Comp/List.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/List.js.map" afterPath="$PROJECT_DIR$/src/Comp/List.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/List.ts" afterPath="$PROJECT_DIR$/src/Comp/List.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Comp/STD.js" afterPath="$PROJECT_DIR$/src/Comp/STD.js" />
@@ -11,6 +12,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js" afterPath="$PROJECT_DIR$/src/Lib.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.js.map" afterPath="$PROJECT_DIR$/src/Lib.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lib.ts" afterPath="$PROJECT_DIR$/src/Lib.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Prim.js" afterPath="$PROJECT_DIR$/tests/Prim.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +33,8 @@
       <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+            <state relative-caret-position="113">
+              <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -40,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="STD.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="STD.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
-              <caret line="378" column="34" lean-forward="false" selection-start-line="378" selection-start-column="34" selection-end-line="378" selection-end-column="34" />
+              <caret line="385" column="26" lean-forward="true" selection-start-line="385" selection-start-column="26" selection-end-line="385" selection-end-column="26" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="n#!!doc;n#STD#0" expanded="false" />
@@ -66,8 +68,8 @@
       <file leaf-file-name="Prim.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+            <state relative-caret-position="338">
+              <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -83,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="List.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Comp/List.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="203">
+              <caret line="67" column="9" lean-forward="false" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -119,10 +121,18 @@
             <state relative-caret-position="-1312">
               <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="45" />
               <folding>
-                <marker date="1489698075000" expanded="true" signature="169:4376" ph="{...}" />
-                <marker date="1489698075000" expanded="true" signature="199:4347" ph="{...}" />
-                <marker date="1489698075000" expanded="true" signature="3808:4319" ph="{...}" />
-                <marker date="1489698075000" expanded="true" signature="4259:4272" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="199:4275" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="2082:2417" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="2514:2706" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="2572:2696" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="2618:2682" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="2763:3064" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="3168:3327" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="3345:3436" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="3494:3607" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="3617:3683" ph="//..." />
+                <marker date="1489700380000" expanded="true" signature="3736:4247" ph="{...}" />
+                <marker date="1489700380000" expanded="true" signature="4187:4200" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -193,9 +203,9 @@
         <option value="$PROJECT_DIR$/src/svg/Color.ts" />
         <option value="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
-        <option value="$PROJECT_DIR$/src/Comp/List.ts" />
         <option value="$PROJECT_DIR$/src/Lib.ts" />
         <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
+        <option value="$PROJECT_DIR$/src/Comp/List.ts" />
       </list>
     </option>
   </component>
@@ -559,12 +569,12 @@
       <workItem from="1487207577151" duration="50741000" />
       <workItem from="1487838037508" duration="78817000" />
       <workItem from="1489266466094" duration="373000" />
-      <workItem from="1489306017047" duration="31926000" />
+      <workItem from="1489306017047" duration="33222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182734000" />
+    <option name="totallyTimeSpent" value="184030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -964,14 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Prim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/interfaces.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -993,19 +995,19 @@
         <state relative-caret-position="-1312">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="45" />
           <folding>
-            <marker date="1489698075000" expanded="true" signature="169:4376" ph="{...}" />
-            <marker date="1489698075000" expanded="true" signature="199:4347" ph="{...}" />
-            <marker date="1489698075000" expanded="true" signature="3808:4319" ph="{...}" />
-            <marker date="1489698075000" expanded="true" signature="4259:4272" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="199:4275" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="2082:2417" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="2514:2706" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="2572:2696" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="2618:2682" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="2763:3064" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="3168:3327" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="3345:3436" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="3494:3607" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="3617:3683" ph="//..." />
+            <marker date="1489700380000" expanded="true" signature="3736:4247" ph="{...}" />
+            <marker date="1489700380000" expanded="true" signature="4187:4200" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comp/List.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,10 +1027,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Prim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lib.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+        <state relative-caret-position="113">
+          <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -1038,11 +1048,19 @@
     <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="378" column="34" lean-forward="false" selection-start-line="378" selection-start-column="34" selection-end-line="378" selection-end-column="34" />
+          <caret line="385" column="26" lean-forward="true" selection-start-line="385" selection-start-column="26" selection-end-line="385" selection-end-column="26" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <element signature="n#!!doc;n#STD#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comp/List.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="67" column="9" lean-forward="false" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

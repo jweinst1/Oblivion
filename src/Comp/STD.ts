@@ -284,7 +284,7 @@ export namespace STD {
         for(let i=0;i<args.length;i++){
             args[i] = env.callLib(env, args[i].node, args[i].args);
         }
-        return new Lists.OblList(args);
+        return new Lists.List(args);
     };
 
     //creates new map object
@@ -300,20 +300,20 @@ export namespace STD {
     export let range = (env:Environment.Env, args:any[]) => {
         switch(args.length){
             case 0:
-                return new Lists.OblList();
+                return new Lists.List();
             case 1:
                 var lst = [];
                 let limit = env.callLib(env, args[0].node, args[0].args);
                 if(typeof limit !== 'number') throw new Error(`TypeError: Got type ${typeof limit} but needs number.`);
                 for(let i=0;i<limit;i++) lst.push(i);
-                return new Lists.OblList(lst);
+                return new Lists.List(lst);
             case 2:
                 var lst = [];
                 let start = env.callLib(env, args[0].node, args[0].args);
                 let end = env.callLib(env, args[1].node, args[1].args);
                 if(typeof start !== 'number' || typeof end !== 'number') throw new Error(`TypeError: Needs type number.`);
                 for(let i=start;i<end;i++) lst.push(i);
-                return new Lists.OblList(lst);
+                return new Lists.List(lst);
         }
     };
 
@@ -383,7 +383,9 @@ export namespace STD {
 
     export let pop = (env:Environment.Env, args:any[]) => {
         if(args.length !== 1) throw new Errors.ArgumentError(args.length, 1);
-        return env.callLib(env, args[0].node, args[0].args).pop();
+        let obj = env.callLib(env, args[0].node, args[0].args);
+        if(obj.constructor.name !== 'List') throw new Error();
+        return obj.pop();
     };
 
     export let popLeft = (env:Environment.Env, args:any[]) => {
@@ -398,17 +400,17 @@ export namespace STD {
         obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
     };
 
+    //operator implementation of &
     export let extend = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         let obj = env.callLib(env, args[0].node, args[0].args);
-        if(typeof obj !== 'object') throw new Error('TypeError: Argument not of collection type');
-        obj.extend(env.callLib(env, args[1].node, args[1].args));
+        if(obj.constructor.name !== 'List') throw new Error('TypeError: Argument not of collection type');
+        return obj.extend(env.callLib(env, args[1].node, args[1].args));
     };
 
     export let find = (env:Environment.Env, args:any[]) => {
         if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         let obj = env.callLib(env, args[0].node, args[0].args);
-        if(typeof obj !== 'object' || !('insert' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of ordered collection type');
+        if(obj.constructor.name !== 'List') throw new Error('TypeError: Argument not of List type');
         return obj.find(env.callLib(env, args[1].node, args[1].args));
     };
 

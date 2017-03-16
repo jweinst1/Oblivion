@@ -58,12 +58,10 @@ var Lists;
         List.prototype.pop = function () {
             if (this.items.length === 0)
                 throw new Error("Pop Error: Pop method requires list not have length 0");
-            return this.items.pop();
-        };
-        List.prototype.popLeft = function () {
-            if (this.items.length === 0)
-                throw new Error("Pop Error: Pop method requires list not have length 0");
-            return this.items.shift();
+            var size = this.items.length - 1;
+            if (this.items[size].constructor.name === 'List')
+                return this.items[size].copy();
+            return this.items[size];
         };
         //wont do anything if item not in list
         List.prototype.remove = function (item) {

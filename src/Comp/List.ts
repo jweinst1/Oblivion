@@ -62,12 +62,9 @@ export namespace Lists {
 
         pop(): any {
             if(this.items.length === 0) throw new Error("Pop Error: Pop method requires list not have length 0");
-            return this.items.pop();
-        }
-
-        popLeft(): any {
-            if(this.items.length === 0) throw new Error("Pop Error: Pop method requires list not have length 0");
-            return this.items.shift();
+            let size = this.items.length-1;
+            if (this.items[size].constructor.name === 'List') return this.items[size].copy();
+            return this.items[size];
         }
 
         //wont do anything if item not in list

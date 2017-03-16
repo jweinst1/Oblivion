@@ -20,3 +20,6 @@ test.StdOutTest(11, 'print((1,2) -> (5,6%3) *> (77,77))', '1,2 -> 5,0 *> 77,77\n
 test.StdOutTest(12, 'print(3 == 4)', 'false\n');
 test.StdOutTest(13, 'print(3 ~= 4 - 1)', 'true\n');
 test.StdOutTest(14, 'if 3 ~= 4\nprint(2) else print(true) _', 'true\n');
+test.StdOutTest(15, 'g = [1, 2]\n\nprint(g.1)', '2\n');
+test.StdOutTest(16, 'g = [1, 2]\n\nprint(find(g, 2))', '1\n');
+test.StdOutTest(16, 'g = [1, 2]\n\nprint(in(g, 2))', 'true\n');
