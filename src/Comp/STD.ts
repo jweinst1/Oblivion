@@ -317,16 +317,6 @@ export namespace STD {
         }
     };
 
-    export let type = (env:Environment.Env, args:any[]):Strings.OblString => {
-        if(args.length !== 1) throw new Error(`ArgumentError: !type() takes one argument but got ${args.length}`);
-        let obj = env.callLib(env, args[0].node, args[0].args);
-        if(typeof obj !== 'object') return new Strings.OblString(typeof obj);
-        else switch(obj.constructor.name){
-            case 'OblList': return new Strings.OblString('List');
-            case 'OblString': return new Strings.OblString('String');
-            case 'OblMap': return new Strings.OblString('Map');
-        }
-    };
 
     export let _for = (env:Environment.Env, args:any[]) => {
         let varName = env.callLib(env, args[0].node, args[0].args);
@@ -387,7 +377,7 @@ export namespace STD {
     export let _in = (env:Environment.Env, args:any[]) => {
         if(args.length !== 2) throw new Errors.ArgumentError(args.length, 2);
         let obj = env.callLib(env, args[0].node, args[0].args);
-        if(typeof obj !== 'object') throw new Error('TypeError: Argument not of collection type');
+        if(typeof obj !== 'object' || obj === null) throw new Error('TypeError: Argument not of collection type');
         return obj.hasItem(env.callLib(env, args[1].node, args[1].args));
     };
 

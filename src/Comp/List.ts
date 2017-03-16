@@ -56,7 +56,6 @@ export namespace Lists {
             this.items.push(item);
         }
 
-
         appendLeft(item: any): void {
             this.items.unshift(item);
         }

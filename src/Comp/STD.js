@@ -308,19 +308,6 @@ var STD;
                 return new List_1.Lists.OblList(lst);
         }
     };
-    STD.type = function (env, args) {
-        if (args.length !== 1)
-            throw new Error("ArgumentError: !type() takes one argument but got " + args.length);
-        var obj = env.callLib(env, args[0].node, args[0].args);
-        if (typeof obj !== 'object')
-            return new Strings_1.Strings.OblString(typeof obj);
-        else
-            switch (obj.constructor.name) {
-                case 'OblList': return new Strings_1.Strings.OblString('List');
-                case 'OblString': return new Strings_1.Strings.OblString('String');
-                case 'OblMap': return new Strings_1.Strings.OblString('Map');
-            }
-    };
     STD._for = function (env, args) {
         var varName = env.callLib(env, args[0].node, args[0].args);
         var iterable = Iter_1.Iter.makeIter(env.callLib(env, args[1].node, args[1].args));
@@ -382,7 +369,7 @@ var STD;
         if (args.length !== 2)
             throw new Errors_1.Errors.ArgumentError(args.length, 2);
         var obj = env.callLib(env, args[0].node, args[0].args);
-        if (typeof obj !== 'object')
+        if (typeof obj !== 'object' || obj === null)
             throw new Error('TypeError: Argument not of collection type');
         return obj.hasItem(env.callLib(env, args[1].node, args[1].args));
     };

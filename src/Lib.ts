@@ -63,7 +63,6 @@ export namespace Lib {
         /*Lib functons with !*/
         "!range":STD.range,
         "!repeat":STD.repeat,
-        "!type":STD.type,
         "!get":STD.get,
         "!set":STD.set,
         "!append":STD.append,

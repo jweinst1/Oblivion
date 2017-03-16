@@ -59,7 +59,6 @@ var Lib;
         /*Lib functons with !*/
         "!range": STD_1.STD.range,
         "!repeat": STD_1.STD.repeat,
-        "!type": STD_1.STD.type,
         "!get": STD_1.STD.get,
         "!set": STD_1.STD.set,
         "!append": STD_1.STD.append,
