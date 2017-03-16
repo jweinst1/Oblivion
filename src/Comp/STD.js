@@ -259,10 +259,13 @@ var STD;
             throw new Errors_1.Errors.TypeError('callable', typeof args[0]);
         return method(env, args.slice(1));
     };
+    //function for => operator
     STD.attrAssign = function (env, args) {
         var obj = env.get(args[0].args[0].args[0]);
+        if (obj.constructor.name !== 'List')
+            throw new Error('=> Operator can only be used on lists');
         var key = env.callLib(env, args[0].args[1].node, args[0].args[1].args);
-        obj.setItem(key, env.callLib(env, args[1].node, args[1].args));
+        return obj.setItem(key, env.callLib(env, args[1].node, args[1].args));
     };
     //creates new list object
     STD.c_list = function (env, args) {

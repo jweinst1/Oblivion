@@ -23,3 +23,4 @@ test.StdOutTest(14, 'if 3 ~= 4\nprint(2) else print(true) _', 'true\n');
 test.StdOutTest(15, 'g = [1, 2]\n\nprint(g.1)', '2\n');
 test.StdOutTest(16, 'g = [1, 2]\n\nprint(find(g, 2))', '1\n');
 test.StdOutTest(16, 'g = [1, 2]\n\nprint(in(g, 2))', 'true\n');
+test.StdOutTest(17, 'g = [1, 2]\n\nprint(g.0 => 6)', '[6,2]\n');

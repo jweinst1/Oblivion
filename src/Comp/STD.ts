@@ -269,10 +269,12 @@ export namespace STD {
         return method(env, args.slice(1));
     };
 
+    //function for => operator
     export let attrAssign = (env:Environment.Env, args:any[]) => {
         let obj = env.get(args[0].args[0].args[0]);
+        if(obj.constructor.name !== 'List') throw new Error('=> Operator can only be used on lists');
         let key = env.callLib(env, args[0].args[1].node, args[0].args[1].args);
-        obj.setItem(key, env.callLib(env, args[1].node, args[1].args));
+        return obj.setItem(key, env.callLib(env, args[1].node, args[1].args));
     };
 
     //creates new list object
