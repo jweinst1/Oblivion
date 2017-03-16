@@ -420,5 +420,13 @@ var STD;
             throw new Error('TypeError: Argument not of ordered collection type');
         return obj.find(env.callLib(env, args[1].node, args[1].args));
     };
+    //random number operator
+    STD.rand = function (env, args) {
+        var left = env.callLib(env, args[0].node, args[0].args);
+        var right = env.callLib(env, args[1].node, args[1].args);
+        if (typeof left !== 'number' || typeof right !== 'number')
+            throw new Errors_1.Errors.TypeError('number', typeof left + " and " + typeof right);
+        return Math.floor((Math.random() * right) + left);
+    };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map

@@ -421,4 +421,12 @@ export namespace STD {
         if(typeof obj !== 'object' || !('insert' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of ordered collection type');
         return obj.find(env.callLib(env, args[1].node, args[1].args));
     };
+
+    //random number operator
+    export let rand = (env:Environment.Env, args:any[]) => {
+        let left = env.callLib(env, args[0].node, args[0].args);
+        let right = env.callLib(env, args[1].node, args[1].args);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Errors.TypeError('number', `${typeof left} and ${typeof right}`);
+        return Math.floor((Math.random() * right) + left);
+    };
 }

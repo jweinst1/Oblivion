@@ -43,6 +43,7 @@ var Lib;
         ">=": STD_1.STD.ge,
         "||": STD_1.STD._or,
         "&&": STD_1.STD._and,
+        "!!": STD_1.STD.rand,
         "?if": STD_1.STD._if,
         "?loop": STD_1.STD.loop,
         "?for": STD_1.STD._for,
