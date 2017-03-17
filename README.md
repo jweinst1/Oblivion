@@ -105,7 +105,7 @@ draw g
 
 This gives the SVG
 
-```
+```xml
 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <style></style>
 <polyline points="1,8 44,9 44,44" fill="transparent" stroke="red" stroke-width="1"></polyline>
@@ -126,7 +126,7 @@ draw g
 1,8 *> 44,9 *> 44,44 *> 0,90
 ```
 
-```
+```xml
 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <style></style>
 <polygon points="1,8 44,9 44,44 0,90" fill="tan" stroke="transparent" stroke-width="1"></polygon>
@@ -233,7 +233,7 @@ else
 _
 ```
 
-```
+```xml
 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <style></style>
 <polygon points="30,30 88,1 5,5" fill="black" stroke="transparent" stroke-width="1"></polygon>
