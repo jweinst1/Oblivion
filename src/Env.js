@@ -22,16 +22,26 @@ var Environment;
                 return this.parent.get(key);
             }
             else
-                throw "Key Error, variable " + key + " not found.";
+                throw "Key Error, variable " + key + " not defined.";
+        };
+        //safe version of get which does not throw and returns default value
+        //used for recursive calls
+        Env.prototype.safeGet = function (key) {
+            if (this.contains(key))
+                return this.variables[key];
+            else if (this.parent) {
+                //Checks if variable defined in parent environment
+                return this.parent.get(key);
+            }
+            else
+                return undefined;
         };
         //unnests from lib
         Env.prototype.callLib = function (env, ASTkey, args) {
             if (ASTkey in this.lib)
                 return this.lib[ASTkey](env, args);
-            else if (ASTkey in this.variables)
-                return this.get(ASTkey)(env, args);
             else
-                throw new Error("Call Error, func " + ASTkey + " not found.");
+                return this.get(ASTkey)(env, args);
         };
         ;
         Env.prototype.set = function (key, val) {

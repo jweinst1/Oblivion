@@ -34,13 +34,22 @@ export namespace Environment {
                 //Checks if variable defined in parent environment
                 return this.parent.get(key);
             }
-            else throw `Key Error, variable ${key} not found.`;
+            else throw `Key Error, variable ${key} not defined.`;
+        }
+        //safe version of get which does not throw and returns default value
+        //used for recursive calls
+        safeGet(key: string): any {
+            if(this.contains(key))  return this.variables[key];
+            else if(this.parent) {
+                //Checks if variable defined in parent environment
+                return this.parent.get(key);
+            }
+            else return undefined;
         }
         //unnests from lib
         callLib(env:Environment.Env, ASTkey:string, args:any[]):any{
             if(ASTkey in this.lib)return this.lib[ASTkey](env, args);
-            else if(ASTkey in this.variables) return this.get(ASTkey)(env, args);
-            else throw new Error(`Call Error, func ${ASTkey} not found.`);
+            else return this.get(ASTkey)(env, args);
         };
 
         set(key: string, val: any): void {

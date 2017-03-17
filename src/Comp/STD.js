@@ -71,8 +71,9 @@ var STD;
     };
     //handles Word rule, which retrieves variables
     STD.wordVar = function (env, args) {
-        if (env.contains(args[0]))
-            return env.get(args[0]);
+        var varr = env.safeGet(args[0]);
+        if (varr !== undefined)
+            return varr;
         else
             return args[0];
     };
@@ -113,28 +114,28 @@ var STD;
         var left = env.callLib(env, args[0].node, args[0].args);
         var right = env.callLib(env, args[1].node, args[1].args);
         if (typeof left !== 'number' || typeof right !== 'number')
-            throw new Error("+ only supports number type.");
+            throw new Error("- only supports number type.");
         return left - right;
     };
     STD.mul = function (env, args) {
         var left = env.callLib(env, args[0].node, args[0].args);
         var right = env.callLib(env, args[1].node, args[1].args);
         if (typeof left !== 'number' || typeof right !== 'number')
-            throw new Error("+ only supports number type.");
+            throw new Error("* only supports number type.");
         return left * right;
     };
     STD.div = function (env, args) {
         var left = env.callLib(env, args[0].node, args[0].args);
         var right = env.callLib(env, args[1].node, args[1].args);
         if (typeof left !== 'number' || typeof right !== 'number')
-            throw new Error("+ only supports number type.");
+            throw new Error("/ only supports number type.");
         return left / right;
     };
     STD.rem = function (env, args) {
         var left = env.callLib(env, args[0].node, args[0].args);
         var right = env.callLib(env, args[1].node, args[1].args);
         if (typeof left !== 'number' || typeof right !== 'number')
-            throw new Error("+ only supports number type.");
+            throw new Error("% only supports number type.");
         return left % right;
     };
     STD.c_number = function (env, args) {
@@ -322,16 +323,6 @@ var STD;
         }
     };
     /*Generic get and set functions*/
-    STD.get = function (env, args) {
-        if (args.length !== 2)
-            throw new Error("ArgumentError: !get() takes 2 arguments but got " + args.length);
-        return env.callLib(env, args[0].node, args[0].args).getItem(env.callLib(env, args[1].node, args[1].args));
-    };
-    STD.set = function (env, args) {
-        if (args.length !== 3)
-            throw new Error("ArgumentError: !get() takes 3 arguments but got " + args.length);
-        env.callLib(env, args[0].node, args[0].args).setItem(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
-    };
     /*Generic Collection functions*/
     STD.len = function (env, args) {
         var obj = env.callLib(env, args[0].node, args[0].args);

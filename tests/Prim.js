@@ -27,3 +27,9 @@ test.StdOutTest(17, 'g = [1, 2]\n\nprint(g.0 => 6)', '[6,2]\n');
 test.StdOutTest(18, 'g = [1, 2]\n\nprint(g.0 => 6)', '[6,2]\n');
 test.StdOutTest(19, 'g = [1, 2, 3]\n\nprint(insert(g, 1, 44))', '[1,44,2,3]\n');
 test.StdOutTest(20, 'g = {print([1])}\nrepeat(4, g)', '[1]\n[1]\n[1]\n[1]\n');
+test.StdOutTest(21, 'g = [{print([1])}]\ng.0()', '[1]\n');
+test.StdOutTest(22, 'def foo(e)' +
+    '\n if e == 0\n' +
+    'return e' +
+    '\nelse return e + foo(e - 1) _ _\n\nprint(foo(4))', '10\n');
+

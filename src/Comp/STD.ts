@@ -74,7 +74,8 @@ export namespace STD {
     };
     //handles Word rule, which retrieves variables
     export let wordVar = (env:Environment.Env, args:any[]) => {
-        if(env.contains(args[0])) return env.get(args[0]);
+        let varr = env.safeGet(args[0]);
+        if(varr !== undefined) return varr;
         else return args[0];
     };
 
@@ -115,28 +116,28 @@ export namespace STD {
     export let sub = (env:Environment.Env, args:any[]) => {
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
-        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`- only supports number type.`);
         return left - right;
     };
 
     export let mul = (env:Environment.Env, args:any[]) => {
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
-        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`* only supports number type.`);
         return left * right;
     };
 
     export let div = (env:Environment.Env, args:any[]) => {
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
-        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`/ only supports number type.`);
         return left / right;
     };
 
     export let rem = (env:Environment.Env, args:any[]) => {
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
-        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`+ only supports number type.`);
+        if(typeof left !== 'number' || typeof right !== 'number') throw new Error(`% only supports number type.`);
         return left % right;
     };
 
@@ -332,15 +333,6 @@ export namespace STD {
 
     /*Generic get and set functions*/
 
-    export let get = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 2) throw new Error(`ArgumentError: !get() takes 2 arguments but got ${args.length}`);
-        return env.callLib(env, args[0].node, args[0].args).getItem(env.callLib(env, args[1].node, args[1].args));
-    };
-
-    export let set = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 3) throw new Error(`ArgumentError: !get() takes 3 arguments but got ${args.length}`);
-        env.callLib(env, args[0].node, args[0].args).setItem(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
-    };
 
     /*Generic Collection functions*/
 
