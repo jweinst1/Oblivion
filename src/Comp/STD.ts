@@ -387,9 +387,14 @@ export namespace STD {
         let lst = env.callLib(env, args[0].node, args[0].args);
         switch(args.length){
             case 2:
-                break;
+                var start = env.callLib(env, args[1].node, args[1].args);
+                if(typeof start !== 'number') throw new Error("slice() indexes must be a number");
+                return lst.copy(start);
             case 3:
-                break;
+                var start = env.callLib(env, args[1].node, args[1].args);
+                let end = env.callLib(env, args[2].node, args[2].args);
+                if(typeof start !== 'number' || typeof end !== 'number') throw new Error("slice() indexes must be a number");
+                return lst.copy(start, end);
         }
     };
 
