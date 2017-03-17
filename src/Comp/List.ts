@@ -76,10 +76,11 @@ export namespace Lists {
             }
         }
 
-        insert(index: number, item: any): void {
+        insert(index: number, item: any): List {
             if(typeof index !== 'number') throw new Errors.TypeError('number', typeof index);
             if(index < 0 || index >= this.items.length) throw new Errors.IndexError(index+"");
             this.items.splice(index, 0, item);
+            return this.copy();
         }
 
         extend(other: any): List {

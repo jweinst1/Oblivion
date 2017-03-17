@@ -24,3 +24,6 @@ test.StdOutTest(15, 'g = [1, 2]\n\nprint(g.1)', '2\n');
 test.StdOutTest(16, 'g = [1, 2]\n\nprint(find(g, 2))', '1\n');
 test.StdOutTest(16, 'g = [1, 2]\n\nprint(in(g, 2))', 'true\n');
 test.StdOutTest(17, 'g = [1, 2]\n\nprint(g.0 => 6)', '[6,2]\n');
+test.StdOutTest(18, 'g = [1, 2]\n\nprint(g.0 => 6)', '[6,2]\n');
+test.StdOutTest(19, 'g = [1, 2, 3]\n\nprint(insert(g, 1, 44))', '[1,44,2,3]\n');
+test.StdOutTest(20, 'g = {print([1])}\nrepeat(4, g)', '[1]\n[1]\n[1]\n[1]\n');

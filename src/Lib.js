@@ -55,11 +55,11 @@ var Lib;
         "?return": STD_1.STD._return,
         /*Lib functons with !*/
         "range": STD_1.STD.range,
-        "!repeat": STD_1.STD.repeat,
+        "repeat": STD_1.STD.repeat,
         "pop": STD_1.STD.pop,
         "len": STD_1.STD.len,
         "in": STD_1.STD._in,
-        "!insert": STD_1.STD.insert,
+        "insert": STD_1.STD.insert,
         "&": STD_1.STD.extend,
         "=>": STD_1.STD.attrAssign,
         "find": STD_1.STD.find,

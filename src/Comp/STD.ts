@@ -247,6 +247,7 @@ export namespace STD {
         if(args.length !== 2) throw new Error(`ArgumentError: Expected 2 arguments but got ${args.length}`);
         let times = env.callLib(env, args[0].node, args[0].args);
         let proc = env.callLib(env, args[1].node, args[1].args);
+        if(typeof proc !== 'function' || typeof times !== 'number') throw new Error("repeat() must take one number and one process or function.");
         while(times--){
             proc(env, []);
         }
@@ -279,10 +280,11 @@ export namespace STD {
 
     //creates new list object
     export let c_list = (env:Environment.Env, args:any[]) => {
+        let newlst = [];
         for(let i=0;i<args.length;i++){
-            args[i] = env.callLib(env, args[i].node, args[i].args);
+            newlst.push(env.callLib(env, args[i].node, args[i].args));
         }
-        return new Lists.List(args);
+        return new Lists.List(newlst);
     };
 
     //creates new map object
@@ -349,19 +351,6 @@ export namespace STD {
         for(let i=1;i<args.length;i++) obj.append(env.callLib(env, args[i].node, args[i].args));
     };
 
-    export let appendLeft = (env:Environment.Env, args:any[]) => {
-        if(args.length < 2) throw new Errors.ArgumentError(args.length, 2);
-        let obj = env.callLib(env, args[0].node, args[0].args);
-        if(typeof obj !== 'object' || !('append' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of collection type');
-        for(let i=1;i<args.length;i++) obj.appendLeft(env.callLib(env, args[i].node, args[i].args));
-    };
-
-    export let remove = (env:Environment.Env, args:any[]) => {
-        if(args.length < 2) throw new Errors.ArgumentError(args.length, 2);
-        let obj = env.callLib(env, args[0].node, args[0].args);
-        if(typeof obj !== 'object' || !('append' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of collection type');
-        obj.remove(env.callLib(env, args[1].node, args[1].args))
-    };
 
     export let len = (env:Environment.Env, args:any[]) => {
         let obj = env.callLib(env, args[0].node, args[0].args);
@@ -386,16 +375,12 @@ export namespace STD {
         return obj.pop();
     };
 
-    export let popLeft = (env:Environment.Env, args:any[]) => {
-        if(args.length !== 1) throw new Errors.ArgumentError(args.length, 1);
-        return env.callLib(env, args[0].node, args[0].args).popLeft();
-    };
 
     export let insert = (env:Environment.Env, args:any[]) => {
         if(args.length < 3) throw new Errors.ArgumentError(args.length, 3);
         let obj = env.callLib(env, args[0].node, args[0].args);
-        if(typeof obj !== 'object' || !('insert' in obj.constructor.prototype)) throw new Error('TypeError: Argument not of collection type');
-        obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
+        if(obj.constructor.name !== 'List') throw new Error('TypeError: Argument not of List type');
+        return obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
     };
 
     //operator implementation of &

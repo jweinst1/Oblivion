@@ -237,6 +237,8 @@ var STD;
             throw new Error("ArgumentError: Expected 2 arguments but got " + args.length);
         var times = env.callLib(env, args[0].node, args[0].args);
         var proc = env.callLib(env, args[1].node, args[1].args);
+        if (typeof proc !== 'function' || typeof times !== 'number')
+            throw new Error("repeat() must take one number and one process or function.");
         while (times--) {
             proc(env, []);
         }
@@ -269,10 +271,11 @@ var STD;
     };
     //creates new list object
     STD.c_list = function (env, args) {
+        var newlst = [];
         for (var i = 0; i < args.length; i++) {
-            args[i] = env.callLib(env, args[i].node, args[i].args);
+            newlst.push(env.callLib(env, args[i].node, args[i].args));
         }
-        return new List_1.Lists.List(args);
+        return new List_1.Lists.List(newlst);
     };
     //creates new map object
     STD.c_map = function (env, args) {
@@ -339,23 +342,6 @@ var STD;
         for (var i = 1; i < args.length; i++)
             obj.append(env.callLib(env, args[i].node, args[i].args));
     };
-    STD.appendLeft = function (env, args) {
-        if (args.length < 2)
-            throw new Errors_1.Errors.ArgumentError(args.length, 2);
-        var obj = env.callLib(env, args[0].node, args[0].args);
-        if (typeof obj !== 'object' || !('append' in obj.constructor.prototype))
-            throw new Error('TypeError: Argument not of collection type');
-        for (var i = 1; i < args.length; i++)
-            obj.appendLeft(env.callLib(env, args[i].node, args[i].args));
-    };
-    STD.remove = function (env, args) {
-        if (args.length < 2)
-            throw new Errors_1.Errors.ArgumentError(args.length, 2);
-        var obj = env.callLib(env, args[0].node, args[0].args);
-        if (typeof obj !== 'object' || !('append' in obj.constructor.prototype))
-            throw new Error('TypeError: Argument not of collection type');
-        obj.remove(env.callLib(env, args[1].node, args[1].args));
-    };
     STD.len = function (env, args) {
         var obj = env.callLib(env, args[0].node, args[0].args);
         switch (typeof obj) {
@@ -380,18 +366,13 @@ var STD;
             throw new Error();
         return obj.pop();
     };
-    STD.popLeft = function (env, args) {
-        if (args.length !== 1)
-            throw new Errors_1.Errors.ArgumentError(args.length, 1);
-        return env.callLib(env, args[0].node, args[0].args).popLeft();
-    };
     STD.insert = function (env, args) {
         if (args.length < 3)
             throw new Errors_1.Errors.ArgumentError(args.length, 3);
         var obj = env.callLib(env, args[0].node, args[0].args);
-        if (typeof obj !== 'object' || !('insert' in obj.constructor.prototype))
-            throw new Error('TypeError: Argument not of collection type');
-        obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
+        if (obj.constructor.name !== 'List')
+            throw new Error('TypeError: Argument not of List type');
+        return obj.insert(env.callLib(env, args[1].node, args[1].args), env.callLib(env, args[2].node, args[2].args));
     };
     //operator implementation of &
     STD.extend = function (env, args) {

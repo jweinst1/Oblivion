@@ -77,6 +77,7 @@ var Lists;
             if (index < 0 || index >= this.items.length)
                 throw new Errors_1.Errors.IndexError(index + "");
             this.items.splice(index, 0, item);
+            return this.copy();
         };
         List.prototype.extend = function (other) {
             if (other.constructor.name === 'List') {

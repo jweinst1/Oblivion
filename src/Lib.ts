@@ -59,11 +59,11 @@ export namespace Lib {
         "?return":STD._return,
         /*Lib functons with !*/
         "range":STD.range,
-        "!repeat":STD.repeat,
+        "repeat":STD.repeat,
         "pop":STD.pop,
         "len":STD.len,
         "in":STD._in,
-        "!insert":STD.insert,
+        "insert":STD.insert,
         "&":STD.extend,
         "=>":STD.attrAssign,
         "find":STD.find,

@@ -38,10 +38,9 @@ export namespace Environment {
         }
         //unnests from lib
         callLib(env:Environment.Env, ASTkey:string, args:any[]):any{
-            //needs changing
             if(ASTkey in this.lib)return this.lib[ASTkey](env, args);
             else if(ASTkey in this.variables) return this.get(ASTkey)(env, args);
-            else throw `Call Error, func ${ASTkey} not found.`;
+            else throw new Error(`Call Error, func ${ASTkey} not found.`);
         };
 
         set(key: string, val: any): void {
