@@ -66,6 +66,7 @@ export namespace Lib {
         "&":STD.extend,
         "=>":STD.attrAssign,
         "find":STD.find,
+        "call":STD.call,
         /*SVG*/
         "?point":Points.makePoint,
         "->":Draw.lineConnect,

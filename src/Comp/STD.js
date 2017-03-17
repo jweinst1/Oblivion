@@ -389,6 +389,15 @@ var STD;
                 return lst.copy(start, end);
         }
     };
+    //can call a function or process arbitrarily
+    STD.call = function (env, args) {
+        if (args.length === 0)
+            throw new Error("call() must take 1 or more arguments");
+        var fnc = env.callLib(env, args[0].node, args[0].args);
+        if (typeof fnc !== 'function')
+            throw new Error("Cannot call non-function type");
+        return fnc(env, args.slice(1));
+    };
     //random number operator
     STD.rand = function (env, args) {
         var left = env.callLib(env, args[0].node, args[0].args);

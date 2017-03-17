@@ -62,6 +62,7 @@ var Lib;
         "&": STD_1.STD.extend,
         "=>": STD_1.STD.attrAssign,
         "find": STD_1.STD.find,
+        "call": STD_1.STD.call,
         /*SVG*/
         "?point": Point_1.Points.makePoint,
         "->": draw_1.Draw.lineConnect,
