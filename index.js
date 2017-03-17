@@ -14,7 +14,12 @@ fs.readFile(userArgs[0], 'utf-8', function (err, data) {
             if (err) throw err;
         });
     }
-    else fs.writeFile(userArgs[1], cmp.Compile(data), function (err) {
+    else fs.writeFile(convertFileName(userArgs[0]), cmp.Compile(data), function (err) {
         if (err) throw err;
     });
 });
+
+
+function convertFileName(string){
+    return string.match(/(.+)\.obl/)[1] + ".svg"
+}
