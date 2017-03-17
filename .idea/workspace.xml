@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.js" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.js.map" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.ts" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Prim.js" afterPath="$PROJECT_DIR$/tests/Prim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.js" afterPath="$PROJECT_DIR$/src/Main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +24,7 @@
       <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
+            <state relative-caret-position="945">
               <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -39,7 +36,7 @@
       <file leaf-file-name="STD.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6030">
+            <state relative-caret-position="5970">
               <caret line="404" column="39" lean-forward="true" selection-start-line="404" selection-start-column="39" selection-end-line="404" selection-end-column="39" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -59,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Prim.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Prim.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
+            <state relative-caret-position="435">
               <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
               <folding />
             </state>
@@ -82,8 +79,8 @@
       <file leaf-file-name="Oblivion.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Oblivion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="3388" column="3" lean-forward="true" selection-start-line="3388" selection-start-column="3" selection-end-line="3388" selection-end-column="3" />
+            <state relative-caret-position="82">
+              <caret line="3368" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3394" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -92,18 +89,18 @@
       <file leaf-file-name="Synthesizer.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
+            <state relative-caret-position="735">
               <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="285">
+              <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -184,9 +181,9 @@
         <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/src/Lib.ts" />
         <option value="$PROJECT_DIR$/src/svg/CSS.ts" />
-        <option value="$PROJECT_DIR$/src/Main.js" />
         <option value="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
         <option value="$PROJECT_DIR$/tests/Prim.js" />
+        <option value="$PROJECT_DIR$/src/Main.js" />
       </list>
     </option>
   </component>
@@ -220,6 +217,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -418,8 +417,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -551,12 +548,13 @@
       <workItem from="1487838037508" duration="78817000" />
       <workItem from="1489266466094" duration="373000" />
       <workItem from="1489306017047" duration="45787000" />
-      <workItem from="1489722391574" duration="333000" />
+      <workItem from="1489722391574" duration="353000" />
+      <workItem from="1489733577465" duration="118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196928000" />
+    <option name="totallyTimeSpent" value="197066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -567,7 +565,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -750,9 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#37#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -794,9 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#33#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,9 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc;n#SVGSize#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -822,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,10 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#77#112#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,10 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#80#115#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,9 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#57#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,6 +904,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -964,7 +942,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6030">
+        <state relative-caret-position="5970">
           <caret line="404" column="39" lean-forward="true" selection-start-line="404" selection-start-column="39" selection-end-line="404" selection-end-column="39" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -975,7 +953,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lib.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
+        <state relative-caret-position="945">
           <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
@@ -991,25 +969,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Oblivion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="3388" column="3" lean-forward="true" selection-start-line="3388" selection-start-column="3" selection-end-line="3388" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
+        <state relative-caret-position="735">
           <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
           <folding />
         </state>
@@ -1017,8 +979,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Prim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
+        <state relative-caret-position="435">
           <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Oblivion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="3368" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3394" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding />
         </state>
       </provider>

@@ -9,8 +9,17 @@ var io = require('./IO');
 //option determines output
 var Compile = function(code, option){
     if (option === void 0) { option = 1; }
-    var ast = prs.parse(code);
-    gen.Gen.gen(ast);
+    try {
+        var ast = prs.parse(code);
+        gen.Gen.gen(ast);
+    } catch(err){
+        switch(option){
+            case 2:
+                return [err, err];
+            default:
+                throw err;
+        }
+    }
     switch(option){
         case 0:
             return io.IO.getFlushOut();
