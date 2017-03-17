@@ -21,6 +21,18 @@ giving programmers as well as artists the tools to create art with code.
 
 Try out Oblivion on the playground, or read the guide to see how it all works!
 
+## Installation
+
+To Install Oblivion, use the following shell command
+
+``$ npm install -g oblivion-js`
+
+To compile an `.obl` file, use the following `oblivion` command
+
+`$ oblivion yourfilename.obl`
+
+The stdout will be logged to your console and the svg output will be written to a file.
+
 ## `Language Guide`:
 
 ## Output
