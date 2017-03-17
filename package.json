@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "preferGlobal": true,
+  "bin":{"oblivion": "index.js"},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jweinst1/Oblivion.git"
