@@ -1,6 +1,6 @@
 # Oblivion
 
-![Logo](samples/logo.svg)
+![Logo](https://raw.githubusercontent.com/jweinst1/Oblivion/master/samples/logo.svg)
 
 The language of art and graphics!
 
