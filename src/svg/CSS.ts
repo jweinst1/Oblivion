@@ -5,6 +5,7 @@ import {Collection, Printable} from "../Comp/interfaces";
  */
 
 export namespace CSS {
+    /*Not yet in use*/
 
     //all legal CSS attribute names for SVG
     let ATTRIBUTES = {

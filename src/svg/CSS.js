@@ -5,6 +5,7 @@
  */
 var CSS;
 (function (CSS) {
+    /*Not yet in use*/
     //all legal CSS attribute names for SVG
     var ATTRIBUTES = {
         "x": true, "y": true, "cx": true,
