@@ -16,6 +16,8 @@ var Compile = function(code, option){
             return io.IO.getFlushOut();
         case 1:
             return io.IO.getflushSVGDoc();
+        case 2:
+            return [io.IO.getFlushOut(), io.IO.getflushSVGDoc()];
     }
 };
 
