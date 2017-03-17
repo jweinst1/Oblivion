@@ -25,7 +25,7 @@ Try out Oblivion on the playground, or read the guide to see how it all works!
 
 To Install Oblivion, use the following shell command
 
-``$ npm install -g oblivion-js`
+`$ npm install -g oblivion-js`
 
 To compile an `.obl` file, use the following `oblivion` command
 
