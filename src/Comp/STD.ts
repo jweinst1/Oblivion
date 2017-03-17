@@ -382,6 +382,17 @@ export namespace STD {
         return obj.find(env.callLib(env, args[1].node, args[1].args));
     };
 
+    export let slice = (env:Environment.Env, args:any[]) => {
+        if(args.length < 2 || args.length > 3) throw new Error("slice() takes either 2 or 3 arguments only");
+        let lst = env.callLib(env, args[0].node, args[0].args);
+        switch(args.length){
+            case 2:
+                break;
+            case 3:
+                break;
+        }
+    };
+
     //random number operator
     export let rand = (env:Environment.Env, args:any[]) => {
         let left = env.callLib(env, args[0].node, args[0].args);

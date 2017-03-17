@@ -371,6 +371,17 @@ var STD;
             throw new Error('TypeError: Argument not of List type');
         return obj.find(env.callLib(env, args[1].node, args[1].args));
     };
+    STD.slice = function (env, args) {
+        if (args.length < 2 || args.length > 3)
+            throw new Error("slice() takes either 2 or 3 arguments only");
+        var lst = env.callLib(env, args[0].node, args[0].args);
+        switch (args.length) {
+            case 2:
+                break;
+            case 3:
+                break;
+        }
+    };
     //random number operator
     STD.rand = function (env, args) {
         var left = env.callLib(env, args[0].node, args[0].args);
