@@ -101,6 +101,7 @@ export namespace STD {
         for(let i=0;i<args.length;i++){
             let printed = env.callLib(env, args[i].node, args[i].args);
             if(typeof printed === 'object') IO.pushOut(printed.strFormat());
+            else if(typeof printed === 'function') IO.pushOut("{func}");
             else IO.pushOut(printed);
         }
     };

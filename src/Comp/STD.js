@@ -98,6 +98,8 @@ var STD;
             var printed = env.callLib(env, args[i].node, args[i].args);
             if (typeof printed === 'object')
                 IO_1.IO.pushOut(printed.strFormat());
+            else if (typeof printed === 'function')
+                IO_1.IO.pushOut("{func}");
             else
                 IO_1.IO.pushOut(printed);
         }

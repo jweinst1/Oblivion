@@ -20,7 +20,16 @@ export namespace Lists {
         }
 
         strFormat(): string {
-            return JSON.stringify(this.items);
+            let str = "[";
+            for(let i=0;i<this.items.length-1;i++){
+                if(this.items[i].constructor.name === 'List') str += this.items[i].strFormat() + ",";
+                else if(typeof this.items[i] === 'function') str += "{func},";
+                else str += this.items[i] + ",";
+            }
+            if(this.items[this.items.length-1].constructor.name === 'List') str += this.items[this.items.length-1].strFormat();
+            else if(typeof this.items[this.items.length-1] === 'function') str += "{func}";
+            else str += this.items[this.items.length-1];
+            return str + "]";
         }
 
         innerValue(): any {

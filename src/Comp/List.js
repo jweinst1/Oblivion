@@ -16,7 +16,22 @@ var Lists;
             return this.items;
         };
         List.prototype.strFormat = function () {
-            return JSON.stringify(this.items);
+            var str = "[";
+            for (var i = 0; i < this.items.length - 1; i++) {
+                if (this.items[i].constructor.name === 'List')
+                    str += this.items[i].strFormat() + ",";
+                else if (typeof this.items[i] === 'function')
+                    str += "{func},";
+                else
+                    str += this.items[i] + ",";
+            }
+            if (this.items[this.items.length - 1].constructor.name === 'List')
+                str += this.items[this.items.length - 1].strFormat();
+            else if (typeof this.items[this.items.length - 1] === 'function')
+                str += "{func}";
+            else
+                str += this.items[this.items.length - 1];
+            return str + "]";
         };
         List.prototype.innerValue = function () {
             return this.items;
