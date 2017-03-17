@@ -9,7 +9,7 @@ giving programmers as well as artists the tools to create art with code.
 
  It's a language designed to visualize code and create incredible illustrations!
 
-####`Features:`
+#### `Features:`
 * SVG-specific data structures and operators
 * Simple, Ruby/Python like syntax
 * Runs in the browser, or in NodeJS
