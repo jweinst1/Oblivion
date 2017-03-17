@@ -5,6 +5,19 @@ The language of art and graphics!
 Oblivion is a programming language that produces SVG files. It's a domain specific language dedicated to producing graphics and
 giving programmers as well as artists the tools to create art with code.
 
+ It's a language designed to visualize code and create incredible illustrations!
+
+####`Features:`
+* SVG-specific data structures and operators
+* Simple, Ruby/Python like syntax
+* Runs in the browser, or in NodeJS
+* Recursion and functional programming support
+* Immutable Python-style lists
+
+`Oblivion` is the perfect programming language for artists, researchers, programmers, and anyone who wants to use a functional approach to visualize their code.
+
+Try out Oblivion on the playground, or read the guide to see how it all works!
+
 ##`Language Guide`:
 
 ##Output
