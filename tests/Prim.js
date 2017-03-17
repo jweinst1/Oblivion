@@ -35,5 +35,5 @@ test.StdOutTest(22, 'def foo(e)' +
 test.StdOutTest(23, 'print(slice([1, 2, 3, 4], 2))', '[3,4]\n');
 test.SVGTest(24, 'g = [#red |= (1,2) -> (10, 10) *> (20, 20)]\ndraw g.0', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<line points="1,2 10,10" fill="transparent" stroke="red" stroke-width="1" />\n<polygon points="10,10 20,20" fill="red" stroke="transparent" stroke-width="1" />\n</svg>');
 test.SVGTest(25, 'g = (1,2) -> (10, 10) *> (20, 20)\ng = #red |= g\ndraw g', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<line points="1,2 10,10" fill="transparent" stroke="red" stroke-width="1" />\n<polygon points="10,10 20,20" fill="red" stroke="transparent" stroke-width="1" />\n</svg>');
-
-
+test.SVGTest(26, 'g = [(1,2) -> (10, 10) *> (20, 20)]\ng = g.0 => #red |= g.0\ndraw g.0', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<line points="1,2 10,10" fill="transparent" stroke="red" stroke-width="1" />\n<polygon points="10,10 20,20" fill="red" stroke="transparent" stroke-width="1" />\n</svg>');
+test.SVGTest(27, 'h = 10, g = [(1,2) -> (h, h) *> (h + h, 20)]\ng = g.0 => #red |= g.0\ndraw g.0', '<svg width ="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">\n<style></style>\n<line points="1,2 10,10" fill="transparent" stroke="red" stroke-width="1" />\n<polygon points="10,10 20,20" fill="red" stroke="transparent" stroke-width="1" />\n</svg>');
