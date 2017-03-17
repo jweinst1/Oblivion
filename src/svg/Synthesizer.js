@@ -46,8 +46,14 @@ var Synthesizer = (function () {
         this.currentPoints = [];
     };
     Synthesizer.prototype.releaseSVG = function () {
-        IO_1.IO.pushSVG("<" + this.mode + " " + this.makePointString() + " " + this.makestyleString() + "/>");
+        IO_1.IO.pushSVG("<" + this.prepMode() + " " + this.makePointString() + " " + this.makestyleString() + "/>");
         this.reset();
+    };
+    Synthesizer.prototype.prepMode = function () {
+        if (this.mode === 'line')
+            return 'polyline';
+        else
+            return this.mode;
     };
     Synthesizer.prototype.colorCheck = function (item) {
         switch (this.mode) {

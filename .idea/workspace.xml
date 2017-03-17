@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c4ff2-b87d-4770-9a5d-a7e7818aa0f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Oblivion.js" afterPath="$PROJECT_DIR$/lib/Oblivion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.js" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.js.map" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/svg/Synthesizer.ts" afterPath="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Prim.js" afterPath="$PROJECT_DIR$/tests/Prim.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +27,7 @@
       <file leaf-file-name="Lib.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lib.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="1020">
               <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -32,20 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Iter.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Comp/Iter.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="30" column="105" lean-forward="false" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="STD.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
+            <state relative-caret-position="6030">
               <caret line="404" column="39" lean-forward="true" selection-start-line="404" selection-start-column="39" selection-end-line="404" selection-end-column="39" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -65,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Prim.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Prim.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Prim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="39" column="76" lean-forward="false" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
+            <state relative-caret-position="113">
+              <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -85,11 +79,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Oblivion.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Oblivion.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Oblivion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
+            <state relative-caret-position="472">
               <caret line="3388" column="3" lean-forward="true" selection-start-line="3388" selection-start-column="3" selection-end-line="3388" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Synthesizer.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -108,7 +112,7 @@
       <file leaf-file-name="List.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comp/List.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-232">
+            <state relative-caret-position="1215">
               <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
               <folding />
             </state>
@@ -118,7 +122,7 @@
       <file leaf-file-name="Env.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Env.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="585">
               <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
               <folding />
             </state>
@@ -174,15 +178,15 @@
         <option value="$PROJECT_DIR$/src/svg/Polygon.ts" />
         <option value="$PROJECT_DIR$/src/svg/draw.ts" />
         <option value="$PROJECT_DIR$/src/svg/Color.ts" />
-        <option value="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
         <option value="$PROJECT_DIR$/src/Comp/List.ts" />
         <option value="$PROJECT_DIR$/src/Gen.ts" />
         <option value="$PROJECT_DIR$/src/Env.ts" />
         <option value="$PROJECT_DIR$/src/Comp/STD.ts" />
         <option value="$PROJECT_DIR$/src/Lib.ts" />
-        <option value="$PROJECT_DIR$/tests/Prim.js" />
         <option value="$PROJECT_DIR$/src/svg/CSS.ts" />
         <option value="$PROJECT_DIR$/src/Main.js" />
+        <option value="$PROJECT_DIR$/src/svg/Synthesizer.ts" />
+        <option value="$PROJECT_DIR$/tests/Prim.js" />
       </list>
     </option>
   </component>
@@ -216,8 +220,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -416,6 +418,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,12 +550,13 @@
       <workItem from="1487207577151" duration="50741000" />
       <workItem from="1487838037508" duration="78817000" />
       <workItem from="1489266466094" duration="373000" />
-      <workItem from="1489306017047" duration="45782000" />
+      <workItem from="1489306017047" duration="45787000" />
+      <workItem from="1489722391574" duration="333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196590000" />
+    <option name="totallyTimeSpent" value="196928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="38" width="1206" height="685" extended-state="0" />
@@ -562,7 +567,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -751,28 +756,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comp/Pair.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comp/Pair.ts" />
     <entry file="file://$PROJECT_DIR$/src/svg/Point.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <marker date="1489558864000" expanded="true" signature="84:1887" ph="{...}" />
-            <marker date="1489558864000" expanded="true" signature="456:1855" ph="{...}" />
-            <marker date="1489558864000" expanded="true" signature="618:628" ph="{...}" />
-            <marker date="1489558864000" expanded="true" signature="761:814" ph="{...}" />
-            <marker date="1489558864000" expanded="true" signature="865:913" ph="{...}" />
-            <marker date="1489558864000" expanded="true" signature="973:1332" ph="{...}" />
-            <marker date="1489558864000" expanded="true" signature="1006:1225" ph="{...}" />
-            <marker date="1489558864000" expanded="true" signature="1474:1649" ph="{...}" />
-            <marker date="1489558864000" expanded="true" signature="1700:1748" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="84:1887" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="456:1855" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="618:628" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="761:814" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="865:913" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="973:1332" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="1006:1225" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="1474:1649" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="1700:1748" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -782,30 +780,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1489600739000" expanded="true" signature="43:1277" ph="{...}" />
-            <marker date="1489600739000" expanded="true" signature="73:1248" ph="{...}" />
-            <marker date="1489600739000" expanded="true" signature="946:1138" ph="{...}" />
-            <marker date="1489600739000" expanded="true" signature="1182:1220" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="43:1277" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="73:1248" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="946:1138" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="1182:1220" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/Rect.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/Wrappers.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/Rect.ts" />
+    <entry file="file://$PROJECT_DIR$/src/svg/Wrappers.ts" />
     <entry file="file://$PROJECT_DIR$/src/svg/Interfaces.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -884,16 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="19" column="109" lean-forward="false" selection-start-line="19" selection-start-column="109" selection-end-line="19" selection-end-column="109" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/svg/Point.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -908,7 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,20 +897,20 @@
         <state relative-caret-position="-1312">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="45" />
           <folding>
-            <marker date="1489704363000" expanded="true" signature="169:4368" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="199:4339" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="2114:2449" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="2546:2738" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="2604:2728" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="2650:2714" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="2795:3128" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="3179:3510" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="3232:3391" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="3409:3500" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="3558:3671" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="3681:3747" ph="//..." />
-            <marker date="1489704363000" expanded="true" signature="3800:4311" ph="{...}" />
-            <marker date="1489704363000" expanded="true" signature="4251:4264" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="169:4368" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="199:4339" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="2114:2449" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="2546:2738" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="2604:2728" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="2650:2714" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="2795:3128" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="3179:3510" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="3232:3391" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="3409:3500" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="3558:3671" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="3681:3747" ph="//..." />
+            <marker date="1489722400000" expanded="true" signature="3800:4311" ph="{...}" />
+            <marker date="1489722400000" expanded="true" signature="4251:4264" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -955,13 +927,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/Iter.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
+        <state relative-caret-position="450">
           <caret line="30" column="105" lean-forward="false" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
           <folding />
         </state>
@@ -969,7 +940,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Env.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="585">
           <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
           <folding />
         </state>
@@ -977,7 +948,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/List.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
+        <state relative-caret-position="1215">
           <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
           <folding />
         </state>
@@ -993,7 +964,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Comp/STD.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
+        <state relative-caret-position="6030">
           <caret line="404" column="39" lean-forward="true" selection-start-line="404" selection-start-column="39" selection-end-line="404" selection-end-column="39" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -1004,19 +975,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lib.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="1020">
           <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Prim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="39" column="76" lean-forward="false" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,8 +1001,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Oblivion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
+        <state relative-caret-position="472">
           <caret line="3388" column="3" lean-forward="true" selection-start-line="3388" selection-start-column="3" selection-end-line="3388" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/svg/Synthesizer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Prim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
           <folding />
         </state>
       </provider>

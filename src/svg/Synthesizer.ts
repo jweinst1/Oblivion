@@ -48,8 +48,13 @@ export class Synthesizer {
     }
 
     public releaseSVG():void {
-        IO.pushSVG(`<${this.mode} ${this.makePointString()} ${this.makestyleString()}/>`);
+        IO.pushSVG(`<${this.prepMode()} ${this.makePointString()} ${this.makestyleString()}/>`);
         this.reset();
+    }
+
+    private prepMode():string {
+        if(this.mode === 'line') return 'polyline';
+        else return this.mode;
     }
 
     private colorCheck(item:any):void {
