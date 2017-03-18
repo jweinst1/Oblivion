@@ -54,6 +54,12 @@ print(3,,,,,,,,,
 3
 ```
 
+### Runtime
+
+Oblivion's compiler is implemented in TypeScript, with it's parser generated from JavaScript. Unlike most web-based languages, Oblivion does not transcomple to JavaScript. It also does not run on a virtual machine.
+
+Oblivion uses a self-evaluating abstract syntax tree with a pre-defined set of *rules*. A program is compiled by traversing the abstract syntax tree in a depth-first fashion, and using a node's rule to evaluate it's child arguments. The state of evaluation never changes as rules are the same.
+
 ## Types
 
 Oblivion has a relatively small number of types, allowing for a small variety of data to yield many combinations of uses and functionality.
@@ -72,7 +78,16 @@ print(4 + 6)
 
 ### Bools
 
-Bools or booleans represent true and false in Oblivion. They are the results of using logical operators.
+Bools or booleans represent true and false in Oblivion. They are the results of using logical operators. `true` and `false` can also be used in lists or returned from functions
+
+```
+d = true || false
+print(d)
+print(d && false)
+
+true
+false
+```
 
 ### Lists
 
@@ -323,6 +338,34 @@ repeat(4, f.0)
 3
 ```
 
+Here's an exmaple that uses two processes together to draw with random numbers!
+
+```
+getnum = {return 1 !! 70}
+
+randline = {
+    draw #cyan |= (getnum(), getnum()) -> (getnum(), getnum())
+}
+
+repeat(10, randline)
+```
+
+```
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<style></style>
+<polyline points="54,15 37,49" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="17,14 59,48" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="51,32 35,9" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="39,21 16,14" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="43,59 19,55" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="25,68 23,19" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="38,12 43,9" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="58,35 38,50" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="48,23 34,66" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+<polyline points="56,47 56,29" fill="transparent" stroke="cyan" stroke-width="1"></polyline>
+</svg>
+```
+
 ## List Functions
 
 Oblivion also has a variety of built in List functions that can slice, search, and insert items into a newly returned list.
@@ -334,10 +377,18 @@ print(find(range(5), 77))
 print(len(range(8)))
 
 print(slice([1, 2, 3, 4], 2))
+print(in([1, 2], 3))
 
 [0,1,2,3,4,5,6,7]
 [0,1,2,88,3,4,5,6]
 false
 [3,4]
 8
+false
 ```
+
+* `in()` Checks if a list contains a value
+* `range()` Creates a list from 0 to some integer, or from some start integer to some end integer
+* `len()` Takes the length of a list
+* `insert()` Return a new list with some item inserted at an index in the list.
+* `slice()` Return a new list between, or starting at the index in the arguments.
