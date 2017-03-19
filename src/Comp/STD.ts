@@ -250,6 +250,7 @@ export namespace STD {
         let times = env.callLib(env, args[0].node, args[0].args);
         let proc = env.callLib(env, args[1].node, args[1].args);
         if(typeof proc !== 'function' || typeof times !== 'number') throw new Error("repeat() must take one number and one process or function.");
+        if(times < 1) throw new Error("Cannot call repeat less than 1 times, in valid argument: " +times);
         while(times--){
             proc(env, []);
         }
@@ -357,7 +358,7 @@ export namespace STD {
     export let pop = (env:Environment.Env, args:any[]) => {
         if(args.length !== 1) throw new Errors.ArgumentError(args.length, 1);
         let obj = env.callLib(env, args[0].node, args[0].args);
-        if(obj.constructor.name !== 'List') throw new Error();
+        if(obj.constructor.name !== 'List') throw new Error(`Cannot call pop on type ${typeof obj}`);
         return obj.pop();
     };
 
