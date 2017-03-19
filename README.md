@@ -56,9 +56,9 @@ print(3,,,,,,,,,
 
 ### Runtime
 
-Oblivion's compiler is implemented in TypeScript, with it's parser generated from JavaScript. Unlike most web-based languages, Oblivion does not transcomple to JavaScript. It also does not run on a virtual machine.
+Oblivion's compiler is implemented in TypeScript, with its parser generated from JavaScript. Unlike most web-based languages, Oblivion does not transcomple to JavaScript. It also does not run on a virtual machine.
 
-Oblivion uses a self-evaluating abstract syntax tree with a pre-defined set of *rules*. A program is compiled by traversing the abstract syntax tree in a depth-first fashion, and using a node's rule to evaluate it's child arguments. The state of evaluation never changes as rules are the same.
+Oblivion uses a self-evaluating abstract syntax tree with a pre-defined set of *rules*. A program is compiled by traversing the abstract syntax tree in a depth-first fashion, and using a node's rule to evaluate its child arguments. The state of evaluation never changes as rules are the same.
 
 ## Types
 
@@ -232,7 +232,7 @@ The `|=` operator takes one color and a line shape or combo and colors it.
 
 ## If-Else Statements
 
-Oblivions only conditional element is the if statement. It's constructed similarly to Ruby's if..else syntax. Like with all body statements, if statements end with a _, and can be nested.
+Oblivion's only conditional element is the if statement. It's constructed similarly to Ruby's if..else syntax. Like with all body statements, if statements end with a _, and can be nested.
 
 ```
 d = (3,4) -> (5,6)
