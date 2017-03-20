@@ -421,7 +421,7 @@ false
 
 ## License
 
-[MIT License](/Oblivion/LICENSE.MD)
+[MIT License](LICENSE.md)
 
 Copyright (c) 2017 Josh Weinstein
 
