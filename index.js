@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 /**
  * Created by Josh on 2/7/17.
  */
