@@ -64,11 +64,11 @@ The stdout will be logged to your console and the svg output will be written to 
 
 ## Output
 
-Oblivion is a programming language that outputs a string representing an svg format graphic. This is called the `SVGOut`. We can think of this output as a buffer. Similarly, the language can aslo "print" statements to another output called `StdOut`. Both of these are accessed with the `draw` keyword and `print()` function respectively.
+Oblivion is a programming language that outputs a string representing an svg format graphic. This is called the `SVGOut`. We can think of this output as a buffer. Similarly, the language can also "print" statements to another output called `StdOut`. Both of these are accessed with the `draw` keyword and `print()` function respectively.
 
 ### WhiteSpace
 
-In Oblivon, newlines, spaces, tabs and commas are treated as whitespace. This means you can put as many commas, spaces or newlines as you like, to allow for a customized spacing of code.
+In Oblivion, newlines, spaces, tabs and commas are treated as whitespace. This means you can put as many commas, spaces or newlines as you like, to allow for a customized spacing of code.
 
 ```
 
@@ -83,7 +83,7 @@ print(3,,,,,,,,,
 
 ### Runtime
 
-Oblivion's compiler is implemented in TypeScript, with its parser generated from JavaScript. Unlike most web-based languages, Oblivion does not transcomple to JavaScript. It also does not run on a virtual machine.
+Oblivion's compiler is implemented in TypeScript, with its parser generated from JavaScript. Unlike most web-based languages, Oblivion does not transcompile to JavaScript. It also does not run on a virtual machine.
 
 Oblivion uses a self-evaluating abstract syntax tree with a pre-defined set of *rules*. A program is compiled by traversing the abstract syntax tree in a depth-first fashion, and using a node's rule to evaluate its child arguments. The state of evaluation never changes as rules are the same.
 
@@ -148,7 +148,7 @@ print(f.x)
 
 ### Lines
 
-In Oblivion, a line is a data structure that represent a series of points connected by a line. It is immutable, like the rest of Oblivon's types. A line has both a printable form and a drawable form. They are connected via the `->` operator.
+In Oblivion, a line is a data structure that represent a series of points connected by a line. It is immutable, like the rest of Oblivion's types. A line has both a printable form and a drawable form. They are connected via the `->` operator.
 
 ```
 g = (1,8) -> (44, 9) -> (44,44)
@@ -194,7 +194,7 @@ Colors are special types in Oblivion that allow you to color your lines and shap
 
 ## Operators
 
-Unlike most functional languages, Oblivion uses a wide array of operators (*and a minimal amount of parenthsis*).
+Unlike most functional languages, Oblivion uses a wide array of operators (*and a minimal amount of parenthesis*).
 
 ### Left Associativity
 
@@ -364,7 +364,7 @@ repeat(4, f.0)
 3
 ```
 
-Here's an exmaple that uses two processes together to draw with random numbers!
+Here's an example that uses two processes together to draw with random numbers!
 
 ```
 getnum = {return 1 !! 70}
