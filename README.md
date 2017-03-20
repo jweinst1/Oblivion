@@ -2,13 +2,12 @@
 
 [Website](http://obliv.me/)
 
-
 The language of art and graphics!
 
 Oblivion is a programming language that produces SVG files. It's a domain specific language dedicated to producing graphics and
 giving programmers as well as artists the tools to create art with code.
 
- It's a language designed to visualize code and create incredible illustrations!
+It's a language designed to visualize code and create incredible illustrations!
 
 #### `Features:`
 * SVG-specific data structures and operators
@@ -20,6 +19,33 @@ giving programmers as well as artists the tools to create art with code.
 `Oblivion` is the perfect programming language for artists, researchers, programmers, and anyone who wants to use a functional approach to visualize their code.
 
 Try out Oblivion on the playground, or read the guide to see how it all works!
+
+## Contents
+
+- [Installation](#installation)
+- [Language Guide](#language-guide)
+- [Output](#output)
+    - [Whitespace](#whitespace)
+    - [Runtime](#runtime)
+- [Types](#types)
+    - [Numbers](#numbers)
+    - [Bools](#bools)
+    - [Lists](#lists)
+    - [Points](#points)
+    - [Lines](#lines)
+    - [Shapes](#shapes)
+    - [Colors](#colors)
+- [Operators](#operators)
+    - [Left Associativity](#left-associativity)
+    - [Arithmetic Operators](#arithmetic-operators)
+    - [Random Number Operator](#random-number-operator)
+    - [Logical Operators](#logical-operators) 
+    - [List Operators](#list-operators)
+    - [Color Operator](#color-operator)
+- [If-Else Statements](#if-else-statements)
+- [Functions](#functions)
+- [Processes](#processes)
+- [List Functions](#list-functions)
 
 ## Installation
 
@@ -140,7 +166,6 @@ This gives the SVG
 <polyline points="1,8 44,9 44,44" fill="transparent" stroke="red" stroke-width="1"></polyline>
 </svg>
 ```
-
 
 ### Shapes
 
