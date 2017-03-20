@@ -2,13 +2,12 @@
 
 [Website](http://obliv.me/)
 
-
 The language of art and graphics!
 
 Oblivion is a programming language that produces SVG files. It's a domain specific language dedicated to producing graphics and
 giving programmers as well as artists the tools to create art with code.
 
- It's a language designed to visualize code and create incredible illustrations!
+It's a language designed to visualize code and create incredible illustrations!
 
 #### `Features:`
 * SVG-specific data structures and operators
@@ -20,6 +19,34 @@ giving programmers as well as artists the tools to create art with code.
 `Oblivion` is the perfect programming language for artists, researchers, programmers, and anyone who wants to use a functional approach to visualize their code.
 
 Try out Oblivion on the playground, or read the guide to see how it all works!
+
+## Contents
+
+- [Installation](#installation)
+- [Language Guide](#language-guide)
+- [Output](#output)
+    - [Whitespace](#whitespace)
+    - [Runtime](#runtime)
+- [Types](#types)
+    - [Numbers](#numbers)
+    - [Bools](#bools)
+    - [Lists](#lists)
+    - [Points](#points)
+    - [Lines](#lines)
+    - [Shapes](#shapes)
+    - [Colors](#colors)
+- [Operators](#operators)
+    - [Left Associativity](#left-associativity)
+    - [Arithmetic Operators](#arithmetic-operators)
+    - [Random Number Operator](#random-number-operator)
+    - [Logical Operators](#logical-operators) 
+    - [List Operators](#list-operators)
+    - [Color Operator](#color-operator)
+- [If-Else Statements](#if-else-statements)
+- [Functions](#functions)
+- [Processes](#processes)
+- [List Functions](#list-functions)
+- [License](#license)
 
 ## Installation
 
@@ -140,7 +167,6 @@ This gives the SVG
 <polyline points="1,8 44,9 44,44" fill="transparent" stroke="red" stroke-width="1"></polyline>
 </svg>
 ```
-
 
 ### Shapes
 
@@ -392,3 +418,27 @@ false
 * `len()` Takes the length of a list
 * `insert()` Return a new list with some item inserted at an index in the list.
 * `slice()` Return a new list between, or starting at the index in the arguments.
+
+## License
+
+[MIT License](LICENSE.md)
+
+Copyright (c) 2017 Josh Weinstein
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
