@@ -6,6 +6,7 @@
 var cmp = require('./src/Main');
 var fs = require('fs');
 var pkg = require('./package.json');
+var repl = require('./repl');
 
 var userArgs = process.argv.slice(2);
 
@@ -16,7 +17,7 @@ var help = "Commands:" +
 
 var cmds = {"--help":function(){console.log(help);}, "--version":function(){console.log(pkg.version)}};
 
-if(userArgs.length === 0) cmds["--help"]();
+if(userArgs.length === 0) repl.OblRepl();
 else if(userArgs.length ===1){
     if(userArgs[0] in cmds) {
         cmds[userArgs[0]]();
