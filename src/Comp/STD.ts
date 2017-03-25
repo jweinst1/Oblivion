@@ -412,6 +412,6 @@ export namespace STD {
         let left = env.callLib(env, args[0].node, args[0].args);
         let right = env.callLib(env, args[1].node, args[1].args);
         if(typeof left !== 'number' || typeof right !== 'number') throw new Errors.TypeError('number', `${typeof left} and ${typeof right}`);
-        return Math.floor((Math.random() * right) + left);
+        return Math.floor(Math.random() * (Math.floor(right) - Math.ceil(left))) + Math.ceil(left);
     };
 }

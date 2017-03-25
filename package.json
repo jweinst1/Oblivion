@@ -1,6 +1,6 @@
 {
   "name": "oblivion-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The language of art and creation",
   "main": "index.js",
   "scripts": {

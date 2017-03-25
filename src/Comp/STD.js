@@ -408,7 +408,7 @@ var STD;
         var right = env.callLib(env, args[1].node, args[1].args);
         if (typeof left !== 'number' || typeof right !== 'number')
             throw new Errors_1.Errors.TypeError('number', typeof left + " and " + typeof right);
-        return Math.floor((Math.random() * right) + left);
+        return Math.floor(Math.random() * (Math.floor(right) - Math.ceil(left))) + Math.ceil(left);
     };
 })(STD = exports.STD || (exports.STD = {}));
 //# sourceMappingURL=STD.js.map
