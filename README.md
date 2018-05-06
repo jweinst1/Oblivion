@@ -1,6 +1,6 @@
 # Oblivion
 
-[Website](http://obliv.me/)
+[Website](https://jweinst1.github.io/OblivionWebsite/)
 
 The language of art and graphics!
 
